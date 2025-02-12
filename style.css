@@ -1,0 +1,163 @@
+/*Hela bladet*/
+
+html {
+  background: rgb(234, 250, 241);
+  color: rgb(212, 172, 13);
+  font-family: Verdana, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, , sans-serif;
+}
+
+/* Navigation START*/
+nav {
+  background-color: rgb(234, 250, 241);
+  color: rgb(212, 172, 13);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 20px;
+  border-bottom: 3px solid rgb(212, 172, 13);
+
+
+}
+
+.logo {
+  font-size: 1.5rem;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  margin-right: 20px;
+}
+
+ul li a {
+  color: rgb(212, 172, 13);
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.3s;
+  font-size: 15px;
+}
+
+ul li a:hover {
+  color: rgb(234, 250, 241);
+  background-color: rgb(244, 208, 63);
+  border-bottom: 2px rgb(212, 172, 13);
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: rgb(212, 172, 13);
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+@media (max-width: 668px) {
+  .checkbtn {
+    display: block;
+    order: 1;
+    margin-right: 20px;
+  }
+
+  ul {
+    position: fixed;
+    top: 20px;
+    right: -100%;
+    background-color: rgb(234, 250, 241);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+  }
+
+  ul li {
+    margin: 15px 0;
+  }
+
+  #check:checked~ul {
+    right: 0;
+  }
+}
+
+/* Navigation END*/
+
+/*Welcome section START*/
+.welcome {
+  display: block;
+  padding: 10px;
+  border-top: 10px white;
+}
+
+.welcome div {
+  font-family: 'Lucida Sans', sans-serif;
+}
+
+/*Welcome section END*/
+
+/*News and inspiration section START*/
+.section,
+.footer {
+  display: block;
+  color: rgb(234, 250, 241);
+  background-color: rgb(212, 172, 13);
+  font-size: 25px;
+  padding: 2px;
+  padding-left: 10px;
+}
+
+.news,
+.inspiration {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  text-align: center;
+  grid-gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.news-box,
+.inspiration-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  padding: 5px;
+}
+
+.news-box-image img,
+.inspiration-box-image img {
+  display: flex;
+  width: 100%;
+  height: 250px;
+}
+
+.news-box-headline,
+.inspiration-box-headline {
+  display: flex;
+  color: rgb(212, 172, 13);
+  text-decoration: none;
+  font-size: 15px;
+}
+
+/*News and inspiration section END*/
+
+/*Footer*/
+
+.footer p {
+  font-size: 10px;
+}
