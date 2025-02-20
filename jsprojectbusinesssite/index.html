@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+<!-- Header with and navigation bar, hamburger menu and video -->
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Outfit:wght@100..900&family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+
+  <title>Sushi World</title>
+  <div class="video-container">
+    <div class="overlay">
+      <p class="emoticon">(´｡• ᵕ •｡`) ♡</p>
+        <h1 id="main-title">Sushi World</h1>
+        <button class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav id="nav-menu" class="hidden">
+          <ul>
+            <li><a href="#">MENU</a></li>
+            <li><a href="#">FIND US</a></li>
+            <li><a href="#bookTable">BOOK TABLE</a></li>
+            <li><a href="#">ABOUT US</a></li>
+          </ul>
+          </nav>
+        </div>
+      <video autoplay loop muted playsinline class="hero-video">
+          <source src="img/sushi_720p_30fps - 2.mp4" type="video/mp4">
+      </video>
+      </nav>
+  </div>
+
+  <div class="header">
+    <div class="flex-navi">
+      <button id="button-red">MENU</button>
+      <button id="button-red">FIND US</button>
+      <button id="button-red"><a href="#bookTable">BOOK TABLE</a></button>
+      <button id="button-red">ABOUT US</button>
+      </div>
+      <p class="column-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, a enim delectus exercitationem explicabo et quos obcaecati dicta iusto quasi dolorum esse incidunt, mollitia, necessitatibus placeat tenetur cum! At, ut hic! Repellendus est vel pariatur? Sint in consectetur beatae, adipisci officiis distinctio quos aperiam dolore inventore quia aspernatur cupiditate sunt molestiae a expedita voluptatum molestias eius error nisi dignissimos eos dolores? Quos tempore eveniet adipisci, odit molestias expedita. Doloremque, minus, blanditiis laboriosam possimus maxime incidunt amet distinctio optio nemo provident illum? Ducimus nesciunt eos magni et incidunt quas temporibus impedit accusantium, ex excepturi veritatis odit enim explicabo praesentium sit? Dicta. eos magni et incidunt quas temporibus impedit accusantium, ex excepturi veritatis odit enim explicabo praesentium sit? Dicta.</p>
+  </div>
+</head>
+
+<!-- Grid with images -->
+<div class="container">
+    <div class="flex-item-1"><p><img src="img/img-1.jpg" class="img-container"></p></div>
+    <div class="flex-item-2"><p><img src="img/img-2.jpg" class="img-container"></p></div>
+    <div class="flex-item-3"><p><img src="img/img-3.jpg" class="img-container"></p></div>
+    <div class="flex-item-4"><p><img src="img/img-4.jpg" class="img-container"></p></div>
+  </div>
+
+<!-- Book Table -->
+<div class="container" id="bookTable">
+<div class="form-container">
+      <form>
+        <h2>For larger companies please call!</h2>
+        <p>08-1234567</p>
+        <form action="http://httpbin.org/anything" method="post">
+        <fieldset>
+          <label>
+            <span>Name</span>
+            <input 
+            type="text"
+            name="name"
+            placeholder="Sushi McSushi"/>  
+            </label>
+          <label>
+            <span>E-mail</span>
+            <input type="email" name="email" placeholder="E-mail@example.com"/>
+          </label>
+          <label>
+            <span>Phone</span>
+            <input type="number" name="phone" placeholder="+46 123456789"/>
+          </label>
+          <label>
+            <span>Date</span>
+            <input type="date" name="date" placeholder="date"/>
+          </label>
+          <label>
+            <span>Time</span>
+            <input type="time" id="appt" name="appt" min="16:00" max="21:00" required />
+          </label>
+          <label>
+            <span>Guests</span>
+            <input type="number" id="numberInput" name="guests" min="1" max="9" step="1" placeholder="Number of guests">
+        </label>
+        </fieldset>
+        <button type="submit" id="button-red">BOOK TABLE</button>
+          </form>
+        </form>
+    </div>
+</div>
+
+<!-- Footer with social media links -->
+<div class="footer">
+  <div class="socials">
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</html>
+</body>
