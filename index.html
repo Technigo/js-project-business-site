@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js-project-business-site</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://api.fontshare.com/v2/css?f[]=erode@400&f[]=satoshi@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<header>
+    <nav class="nav-bar">
+        <ul class="nav-menu" id="nav-menu">
+            <li class="nav-item">
+                <a href="#" class="nav-link">home</a>
+            </li>
+            <li class="nav-item">
+                <a href="#site-info" class="nav-link">about</a>
+            </li>
+            <li class="nav-item">
+                <a href="#contact" class="nav-link">contact</a>
+            </li>
+        </ul>
+
+        <div class="hamburger" id="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <section class="hero-container">
+        <div class="overlay"></div>
+        <video 
+        autoplay
+        loop
+        muted
+        playsinline
+        class="hero-video">
+            <source src="assets/flipped.mp4" type="video/mp4">
+            Your browser doesn't support the video type
+        </video>
+        <h1>a mouthful guide</h1>
+    </section>
+</header>
+
+    <main>
+        <div class="container-info-newsletter">
+            <div class="site-info" id="site-info">
+                <h2>about this site</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit  Ex officia est amet vero repellendus? Iste officiis inventore aliquam cumque, dolor eveniet!</p>
+            </div>
+            
+            <form
+            class="form-newsletter"
+            action="http://httpbin.org/anything" 
+            method="POST">
+                <h2>sign up to our newsletter</h2>
+                <fieldset>
+                    <div class="radio-button-wrapper">
+                        <p>what are you interested in?</p>
+                        <div class="form-input-radio">
+                            <div class="radio-option">
+                                <input 
+                                type="radio" 
+                                id="option1" 
+                                name="newsletter-options" 
+                                value="option1">
+                                <label for="option1">restaurant recs</label>
+                            </div>
+
+                            <div class="radio-option">
+                                <input 
+                                type="radio" 
+                                id="option2" 
+                                name="newsletter-options" 
+                                value="option2">
+                                <label for="option2">recipe recs</label>
+                            </div>
+
+                            <div class="radio-option">
+                                <input 
+                                type="radio" 
+                                id="option3" 
+                                name="newsletter-options" 
+                                value="option3">
+                                <label for="option3">both</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-input">
+                        <label for="email">what's your e-mail adress?</label>
+                        <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        placeholder="example@gmail.com" 
+                        required/>
+                    </div>
+                </fieldset>  
+                <button type="submit" class="formButton">sign me up</button>
+            </form>
+        </div>
+
+    <section class="grid-parent">
+
+        <div class="grid-item">
+            <div>
+                <h2>my kitchen MVP's (Most Valuable Plates)</h2>
+            </div>
+            <div class="card-container">
+                <div class="card-type1">
+                    <img src="/assets/noodles.webp" alt="an image of noodles">
+                    <div class="card-content">
+                        <h3>instant noodles (sesame)
+                        <br>+ soy marinated egg</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex officia est amet vero repellendus? Iste officiis inventore aliquam cumque, dolor eveniet!</p>
+                        <div class="button-wrapper">
+                            <a 
+                            class="button" 
+                            href="https://jacksvaruhus.se/snabbnudlar/nissin-demae-ramen-sesamsmak/?gad_source=1&gclid=CjwKCAiA2JG9BhAuEiwAH_zf3nMvb4Hpb8ncFYTFWdmvm8cmV6waE1Tb9q7IY9qvgUc1MTUmNyibZxoC_OsQAvD_BwE" 
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            Take me to the recipe</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-type1">
+                    <img src="/assets/lemon-pasta.webp" alt="image of pasta">
+                    <div class="card-content">
+                        <h3>ricotta pasta with:
+                        <br>butter & lemon</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex officia est amet vero repellendus? Iste officiis inventore aliquam cumque, dolor eveniet!</p>
+                        <div class="button-wrapper">
+                            <a 
+                            class="button" 
+                            href="https://tuvessonskan.se/2022/04/25/ricottapasta-med-brynt-smor-parmesan-och-citron/" 
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            Take me to the recipe</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-type1">
+                    <img src="/assets/mousse.webp" alt="image of chocolate mousse">
+                    <div class="card-content">
+                        <h3>chocolate mousse,
+                        <br>but make it french</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex officia est amet vero repellendus? Iste officiis inventore aliquam cumque, dolor eveniet!</p>
+                        <div class="button-wrapper">
+                            <a 
+                            class="button" 
+                            href="https://alltommat.expressen.se/recept/chokladmousse-med-mork-choklad/" 
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            Take me to the recipe</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-type1">
+                    <img src="/assets/ribollita.webp" alt="image of ribollita">
+                    <div class="card-content">
+                        <h3>cucina povera?
+                        <br>ribollita!</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex officia est amet vero repellendus? Iste officiis inventore aliquam cumque, dolor eveniet!</p>
+                        <div class="button-wrapper">
+                            <a class="button" 
+                            href="https://www.ica.se/recept/ribollita-med-vita-bonor-726504/" 
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            Take me to the recipe</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="grid-item">
+            <div>
+                <h2>recipes on my radar</h2>
+            </div>
+            <div class="card-container">
+                <div class="card-type2">
+                    <img src="/assets/cheesecake.webp" alt="image of cheesecake">
+                    <div class="card-content">
+                        <h3>burnt basque cheesecake
+                        <br>(La Viña Style)</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex officia est amet vero repellendus? Iste officiis inventore aliquam cumque, dolor eveniet!</p>
+                        <div class="button-wrapper">
+                            <a 
+                            class="button" 
+                            href="https://spanishsabores.com/burnt-basque-cheesecake-recipe/" 
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            Take me to the recipe</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-type2">
+                    <img src="/assets/gnocci.webp" alt="image of gnocchi">
+                    <div class="card-content">
+                        <h3>browned butter,
+                        <br>sage & gnocchi</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex officia est amet vero repellendus? Iste officiis inventore aliquam cumque, dolor eveniet!</p>
+                        <div class="button-wrapper">
+                            <a class="button" 
+                            href="https://www.ica.se/recept/gnocchi-med-brynt-smor-och-salvia-727220/" 
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            Take me to the recipe</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-type2">
+                    <img src="/assets/mela.webp" alt="image of melanzane alla parmigiana">
+                    <div class="card-content">
+                        <h3>Melanzane alla 
+                        <br>parmigiana</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex officia est amet vero repellendus? Iste officiis inventore aliquam cumque, dolor eveniet!</p>
+                        <div class="button-wrapper">
+                            <a class="button" 
+                            href="https://www.ica.se/recept/melanzane-alla-parmigiana-729477/" 
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            Take me to the recipe</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-type2">
+                    <img src="/assets/bibimbap.webp" alt="image of bibimbap">
+                    <div class="card-content">
+                        <h3>bibimbap</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex officia est amet vero repellendus? Iste officiis inventore aliquam cumque, dolor eveniet!</p>
+                        <div class="button-wrapper">
+                            <a 
+                            class="button" 
+                            href="https://www.ica.se/recept/bibimbap-727370/" 
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            Take me to the recipe</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <div>
+                <h2>my current restaurant obsessions</h2>
+            </div>
+            <div class="card-container">
+                <div class="card-type1">
+                    <img src="/assets/bistro.webp" alt="image of a bistro">
+                    <div class="card-content">
+                        <h3>Bistro MIRABELLE</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex officia est amet vero repellendus? Iste officiis inventore aliquam cumque, dolor eveniet!</p>
+                        <div class="button-wrapper">
+                            <a 
+                            class="button" 
+                            href="https://bistromirabelle.se/" 
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            Take me there</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-type1">
+                    <img src="/assets/mormor.webp" alt="image of an older woman and a child">
+                    <div class="card-content">
+                        <h3>Mormors Restaurang
+                            <br>& Dumplings</h3>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex officia est amet vero repellendus? Iste officiis inventore aliquam cumque, dolor eveniet!</p>
+                            <div class="button-wrapper">
+                                <a 
+                                class="button" 
+                                href="https://www.tripadvisor.se/Restaurant_Review-g189852-d19126358-Reviews-Mormors_Restaurang_Dumplings-Stockholm.html" 
+                                target="_blank"
+                                rel="noopener noreferrer">
+                                Take me there</a>
+                            </div>
+                        </div>
+                </div>
+                <div class="card-type1">
+                    <img src="/assets/pelican.webp" alt="image of a pelican">
+                    <div class="card-content">
+                        <h3>Pelikan</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex officia est amet vero repellendus? Iste officiis inventore aliquam cumque, dolor eveniet!</p>
+                        <div class="button-wrapper">
+                            <a 
+                            class="button" 
+                            href="https://pelikan.se/" 
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            Take me there</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-type1">
+                    <img src="/assets/bitza.webp" alt="image of a restaurant">
+                    <div class="card-content">
+                        <h3>Bitza</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex officia est amet vero repellendus? Iste officiis inventore aliquam cumque, dolor eveniet!</p>
+                        <div class="button-wrapper">
+                            <a 
+                            class="button" 
+                            href="https://bitzahornstull.com/" 
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            Take me there</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <div>
+                <h2>so many restaurants, so little time, next up:</h2>
+            </div>
+            <div class="card-container">
+                <div class="card-type2">
+                    <img src="/assets/matcha2.webp" alt="image of a matcha cake">
+                    <div class="card-content">
+                        <h3>BALUE</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex officia est amet vero repellendus? Iste officiis inventore aliquam cumque, dolor eveniet!</p>
+                        <div class="button-wrapper">
+                            <a 
+                            class="button" 
+                            href="https://www.instagram.com/baluestockholm/" 
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            Take me there</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-type2">
+                    <img src="/assets/amino.webp" alt="image of a restaurant">
+                    <div class="card-content">
+                        <h3>Animo</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex officia est amet vero repellendus? Iste officiis inventore aliquam cumque, dolor eveniet!</p>
+                        <div class="button-wrapper">
+                            <a 
+                            class="button" 
+                            href="https://www.animorestaurant.se/" 
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            Take me there</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-type2">
+                    <img src="/assets/t-rulle1.webp" alt="image of a tunnbrödsrulle">
+                    <div class="card-content">
+                        <h3>Göstas korvrestaurang</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex officia est amet vero repellendus? Iste officiis inventore aliquam cumque, dolor eveniet!</p>
+                        <div class="button-wrapper">
+                            <a 
+                            class="button" 
+                            href="https://www.instagram.com/gostaskorvrestaurang/" 
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            Take me there</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-type2">
+                    <img src="/assets/facile.webp" alt="image of a bistro">
+                    <div class="card-content">
+                        <h3>Café Facile</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex officia est amet vero repellendus? Iste officiis inventore aliquam cumque, dolor eveniet!</p>
+                        <div class="button-wrapper">
+                            <a 
+                            class="button" 
+                            href="https://www.cafefacile.se/" 
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            Take me there</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <h3 id="contact">Contact</h3>
+    <div class="contact-info-container">
+        <div class="contact-info">
+            <h4 id="contact-way-1">
+                <span class="expand-symbol">+</span>
+                message in a bottle</h4>
+            <p class="contact">latitude: -22° 54' 11.63" s longitude: -43° 10' 22.59" w</p>
+        </div>
+        <div class="contact-info">
+            <h4 id="contact-way-2">
+                <span class="expand-symbol">+</span>
+                give me a call</h4>
+            <p class="contact">070 xxx xx xx</p>
+        </div>
+        <div class="contact-info">
+            <h4 id="contact-way-3">
+                <span class="expand-symbol">+</span>
+                send an e-mail</h4>
+            <p class="contact"> amouthfulguide@javascript.com</p>
+        </div>
+    </div>
+    
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
