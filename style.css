@@ -1,0 +1,685 @@
+body {
+  margin: 0;
+  font-family: "Figtree", sans-serif;
+  background: #f6f2f9;
+}
+
+/* HEADER ----------------------------- */
+
+/* Navigation bar */
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* Keep navbar on top when scrolling down */
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 1;
+  background: #130d3b;
+  color: #FFFFFF;
+  height: 80px;
+  padding: 0 20px 0 5px;
+}
+
+
+/* Logo */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+/* Logo icon */
+.logo-icon {
+  height: 40px;
+}
+
+/* Logo text */
+.nav-logo p {
+  margin: 0;
+  width: 50vw;
+  font-family: "Sofia", sans-serif;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+/* style the links in menu bar */
+.menu a {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 16px;
+}
+
+.menu a:hover {
+  font-size: larger;
+}
+
+/* style the hamburger menu */
+.menu {
+  position: fixed;
+  /* z-index of -1 so the menu slides into place behind the nav-bar */
+  z-index: -1;
+  /* to hide the menu by default above the screen */
+  transform: translateY(-110%);
+  /* to create a slideup/down effect */
+  transition: transform 0.3s;
+  top: 60px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #130d3b;
+  color: white;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 7vh;
+  padding: 5vh 20px;
+  margin: 0;
+}
+
+/* style the hamburger icon */
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.hamburger-icon div {
+  background: #FFFFFF;
+  width: 40px;
+  height: 4px;
+  border-radius: 5px;
+  transition: transform 0.3s;
+}
+
+/* class to show the hamburger menu with javascript */
+.show-menu {
+  transform: translateY(0);
+}
+
+/* class to change the hamburger icon to a closing icon with javascript */
+/* rotate the first and third lines */
+.closing-icon :first-child,
+.closing-icon :last-child {
+  position: absolute;
+}
+
+.closing-icon :first-child {
+  transform: rotate(45deg);
+}
+
+.closing-icon :last-child {
+  transform: rotate(-45deg);
+}
+
+/* hide the second line */
+.closing-icon :nth-child(2) {
+  background: #130d3b;
+}
+
+/* Header with hero image */
+header {
+  /* Hero image with a linear gradient to make it a little darker */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./assets/hero-image.jpg);
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+  color: #FFFFFF;
+  /* flexbox to center the headings on the image */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header div {
+  width: 80%;
+  max-width: 900px;
+  text-align: center;
+  margin-top: 10vh;
+}
+
+header h1 {
+  font-family: "Galada", sans-serif;
+  font-size: 38px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+header h2 {
+  font-size: 15px;
+  font-weight: 200;
+  margin-top: 8vh;
+}
+
+/* Main section --------------------------------- */
+
+/* flexbox on the main section */
+.main-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: 5vh auto 8vh auto;
+}
+
+/* Style setion headings */
+.section-heading {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.section-heading h2 {
+  font-size: 36px;
+  font-weight: 400;
+  font-family: "Galada", sans-serif;
+  text-align: center;
+  color: #130d3b;
+  margin: 0;
+}
+
+.section-heading hr {
+  border: 1px solid #130d3b;
+  margin: 10px 40px;
+}
+
+/* CSS grid on cards container */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-rows: auto;
+  gap: 30px;
+  justify-items: center;
+  padding: 0 20px;
+}
+
+/* Each card is a flexbox */
+.unicorn-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 25px;
+  box-sizing: border-box;
+  background: #FFFFFF;
+  box-shadow: 0 0 15px 2px #d8b3d6;
+  padding: 30px 40px;
+  border-radius: 15px;
+}
+
+figure {
+  margin: 0;
+}
+
+/* adding a shimmering effect when hovering the image */
+.shimmering-image {
+  width: 100%;
+  -webkit-mask-image: linear-gradient(45deg, #000 25%, rgba(0, 0, 0, .1) 50%, #000 75%);
+  mask-image: linear-gradient(45deg, #000 25%, rgba(0, 0, 0, .1) 50%, #000 75%);
+  -webkit-mask-size: 800%;
+  mask-size: 800%;
+  -webkit-mask-position: 0;
+  mask-position: 0;
+}
+
+.shimmering-image:hover {
+  transition: mask-position 2s ease, -webkit-mask-position 2s ease;
+  -webkit-mask-position: 120%;
+  mask-position: 120%;
+  opacity: 1;
+}
+
+/* Container with info is a flexbox */
+.info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: space-between;
+}
+
+/* Card heading - unicorn name */
+.unicorn-card h2 {
+  margin: 0;
+  font-family: "Galada", sans-serif;
+  color: #4e036e;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+/* Hide the unicorn descriptions */
+.unicorn-card .description {
+  display: none;
+}
+
+/* Container with stats is a flexbox */
+.stats-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+}
+
+/* Each stat is a flexbox */
+.stat {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.stat p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Hide the stat headings*/
+.stat h3 {
+  display: none;
+}
+
+/* Button styling */
+.unicorn-card .button {
+  background: #fce044;
+  color: black;
+  border: none;
+  margin: 20px 40px 0 40px;
+  padding: 10px;
+  border-radius: 30px;
+  font-family: "Figtree", sans-serif;
+  text-decoration: none;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.button a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Change color of button on hover */
+.unicorn-card .button:hover {
+  background: #c49dd3;
+  box-shadow: 0 0 10px 1px silver;
+}
+
+/* Only display the 'Learn more'-button (hide the 'Book now'-button */
+.unicorn-card .button-book {
+  display: none;
+}
+
+/* FEATURED UNICORN ----------------------------------*/
+
+/* Place the featured unicorn card first in the grid */
+.featured-unicorn {
+  grid-row: 1/2;
+}
+
+/* Show the description */
+.featured-unicorn .description {
+  display: initial;
+  margin: 0;
+  text-align: justify;
+  font-size: 14px;
+}
+
+/* adjusting gap size on information container */
+.featured-unicorn .info-container {
+  gap: 10px;
+}
+
+/* Change flex direction for the stat container */
+.featured-unicorn .stats-container {
+  flex-direction: column;
+}
+
+/* Show the stat headings */
+.featured-unicorn .stat h3 {
+  display: initial;
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Only display button text 'Book now' */
+.featured-unicorn .button-more-info {
+  display: none;
+}
+
+.featured-unicorn .button-book {
+  display: initial;
+}
+
+/* BOOKING FORM ------------------------------------ */
+
+.form-section {
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: 5vh auto 8vh auto;
+}
+
+/* flexbox on the form element */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: #fff;
+  border-radius: 5px;
+  /* adding a box shaddow for a glow effect */
+  box-shadow: 0 0 15px 2px #d8b3d6;
+  padding: 30px;
+  margin: 0 40px;
+}
+
+/* fieldset styling */
+fieldset {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 25px;
+  padding: 20px;
+  margin: 0;
+  border-radius: 5px;
+  border: 1px solid #c49dd3;
+}
+
+/* change border color of the fieldset on hover */
+fieldset:hover {
+  border: 1px solid #7a2f97;
+}
+
+legend {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  color: #130d3b;
+}
+
+/* style the column and row wrappers */
+.wrapper-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2px
+}
+
+.wrapper-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* styling text elements in the form */
+form h3,
+form p {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+label {
+  font-size: 12px;
+}
+
+/* styling input fields and select field*/
+input,
+select {
+  height: 25px;
+  padding-left: 5px;
+  border: 1px solid #d8b3d6;
+  border-radius: 5px;
+}
+
+/* change border color on hover */
+input:hover,
+select:hover {
+  border: 1px solid #F53B98;
+}
+
+/* change background color and thicker border on focus */
+input:focus,
+select:focus {
+  background-color: #f7e5f2;
+  outline: 1.5px solid #F53B98
+}
+
+/* styling checkboxes and radiobuttons */
+input[type=checkbox],
+input[type=radio] {
+  height: 15px;
+  width: 15px;
+  margin: 0;
+  cursor: pointer;
+}
+
+/* styling the different parts in the fieldsets */
+.full-name-wrapper,
+.contact-info-wrapper,
+.unicorn-wrapper,
+.date-time-wrapper,
+.special-requests-wrapper,
+.add-on-wrapper {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.unicorn-wrapper,
+.special-requests-wrapper label {
+  font-weight: 600;
+}
+
+.date-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.time-wrapper {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.time-wrapper span {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-grow: 1;
+}
+
+.time-wrapper span label {
+  width: 25px;
+}
+
+input[type="time"],
+input[type="date"] {
+  flex-grow: 1;
+}
+
+.radiobutton-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* styling the submit button */
+#submit-button {
+  width: 150px;
+  height: 40px;
+  align-self: center;
+  background: #f5c7e9;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* change color and add a glow effect on hover */
+#submit-button:hover {
+  background: #f39adb;
+  box-shadow: 0 0 15px 1px #d8b3d6;
+}
+
+
+/* FOOTER----------------------------------- */
+
+footer {
+  background: #130d3b;
+  bottom: 0;
+}
+
+footer p {
+  color: #f6f2f9;
+  text-align: center;
+  font-size: 1.5vh;
+  padding: 30px;
+  margin: 0;
+}
+
+/* MEDIA QUERIES---------------------------- */
+
+@media (min-width: 630px) {
+
+  /* change padding on cards container to keep one column */
+  .cards-container {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+}
+
+/* Tablets */
+
+@media (min-width: 660px) {
+
+  /* For the featured unicorn, span card overall columns and change flex direction*/
+  .featured-unicorn {
+    flex-direction: row;
+    grid-column: 1/-1;
+    max-width: fit-content;
+  }
+
+  /* Increase button font size */
+  .featured-unicorn .button-book {
+    font-size: 16px;
+  }
+
+  /* change flex direction in booking form */
+  .personal-info {
+    flex-direction: row;
+  }
+
+}
+
+/* Larger tablets */
+
+@media (min-width: 800px) {
+
+  /* Adjust font size in menu bar and header*/
+  .nav-logo p {
+    font-size: 24px;
+  }
+
+  header h1 {
+    font-size: 50px;
+  }
+
+  header h2 {
+    font-size: 20px;
+  }
+
+  /* Adjust featured unicorn card*/
+  .featured-unicorn {
+    padding: 40px;
+    gap: 40px;
+  }
+
+  .featured-unicorn h2 {
+    font-size: 28px;
+  }
+
+  .featured-unicorn .info-container {
+    gap: 20px;
+  }
+
+  .featured-unicorn .stat h3 {
+    font-size: 15px;
+  }
+
+  .featured-unicorn .stat p {
+    font-size: 15px;
+  }
+
+  .featured-unicorn .description {
+    font-size: 15px;
+  }
+
+}
+
+/* Desktop */
+
+@media (min-width: 1024px) {
+
+  /* Hide the hamburge icon */
+  #hamburger {
+    display: none;
+  }
+
+  /*Show the links of the navigation bar*/
+  .menu {
+    position: static;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    transform: none;
+    transition: none;
+    gap: 0;
+    padding: 0;
+    background: none;
+  }
+
+  .menu a {
+    padding: 30px 20px;
+  }
+
+  .menu a:hover {
+    background: #8AB6D6;
+    font-size: 16px;
+  }
+
+  .nav-logo p {
+    width: 30vw;
+  }
+
+  /* change flex direction in booking form */
+  form {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .personal-info,
+  .rental-details {
+    width: 40%;
+  }
+
+  .personal-info {
+    flex-direction: column;
+  }
+
+}

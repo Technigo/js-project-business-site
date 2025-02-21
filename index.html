@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <link
+    rel="stylesheet"
+    href="./style.css"
+  >
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Sofia|Galada|Montserrat|Figtree"
+  >
+  <title>Starlight Unicorn Rentals</title>
+</head>
+
+<body onload="changeFeaturedUnicorn('starlight-sparkle')">
+
+  <!-- Header ----------------------------------------------->
+
+  <!--Navigation bar-->
+  <nav class="nav-bar">
+    <!--Logo-->
+    <div class="nav-logo">
+      <a
+        href="#"
+        onclick="changeFeaturedUnicorn('starlight-sparkle')"
+      ><img
+          class="logo-icon"
+          src="./assets/unicorn-icon.png"
+          alt="Unicorn logo"
+        ></a>
+      <p>Starlight Unicorn Rentals</p>
+    </div>
+    <!--Links-->
+    <ul class="menu">
+      <li class="menu-item">
+        <a
+          href="#"
+          onclick="changeFeaturedUnicorn('starlight-sparkle'
+      )"
+        >Home</a>
+      </li>
+      <li class="menu-item">
+        <a
+          href="#gallery-section"
+          onclick="changeFeaturedUnicorn()"
+        >Gallery</a>
+      <li class="menu-item"><a href="#booking-section">Book a Unicorn</a></li>
+      </li>
+      <li class="menu-item"><a href="#booking-section">Contact</a></li>
+    </ul>
+    <!--Hamburger icon -->
+    <div
+      id=hamburger
+      onclick="toggleMenu()"
+    >
+      <!-- menu icon -->
+      <div class="hamburger-icon">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  </nav>
+
+  <header>
+    <div>
+      <h1>Welcome to Starlight Unicorn Rentals!</h1>
+      <h2>Your whimsical, enchanting rental service that lets you rent actual unicorns for parties, photoshoots,
+        festivals,
+        and other special events.</h2>
+    </div>
+  </header>
+
+  <!-- Main section ----------------------------------------->
+  <section
+    class="main-section"
+    id="gallery-section"
+  >
+
+    <div class="section-heading">
+      <h2>Our Unicorns</h2>
+      <hr>
+    </div>
+
+    <!-- Cards container -->
+    <article class="cards-container">
+
+      <!--Card 1-->
+      <article
+        id="starlight-sparkle"
+        class="unicorn-card"
+      >
+
+        <!--Image-->
+        <figure>
+          <img
+            src="./assets/starlight-sparkle.png"
+            alt="Image of Starlight Sparkle"
+            class="shimmering-image"
+          >
+        </figure>
+
+        <div class="info-container">
+          <!--Name-->
+          <h2>Starlight Sparkle</h2>
+
+          <!--short description-->
+          <p class="description">Starlight Sparkle radiates a soft, celestial glow, lighting up every room she enters.
+            With
+            her playful spirit
+            and shimmering mane, she's the perfect companion for a joyful, enchanting celebration.</p>
+
+          <!--Stats container-->
+          <div class="stats-container">
+
+            <!--Magical aura-->
+            <div class="stat magical-aura">
+              <!--stat icon-->
+              <p class="icon">&#11088</p>
+              <!--stat name-->
+              <h3>Magical Aura:</h3>
+              <!--Rating-->
+              <p class="rating">High</p>
+            </div>
+
+            <!--Speed-->
+            <div class="stat speed">
+              <!--stat icon-->
+              <p class="icon">&#9889</p>
+              <!--stat name-->
+              <h3>Speed:</h3>
+              <!--Rating-->
+              <p class="rating">Swift</p>
+            </div>
+
+            <!--Mane & Tail-->
+            <div class="stat mane-tail">
+              <!--stat icon-->
+              <p class="icon">🦄</p>
+              <!--stat name-->
+              <h3>Mane & Tail:</h3>
+              <!--Rating-->
+              <p class="rating">Shimmering</p>
+            </div>
+
+            <!--Personality-->
+            <div class="stat personality">
+              <!--stat icon-->
+              <p class="icon">&#128522</p>
+              <!--stat name-->
+              <h3>Personality:</h3>
+              <!--Rating-->
+              <p class="rating">Playful</p>
+            </div>
+
+            <!--Rarity-->
+            <div class="stat rarity">
+              <!--stat icon-->
+              <p class="icon">&#128142</p>
+              <!--stat name-->
+              <h3>Rarity:</h3>
+              <!--Rating-->
+              <p class="rating">Rare</p>
+            </div>
+          </div>
+
+          <!--Buttons-->
+          <a
+            class="button button-book"
+            href="#booking-section"
+            id="button-book-starlight-sparkle"
+            onclick=bookUnicorn(this.id)
+          >
+            Book Now
+          </a>
+          <button
+            id="button-info-starlight-sparkle"
+            class="button button-more-info"
+            onclick=showInfo(this.id)
+          >
+            <a href="#gallery-section">Learn More</a>
+          </button>
+
+        </div>
+
+      </article>
+
+      <!--Card 2-->
+      <article
+        id="rainbow-dream"
+        class="unicorn-card"
+      >
+
+        <!--Image-->
+        <figure>
+          <img
+            src="./assets/rainbow-dream.png"
+            alt="Image of Rainbow Dream"
+            class="shimmering-image"
+          >
+        </figure>
+
+        <div class="info-container">
+          <!--Name-->
+          <h2>Rainbow Dream</h2>
+
+          <!--short description-->
+          <p class="description">Rainbow Dream is a vision of vibrant colors, bringing a magical rainbow wherever she
+            goes. Known for her gentle heart and dreamy aura, she will add a touch of wonder and warmth to your event.
+          </p>
+
+          <!--Stats container-->
+          <div class="stats-container">
+
+            <!--Magical aura-->
+            <div class="stat magical-aura">
+              <!--stat icon-->
+              <p class="icon">&#11088</p>
+              <!--stat name-->
+              <h3>Magical Aura:</h3>
+              <!--Rating-->
+              <p class="rating">Vibrant</p>
+            </div>
+
+            <!--Speed-->
+            <div class="stat speed">
+              <!--stat icon-->
+              <p class="icon">&#9889</p>
+              <!--stat name-->
+              <h3>Speed:</h3>
+              <!--Rating-->
+              <p class="rating">Agile</p>
+            </div>
+
+            <!--Mane & Tail-->
+            <div class="stat mane-tail">
+              <!--stat icon-->
+              <p class="icon">🦄</p>
+              <!--stat name-->
+              <h3>Mane & Tail:</h3>
+              <!--Rating-->
+              <p class="rating">Rainbow Glow</p>
+            </div>
+
+            <!--Personality-->
+            <div class="stat personality">
+              <!--stat icon-->
+              <p class="icon">&#128522</p>
+              <!--stat name-->
+              <h3>Personality:</h3>
+              <!--Rating-->
+              <p class="rating">Gentle</p>
+            </div>
+
+            <!--Rarity-->
+            <div class="stat rarity">
+              <!--stat icon-->
+              <p class="icon">&#128142</p>
+              <!--stat name-->
+              <h3>Rarity:</h3>
+              <!--Rating-->
+              <p class="rating">Unique</p>
+            </div>
+          </div>
+
+          <!--Button-->
+          <a
+            class="button button-book"
+            href="#booking-section"
+            id="button-book-rainbow-dream"
+            onclick=bookUnicorn(this.id)
+          >
+            Book Now
+          </a>
+          <button
+            id="button-info-rainbow-dream"
+            class="button button-more-info"
+            onclick=showInfo(this.id)
+          >
+            <a href="#gallery-section">Learn More</a>
+          </button>
+
+        </div>
+
+      </article>
+
+      <!--Card 3-->
+      <article
+        id="moonshadow"
+        class="unicorn-card"
+      >
+
+        <!--Image-->
+        <figure>
+          <img
+            src="./assets/moonshadow.png"
+            alt="Moonshadow"
+            class="shimmering-image"
+          >
+        </figure>
+
+        <div class="info-container">
+          <!--Name-->
+          <h2>Moonshadow</h2>
+
+          <!--short description-->
+          <p class="description">Moonshadow moves in silence, her dark, mysterious aura lighting up the night. She’s
+            graceful, quiet, and serene, ideal for intimate, moonlit gatherings that call for elegance and tranquility.
+          </p>
+
+          <!--Stats container-->
+          <div class="stats-container">
+
+            <!--Magical aura-->
+            <div class="stat magical-aura">
+              <!--stat icon-->
+              <p class="icon">&#11088</p>
+              <!--stat name-->
+              <h3>Magical Aura:</h3>
+              <!--Rating-->
+              <p class="rating">Mystical</p>
+            </div>
+
+            <!--Speed-->
+            <div class="stat speed">
+              <!--stat icon-->
+              <p class="icon">&#9889</p>
+              <!--stat name-->
+              <h3>Speed:</h3>
+              <!--Rating-->
+              <p class="rating">Graceful</p>
+            </div>
+
+            <!--Mane & Tail-->
+            <div class="stat mane-tail">
+              <!--stat icon-->
+              <p class="icon">🦄</p>
+              <!--stat name-->
+              <h3>Mane & Tail:</h3>
+              <!--Rating-->
+              <p class="rating">Subtle Shimmer</p>
+            </div>
+
+            <!--Personality-->
+            <div class="stat personality">
+              <!--stat icon-->
+              <p class="icon">&#128522</p>
+              <!--stat name-->
+              <h3>Personality:</h3>
+              <!--Rating-->
+              <p class="rating">Serene</p>
+            </div>
+
+            <!--Rarity-->
+            <div class="stat rarity">
+              <!--stat icon-->
+              <p class="icon">&#128142</p>
+              <!--stat name-->
+              <h3>Rarity:</h3>
+              <!--Rating-->
+              <p class="rating">Elusive</p>
+            </div>
+          </div>
+
+          <a
+            class="button button-book"
+            href="#booking-section"
+            id="button-book-moonshadow"
+            onclick=bookUnicorn(this.id)
+          >
+            Book Now
+          </a>
+          <button
+            id="info-button-moonshadow"
+            class="button button-more-info"
+            onclick=showInfo(this.id)
+          >
+            <a href="#gallery-section">Learn More</a>
+          </button>
+
+        </div>
+
+      </article>
+
+      <!--Card 4-->
+      <article
+        id="aurora-mist"
+        class="unicorn-card"
+      >
+
+        <!--Image-->
+        <figure>
+          <img
+            src="./assets/auora-mist.png"
+            alt="Aurora Mist"
+            class="shimmering-image"
+          >
+        </figure>
+
+        <div class="info-container">
+          <!--Name-->
+          <h2>Aurora Mist</h2>
+
+          <!--short description-->
+          <p class="description">Aurora Mist captures the beauty of the northern lights in her sparkling, ethereal mane.
+            With her calm, majestic personality, she’s perfect for creating a magical, peaceful atmosphere at any event.
+          </p>
+
+          <!--Stats container-->
+          <div class="stats-container">
+
+            <!--Magical aura-->
+            <div class="stat magical-aura">
+              <!--stat icon-->
+              <p class="icon">&#11088</p>
+              <!--stat name-->
+              <h3>Magical Aura:</h3>
+              <!--Rating-->
+              <p class="rating">Ethereal</p>
+            </div>
+
+            <!--Speed-->
+            <div class="stat speed">
+              <!--stat icon-->
+              <p class="icon">&#9889</p>
+              <!--stat name-->
+              <h3>Speed:</h3>
+              <!--Rating-->
+              <p class="rating">Steady</p>
+            </div>
+
+            <!--Mane & Tail-->
+            <div class="stat mane-tail">
+              <!--stat icon-->
+              <p class="icon">🦄</p>
+              <!--stat name-->
+              <h3>Mane & Tail:</h3>
+              <!--Rating-->
+              <p class="rating">Soft Radiance</p>
+            </div>
+
+            <!--Personality-->
+            <div class="stat personality">
+              <!--stat icon-->
+              <p class="icon">&#128522</p>
+              <!--stat name-->
+              <h3>Personality:</h3>
+              <!--Rating-->
+              <p class="rating">Majestic</p>
+            </div>
+
+            <!--Rarity-->
+            <div class="stat rarity">
+              <!--stat icon-->
+              <p class="icon">&#128142</p>
+              <!--stat name-->
+              <h3>Rarity:</h3>
+              <!--Rating-->
+              <p class="rating">Rare</p>
+            </div>
+          </div>
+
+          <!--Buttons-->
+          <a
+            class="button button-book"
+            href="#booking-section"
+            id="button-book-aurora-mist"
+            onclick=bookUnicorn(this.id)
+          >
+            Book Now
+          </a>
+          <button
+            id="button-info-aurora-mist"
+            class="button button-more-info"
+            onclick=showInfo(this.id)
+          >
+            <a href="#gallery-section">Learn More</a>
+          </button>
+
+        </div>
+
+      </article>
+
+      <!--Card 5-->
+      <article
+        id="whisperwind"
+        class="unicorn-card"
+      >
+
+        <!--Image-->
+        <figure>
+          <img
+            src="./assets/whisperwind.png"
+            alt="Whisperwind"
+            class="shimmering-image"
+          >
+        </figure>
+
+        <div class="info-container">
+          <!--Name-->
+          <h2>Whisperwind</h2>
+
+          <!--short description-->
+          <p class="description">Whisperwind’s delicate steps and soft mane give her an air of gentle mystery. Known for
+            her quiet charm and soothing presence, she’s ideal for adding a peaceful, dreamlike atmosphere to any
+            occasion.</p>
+
+          <!--Stats container-->
+          <div class="stats-container">
+
+            <!--Magical aura-->
+            <div class="stat magical-aura">
+              <!--stat icon-->
+              <p class="icon">&#11088</p>
+              <!--stat name-->
+              <h3>Magical Aura:</h3>
+              <!--Rating-->
+              <p class="rating">Calm</p>
+            </div>
+
+            <!--Speed-->
+            <div class="stat speed">
+              <!--stat icon-->
+              <p class="icon">&#9889</p>
+              <!--stat name-->
+              <h3>Speed:</h3>
+              <!--Rating-->
+              <p class="rating">Elegant</p>
+            </div>
+
+            <!--Mane & Tail-->
+            <div class="stat mane-tail">
+              <!--stat icon-->
+              <p class="icon">🦄</p>
+              <!--stat name-->
+              <h3>Mane & Tail:</h3>
+              <!--Rating-->
+              <p class="rating">Soft Glow</p>
+            </div>
+
+            <!--Personality-->
+            <div class="stat personality">
+              <!--stat icon-->
+              <p class="icon">&#128522</p>
+              <!--stat name-->
+              <h3>Personality:</h3>
+              <!--Rating-->
+              <p class="rating">Quiet</p>
+            </div>
+
+            <!--Rarity-->
+            <div class="stat rarity">
+              <!--stat icon-->
+              <p class="icon">&#128142</p>
+              <!--stat name-->
+              <h3>Rarity:</h3>
+              <!--Rating-->
+              <p class="rating">Rare</p>
+            </div>
+          </div>
+
+          <!--Button-->
+          <a
+            class="button button-book"
+            href="#booking-section"
+            id="button-book-whisperwind"
+            onclick=bookUnicorn(this.id)
+          >
+            Book Now
+          </a>
+          <button
+            id="button-info-whisperwind"
+            class="button button-more-info"
+            onclick=showInfo(this.id)
+          >
+            <a href="#gallery-section">Learn More</a>
+          </button>
+
+        </div>
+
+      </article>
+
+      <!--Card 6-->
+      <article
+        id="sunshine-glow"
+        class="unicorn-card"
+      >
+
+        <!--Image-->
+        <figure>
+          <img
+            src="./assets/sunshine-glow.png"
+            alt="Sunshine Glow"
+            class="shimmering-image"
+          >
+        </figure>
+
+        <div class="info-container">
+          <!--Name-->
+          <h2>Sunshine Glow</h2>
+
+          <!--short description-->
+          <p class="description">Sunshine Glow lights up the day with her golden mane and cheerful energy. Always happy
+            and full of life, she’s the perfect unicorn to bring joy, laughter, and warmth to your event.</p>
+
+          <!--Stats container-->
+          <div class="stats-container">
+
+            <!--Magical aura-->
+            <div class="stat magical-aura">
+              <!--stat icon-->
+              <p class="icon">&#11088</p>
+              <!--stat name-->
+              <h3>Magical Aura:</h3>
+              <!--Rating-->
+              <p class="rating">Radiant</p>
+            </div>
+
+            <!--Speed-->
+            <div class="stat speed">
+              <!--stat icon-->
+              <p class="icon">&#9889</p>
+              <!--stat name-->
+              <h3>Speed:</h3>
+              <!--Rating-->
+              <p class="rating">Swift</p>
+            </div>
+
+            <!--Mane & Tail-->
+            <div class="stat mane-tail">
+              <!--stat icon-->
+              <p class="icon">🦄</p>
+              <!--stat name-->
+              <h3>Mane & Tail:</h3>
+              <!--Rating-->
+              <p class="rating">Golden Glow</p>
+            </div>
+
+            <!--Personality-->
+            <div class="stat personality">
+              <!--stat icon-->
+              <p class="icon">&#128522</p>
+              <!--stat name-->
+              <h3>Personality:</h3>
+              <!--Rating-->
+              <p class="rating">Cheerful</p>
+            </div>
+
+            <!--Rarity-->
+            <div class="stat rarity">
+              <!--stat icon-->
+              <p class="icon">&#128142</p>
+              <!--stat name-->
+              <h3>Rarity:</h3>
+              <!--Rating-->
+              <p class="rating">Common</p>
+            </div>
+          </div>
+
+          <!--Button-->
+          <a
+            class="button button-book"
+            href="#booking-section"
+            id="button-book-sunshine-glow"
+            onclick=bookUnicorn(this.id)
+          >
+            Book Now
+          </a>
+          <button
+            id="button-info-sunshine-glow"
+            class="button button-more-info"
+            onclick=showInfo(this.id)
+          >
+            <a href="#gallery-section">Learn More</a>
+          </button>
+
+        </div>
+
+      </article>
+
+      <!--Card 7-->
+      <article
+        id="midnight-mirage"
+        class="unicorn-card"
+      >
+
+        <!--Image-->
+        <figure>
+          <img
+            src="./assets/midnight-mirage.png"
+            alt="Midnight Mirage"
+            class="shimmering-image"
+          >
+        </figure>
+
+        <div class="info-container">
+          <!--Name-->
+          <h2>Midnight Mirage</h2>
+
+          <!--short description-->
+          <p class="description">Midnight Mirage is a stunning unicorn with a midnight-black coat that glows under the
+            stars. With her elegant demeanor and enchanting presence, she’s perfect for evening events full of mystery
+            and
+            magic.</p>
+
+          <!--Stats container-->
+          <div class="stats-container">
+
+            <!--Magical aura-->
+            <div class="stat magical-aura">
+              <!--stat icon-->
+              <p class="icon">&#11088</p>
+              <!--stat name-->
+              <h3>Magical Aura:</h3>
+              <!--Rating-->
+              <p class="rating">Enigmatic</p>
+            </div>
+
+            <!--Speed-->
+            <div class="stat speed">
+              <!--stat icon-->
+              <p class="icon">&#9889</p>
+              <!--stat name-->
+              <h3>Speed:</h3>
+              <!--Rating-->
+              <p class="rating">Sleek</p>
+            </div>
+
+            <!--Mane & Tail-->
+            <div class="stat mane-tail">
+              <!--stat icon-->
+              <p class="icon">🦄</p>
+              <!--stat name-->
+              <h3>Mane & Tail:</h3>
+              <!--Rating-->
+              <p class="rating">Moonlit Shine</p>
+            </div>
+
+            <!--Personality-->
+            <div class="stat personality">
+              <!--stat icon-->
+              <p class="icon">&#128522</p>
+              <!--stat name-->
+              <h3>Personality:</h3>
+              <!--Rating-->
+              <p class="rating">Elegant</p>
+            </div>
+
+            <!--Rarity-->
+            <div class="stat rarity">
+              <!--stat icon-->
+              <p class="icon">&#128142</p>
+              <!--stat name-->
+              <h3>Rarity:</h3>
+              <!--Rating-->
+              <p class="rating">Very Rare</p>
+            </div>
+          </div>
+
+          <!--Button-->
+          <a
+            class="button button-book"
+            href="#booking-section"
+            id="button-book-midnight-mirage"
+            onclick=bookUnicorn(this.id)
+          >
+            Book Now
+          </a>
+          <button
+            id="button-info-midnight-mirage"
+            class="button button-more-info"
+            onclick=showInfo(this.id)
+          >
+            <a href="#gallery-section">Learn More</a>
+          </button>
+
+        </div>
+
+      </article>
+
+    </article>
+
+  </section>
+
+  <!-- Booking form section --------------------------------->
+  <section
+    class="form-section"
+    id="booking-section"
+  >
+
+    <div class="section-heading">
+      <h2>Book a Unicorn</h2>
+      <hr>
+    </div>
+
+    <form
+      action="http://httpbin.org/anything"
+      method="POST"
+    >
+      <!-- Personal info: Name, email, phone number-->
+      <fieldset class="personal-info">
+        <legend>Personal information</legend>
+
+        <div class="full-name-wrapper">
+          <h3>Full Name</h3>
+          <div class="wrapper-column">
+            <input
+              type="text"
+              name="first-name"
+              id="first-name"
+              required
+            >
+            <label for="first-name">First Name</label>
+          </div>
+          <div class="wrapper-column">
+            <input
+              type="text"
+              name="last-name"
+              id="last-name"
+              required
+            >
+            <label for="last-name">Last Name</label>
+          </div>
+        </div>
+
+        <div class="contact-info-wrapper">
+          <h3>Contact Information</h3>
+          <div class="wrapper-column">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="example@email.com"
+              required
+            >
+            <label for="email">Email</label>
+          </div>
+          <div class="wrapper-column">
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              placeholder="070-123 45 67"
+              pattern="[0-9]{3}-[0-9]{3} [0-9]{2} [0-9]{2}"
+            >
+            <label for="phone">Phone Number</label>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- Rental details: date, time, unicorn, special requests -->
+      <fieldset class="rental-details">
+        <legend>Rental Details</legend>
+
+        <div class="unicorn-wrapper">
+          <label for="unicorn-select">Select your preferred unicorn</label>
+          <select
+            name="unicorn"
+            id="unicorn-select"
+          >
+            <option value="starlight-sparkle">Starlight Sparkle</option>
+            <option value="rainbow-dream">Rainbow Dream</option>
+            <option value="moonshadow">Moonshadow</option>
+            <option value="aurora-mist">Aurora Mist</option>
+            <option value="whisperwind">Whisperwind</option>
+            <option value="sunshine-glow">Sunshine Glow</option>
+            <option value="midnight-mirage">Midnight Mirage</option>
+          </select>
+        </div>
+
+        <div class="date-time-wrapper">
+          <h3>Booking date and time</h3>
+
+          <div class="date-wrapper">
+            <div class="wrapper-column">
+              <label for="date">Date</label>
+              <input
+                type="date"
+                name="date"
+                id="date"
+                required
+              >
+            </div>
+          </div>
+
+          <div class="time-wrapper">
+            <span>
+              <label for="start-time">from</label>
+              <input
+                type="time"
+                name="start-time"
+                id="start-time"
+                placeholder="HH:MM"
+              >
+            </span>
+            <span>
+              <label for="end-time">to</label>
+              <input
+                type="time"
+                name="end-time"
+                id="end-time"
+              >
+            </span>
+            <div class="checkbox-wrapper">
+              <input
+                type="checkbox"
+                name="full-day"
+                id="full-day"
+              >
+              <label for="full-day">Full day</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="special-requests-wrapper">
+          <label for="special-requests">Special Requests</label>
+          <input
+            type="text"
+            name="special-requests"
+            id="special-requests"
+          >
+        </div>
+
+        <div class="add-on-wrapper">
+          <p>Do you want to add unicorn-themed party accessories?</p>
+          <div class="wrapper-row">
+            <label class="radiobutton-wrapper">
+              <input
+                type="radio"
+                name="add-on"
+                value="yes"
+                checked
+              >
+              Yes
+            </label>
+            <label class="radiobutton-wrapper">
+              <input
+                type="radio"
+                name="add-on"
+                value="no"
+              >
+              No
+            </label>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- Booking confirmation -->
+      <fieldset class="confirmation">
+        <legend>Confirmation</legend>
+
+        <div class="checkbox-wrapper">
+          <input
+            type="checkbox"
+            name="agreement"
+            id="agreement"
+            required
+          >
+          <label for="agreement">Agree on our terms and conditions.</label>
+        </div>
+
+        <button
+          id="submit-button"
+          type="submit"
+        >Submit</button>
+      </fieldset>
+
+    </form>
+  </section>
+
+  <!-- Footer --------------------------------------->
+  <footer>
+    <p>Created by Mimmi Eriksson</p>
+  </footer>
+
+  <script src="./script.js"></script>
+
+</body>
+
+</html>
