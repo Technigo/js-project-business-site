@@ -1,1 +1,3 @@
-# js-project-business-site
+Link to netlify: earthenexpressions.netlify.app
+
+
