@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #D9D9D9;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #E6DDCA;
+}
+
+.site-title {
+  color: black;
+  font-size: 1.2rem;
+  margin: 20px 30px;
+  font-weight: bolder;
+  text-decoration: none;
+  transition: ease .3s;
+}
+
+.site-title:hover {
+  transform: scale(102%);
+  color: rgb(59, 61, 76);
+}
+
+.nav-links {
+  display: none;
+}
+
+nav button {
+  border: none;
+  background-color: #E6DDCA;
+  font-size: 2rem;
+  margin: 0 30px;
+}
+
+main {
+  display: grid;
+  /* grid-template-columns: repeat(4, 1fr); */
+  /* width: 100%; */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin: 100px 300px;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 3rem;
+  margin-top: 80px;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  /* border: solid red 2px; */
+}
+
+/* Image highlighted by scale and color */
+.image-container:hover {
+  transform: scale(1.02);
+  background-color: rgb(195, 195, 195);
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+/* Image highlighted by scale */
+.image-container:hover img {
+  transform: scale(1.02);
+  transition: transform 0.3s ease-in-out
+}
+
+.image-container {
+  height: 400px;
+  width: 300px;
+  background-color: rgb(187, 187, 187);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  /* border: solid green 3px; */
+  display: flex;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  object-fit: cover;
+
+}
+
+.item-text {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  /* border: solid blue 3px; */
+  width: 100%;
+}
+
+.item-btn {
+  border-radius: 20px;
+  font-size: 1rem;
+  height: 40px;
+  border: none;
+  background-color: #C1B2C8;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.);
+  transition: ease .3s;
+}
+
+.item-btn:hover {
+  box-shadow: none;
+  transform: scale(1.05);
+}
+
+.item-title {
+  margin: 25px 0 0 0;
+}
+
+.item-description {
+  margin: 15px 0 25px 0;
+}
+
+/*
+inpo
+https://www.klattermusen.com/sv-se/men/shop-all-jackets/
+ */

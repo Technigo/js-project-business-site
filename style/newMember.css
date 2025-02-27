@@ -1,0 +1,407 @@
+/* ----- Phone viewport --- Manual Fold ----- */
+
+/* ----- Basic --- Manual Fold ----- */
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #E6DDCA;
+  --primary-color-hover: #f5ecd8;
+  --secondary-color: #D9D9D9;
+  --complementary-color: #C1B2C8;
+  --complementary-color-hover: #C1B2C8;
+  --primary-font-color: black;
+  --primary-font-color-hover: rgb(44, 44, 44);
+  --primary-font-color-fixed: black;
+  --secondary-font-color: white;
+  --secondary-font-color-fixed: white;
+  --dark-color: rgb(164, 164, 164);
+}
+
+.dark-mode {
+  --primary-color: #2b3246;
+  --primary-color-hover: #3c445b;
+  --secondary-color: #324539;
+  --complementary-color: #5e486a;
+  --complementary-color-hover: #6b5178;
+  --primary-font-color: white;
+  --primary-font-color-hover: rgb(202, 202, 202);
+  --secondary-font-color: black;
+  --dark-color: rgb(40, 40, 40);
+}
+
+body {
+  background-color: var(--secondary-color);
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 60px;
+  color: var(--primary-font-color);
+  pad
+}
+
+.submit-button {
+  font-size: 1.5rem;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--complementary-color);
+  color: var(--primary-font-color);
+  padding: 12px;
+  transition: transform ease 0.3s, background-color ease 0.3s;
+}
+
+button:hover {
+  background-color: var(--complementary-color-hover);
+  transform: scale(1.05);
+}
+
+p {
+  text-align: center;
+  margin: 40px 10px 20px 10px;
+}
+
+a {
+  color: var(--primary-font-color-fixed);
+}
+
+/* ----- Nav Bar --- Manual Fold -----  */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  background-color: var(--primary-color);
+  height: 60px;
+  top: 0;
+  transition: 0.2s ease-in-out,
+    color 0.2s ease-in-out;
+}
+
+.site-title {
+  color: var(--primary-font-color);
+  font-size: 1.6rem;
+  margin: 20px;
+  font-weight: bolder;
+  text-decoration: none;
+  transition: ease .3s;
+}
+
+.site-title:hover {
+  transform: scale(102%);
+  color: var(--primary-font-color-hover);
+}
+
+.nav-links {
+  display: none;
+}
+
+nav button {
+  border: none;
+  color: var(--primary-font-color);
+  background-color: var(--primary-color);
+  font-size: 1.8rem;
+  margin: 0 30px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.hamburger {
+  margin: 20px;
+}
+
+.burger-icon-line {
+  height: 3px;
+  width: 25px;
+  background-color: var(--primary-font-color);
+  margin: 5px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.line-01 {
+  transform: translateY(8px);
+}
+
+.line-03 {
+  transform: translateY(-8px);
+}
+
+/* ----- Nav expand --- Manual Fold -----  */
+.nav-burger-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100dvh;
+  width: 100vw;
+  transform: translateY(-100%);
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.nav-burger-menu.open {
+  transform: translateY(0%);
+}
+
+.nav-burger-row {
+  margin: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.nav-burger-row:hover,
+.nav-burger-row:hover button {
+  background-color: var(--primary-color-hover);
+}
+
+.nav-burger-arrow {
+  color: var(--primary-font-color);
+  font-size: 1.5rem;
+  margin: 25px 50px;
+}
+
+
+.theme-button {
+  position: absolute;
+  justify-content: center;
+  bottom: 35px;
+  width: 100%;
+  display: flex;
+}
+
+.theme-button button:hover {
+  background-color: #3b415c;
+  transform: scale(1.02);
+}
+
+.theme-button img {
+  height: 55px;
+  width: 55px;
+  padding: 12px;
+  background-color: var(--dark-color);
+  border-radius: 50px;
+  border-radius: 50px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.dark {
+  display: block;
+
+}
+
+.light {
+  display: none;
+}
+
+/* ----- Side image --- Manual Fold ----- */
+.side-img {
+  display: none;
+}
+
+/* ----- Form --- Manual Fold ----- */
+h1 {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 550;
+  margin: 40px 0;
+
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  width: 70%;
+}
+
+span {
+  margin: 0 10px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  font-size: 1.3rem;
+  margin: 20px 0;
+}
+
+input {
+  border: none;
+  margin: 5px;
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  width: 100%;
+  background-color: white;
+}
+
+.checkbox-label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  margin: 15px 0 40px 0;
+}
+
+.check-box {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+}
+
+
+::placeholder {
+  color: rgb(168, 168, 168);
+  font-style: italic;
+}
+
+/* ipad viewport */
+@media (min-width: 667px) and (max-width: 1023px) {
+
+  /* ----- Nav --- Manual Fold -----  */
+  nav {
+    height: 80px;
+  }
+
+  nav h3 {
+    font-size: 1.5rem;
+  }
+
+  .site-title {
+    font-size: 2rem;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    height: 80px;
+  }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: clamp(30px, 55px, 100px);
+  }
+
+  .nav-links {
+    display: block;
+    font-size: 1.4rem;
+    margin: 0;
+    transition: ease .3s;
+  }
+
+  .nav-links:hover {
+    color: var(--primary-font-color-hover);
+    transform: scale(105%);
+  }
+
+  .nav-login {
+    background-color: var(--complementary-color);
+    height: 50px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-login:hover {
+    background-color: var(--complementary-color-hover);
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
+
+
+/* Deskop Viewport */
+@media (min-width: 1024px) {
+
+  /* ----- Basic --- Manual Fold ----- */
+  main {
+    display: flex;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin: 80px 0 60px 0;
+  }
+
+  /* ----- nav bar --- Manual Fold ----- */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+  }
+
+  .site-title {
+    font-size: 2.2rem;
+  }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+  }
+
+  .nav-links {
+    display: block;
+    font-size: 1.6rem;
+    margin: 0;
+    transition: ease .3s;
+  }
+
+  .nav-links:hover {
+    color: rgb(92, 92, 92);
+    transform: scale(105%);
+  }
+
+  .nav-login {
+    background-color: #f8f5ef;
+    height: 50px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  /* ----- Side image --- Manual Fold ----- */
+  .side-img {
+    display: block;
+    height: 100dvh;
+  }
+
+  /* ----- form --- Manual Fold ----- */
+  form {
+    margin: 0 auto;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+  }
+
+}

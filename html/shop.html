@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style/shop.css">
+  <title>shop
+  </title>
+</head>
+
+<body id="body">
+
+  <!----- Nav expand --- Manual Fold  ----->
+  <nav id="burger-menu" class="nav-burger-menu">
+    <div class="nav-burger-row">
+      <button class="nav-links-phone">Events</button>
+      <p class="nav-burger-arrow">&#8594;</p>
+    </div>
+    <div class="nav-burger-row" id="burger-row-shop">
+      <button class="nav-links-phone" id="shopBtn2">Shop</button>
+      <p class="nav-burger-arrow">&#8594;</p>
+    </div>
+    <div class="nav-burger-row">
+      <button class="nav-links-phone">Log in</button>
+      <p class="nav-burger-arrow">&#8594;</p>
+    </div>
+    <!-- Dark mode -->
+    <div class="theme-button" id="dark-mode">
+      <img class="dark" id="dark" src="../icons/darkmode.svg" alt="dark mode toggle">
+      <img class="light" id="light" src="../icons/lightmode.svg" alt="light mode toggle">
+    </div>
+  </nav>
+
+  <!----- Nav bar --- Manual Fold  ----->
+  <nav>
+    <a href="../index.html" class="site-title">Boulder Zone</a>
+    <div class="nav-right">
+      <button class="nav-links">Events</button>
+      <button class="nav-links" id="shopBtn">Shop</button>
+      <button class="nav-links nav-login">LOG IN</button>
+      <div class="hamburger" id="burger-button">
+        <!-- Burger icon -->
+        <div class="burger-icon-line" id="burger-line-01"></div>
+        <div class="burger-icon-line line-02"></div>
+        <div class="burger-icon-line" id="burger-line-03"></div>
+      </div>
+      <!-- This is only for phone view -->
+    </div>
+  </nav>
+
+  <!----- Title --- Manual Fold  ----->
+  <h1 class="page-title">Shop</h1>
+
+  <!----- Pop Up Item --- Manual Fold  ----->
+  <aside id="popUpProduct" class="pop-up-product">
+    <div class="exit-container">
+      <button id="exitBtn" class="exit-btn">X</button>
+    </div>
+    <h2 id="popUpTitle" class="pop-up-title">Item text</h2>
+    <div class="pop-up-price">
+      <h3>Price:</h3>
+      <p>250 kr</p>
+    </div>
+    <form action="http://httpbin.org/anything" method="post">
+      <fieldset class="temp1">
+        <label>
+          <div class="span-container">
+            <span>Size:</span>
+          </div>
+          <div class="select-container" select-container>
+            <select name="size">
+              <option value="small">Small</option>
+              <option value="medium">Medium</option>
+              <option value="large">Large</option>
+              <option value="XL">XL</option>
+            </select>
+          </div>
+        </label>
+        <label>
+          <div class="span-container">
+            <span>color:</span>
+          </div>
+          <div class="select-container" select-container>
+            <select name="color">
+              <option value="green">Green</option>
+              <option value="red">Red</option>
+              <option value="orage">Orange</option>
+              <option value="blue">Blue</option>
+            </select>
+          </div>
+        </label>
+        <label>
+          <div class="span-container">
+            <span>Items:</span>
+          </div>
+          <div class="select-container" select-container>
+            <input type="number" name="quantity" value="1">
+          </div>
+        </label>
+      </fieldset>
+      <button class="add-to-cart-btn" type="submit">Add to cart</button>
+    </form>
+  </aside>
+
+  <main>
+
+    <!----- All Items --- Manual Fold  ----->
+
+    <!----- Item 1 --- Manual Fold  ----->
+    <article class="items shirt">
+      <div class="image-container">
+        <img src="../img/shirt-02.webp" alt="">
+      </div>
+
+      <div class="item-text">
+        <h3 class="item-title">Fulu Climbing</h3>
+        <p class="item-description">This is a great shirt for climbing</p>
+        <button id="item01Btn" class="item-btn">Add to basket</button>
+      </div>
+    </article>
+
+    <!----- Item 2 --- Manual Fold  ----->
+    <article class="items shirt">
+      <div class="image-container">
+        <img src="../img/shirt-03.webp" alt="">
+      </div>
+      <div class="item-text">
+        <h3 class="item-title">Rock Climbing</h3>
+        <p class="item-description">This is a great shirt for climbing</p>
+        <button id="item02Btn" class="item-btn">Add to basket</button>
+      </div>
+    </article>
+
+    <!----- Item 3 --- Manual Fold  ----->
+    <article class="items shirt">
+      <div class="image-container">
+        <img src="../img/shirt-01.webp" alt="">
+      </div>
+      <div class="item-text">
+        <h3 class="item-title">La Sportiva Tracer</h3>
+        <p class="item-description">This is a great shirt for climbing</p>
+        <button id="item03Btn" class="item-btn">Add to basket</button>
+      </div>
+    </article>
+
+    <!----- Item 4 --- Manual Fold  ----->
+    <article class="items pants">
+      <div class="image-container">
+        <img src="../img/pants1.webp" alt="">
+      </div>
+      <div class="item-text">
+        <h3 class="item-title">Ripstop Voyger</h3>
+        <p class="item-description">These are great pants for climbing</p>
+        <button id="item04Btn" class="item-btn">Add to basket</button>
+      </div>
+    </article>
+
+    <!----- Item 5 --- Manual Fold  ----->
+    <article class="items pants">
+      <div class="image-container">
+        <img src="../img/pants2.webp" alt="">
+      </div>
+      <div class="item-text">
+        <h3 class="item-title">Hiking Patrol</h3>
+        <p class="item-description">These are great pants for climbing</p>
+        <button id="item05Btn" class="item-btn">Add to basket</button>
+      </div>
+    </article>
+
+    <!----- Item 6 --- Manual Fold  ----->
+    <article class="items pants">
+      <div class="image-container">
+        <img src="../img/pants3.webp" alt="">
+      </div>
+      <div class="item-text">
+        <h3 class="item-title">Peachell Technical</h3>
+        <p class="item-description">These are great pants for climbing</p>
+        <button id="item06Btn" class="item-btn">Add to basket</button>
+      </div>
+    </article>
+
+    <!----- Item 7 --- Manual Fold  ----->
+    <article class="items shoe">
+      <div class="image-container">
+        <img src="../img/shoe2.webp" alt="">
+      </div>
+      <div class="item-text">
+        <h3 class="item-title">La Sportiva - Miura</h3>
+        <p class="item-description">These are great shoes for climbing</p>
+        <button id="item07Btn" class="item-btn">Add to basket</button>
+      </div>
+    </article>
+
+    <!----- Item 8 --- Manual Fold  ----->
+    <article class="items shoe">
+      <div class="image-container">
+        <img src="../img/shoe3.webp" alt="">
+      </div>
+      <div class="item-text">
+        <h3 class="item-title">La Sportiva Miura </h3>
+        <p class="item-description">These are great shoes for climbing</p>
+        <button id="item08Btn" class="item-btn">Add to basket</button>
+      </div>
+    </article>
+
+    <!----- Item  --- Manual Fold  ----->
+    <article class="items shoe">
+      <div class="image-container">
+        <img src="../img/shoe4.webp" alt="">
+      </div>
+      <div class="item-text">
+        <h3 class="item-title">La Sportiva Tarantula</h3>
+        <p class="item-description">These are great shoes for climbing</p>
+        <button id="item09Btn" class="item-btn">Add to basket</button>
+      </div>
+    </article>
+
+
+  </main>
+
+</body>
+
+<script src="../script/itemScript.js"></script>
+
+</html>

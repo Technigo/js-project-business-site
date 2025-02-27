@@ -1,0 +1,728 @@
+/* ----- Phone viewport --- Manual Fold -----  */
+
+/* ----- Basics --- Manual Fold -----  */
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #E6DDCA;
+  --primary-color-hover: #f5ecd8;
+  --secondary-color: #B2B9C8;
+  --complementary-color: #C1B2C8;
+  --complementary-color-hover: #C1B2C8;
+  --primary-font-color: black;
+  --primary-font-color-hover: rgb(44, 44, 44);
+  --primary-font-color-fixed: black;
+  --secondary-font-color: white;
+  --secondary-font-color-fixed: white;
+  --dark-color: rgb(164, 164, 164);
+}
+
+.dark-mode {
+  --primary-color: #2b3246;
+  --primary-color-hover: #3c445b;
+  --secondary-color: #324539;
+  --complementary-color: #5e486a;
+  --complementary-color-hover: #6b5178;
+  --primary-font-color: white;
+  --primary-font-color-hover: rgb(202, 202, 202);
+  --secondary-font-color: black;
+  --dark-color: rgb(40, 40, 40);
+}
+
+body {
+  margin: 0;
+  background-color: var(--primary-color);
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 60px;
+
+  /* Adjust to match the nav height */
+}
+
+main {
+  color: var(--primary-font-color);
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+.section-imgs {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0px 0px 0px 0px;
+}
+
+/* ----- Nav Bar --- Manual Fold -----  */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  background-color: var(--primary-color);
+  height: 60px;
+  /* Set a fixed height */
+  top: 0;
+  transition: 0.2s ease-in-out,
+    color 0.2s ease-in-out;
+  /* Ensures it stays at the top */
+}
+
+.site-title {
+  color: var(--primary-font-color);
+  font-size: 1.6rem;
+  margin: 20px;
+  font-weight: bolder;
+  text-decoration: none;
+  transition: ease .3s;
+}
+
+.site-title:hover {
+  transform: scale(102%);
+  color: var(--primary-font-color-hover);
+}
+
+.nav-links {
+  display: none;
+}
+
+nav button {
+  border: none;
+  color: var(--primary-font-color);
+  background-color: var(--primary-color);
+  font-size: 1.8rem;
+  margin: 0 30px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.hamburger {
+  margin: 20px;
+}
+
+.burger-icon-line {
+  height: 3px;
+  width: 25px;
+  background-color: var(--primary-font-color);
+  margin: 5px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.line-01 {
+  transform: translateY(8px);
+}
+
+.line-03 {
+  transform: translateY(-8px);
+}
+
+/* ----- Nav expand --- Manual Fold -----  */
+.nav-burger-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100dvh;
+  width: 100vw;
+  transform: translateY(-100%);
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.nav-burger-menu.open {
+  transform: translateY(0%);
+}
+
+.nav-burger-row {
+  /* border: solid red 2px; */
+  margin: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  /* border-bottom: solid black 1px; */
+  transition: background-color 0.2s ease-in-out;
+}
+
+.nav-burger-row:hover,
+.nav-burger-row:hover button {
+  background-color: var(--primary-color-hover);
+}
+
+.nav-burger-arrow {
+  color: var(--primary-font-color);
+  font-size: 1.5rem;
+  margin: 25px 50px;
+}
+
+
+.theme-button {
+  position: absolute;
+  justify-content: center;
+  bottom: 35px;
+  width: 100%;
+  display: flex;
+}
+
+.theme-button button:hover {
+  background-color: #3b415c;
+  transform: scale(1.02);
+}
+
+.theme-button img {
+  height: 55px;
+  width: 55px;
+  padding: 12px;
+  background-color: var(--dark-color);
+  border-radius: 50px;
+  border-radius: 50px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.dark {
+  display: block;
+
+}
+
+.light {
+  display: none;
+}
+
+/* ----- Hero --- Manual Fold -----   */
+.hero-container {
+  position: relative;
+}
+
+.hero-img {
+  width: 100%;
+  filter: brightness(65%);
+}
+
+.hero-text {
+  color: var(--secondary-font-color-fixed);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  text-align: center;
+  padding: 30px;
+  border-radius: 10px;
+
+}
+
+.hero-description-text h2 {
+  margin: 10px;
+  font-size: clamp(1.5rem, 5vw, 5rem);
+}
+
+.hero-description-text p {
+  margin: 10px;
+  font-size: clamp(1rem, 3vw, 5rem);
+}
+
+.member-container p {
+  font-size: .8rem;
+  font-weight: bolder;
+  font-size: clamp(1rem, 3vw, 5rem);
+}
+
+.member-container button {
+  font-size: 1rem;
+  padding: 4px 12px;
+  background-color: var(--complementary-color);
+  color: var(--primary-font-color);
+  border: none;
+  border-radius: 5px;
+  transition: ease .5s;
+}
+
+.member-container button:hover {
+  background-color: var(--complementary-color);
+  transform: scale(102%);
+}
+
+/* ----- About --- Manual Fold -----  */
+.pre-about-subtitle {
+  font-weight: 300;
+  margin: 0px 0px 30px 0px;
+  font-size: 1rem;
+  grid-column: span 2;
+}
+
+.pre-about-title {
+  margin: 15px 0px 0px 0px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  grid-column: span 2;
+
+}
+
+.pre-about {
+  color: var(--primary-font-color);
+  text-align: center;
+  margin: 40px 10px 30px 10px;
+  padding: 0px 10px;
+}
+
+.pre-about h2 {
+  margin: 0 0 15px 0;
+}
+
+.about-us {
+  color: var(--secondary-font-color-fixed);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: center;
+  gap: 12px;
+  margin: 20px;
+}
+
+.about-container {
+  border-radius: 5px;
+  padding: 18px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  padding: 10px;
+  transition: ease .5s;
+}
+
+.img-box {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  border-radius: 10px;
+}
+
+.about-text {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.about-text p {
+  width: 80%;
+}
+
+.about-text h3 {
+  display: none;
+  width: 80%;
+  line-height: 40px;
+  margin: 20px 0 10px 0;
+}
+
+/* ----- Prices --- Manual Fold -----  */
+.prices {
+  text-align: center;
+  background-color: var(--complementary-color);
+  margin: 70px 0px 0px 0px;
+  padding: 25px;
+  padding-bottom: 50px;
+}
+
+/* ----- Opten times --- Manual Fold -----  */
+.hours {
+  text-align: center;
+  padding: 25px 0px 10px 0px;
+}
+
+/* ----- Contact --- Manual Fold -----  */
+.contact {
+  text-align: center;
+  background-color: var(--secondary-color);
+  margin: 42px 0px 0px 0px;
+  padding: 25px;
+}
+
+/* ----- Location --- Manual Fold -----  */
+.location {
+  text-align: center;
+  color: var(--secondary-font-color-fixed);
+  background-color: #050505;
+  padding: 25px;
+}
+
+.map {
+  display: none;
+}
+
+
+/* Mini phone viewport */
+@media (min-width: 0px) and (max-width: 400px) {
+
+  /* ----- Basics --- Manual Fold -----  */
+  .site-title {
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: .6rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* ----- Hero --- Manual Fold -----  */
+  .climb-container p {
+    margin: 0;
+    padding: 0;
+  }
+
+  .hero-description-text h2 {
+    margin: 10px;
+    font-size: clamp(1.5rem, 3vw, 5rem);
+  }
+
+  .hero-description-text p {
+    margin: 10px;
+    font-size: clamp(.6rem, 3vw, 5rem);
+  }
+
+  .member-container p {
+    font-size: .8rem;
+    font-weight: bolder;
+    font-size: clamp(.6rem, 3vw, 4rem);
+  }
+
+  /* ----- About --- Manual Fold -----  */
+  .about-us {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .about-text p {
+    font-size: 1.2rem;
+  }
+
+}
+
+/* iPad viewport */
+@media (min-width: 667px) and (max-width: 1024px) {
+
+  /* ----- Basics --- Manual Fold -----  */
+  p {
+    font-size: 1.4rem;
+  }
+
+  /* ----- Nav --- Manual Fold -----  */
+  nav {
+    height: 80px;
+  }
+
+  nav h3 {
+    font-size: 1.5rem;
+  }
+
+  .site-title {
+    font-size: 2rem;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    height: 80px;
+  }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: clamp(30px, 55px, 100px);
+  }
+
+  .nav-links {
+    display: block;
+    font-size: 1.4rem;
+    margin: 0;
+    transition: ease .3s;
+  }
+
+  .nav-links:hover {
+    color: var(--primary-font-color-hover);
+    transform: scale(105%);
+  }
+
+  .nav-login {
+    background-color: var(--complementary-color);
+    height: 50px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-login:hover {
+    background-color: var(--complementary-color-hover);
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  /* ----- Hero --- Manual Fold -----  */
+  .hero-description-text h2 {
+    font-size: clamp(2rem, 4vw, 5rem);
+    /* font-size: 2rem; */
+  }
+
+  .climb-container p {
+    margin: 50px;
+  }
+
+  .member-container p {
+    font-size: 1.2rem;
+    font-weight: bolder;
+  }
+
+  .member-container button {
+    font-size: 1.5rem;
+    padding: 10px 22px;
+  }
+
+  /* ----- About --- Manual Fold -----  */
+  .pre-about {
+    margin: 60px 0px;
+  }
+
+  .pre-about-title {
+    font-size: 1.8rem;
+    margin: 0 0 400px 0;
+  }
+
+  .pre-about-subtitle {
+    font-size: 1.4rem;
+  }
+}
+
+/* desktop viewport */
+@media (min-width: 1024px) {
+
+  /* ----- Basic --- Manual Fold -----  */
+  p {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+  }
+
+  .section-imgs {
+    max-height: 600px;
+    object-fit: cover;
+  }
+
+  /* ----- Nav --- Manual Fold -----  */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    height: 80px;
+  }
+
+  .site-title {
+    /* font-size: 2.2rem; */
+  }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+  }
+
+  .nav-links {
+    display: block;
+    font-size: 1.6rem;
+    margin: 0;
+    transition: ease .3s;
+  }
+
+  .nav-links:hover {
+    color: var(--primary-font-color-hover);
+    transform: scale(105%);
+  }
+
+  .nav-login {
+    background-color: var(--complementary-color);
+    height: 50px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-login:hover {
+    background-color: var(--complementary-color-hover);
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  /* ----- Hero --- Manual Fold -----  */
+  .hero-img {
+    max-height: 600px;
+    object-fit: cover;
+  }
+
+  .hero-description-text h2 {
+    font-size: clamp(2.5rem, 3vw, 6rem);
+    /* font-size: 2rem; */
+    margin: 0 0 40px 0;
+  }
+
+  .hero-description-text p {
+    margin: 10px;
+    font-size: clamp(1.5rem, 2vw, 5rem);
+  }
+
+  .member-container p {
+    font-size: .8rem;
+    font-weight: bolder;
+    font-size: clamp(1.5rem, 2vw, 5rem);
+  }
+
+  .member-container p {
+    font-size: 1.5rem;
+    font-weight: bolder;
+  }
+
+  .member-container button {
+    font-size: 2rem;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 5px;
+    transition: ease .5s;
+  }
+
+  /* ----- About --- Manual Fold -----  */
+  .about-us {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .about-text h3 {
+    display: block;
+    font-size: 1.8rem;
+    width: 80%;
+    line-height: 40px;
+    margin: 20px 0 10px 0;
+  }
+
+  .about-text p {
+    font-size: 1.8rem;
+  }
+
+  .pre-about {
+    margin: 70px 0px;
+  }
+
+  .pre-about-title {
+    font-size: 2rem;
+    margin: 0 0 400px 0;
+  }
+
+  .pre-about-subtitle {
+    font-size: 1.6rem;
+  }
+
+  .about-container:Hover {
+    transform: scale(102%);
+  }
+
+  /* ----- Prices --- Manual Fold -----  */
+  .prices {
+    text-align: center;
+    margin: 70px 0px 0px 0px;
+    padding: 25px;
+    padding-bottom: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .prices-title {
+    grid-column: span 3;
+
+  }
+
+  .prices-text-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+  }
+
+  .prices-text-2 {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .prices-text-1 p {
+    margin: 10px 30px;
+    text-align: right;
+  }
+
+  .prices-text-2 p {
+    margin: 10px 30px;
+    text-align: center;
+  }
+
+  .prices-text-3 p {
+    margin: 10px 30px;
+    text-align: left;
+  }
+
+  /* ----- Location --- Manual Fold -----  */
+  .location {
+    padding: 80px 0;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+  }
+
+  .locationText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .ourLocation {
+    font-weight: bolder;
+    font-size: 2.1rem;
+  }
+
+  .locationText p {
+    line-height: 45px;
+    margin: 15px;
+  }
+
+  .adress {
+    font-size: 1.7rem;
+  }
+
+  .map {
+    display: block;
+    margin: 50px;
+  }
+
+}
