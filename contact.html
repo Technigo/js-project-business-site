@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="styles.css" />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com">
+    <link
+      rel="preconnect"
+      crossorigin
+      href="https://fonts.gstatic.com">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet">
+    <title>Contact Kaffe Colombia Express</title>
+  </head>
+  <body class="contact-page">
+    <div class="main_container">
+      <nav class="navbar">
+        <div class="colombiaflag">
+          <div class="yellow"></div>
+          <div class="blue"></div>
+          <div class="red"></div>
+        </div>
+        <h1 class="titel">KAFFE COLOMBIA EXPRESS</h1>
+        <!-- Mobile toggle: placed before the hamburger icon -->
+        <img
+          id="dark-mode-toggle-mobile"
+          src="moon.svg"
+          alt="Toggle Dark Mode"
+          class="dark-mode-toggle-mobile">
+        <!-- Hamburger icon -->
+        <div
+        id="menu-icon"
+        class="menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+        <!-- Navigation links with Desktop toggle at the end -->
+      <div
+        id="nav-links"
+        class="nav-links">
+          <a href="./index.html">home</a>
+          <a href="#">about us</a>
+          <a href="./menu.html">menu</a>
+          <a href="#">products</a>
+          <img id="dark-mode-toggle-desktop"
+            src="moon.svg"
+            alt="Toggle Dark Mode"
+            class="dark-mode-toggle-desktop">
+        </div>
+      </nav>
+      <!-- Hero section with background image -->
+      <section class="hero">
+        <!-- Background image -->
+        <img
+          src="./kaffecolombia02.jpg"
+          alt="Background image of Kaffe Colombia Express"
+          class="background-image" />
+        <section class="cards-container">
+          <div class="card">
+            <form
+              action="http://httpbin.org/anything"
+              method="POST"
+              class="contact-form">
+              <label for="fullname">Full Name *</label>
+              <input
+                required
+                type="text"
+                id="fullname"
+                name="fullname">
+              <label for="tel">Phone Number:</label>
+              <input
+                type="tel"
+                id="tel"
+                name="tel">
+              <label for="email">E-Mail *</label>
+              <input
+                required
+                type="email"
+                id="email"
+                name="email">
+              <fieldset class="inquiry-type">
+                <legend>Inquiry Type:</legend>
+                <label>
+                  <input
+                    type="radio"
+                    name="inquiry"
+                    value="general">
+                  General Question
+                </label>
+                <label>
+                  <input
+                    type="radio"
+                    name="inquiry"
+                    value="order">
+                  Order Inquiry
+                </label>
+                <label>
+                  <input
+                    type="radio"
+                    name="inquiry"
+                    value="product">
+                  Product Availability
+                </label>
+              </fieldset>
+              <label for="message">Message *</label>
+              <textarea
+                required
+                id="message"
+                name="message"></textarea>
+              <div class="newsletter">
+                <input
+                  type="checkbox"
+                  id="newsletter"
+                  name="newsletter"
+                  value="subscribe">
+                <label for="newsletter">
+                  Subscribe to our newsletter for updates and special offers.
+                </label>
+              </div>
+              <div class="policy-terms-of-use">
+                <input
+                  type="checkbox"
+                  id="policy-terms-of-use"
+                  name="policy-terms-of-use"
+                  value="accepted"
+                  required>
+                <label for="policy-terms-of-use">
+                  I agree to the&nbsp;<a href="./terms_of_use.html">Terms of Use</a>&nbsp;and&nbsp; 
+                  <a href="./policy.html">Privacy Policy</a>.
+                </label>
+              </div>
+              <button
+                type="submit"
+                class="submit-button">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </section>
+      </section>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
