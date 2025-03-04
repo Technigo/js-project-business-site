@@ -1,0 +1,469 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  font-family: "Inter", serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+body a,
+ul,
+li {
+  text-decoration: none;
+  list-style: none;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.cls-1 {
+  fill: #231f20;
+}
+
+.cls-2 {
+  fill: #9697ca;
+  stroke-width: 8.5px;
+}
+
+.cls-2,
+.cls-3 {
+  stroke: #231f20;
+  stroke-miterlimit: 10;
+}
+
+.cls-3 {
+  fill: #9797ca;
+  stroke-width: 5.7px;
+}
+
+/* header*/
+.nav-header {
+  position: sticky;
+  align-self: flex-start;
+  top: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: none;
+  box-shadow: 0 0 100px rgb(255, 255, 255);
+  backdrop-filter: brightness(250%) blur(4px);
+  z-index: 1000;
+}
+
+.header-icons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.header_logo {
+  display: inline-block;
+}
+
+.header_logo svg {
+  display: block;
+  width: 100px;
+}
+
+.nav-icon-container {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+}
+
+/* header site navigation style */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  display: inline-block;
+  color: inherit;
+  padding: 1px;
+  font-size: 2.5rem;
+  font-optical-sizing: auto;
+  cursor: pointer;
+  transition: color 0.3s;
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 100,
+    'GRAD' 0,
+    'opsz' 24;
+}
+
+.burger-menu {
+  height: 40px;
+  width: 40px;
+  margin-left: auto;
+  position: relative;
+  cursor: pointer;
+}
+
+.burger-menu span {
+  height: 4px;
+  width: 100%;
+  background-color: #333;
+  border-radius: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: .3s ease;
+}
+
+.burger-menu.active span {
+  background-color: lightgrey;
+  outline: 1px solid #333;
+}
+
+.burger-menu span:nth-child(1) {
+  top: 25%;
+}
+
+.burger-menu span:nth-child(3) {
+  top: 75%;
+}
+
+.burger-menu.active span:nth-child(1) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.burger-menu.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-menu.active span:nth-child(3) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.nav-list-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  padding-top: 10px;
+}
+
+.nav-list-container a:hover,
+.material-symbols-outlined:hover {
+  color: lightgrey;
+}
+
+.nav-list1,
+.nav-list2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: normal;
+  gap: 40px;
+
+}
+
+/* hero-video style */
+.hero-section {
+  padding: 5px;
+}
+
+.hero-container {
+  position: relative;
+  height: 60vh;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  text-shadow: rgb(255, 255, 255) 1px 0 10px;
+}
+
+.hero-content {
+  z-index: 2;
+}
+
+.hero-text {
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+
+.hero-content h1 {
+  font-weight: inherit;
+  text-transform: uppercase;
+}
+
+.cta-button {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: grey;
+  color: white;
+  border: solid 1px #333;
+  border-radius: 25px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.3s;
+  align-self: center;
+  letter-spacing: 1px;
+}
+
+.cta-button:hover {
+  background-color: lightgrey;
+  box-shadow: 0 0 15px rgba(103, 118, 123, 0.502);
+  color: #333;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  -webkit-filter: invert(100%) blur(2px) brightness(100%);
+  filter: invert(100%) blur(2px) brightness(100%);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(204, 204, 204, 0.67);
+  z-index: 1;
+}
+
+/*  grid shop Css  */
+.grid-shop {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.grid-shop a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.grid-shop article {
+  position: relative;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: filter 0.3s;
+}
+
+.grid-shop article:hover {
+  filter: invert(100%) blur(2px) brightness(150%);
+  cursor: pointer;
+}
+
+.grid-shop img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 8px;
+  /* !!! so that the image will not be stretched !! */
+}
+
+.card_content {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 10px 20px 10px;
+}
+
+.card_content h2 {
+  text-transform: uppercase;
+  font-weight: normal;
+
+}
+
+.card_content p {
+  margin: 5px 0 5px 0;
+}
+
+/* sign-uo form - starts below  */
+
+.signup-section {
+  display: flex;
+  background-color: rgba(43, 43, 196, 0.494);
+  border-top: #333 solid 3px;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: auto;
+  padding: 20px;
+  background: #f9f9f9;
+}
+
+/* Form Title */
+.signup-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  text-transform: uppercase;
+  font-family: inherit;
+  font-weight: inherit;
+  font-optical-sizing: auto;
+}
+
+/* Input Fields */
+.signup-form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: inherit;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* !!! stretched goal add a focus effect on the input tags !!! */
+.signup-form input[type="text"]:focus,
+.signup-form input[type="email"]:focus,
+.signup-form input[type="password"]:focus {
+  border-color: #354c5380;
+  box-shadow: 0 0 15px rgba(103, 118, 123, 0.502);
+  outline: none;
+}
+
+/* Radio Buttons Styling */
+.radio-group {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.radio-group input {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+}
+
+.radio-group input:checked {
+  background-color: #0076ff;
+}
+
+.radio-group label {
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-top: 0px;
+}
+
+/* Checkboxes */
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.checkbox-group label {
+  margin-top: 0px;
+}
+
+footer {
+  padding: 10px;
+  font-size: 11px;
+  border-top: #333 solid 3px;
+  background-color: white;
+
+}
+
+
+/* mobile & yablet – Show only icons */
+@media (min-width: 320px) and (max-width: 1024px) {
+
+  .nav-list1,
+  .nav-list2 {
+    display: none;
+  }
+
+  .nav-list1.active {
+    background-color: rgba(255, 255, 255, 0.8);
+    -webkit-backdrop-filter: blur(10px);
+    height: 100vh;
+    width: 100vw;
+    max-width: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
+    transition: .3 ease;
+    z-index: -1;
+    text-shadow: #333 1px 0 10px;
+  }
+
+
+}
+
+/* desktop onwars – Show text links, hide icons */
+@media (min-width: 1025px) {
+  .nav-icon-container {
+    display: none;
+  }
+}
+
+@media (min-width: 600px) {
+  .grid-shop {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .signup-form {
+    margin: 30px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+  }
+
+  .grid-shop article:not(:nth-child(2n)) {
+    border-right: 3px solid #333;
+  }
+
+}
+
+@media (min-width: 1024px) {
+  .grid-shop {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .grid-shop article:not(:nth-child(4n)) {
+    border-right: 3px solid #333;
+  }
+}
