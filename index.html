@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Singular Socks Society</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <button class="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-left">
+        <button id="dark-mode-toggle"></button>
+      </div>
+      <div class="header-text">
+        <h1>Singular <span>Socks</span> Society</h1>
+      </div>
+      <nav class="nav-links">
+        <ul>
+          <li><label for="show-signup" class="signup-btn">Sign up</label></li>
+          <li><label for="show-login" class="login-btn">Log in</label></li>
+        </ul>
+      </nav>
+    </header>
+
+    <input type="checkbox" id="show-login" class="hidden-checkbox" />
+    <div class="login-modal">
+      <div class="login-box">
+        <label for="show-login" class="close">&times;</label>
+        <h2>Log in</h2>
+        <form action="https://httpbin.org/anything" method="post">
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              autocomplete="email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required />
+          </div>
+          <button type="submit" class="btn">Log in</button>
+        </form>
+      </div>
+    </div>
+
+    <input type="checkbox" id="show-signup" class="hidden-checkbox" />
+    <div class="signup-modal">
+      <div class="signup-box">
+        <label for="show-signup" class="close">&times;</label>
+        <h2>Sign Up</h2>
+        <form action="https://httpbin.org/anything" method="post">
+          <div class="form-group">
+            <label for="signup-firstname">First Name:</label>
+            <input
+              type="text"
+              id="signup-firstname"
+              name="firstname"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="signup-lastname">Last Name:</label>
+            <input type="text" id="signup-lastname" name="lastname" required />
+          </div>
+          <div class="form-group">
+            <label for="signup-email">Email:</label>
+            <input
+              type="email"
+              id="signup-email"
+              name="email"
+              autocomplete="email"
+              required
+              required
+              pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}"
+            />
+          </div>
+          <div class="form-group">
+            <label for="signup-password">Password:</label>
+            <input
+              type="password"
+              id="signup-password"
+              name="password"
+              required
+              required
+              minlength="8"
+            />
+          </div>
+          <fieldset class="form-group membership-type">
+            <legend>Membership Type</legend>
+            <div class="radio-group">
+              <div class="radio-option">
+                <input
+                  type="radio"
+                  id="basic"
+                  name="membership"
+                  value="basic"
+                  required
+                />
+                <label for="basic">Basic</label>
+              </div>
+              <div class="radio-option">
+                <input
+                  type="radio"
+                  id="premium"
+                  name="membership"
+                  value="premium"
+                />
+                <label for="premium">Premium</label>
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="form-group">
+            <div class="checkbox-group">
+              <input type="checkbox" id="terms" name="terms" required />
+              <label for="terms">I accept the terms and conditions</label>
+            </div>
+          </div>
+
+          <button type="submit" class="btn">Sign Up</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="hero">
+      <img src="images/sockshead.png" alt="Singular Socks hanging" />
+    </div>
+
+    <section id="product-section" class="product-grid">
+      <div class="product">
+        <img src="images/sock1.png" alt="A sock" />
+        <h3>Silky Sensation</h3>
+      </div>
+      <div class="product">
+        <img src="images/sock2.png" alt="A sock" />
+        <h3>Mocca Mirage</h3>
+      </div>
+      <div class="product">
+        <img src="images/sock3.png" alt="A sock" />
+        <h3>Taupe Tranquility</h3>
+      </div>
+      <div class="product">
+        <img src="images/sock4.png" alt="A sock" />
+        <h3>Orange Obscura</h3>
+      </div>
+    </section>
+
+    <footer>
+      <nav>
+        <ul>
+          <li><a href="#">Community</a></li>
+          <li><a href="#">Our mission</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
