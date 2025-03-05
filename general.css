@@ -1,0 +1,154 @@
+/* STYLING */
+/* COLOURS
+Background colour: #fdfaff
+Darker background colour: #eeebf0
+
+Primary colour: #532b88
+Dark primary colour: #2f184b
+Light primary colour: #60329c
+Lighter primary colur: #6b3baa
+*/
+
+/* UNIVERSAL STYLES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #fdfaff;
+  color: #2f184b;
+}
+
+p {
+  line-height: 1.5;
+  font-size: 1.2rem;
+}
+
+/* SECTIONS */
+.section {
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 10rem 1rem 10rem 1rem;
+}
+
+.section-text {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+}
+
+.section-title {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+
+.section-subtitle {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+.section-desc {
+  margin-bottom: 2rem;
+}
+
+.dark-bg-section {
+  background-color: #eeebf0;
+}
+
+/* BUTTONS */
+.btn {
+  text-decoration: none;
+  font-size: 1rem;
+  background-color: #532b88;
+  color: #fdfaff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.4rem;
+  box-shadow: #c8b1e47a 0px 3px 8px;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: #60329c;
+  transition: all ease 0.2s;
+  transform: translate(1px, -1px);
+}
+
+/* FORMS */
+form {
+  border: 1px solid #532b88;
+  border-radius: 5px;
+  padding: 0.8rem;
+}
+
+.form-inputs {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.7rem;
+  margin-bottom: 2rem;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: #2f184b;
+}
+
+.form-input input {
+  border: none;
+  background-color: #d7d5d8;
+  color: #2f184b;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.form-input input:focus {
+  outline: 3px solid #532b88;
+}
+
+.form-input select {
+  border: none;
+  background-color: #d7d5d8;
+  color: #2f184b;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.form-input select:focus {
+  outline: 3px solid #532b88;
+}
+
+.form-btn {
+  font-size: 1rem;
+  background-color: #532b88;
+  color: #fdfaff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 0.8rem;
+  box-shadow: #c8b1e47a 0px 3px 8px;
+  cursor: pointer;
+}
+
+.form-btn:hover {
+  background-color: #60329c;
+  transition: all ease 0.2s;
+  transform: translate(1px, -1px);
+}
+
+.checkbox-list,
+.radio-list {
+  list-style: none;
+  accent-color: #532b88;
+  background-color: #d7d5d8;
+  border-radius: 5px;
+  padding: 0.5rem;
+}

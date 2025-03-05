@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="general.css" />
+    <link rel="stylesheet" href="queries.css" />
+    <script defer src="script.js"></script>
+    <title>The Crit & Cauldron</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="#" class="nav-link logo-link">
+        <img src="logo-3.png" alt="The Crit & Cauldron" class="logo" />
+      </a>
+      <nav class="nav">
+        <ul class="nav-links">
+          <li><a href="#top" class="nav-link">Top</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#shop" class="nav-link">Shop</a></li>
+          <li><a href="#events" class="nav-link">Events</a></li>
+          <li><a href="#membership" class="nav-link">Membership</a></li>
+          <li>
+            <a href="#" class="nav-link nav-btn"
+              ><ion-icon name="cart" class="cart-icon"></ion-icon
+              ><span class="cart-text">Cart</span></a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <button class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
+    </header>
+
+    <section class="section hero-section" id="top">
+      <div class="release-countdown">
+        <div class="countdown-text">
+          <p>Next MTG Release</p>
+          <p>Tarkir: Dragonstorm</p>
+          <div class="countdown"></div>
+        </div>
+        <div class="whitespace"></div>
+      </div>
+      <h1 class="main-title">The Crit & Cauldron</h1>
+      <div class="dice-container">
+        <p>Roll Me!</p>
+        <div class="dice"><ion-icon name="dice"></ion-icon></div>
+      </div>
+      <p class="hero-text">
+        Explore a world of RPGs, card games, and miniatures. Shop new releases,
+        discover events, and join our gaming community!
+      </p>
+      <div class="cta-btns">
+        <a href="#book" class="btn event-btn">Book an Event!</a>
+        <a href="#member-form" class="btn member-btn">Become a Member!</a>
+      </div>
+    </section>
+
+    <section class="section dark-bg-section" id="about">
+      <h2 class="section-title">About Us</h2>
+      <div class="section-text">
+        <p class="section-desc">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit sed
+          ipsam consequatur voluptates veritatis! Voluptate, veritatis maxime
+          praesentium, suscipit dolor quidem, sequi amet officia velit eveniet
+          reprehenderit iusto dolorem iste?
+        </p>
+        <div class="follow">
+          <h3>Follow Us!</h3>
+          <ul class="social-media-links">
+            <li>
+              <a href="#" class="social-media-link"
+                ><ion-icon name="logo-twitter"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a href="#" class="social-media-link"
+                ><ion-icon name="logo-instagram"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a href="#" class="social-media-link"
+                ><ion-icon name="logo-facebook"></ion-icon
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <div class="contact">
+          <h3>Contact Us!</h3>
+          <a href="mailto:contact@critandcauldron.com" class="email-link"
+            ><ion-icon name="mail" class="mail-icon"></ion-icon
+          ></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shop-section" id="shop">
+      <h2 class="section-title">Shop</h2>
+      <p class="section-desc">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias
+        deleniti dignissimos, nulla recusandae asperiores nostrum suscipit ipsam
+        repellendus nobis quasi optio sunt odit velit quibusdam, nesciunt
+        reiciendis commodi? Architecto, sequi.
+      </p>
+
+      <div class="categories">
+        <button class="btn category-btn active-btn" data-filter="all">
+          All
+        </button>
+        <button class="btn category-btn" data-filter="accessories">
+          Accessories
+        </button>
+        <button class="btn category-btn" data-filter="miniatures">
+          Miniatures
+        </button>
+        <button class="btn category-btn" data-filter="games">Games</button>
+        <button class="btn category-btn" data-filter="apparel">Apparel</button>
+        <button class="btn category-btn" data-filter="books">Books</button>
+      </div>
+
+      <div class="products">
+        <div class="product" data-category="accessories">
+          <div class="img-container">
+            <img
+              src="https://images.pexels.com/photos/3649115/pexels-photo-3649115.jpeg"
+              alt="Dice"
+              class="product-img"
+            />
+          </div>
+          <div class="product-text">
+            <h3 class="product-title">Dice</h3>
+            <p class="product-desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+              autem voluptas incidunt explicabo illo molestias corrupti veniam
+              iusto soluta? Placeat, sint voluptates iste minima adipisci qui in
+              atque velit fuga.
+            </p>
+            <span class="price">$0</span>
+            <div class="product-btns">
+              <button class="btn product-btn">More</button>
+              <button class="btn product-btn">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="product" data-category="accessories">
+          <div class="img-container">
+            <img
+              src="https://images.pexels.com/photos/3649115/pexels-photo-3649115.jpeg"
+              alt="Dice"
+              class="product-img"
+            />
+          </div>
+          <div class="product-text">
+            <h3 class="product-title">Dice</h3>
+            <p class="product-desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+              autem voluptas incidunt explicabo illo molestias corrupti veniam
+              iusto soluta? Placeat, sint voluptates iste minima adipisci qui in
+              atque velit fuga.
+            </p>
+            <span class="price">$0</span>
+            <div class="product-btns">
+              <button class="btn product-btn">More</button>
+              <button class="btn product-btn">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="product" data-category="accessories">
+          <div class="img-container">
+            <img
+              src="https://images.pexels.com/photos/3649115/pexels-photo-3649115.jpeg"
+              alt="Dice"
+              class="product-img"
+            />
+          </div>
+          <div class="product-text">
+            <h3 class="product-title">Dice</h3>
+            <p class="product-desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+              autem voluptas incidunt explicabo illo molestias corrupti veniam
+              iusto soluta? Placeat, sint voluptates iste minima adipisci qui in
+              atque velit fuga.
+            </p>
+            <span class="price">$0</span>
+            <div class="product-btns">
+              <button class="btn product-btn">More</button>
+              <button class="btn product-btn">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="product" data-category="miniatures">
+          <div class="img-container">
+            <img
+              src="https://warhammer40000.com/wp-content/uploads/2023/07/KTmRmSRRrpxEPufD.jpeg"
+              alt="Miniature"
+              class="product-img"
+            />
+          </div>
+          <div class="product-text">
+            <h3 class="product-title">Miniature</h3>
+            <p class="product-desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+              autem voluptas incidunt explicabo illo molestias corrupti veniam
+              iusto soluta? Placeat, sint voluptates iste minima adipisci qui in
+              atque velit fuga.
+            </p>
+            <span class="price">$0</span>
+            <div class="product-btns">
+              <button class="btn product-btn">More</button>
+              <button class="btn product-btn">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="product" data-category="miniatures">
+          <div class="img-container">
+            <img
+              src="https://warhammer40000.com/wp-content/uploads/2023/07/KTmRmSRRrpxEPufD.jpeg"
+              alt="Miniature"
+              class="product-img"
+            />
+          </div>
+          <div class="product-text">
+            <h2 class="product-title">Miniature</h2>
+            <p class="product-desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+              autem voluptas incidunt explicabo illo molestias corrupti veniam
+              iusto soluta? Placeat, sint voluptates iste minima adipisci qui in
+              atque velit fuga.
+            </p>
+            <span class="price">$0</span>
+            <div class="product-btns">
+              <button class="btn product-btn">More</button>
+              <button class="btn product-btn">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="product" data-category="miniatures">
+          <div class="img-container">
+            <img
+              src="https://warhammer40000.com/wp-content/uploads/2023/07/KTmRmSRRrpxEPufD.jpeg"
+              alt="Miniature"
+              class="product-img"
+            />
+          </div>
+          <div class="product-text">
+            <h2 class="product-title">Miniature</h2>
+            <p class="product-desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+              autem voluptas incidunt explicabo illo molestias corrupti veniam
+              iusto soluta? Placeat, sint voluptates iste minima adipisci qui in
+              atque velit fuga.
+            </p>
+            <span class="price">$0</span>
+            <div class="product-btns">
+              <button class="btn product-btn">More</button>
+              <button class="btn product-btn">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="product" data-category="games">
+          <div class="img-container">
+            <img
+              src="https://i.kickstarter.com/assets/029/242/943/877eea0afd222891c2cefe01bc0e9b60_original.jpg?anim=false&fit=cover&gravity=auto&height=873&origin=ugc&q=92&v=1590592617&width=1552&sig=XjdRIMmXhj%2FvpiG1KYA0daSUbDeT39I39SAHojYeyKs%3D"
+              alt="Game"
+              class="product-img"
+            />
+          </div>
+          <div class="product-text">
+            <h2 class="product-title">Game</h2>
+            <p class="product-desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+              autem voluptas incidunt explicabo illo molestias corrupti veniam
+              iusto soluta? Placeat, sint voluptates iste minima adipisci qui in
+              atque velit fuga.
+            </p>
+            <span class="price">$0</span>
+            <div class="product-btns">
+              <button class="btn product-btn">More</button>
+              <button class="btn product-btn">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="product" data-category="games">
+          <div class="img-container">
+            <img
+              src="https://i.kickstarter.com/assets/029/242/943/877eea0afd222891c2cefe01bc0e9b60_original.jpg?anim=false&fit=cover&gravity=auto&height=873&origin=ugc&q=92&v=1590592617&width=1552&sig=XjdRIMmXhj%2FvpiG1KYA0daSUbDeT39I39SAHojYeyKs%3D"
+              alt="Game"
+              class="product-img"
+            />
+          </div>
+          <div class="product-text">
+            <h2 class="product-title">Game</h2>
+            <p class="product-desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+              autem voluptas incidunt explicabo illo molestias corrupti veniam
+              iusto soluta? Placeat, sint voluptates iste minima adipisci qui in
+              atque velit fuga.
+            </p>
+            <span class="price">$0</span>
+            <div class="product-btns">
+              <button class="btn product-btn">More</button>
+              <button class="btn product-btn">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="product" data-category="games">
+          <div class="img-container">
+            <img
+              src="https://i.kickstarter.com/assets/029/242/943/877eea0afd222891c2cefe01bc0e9b60_original.jpg?anim=false&fit=cover&gravity=auto&height=873&origin=ugc&q=92&v=1590592617&width=1552&sig=XjdRIMmXhj%2FvpiG1KYA0daSUbDeT39I39SAHojYeyKs%3D"
+              alt="Game"
+              class="product-img"
+            />
+          </div>
+          <div class="product-text">
+            <h2 class="product-title">Game</h2>
+            <p class="product-desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+              autem voluptas incidunt explicabo illo molestias corrupti veniam
+              iusto soluta? Placeat, sint voluptates iste minima adipisci qui in
+              atque velit fuga.
+            </p>
+            <span class="price">$0</span>
+            <div class="product-btns">
+              <button class="btn product-btn">More</button>
+              <button class="btn product-btn">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="product" data-category="apparel">
+          <div class="img-container">
+            <img
+              src="https://i.etsystatic.com/18599689/r/il/323662/1693822981/il_fullxfull.1693822981_hgy1.jpg"
+              alt="Apparel"
+              class="product-img"
+            />
+          </div>
+          <div class="product-text">
+            <h2 class="product-title">Apparel</h2>
+            <p class="product-desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+              autem voluptas incidunt explicabo illo molestias corrupti veniam
+              iusto soluta? Placeat, sint voluptates iste minima adipisci qui in
+              atque velit fuga.
+            </p>
+            <span class="price">$0</span>
+            <div class="product-btns">
+              <button class="btn product-btn">More</button>
+              <button class="btn product-btn">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="product" data-category="apparel">
+          <div class="img-container">
+            <img
+              src="https://i.etsystatic.com/18599689/r/il/323662/1693822981/il_fullxfull.1693822981_hgy1.jpg"
+              alt="Apparel"
+              class="product-img"
+            />
+          </div>
+          <div class="product-text">
+            <h2 class="product-title">Apparel</h2>
+            <p class="product-desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+              autem voluptas incidunt explicabo illo molestias corrupti veniam
+              iusto soluta? Placeat, sint voluptates iste minima adipisci qui in
+              atque velit fuga.
+            </p>
+            <span class="price">$0</span>
+            <div class="product-btns">
+              <button class="btn product-btn">More</button>
+              <button class="btn product-btn">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="product" data-category="apparel">
+          <div class="img-container">
+            <img
+              src="https://i.etsystatic.com/18599689/r/il/323662/1693822981/il_fullxfull.1693822981_hgy1.jpg"
+              alt="Apparel"
+              class="product-img"
+            />
+          </div>
+          <div class="product-text">
+            <h2 class="product-title">Apparel</h2>
+            <p class="product-desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+              autem voluptas incidunt explicabo illo molestias corrupti veniam
+              iusto soluta? Placeat, sint voluptates iste minima adipisci qui in
+              atque velit fuga.
+            </p>
+            <span class="price">$0</span>
+            <div class="product-btns">
+              <button class="btn product-btn">More</button>
+              <button class="btn product-btn">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="product" data-category="books">
+          <div class="img-container">
+            <img
+              src="https://assetsio.gnwcdn.com/dnd-5e-core-books-phb-dm-guide-monster-manual.png?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp"
+              alt="Book"
+              class="product-img"
+            />
+          </div>
+          <div class="product-text">
+            <h2 class="product-title">Book</h2>
+            <p class="product-desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+              autem voluptas incidunt explicabo illo molestias corrupti veniam
+              iusto soluta? Placeat, sint voluptates iste minima adipisci qui in
+              atque velit fuga.
+            </p>
+            <span class="price">$0</span>
+            <div class="product-btns">
+              <button class="btn product-btn">More</button>
+              <button class="btn product-btn">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="product" data-category="books">
+          <div class="img-container">
+            <img
+              src="https://assetsio.gnwcdn.com/dnd-5e-core-books-phb-dm-guide-monster-manual.png?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp"
+              alt="Book"
+              class="product-img"
+            />
+          </div>
+          <div class="product-text">
+            <h2 class="product-title">Book</h2>
+            <p class="product-desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+              autem voluptas incidunt explicabo illo molestias corrupti veniam
+              iusto soluta? Placeat, sint voluptates iste minima adipisci qui in
+              atque velit fuga.
+            </p>
+            <span class="price">$0</span>
+            <div class="product-btns">
+              <button class="btn product-btn">More</button>
+              <button class="btn product-btn">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="product" data-category="books">
+          <div class="img-container">
+            <img
+              src="https://assetsio.gnwcdn.com/dnd-5e-core-books-phb-dm-guide-monster-manual.png?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp"
+              alt="Book"
+              class="product-img"
+            />
+          </div>
+          <div class="product-text">
+            <h2 class="product-title">Book</h2>
+            <p class="product-desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+              autem voluptas incidunt explicabo illo molestias corrupti veniam
+              iusto soluta? Placeat, sint voluptates iste minima adipisci qui in
+              atque velit fuga.
+            </p>
+            <span class="price">$0</span>
+            <div class="product-btns">
+              <button class="btn product-btn">More</button>
+              <button class="btn product-btn">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section events-section" id="events">
+      <h2 class="section-title">Events</h2>
+      <p class="section-desc">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias
+        deleniti dignissimos, nulla recusandae asperiores nostrum suscipit ipsam
+        repellendus nobis quasi optio sunt odit velit quibusdam, nesciunt
+        reiciendis commodi? Architecto, sequi.
+      </p>
+
+      <div class="events">
+        <div class="event">
+          <div class="img-container">
+            <img
+              src="https://images.pexels.com/photos/2608517/pexels-photo-2608517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="Event"
+              class="event-img"
+            />
+          </div>
+          <div class="event-text">
+            <h3 class="event-title">Event</h3>
+            <p class="event-desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+              autem voluptas incidunt explicabo illo molestias corrupti veniam
+              iusto soluta? Placeat, sint voluptates iste minima adipisci qui in
+              atque velit fuga.
+            </p>
+            <div class="event-btns">
+              <a href="#book" class="btn event-btn">Book</a>
+            </div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="img-container">
+            <img
+              src="https://images.pexels.com/photos/2608517/pexels-photo-2608517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="Event"
+              class="event-img"
+            />
+          </div>
+          <div class="event-text">
+            <h3 class="event-title">Event</h3>
+            <p class="event-desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+              autem voluptas incidunt explicabo illo molestias corrupti veniam
+              iusto soluta? Placeat, sint voluptates iste minima adipisci qui in
+              atque velit fuga.
+            </p>
+            <div class="event-btns">
+              <a href="#book" class="btn event-btn">Book</a>
+            </div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="img-container">
+            <img
+              src="https://images.pexels.com/photos/2608517/pexels-photo-2608517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="Event"
+              class="event-img"
+            />
+          </div>
+          <div class="event-text">
+            <h3 class="event-title">Event</h3>
+            <p class="event-desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+              autem voluptas incidunt explicabo illo molestias corrupti veniam
+              iusto soluta? Placeat, sint voluptates iste minima adipisci qui in
+              atque velit fuga.
+            </p>
+            <div class="event-btns">
+              <a href="#book" class="btn event-btn">Book</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark-bg-section" id="book">
+      <h2 class="section-title">Event Booking Form</h2>
+      <p class="section-desc">
+        Please fill in the below form to book one of our events.
+      </p>
+      <form class="book-form" action="http://httpbin.org/anything">
+        <div class="form-inputs">
+          <div class="form-input">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="John Smith" required />
+          </div>
+          <div class="form-input">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="example@email.com"
+              required
+            />
+          </div>
+
+          <div class="form-input">
+            <label for="event">Choose Event</label>
+            <select name="event" id="event">
+              <option value="mtg">MTG Release</option>
+              <option value="dnd">DnD</option>
+              <option value="minis">Mini Painting</option>
+            </select>
+          </div>
+          <div class="form-input">
+            <label for="amount">Number of Attendees</label>
+            <input
+              type="number"
+              id="amount"
+              name="amount"
+              value="1"
+              min="1"
+              max="10"
+            />
+          </div>
+        </div>
+        <button type="submit" value="submit booking form" class="btn form-btn">
+          Book
+        </button>
+      </form>
+    </section>
+
+    <section class="section membership-section" id="membership">
+      <h2 class="section-title">Membership</h2>
+      <p class="section-desc">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis
+        quisquam aperiam vel nostrum praesentium aspernatur natus, ipsam, ab
+        possimus quas distinctio obcaecati ut architecto quia optio? Ratione
+        deleniti enim aperiam.
+      </p>
+      <h3 class="section-subtitle">Being a Member at C&C</h3>
+      <div class="img-grid">
+        <img
+          src="https://assetsio.gnwcdn.com/magic-the-gathering-store-event.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp"
+        />
+        <img
+          src="https://www.wargamer.com/wp-content/sites/wargamer/2023/01/what-is-warhammer-world-gaming-hall.jpg"
+        />
+        <img
+          src="https://s3-eu-west-1.amazonaws.com/localfamily.events/eventimages/103334-10739.jpg"
+        />
+      </div>
+    </section>
+
+    <section class="section dark-bg-section" id="member-form">
+      <h2 class="section-title">Become a Member</h2>
+      <p class="section-desc">
+        Please fill in the form below to become a member.
+      </p>
+
+      <form
+        class="member-form"
+        action="http://httpbin.org/anything"
+        method="POST"
+      >
+        <div class="form-inputs">
+          <div class="form-input">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="John Smith" required />
+          </div>
+          <div class="form-input">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="example@email.com"
+              required
+            />
+          </div>
+
+          <div class="form-input">
+            <label for="interests">What are you interested in?</label>
+            <ul class="checkbox-list" id="interests">
+              <li class="checkbox-list-item">
+                <input
+                  type="checkbox"
+                  id="mtg"
+                  name="interests"
+                  value="Magic The Gathering"
+                />
+                <label for="mtg">Magic The Gathering</label>
+              </li>
+              <li class="checkbox-list-item">
+                <input
+                  type="checkbox"
+                  id="warhammer"
+                  name="interests"
+                  value="Warhammer"
+                />
+                <label for="warhammer">Warhammer</label>
+              </li>
+              <li class="checkbox-list-item">
+                <input type="checkbox" id="dnd" name="interests" value="DnD" />
+                <label for="dnd">DnD</label>
+              </li>
+              <li class="checkbox-list-item">
+                <input
+                  type="checkbox"
+                  id="other"
+                  name="interests"
+                  value="Other"
+                />
+                <label for="other">Other</label>
+              </li>
+            </ul>
+          </div>
+          <div class="form-input">
+            <label for="consent"
+              >Do you consent to receiving updates and promotions?</label
+            >
+            <ul class="radio-list" id="consent">
+              <li>
+                <input
+                  type="radio"
+                  id="info-yes"
+                  name="sendInfo"
+                  value="yes"
+                  required
+                />
+                <label for="info-yes">Yes</label>
+              </li>
+              <li>
+                <input
+                  type="radio"
+                  id="info-no"
+                  name="sendInfo"
+                  value="no"
+                  required
+                />
+                <label for="info-no">No</label>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <button type="submit" value="submit member form" class="btn form-btn">
+          Become a Member
+        </button>
+      </form>
+    </section>
+
+    <footer class="footer">
+      <p>
+        Copyright &copy; <span class="year">2025</span> The Crit & Cauldron. All
+        rights reserved.
+      </p>
+
+      <a href="mailto:contact@critandcauldron.com" class="contact-link"
+        ><ion-icon name="mail" class="mail-icon"></ion-icon
+      ></a>
+    </footer>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
