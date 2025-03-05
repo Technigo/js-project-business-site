@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="login.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Honk:MORF@16&family=Playwrite+IT+Moderna&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <!-- This is where the header starts -->
+  <header>
+    <a class="logo" href="index.html">HookITup</a>
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="#">Workshop</a></li>
+        <li><a href="#">Hackaton</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="navbar-btn" href="login.html"><button>Login</button></a>
+
+    <!-- This is the navbar when it's active on mobile and tablet -->
+    <div class="hamburger-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Workshop</a></li>
+        <li><a href="#">Hackaton</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </div>
+
+    <div class="hamburger-menu-icon">
+      <span class="menu-line"></span>
+      <span class="menu-line"></span>
+      <span class="menu-line"></span>
+    </div>
+  </header>
+
+  <!-- This is my hero section -->
+  <section class="hero">
+    <h1 class="hero-heading">Let's build something<br>awesome together</h1>
+  </section>
+
+  <!-- This is my login/sign section -->
+  <div class="login-container">
+    <div class="login">
+      <div class="form">
+        <h2>Login</h2>
+
+        <form action="http://httpbin.org/anything" method="POST">
+          
+          <div class="form-control">
+            <label for="email">Email</label>
+            <input 
+              type="text" 
+              id="email" 
+              placeholder="Enter email" 
+              name="email" 
+              required
+            >
+          </div>
+
+          <div class="form-control">
+            <label for="password">Password</label>
+            <input 
+              type="password" 
+              id="password" 
+              placeholder="Enter password" 
+              name="password" 
+              required
+            >
+          </div>
+          
+          <a class="forgot-pass" href="#">Forgot password?</a>
+          
+          <div class="primary-login">
+            <button class="primary-btn">
+              <p class="btn-text">Login</p>
+            </button>
+          </div>
+
+          <p class="or"><span>or</span></p>
+          
+          <div class="google-login">
+            <button class="google-btn">
+              <img 
+                alt="Google"
+                src="./Images/Google.png" 
+              />
+              <p class="btn-text">Sign in with Google</p>
+            </button>
+          </div>
+
+          <p class="subtitle">Don't have an account? <a href="#"> Sign Up</a></p>
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- This is my footer section -->
+  <section id="footer">
+    <p><a href="#">info@hookitup.se</a></p>
+    <p>All Rights Reserved by &copy;HookITup 2025</p>
+  </section>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>

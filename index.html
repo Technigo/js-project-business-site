@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Honk:MORF@16&family=Playwrite+IT+Moderna&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <!-- This is my header -->
+  <header>
+    <a class="logo" href="index.html">HookITup</a>
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="#">Workshop</a></li>
+        <li><a href="#">Hackaton</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="navbar-btn" href="login.html"><button>Login</button></a>
+
+<!-- This is the hamburger menu when it's active on mobile and tablet -->
+    <div class="hamburger-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Workshop</a></li>
+        <li><a href="#">Hackaton</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </div>
+<!-- This is the hamburger menu for mobile and tablet -->
+    <div class="hamburger-menu-icon">
+      <span class="menu-line"></span>
+      <span class="menu-line"></span>
+      <span class="menu-line"></span>
+    </div>
+  </header>
+
+  <!-- This is my hero section -->
+  <section class="hero">
+    <h1 class="hero-heading">Let's build something<br>awesome together</h1>
+  </section>
+
+  <!-- This is my event section -->
+  <section class="event-container">
+    <div class="event-card">
+      <img 
+        src="./Images/Designer workshop.jpg" 
+        alt="designer workshop event"
+      >
+      <div class="event-card-content">
+        <h2>Designer Workshops 🎨💡 </h2>
+        <p>Join us for an immersive UX/UI Design Workshop, where you'll learn the principles of user experience (UX) and
+          user interface (UI) design to create intuitive, visually appealing and user-friendly digital products.</p>
+        <a href="#" class="btn">Read more</a>
+      </div>
+    </div>
+
+    <div class="event-card">
+      <img 
+        src="./Images/Developer hackaton.jpg" 
+        alt="developer hackaton event"
+      >
+      <div class="event-card-content">
+        <h2>Developer Hackatons 💻 🚀</h2>
+        <p>Join us for an intensive coding event where you will learn to build innovative
+          solutions. Hackatons encourage participants to create prototypes, apps, or software that address real-world
+          problems.</p>
+        <a href="#" class="btn">Read more</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- This is my review section -->
+  <section class="review-container">
+    <div class="review-card">
+      <div class="review-card-header">
+        <img 
+          src="./Images/Erica Ramsey.jpg" 
+          class="review-image" 
+          alt="reviewer image"
+        >
+        <div>
+          <h3>Erica Ramswey</h3>
+          <h4>UX Designer</h4>
+        </div>
+      </div>
+      <p>"This meeting had everything —whiteboards filled with scribbles, moments of pure genius, and at least five
+        hilarious tangents.😂 Somehow, we managed to take all of our wild ideas and shape them into something
+        actionable and creative."</p>
+    </div>
+
+    <div class="review-card">
+      <div class="review-card-header">
+        <img 
+          src="./Images/Ronald Atkin.jpg" 
+          class="review-image" 
+          alt="reviewer image"
+        >
+        <div>
+          <h3>Ronald Atkin</h3>
+          <h4>Developer</h4>
+        </div>
+      </div>
+      <p>"The best thing about this workshop? It was pure, hands-on learning 🛠️. We built
+        prototypes, tested ideas, and got real-time feedback from both peers and mentors. It felt like I learned a lot
+        here. If you love learning by doing, this is the way to
+        go!"</p>
+    </div>
+
+    <div class="review-card">
+      <div class="review-card-header">
+        <img 
+          src="./Images/Lewis Swift.jpg" 
+          class="review-image" 
+          alt="reviewer image"
+        >
+        <div>
+          <h3>Lewis Swift</h3>
+          <h4>Developer</h4>
+        </div>
+      </div>
+      <p>"I showed up with zero expectations and left with a dozen new connections, and new friends. The energy in the
+        room was unreal—everyone was brainstorming, coding, and
+        debugging like their lives depended on it. It was stressful, chaotic, and honestly?."🚀</p>
+    </div>
+
+    <div class="review-card">
+      <div class="review-card-header">
+        <img 
+          src="./Images/Mona Rooney.jpg" 
+          class="review-image" 
+          alt="reviewer image"
+        >
+        <div>
+          <h3>Mona Rooney</h3>
+          <h4>UI Designer</h4>
+        </div>
+      </div>
+      <p>"I signed up for a UX design workshop to learn a few tricks, and left questioning every
+        design decision I’ve ever seen in my life. The hands-on exercises were fantastic, and the instructor gave us
+        challenges that forced us to think outside the box."🎨 </p>
+    </div>
+  </section>
+
+  <!-- This is my newsletter section -->
+  <section class="newsletter">
+    <h2>Stay Ahead. Get Exclusive Insights. Subscribe Now!</h2>
+  </section>
+
+  <!-- This is my footer section -->
+  <section id="footer">
+    <p><a href="#">info@hookitup.se</a></p>
+    <p>All Rights Reserved by &copy;HookITup 2025</p>
+  </section>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>

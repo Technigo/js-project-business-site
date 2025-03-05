@@ -1,0 +1,646 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+
+/* This is my header */
+header {
+  background-color: #2e2e2e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+}
+
+.logo {
+  color: #ffffff;
+  font-family: "Playwrite IT Moderna", serif;
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+
+.navbar {
+  display: flex;
+  width: 100%;
+  list-style: none;
+  justify-content: space-evenly;
+}
+
+.nav-links {
+  list-style: none;
+}
+
+.nav-links li {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+li,
+a {
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+button {
+  background-color: #c652e7;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  padding: 8px 20px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: none;
+}
+
+/* This is my hamburger menu */
+.hamburger-menu {
+  background-color: #2e2e2e;
+  height: 100vh;
+  width: 100%;
+  max-width: 100%;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  font-size: 3rem;
+  transition: .3 ease;
+}
+
+.hamburger-menu ul {
+  width: 100%;
+  cursor: pointer;
+  margin-top: 5rem;
+}
+
+.hamburger-menu li {
+  padding: 20px 0 20px 5%;
+  list-style: none;
+  border-bottom: 0.5px solid rgba(239, 239, 239, 0.3);
+}
+
+.hamburger-menu a {
+  font-size: 1.2rem;
+}
+
+.hamburger-menu.active {
+  right: 0;
+}
+
+.hamburger-menu-icon {
+  display: flex;
+  flex-direction: column;
+  height: 48px;
+  width: 48px;
+  margin-left: auto;
+  position: relative;
+}
+
+.hamburger-menu-icon span {
+  height: 3px;
+  width: 60%;
+  background-color: #ffffff;
+  border-radius: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  transition: .3s ease;
+}
+
+.hamburger-menu-icon span:nth-child(1) {
+  top: 32%;
+}
+
+.hamburger-menu-icon span:nth-child(3) {
+  top: 68%;
+}
+
+.hamburger-menu-icon.active span:nth-child(1) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.hamburger-menu-icon.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-menu-icon.active span:nth-child(3) {
+  top: 50%;
+  transform: translate(-50%, 50%) rotate(-45deg);
+}
+
+
+/* This is my hero section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  background-image: linear-gradient(rgba(48, 59, 75, 0.85), rgba(48, 59, 75, 0.85)), url(./Images/teamwork.jpg);
+  background-size: cover;
+  background-position: bottom;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.4rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+
+/* This is my event section */
+.event-container {
+  display: grid;
+  grid-template-columns: repeat(autofit, minmax (200px, 1fr));
+  margin: 0 5%;
+  gap: 20px;
+}
+
+.event-card {
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(217, 19%, 35%);
+  color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+.event-card img {
+  width: 100%;
+  height: auto;
+}
+
+.event-card-content {
+  padding: 20px;
+}
+
+.event-card-content h2 {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.event-card-content p {
+  font-size: 1rem;
+  font-weight: 200;
+  line-height: 1.5;
+  margin-top: 20px;
+}
+
+.event-card-content .btn {
+  display: inline-block;
+  background-color: #c652e7;
+  font-size: 1rem;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  margin: 20px 0 10px 0;
+}
+
+.event-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0px 10px 10px lightgray;
+}
+
+
+/* This is my review section */
+.review-container {
+  display: grid;
+  grid-template-columns: repeat(autofit, minmax (200px, 1fr));
+  margin: 0 10%;
+  gap: 20px;
+}
+
+.review-card {
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(217, 19%, 35%);
+  color: #ffffff;
+  padding: 20px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+.review-card-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.review-image {
+  width: 54px;
+  height: 54px;
+  border: 1px solid #c652e7;
+  border-radius: 50%;
+}
+
+.review-card-header h3 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+.review-card-header h4 {
+  font-size: 0.8rem;
+  font-weight: 200;
+  margin-top: 5px;
+  opacity: 70%;
+}
+
+.review-card p {
+  font-size: 0.8rem;
+  font-weight: 200;
+  margin-top: 20px;
+  line-height: 1.5;
+}
+
+
+/* This is my newsletter section */
+.newsletter {
+  padding: 100px 50px;
+  margin: 100px 10% 100px 10%;
+  background-image: linear-gradient(rgba(95, 65, 170, 0.5), rgba(48, 59, 75, 0.5)), url(./Images/Creative\ workshop.webp);
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.newsletter h2 {
+  color: #ffffff;
+  font-size: 1rem;
+  padding: 0;
+}
+
+
+/* This is my footer section */
+#footer {
+  background-color: #252525;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 100px;
+}
+
+#footer p {
+  background-color: #252525;
+  color: #ffffff;
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+
+/* -- Media Queries start here -- */
+@media(max-width: 319px) {
+
+  body {
+    display: none;
+  }
+}
+
+
+/* Media Querie Mobile Device */
+@media (min-width: 320px) and (max-width: 480px) {
+
+  .navbar {
+    display: none;
+  }
+
+  button {
+    display: none;
+  }
+
+  .logo {
+    z-index: 1;
+    font-size: 1rem;
+  }
+
+  .hamburger-menu li {
+   padding: 15px ;
+  }
+
+  .hamburger-menu a {
+    font-size: 1rem;
+    font-weight: 300;
+  }
+
+  .hamburger-menu-icon span {
+    height: 2px;
+    width: 50%;
+  }
+
+  .hamburger-menu-icon span:nth-child(1) {
+    top: 35%;
+  }
+
+  .hamburger-menu-icon span:nth-child(3) {
+    top: 65%;
+  }
+
+  .hero {
+    height: 100vh;
+  }
+
+  .hero h1 {
+    font-size: 1.4rem;
+  }
+
+  .event-container {
+    grid-template-columns: 1fr;
+    margin-top: 100px;
+  }
+
+  .event-card {
+    grid-column: 1;
+  }
+
+  .event-card-content h2 {
+    font-size: 1rem;
+  }
+
+  .event-card-content p {
+    font-size: 0.9rem;
+  }
+
+  .review-container {
+    margin-top: 100px;
+    margin: 100px 5% 0 5%;
+  }
+
+  .review-card-header h3 {
+    font-size: 1rem;
+  }
+
+  .review-card-header h4 {
+    font-size: 0.9rem;
+  }
+
+  .review-card p {
+    font-size: 0.9rem;
+  }
+
+  .newsletter {
+    margin: 100px 5% 0 5%;
+  }
+
+  .newsletter h2 {
+    font-size: 1rem;
+    line-height: 1.9;
+  }
+
+  #footer a,
+  #footer p {
+    font-size: 0.8rem;
+  }
+}
+
+/* Media Querie Tablet Device */
+
+@media (min-width: 481px) and (max-width: 1023px) {
+
+  .navbar {
+    display: none;
+  }
+
+  button {
+    display: none;
+  }
+
+  .logo {
+    font-size: 1rem;
+    z-index: 1;
+  }
+
+  .hamburger-menu a {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .hamburger-menu-icon span {
+    height: 2px;
+    width: 50%;
+  }
+
+  .hamburger-menu-icon span:nth-child(1) {
+    top: 35%;
+  }
+
+  .hamburger-menu-icon span:nth-child(3) {
+    top: 65%;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .event-container {
+    margin-top: 100px;
+  }
+
+  .event-card-content h2 {
+    font-size: 1.1rem;
+  }
+
+  .event-card-content p {
+    font-size: 1rem;
+  }
+
+  .event-card:nth-child(1) {
+    grid-column: 1 / 3;
+  }
+
+  .event-card:nth-child(2) {
+    grid-column: 3 / 5;
+  }
+
+  .review-container {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 100px 5% 0 5%;
+  }
+
+  .review-card-header h3 {
+    font-size: 1.1rem;
+  }
+
+  .review-card-header h4,
+  .review-card p {
+    font-size: 1rem;
+  }
+
+  .newsletter {
+    margin: 100px 5% 0 5%;
+  }
+
+  .newsletter h2 {
+    font-size: 1.2rem;
+  }
+
+  #footer a,
+  #footer p {
+    font-size: 0.9rem;
+  }
+}
+
+
+/* Media Querie Desktop Device */
+
+@media (min-width: 1024px) and (max-width: 1800px) {
+
+  .hamburger-menu {
+   display: none;
+  }
+
+  .hamburger-menu-icon {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .event-container {
+    margin-top: 100px;
+  }
+
+  .event-card:nth-child(1) {
+    grid-column: 1 / 3;
+  }
+
+  .event-card:nth-child(2) {
+    grid-column: 3 / 5;
+  }
+
+  .event-card-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .event-card-content p {
+    font-size: 1rem;
+  }
+
+  .review-container {
+    grid-template-columns: repeat(4, 1fr);
+    margin: 100px 5% 0 5%;
+  }
+
+  .review-card-header h3 {
+    font-size: 1.2rem;
+  }
+
+  .review-card-header h4,
+  .review-card p {
+    font-size: 1rem;
+  }
+
+  .newsletter {
+    padding: 120px;
+    margin: 100px 5% 0 5%;
+  }
+
+  .newsletter h2 {
+    font-size: 1.4rem;
+  }
+
+  #footer a,
+  #footer p {
+    font-size: 0.9rem;
+  }
+}
+
+
+/* Media Querie Large Desktop Device */
+
+@media (min-width: 1280px) {
+
+  .hamburger-menu-icon {
+    display: none;
+  }
+
+  .hero {
+    height: 60vh;
+  }
+
+  .hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .event-container {
+    margin-top: 150px;
+  }
+
+  .event-card-content {
+    padding: 25px 35px;
+  }
+
+  .event-card-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .event-card-content p {
+    font-size: 1rem;
+  }
+
+  .event-card:nth-child(1) {
+    grid-column: 1 / 3;
+  }
+
+  .event-card:nth-child(2) {
+    grid-column: 3 / 5;
+  }
+
+  .review-container {
+    grid-template-columns: repeat(4, 1fr);
+    margin: 150px 5% 0 5%;
+  }
+
+  .review-card h4,
+  .review-card p {
+    font-size: 1rem;
+  }
+
+  .newsletter {
+    padding: 140px;
+    margin: 150px 5% 0 5%;
+  }
+
+  .newsletter h2 {
+    font-size: 1.6rem;
+  }
+
+  #footer {
+    margin-top: 150px;
+  }
+
+  #footer a,
+  #footer p {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1801px) {
+  body {
+    display: none;
+}
+}

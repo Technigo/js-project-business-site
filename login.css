@@ -1,0 +1,477 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+
+/* This is my header */
+header {
+  background-color: #2e2e2e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+}
+
+.logo {
+  color: #ffffff;
+  font-family: "Playwrite IT Moderna", serif;
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+
+.navbar {
+  display: flex;
+  width: 100%;
+  list-style: none;
+  justify-content: space-evenly;
+}
+
+.nav-links {
+  list-style: none;
+}
+
+.nav-links li {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+li,
+a {
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+button {
+  background-color: #c652e7;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  padding: 8px 20px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: none;
+}
+
+/* This is the navbar when it's active */
+.hamburger-menu {
+  background-color: #2e2e2e;
+  height: 100vh;
+  width: 100%;
+  max-width: 100%;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  font-size: 3rem;
+  transition: .3 ease;
+}
+
+.hamburger-menu ul {
+  width: 100%;
+  cursor: pointer;
+  margin-top: 5rem;
+}
+
+.hamburger-menu li {
+  padding: 20px 0 20px 5%;
+  list-style: none;
+  border-bottom: 0.5px solid rgba(239, 239, 239, 0.3);
+}
+
+.hamburger-menu a {
+  font-size: 1.2rem;
+}
+
+.hamburger-menu.active {
+  right: 0;
+}
+
+/* This is the hamburger menu icon */
+.hamburger-menu-icon {
+  display: flex;
+  flex-direction: column;
+  height: 48px;
+  width: 48px;
+  margin-left: auto;
+  position: relative;
+}
+
+.hamburger-menu-icon span {
+  height: 3px;
+  width: 60%;
+  background-color: #ffffff;
+  border-radius: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  transition: .3s ease;
+}
+
+.hamburger-menu-icon span:nth-child(1) {
+  top: 32%;
+}
+
+.hamburger-menu-icon span:nth-child(3) {
+  top: 68%;
+}
+
+.hamburger-menu-icon.active span:nth-child(1) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.hamburger-menu-icon.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-menu-icon.active span:nth-child(3) {
+  top: 50%;
+  transform: translate(-50%, 50%) rotate(-45deg);
+}
+
+
+/* This is my hero section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  background-image: linear-gradient(rgba(48, 59, 75, 0.85), rgba(48, 59, 75, 0.85)), url(./Images/teamwork.jpg);
+  background-size: cover;
+  background-position: bottom;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+
+/* -- This is my login/sign up section-- */
+.login-container {
+  display: flex;
+  justify-content: center;
+}
+
+.login {
+  display: flex;
+  height: 70vh;
+  width: 50vw;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.form {
+  background-color: #272850;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 40px 8%;
+  border-radius: 8px;
+}
+
+.form h2 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+.form input {
+  width: 100%;
+  padding: 10px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  background-color: unset;
+  color: #ffffff;
+  margin: 6px 0 20px 0;
+  font-size: 0.9rem;
+}
+
+.form input:not(:nth-child(1)) {
+  margin: 6px 0 10px 0;
+}
+
+.primary-login {
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+  gap: 5px;
+}
+
+.primary-btn {
+  background: #c652e7;
+  color: #ffffff;
+  border-radius: 8px;
+  display: flex;
+  padding: 10px 10px;
+  flex: auto;
+  align-items: center;
+  gap: 5px;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.or {
+  text-align: center;
+  font-weight: bold;
+  border-bottom: 1px solid lightgray;
+  line-height: 0.1em;
+  margin: 15px 0;
+}
+
+.or span {
+  background: #272850;
+  padding: 0 10px;
+}
+
+.google-login {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.google-btn {
+  background: #ffffff;
+  color: #2e2e2e;
+  border-radius: 8px;
+  display: flex;
+  padding: 8px 10px;
+  flex: auto;
+  align-items: center;
+  gap: 5px;
+  justify-content: center;
+  margin-bottom: 15px;
+  cursor: pointer;
+  
+}
+
+.google-login img {
+  width: 24px;
+  margin-right: 6px;
+}
+
+.btn-text {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.subtitle a {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-align: center;
+  color: #c652e7;
+}
+
+.forgot-pass {
+  display: block;
+  font-size: 0.8rem;
+  text-align: left;
+  color: #c652e7;
+}
+
+
+/* This is my footer section */
+#footer {
+  background-color: #252525;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 100px;
+}
+
+#footer p {
+  background-color: #252525;
+  color: #ffffff;
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+
+/* -- Media Queries start here -- */
+@media(max-width: 319px) {
+
+  body {
+    display: none;
+  }
+}
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+  .navbar {
+    display: none;
+  }
+
+  button {
+    display: none;
+  }
+
+  .logo {
+    z-index: 1;
+    font-size: 1rem;
+  }
+
+  .hamburger-menu li {
+    padding: 15px;
+  }
+
+  .hamburger-menu a {
+    font-size: 1rem;
+    font-weight: 300;
+  }
+
+  .hamburger-menu-icon span {
+    height: 2px;
+    width: 50%;
+  }
+
+  .hamburger-menu-icon span:nth-child(1) {
+    top: 35%;
+  }
+
+  .hamburger-menu-icon span:nth-child(3) {
+    top: 65%;
+  }
+
+  .hero {
+    height: 100vh;
+  }
+
+  .hero h1 {
+    font-size: 1.4rem;
+    line-height: 1.8;
+  }
+
+  .login {
+    height: 70vh;
+    width: 90vw;
+  }
+
+  #footer a,
+  #footer p {
+    font-size: 0.8rem;
+  }
+}
+
+
+@media (min-width: 481px) and (max-width: 1023px) {
+
+  .navbar {
+    display: none;
+  }
+
+  button {
+    display: none;
+  }
+
+  .logo {
+    font-size: 1rem;
+    z-index: 1;
+  }
+
+  .hamburger-menu a {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .hamburger-menu-icon span {
+    height: 2px;
+    width: 50%;
+  }
+
+  .hamburger-menu-icon span:nth-child(1) {
+    top: 35%;
+  }
+
+  .hamburger-menu-icon span:nth-child(3) {
+    top: 65%;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  #footer a,
+  #footer p {
+    font-size: 0.9rem;
+  }
+}
+
+
+@media (min-width: 1024px) and (max-width: 1800px) {
+
+  .hamburger-menu {
+    display: none;
+  }
+
+  .hamburger-menu-icon {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  #footer a,
+  #footer p {
+    font-size: 0.9rem;
+  }
+}
+
+
+@media (min-width: 1280px) {
+
+  .hero {
+    height: 60vh;
+  }
+
+  .hero h1 {
+    font-size: 2.4rem;
+  }
+
+  #footer {
+    margin-top: 150px;
+  }
+
+  #footer a,
+  #footer p {
+    font-size: 1rem;
+  }
+}
+
+
+@media (min-width: 1801px) {
+  body {
+    display: none;
+  }
+}
