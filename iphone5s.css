@@ -1,0 +1,11 @@
+/*special rule for iphone5s*/
+@media (max-width: 334px) {
+
+  .darkmode .item-img {
+    box-shadow: none;
+  }
+
+  .darkmode .img-x img {
+    box-shadow: 0 0 20px white;
+  }
+}

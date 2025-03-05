@@ -1,0 +1,177 @@
+/*repeating code because of starting responsive code from desktop*/
+/*mobile < 667px make sure 320px works*/
+@media (max-width: 666px) {
+  .dropdown-content-main {
+    display: none;
+  }
+
+  header {
+    height: 80px;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+
+  .flex-parent {
+    display: none;
+  }
+
+  .hidden-ham-properties {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2%;
+    cursor: pointer;
+  }
+
+  .all-bar {
+    display: block;
+    width: 35px;
+    height: 3px;
+    background-color: black;
+    margin: 4px 0;
+    transition: 0.25s linear;
+  }
+
+  .change {
+    transition: .25s linear;
+    margin: 0;
+  }
+
+  .show {
+    transition: .25s linear;
+    right: 0;
+  }
+
+  .dropdown-content {
+    top: 80px;
+    width: 100%;
+    padding: 0;
+    height: 100%;
+  }
+
+  .dropdown-content h3 {
+    font-size: 16px;
+  }
+
+  .links-parent a {
+    font-size: 14px;
+  }
+
+  .email,
+  .type,
+  .frequency,
+  .amount,
+  .order {
+    font-size: 14px;
+  }
+
+  #emai-input,
+  #frequency-input,
+  #amount-input {
+    font-size: 14px;
+    height: 30px;
+  }
+
+
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.18fr repeat(2, 0.5fr);
+    /*only defines the first 3 rows*/
+    gap: 0;
+    margin: 0;
+  }
+
+  .hero {
+    margin-top: 80px;
+    grid-column: span 1;
+  }
+
+  .video {
+    border-radius: 0;
+  }
+
+  .item-text {
+    margin: 0;
+    height: 110%;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .text-jack {
+    margin-top: 50px;
+  }
+
+  img {
+    border-radius: 0;
+  }
+
+  .img-body-a {
+    display: none;
+  }
+
+  .darkmode .item-img {
+    border-radius: 8px;
+    box-shadow: 0 0 20px white;
+  }
+
+  .darkmode .img-mark img {
+    box-shadow: none;
+  }
+
+  .img-mark {
+    grid-row: span 1;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+    height: 500px;
+  }
+
+  .text-jack,
+  .text-news,
+  .text-wide,
+  .text-sandwich {
+    padding-left: 10px;
+    padding-right: 15px;
+  }
+
+  .text-news {
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+
+  .text-wide {
+    grid-column: span 1;
+    justify-content: flex-end;
+    height: 100%;
+  }
+
+  .solid-background {
+    grid-column: span 1;
+    border-radius: 0;
+    margin-top: 30px;
+    height: 250px;
+    margin-bottom: 20px;
+  }
+
+  .text-sandwich {
+    padding-top: 10px;
+  }
+
+  .foot {
+    display: none;
+  }
+
+  footer {
+    justify-content: center;
+    align-items: center;
+  }
+}

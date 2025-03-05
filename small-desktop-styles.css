@@ -1,0 +1,55 @@
+/*repeating code because of starting responsive code from desktop*/
+/*larger than tablet - desktop */
+@media (min-width: 1025px) and (max-width: 1409px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 0.3fr 1fr repeat(4, 0.3fr);
+    gap: 1%;
+    margin: 0px 5% 8% 5%;
+  }
+
+  .hero {
+    grid-column: span 2;
+  }
+
+  .item-text {
+    margin: 0;
+    height: 100%;
+  }
+
+  .img-body-a {
+    display: none;
+  }
+
+  .img-mark {
+    grid-row: span 1;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+  }
+
+  .text-news {
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+
+  .text-wide {
+    grid-column: span 2;
+    justify-content: flex-end;
+    height: 300px;
+  }
+
+  .dropdown-content-main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 0.1fr;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .dropdown-content-main h3 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+}

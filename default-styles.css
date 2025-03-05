@@ -1,0 +1,501 @@
+/*default with > 1400px*/
+body {
+  margin: 0 auto;
+  font-family: "Merienda", serif;
+  font-optical-sizing: auto;
+  padding: 0;
+  transition: 0.2s linear;
+}
+
+/*font optical sizing help readability when chaning font size. included with google font*/
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 4;
+  background-color: black;
+  height: 100vh;
+  width: 100%;
+  animation: load 0.5s linear 2s;
+  animation-fill-mode: forwards;
+  height: 100%;
+}
+
+/*z-index specifies seen order, behind or infront of objects.
+animation defines name, duration, timing-function, and delay. 
+Fill-mode changes to css affected by animation becomes permanent until reloaded
+"vh" stands for viewport height and is a percentage*/
+
+.spinner {
+  display: fixed;
+  position: fixed;
+  top: auto;
+  left: auto;
+  z-index: 5;
+  height: 120px;
+  width: 120px;
+  border: 6px solid;
+  border-color: white transparent white transparent;
+  border-radius: 50%;
+  animation: spin 1.5s ease infinite, load 0.5 linear 2s;
+  animation-fill-mode: forwards;
+}
+
+
+header {
+  display: flex;
+  position: fixed;
+  top: 0;
+  height: 120px;
+  width: 100%;
+  background-color: #f58d42;
+  z-index: 3;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.2s linear;
+}
+
+#theme-switch {
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  margin-left: 3%;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  transition: 0.2s linear;
+}
+
+#theme-switch svg {
+  fill: black;
+}
+
+#theme-switch svg:last-child {
+  display: none;
+}
+
+.darkmode {
+  background-color: black;
+}
+
+.darkmode .container {
+  background-color: black;
+  color: white;
+}
+
+.darkmode header {
+  background-color: #E96100;
+}
+
+.darkmode header #theme-switch svg:first-child {
+  display: none;
+}
+
+.darkmode header #theme-switch {
+  background-color: black;
+}
+
+.darkmode header #theme-switch svg:last-child {
+  display: block;
+  fill: white;
+}
+
+.darkmode .dropdown-content {
+  background-color: black;
+  color: white;
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.3);
+}
+
+.darkmode input[type=text]:focus {
+  box-shadow: 0 0 8px white;
+}
+
+.darkmode .dropdown-content a {
+  transition: 0.2s linear;
+}
+
+.darkmode .dropdown-content .links-parent a:hover {
+  color: #E96100;
+}
+
+.darkmode .order {
+  box-shadow: 0 0 10px white;
+}
+
+.darkmode .hero {
+  box-shadow: 0 0px 20px white;
+  border-radius: 8px;
+}
+
+.darkmode .item-img {
+  box-shadow: 0 0px 20px white;
+  border-radius: 8px;
+}
+
+.darkmode footer {
+  background-color: #E96100;
+}
+
+/*fixed position to stay on top of screen*/
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+.hidden-ham-properties {
+  display: none;
+}
+
+.dropdown-content {
+  top: 100px;
+  position: fixed;
+  z-index: 2;
+  right: -1000px;
+  height: 90vh;
+  width: 50%;
+  background-color: whitesmoke;
+  overflow: hidden;
+  transition: 0.25s linear;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.7);
+  display: grid;
+  padding: 20px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.1fr 0.1fr 1fr;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.dropdown-content h3 {
+  font-size: 18px;
+  text-align: center;
+}
+
+.links-parent {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.links-parent a {
+  text-decoration: none;
+  padding: 0 40px 0 40px;
+  transition: 0.25s linear;
+  margin: 10px 0 10px 0;
+}
+
+.links-parent a:hover {
+  color: #f58d42;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.form-parent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 5fr;
+  align-items: center;
+}
+
+.form-input {
+  margin: 10px 0 10px 0;
+  padding: 0 20px 0 20px;
+  font-size: 16px;
+}
+
+input[type=text]:focus {
+  box-shadow: 0 0 4px black;
+  outline: none;
+}
+
+.email-pos {
+  grid-column: span 2;
+}
+
+#email-input {
+  font-size: 16px;
+  border-color: white;
+  width: 100%;
+  border-radius: 3px;
+  text-align: center;
+}
+
+#whisky,
+#bourbon,
+#scotch {
+  border-color: white;
+}
+
+.type-pos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.frequency-pos {
+  grid-column: span 2;
+}
+
+#frequency-input {
+  border-color: grey;
+  width: 100%;
+  appearance: none;
+  outline: none;
+  font-size: 16px;
+  border-radius: 3px;
+  text-align: center;
+}
+
+#amount-input {
+  border-color: grey;
+  outline: none;
+  appearance: none;
+  width: 35px;
+  font-size: 16px;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.amount-pos {
+  grid-column: span 2;
+}
+
+.order-parent {
+  grid-column: 2 / 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.order {
+  height: 40px;
+  width: 100px;
+  border-radius: 10px;
+  margin-top: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 4px black;
+  box-shadow: 0 0 5px black;
+  transition: 0.2s linear;
+}
+
+.all-bar {
+  display: none;
+}
+
+.flex-parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin-right: 3%;
+}
+
+.flex-child {
+  text-decoration: none;
+  transition: 0.20s;
+  cursor: pointer;
+}
+
+.flex-child:hover {
+  margin-top: 10px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 2fr 1fr repeat(3, 1fr);
+  gap: 2.5%;
+  margin: 115px 5% 8% 5%;
+  justify-items: center;
+  align-items: center;
+  z-index: 2;
+  background-color: white;
+  transition: 0.2s linear;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  grid-column: span 3;
+}
+
+.video {
+  height: auto;
+  width: 100%;
+  border-radius: 0 0 8px 8px;
+}
+
+.item-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.item-imgex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.item-text {
+  margin: 0;
+  height: 100%;
+}
+
+.text-jack {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.text-news {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.text-news p {
+  text-align: end;
+}
+
+img {
+  flex-shrink: 0;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 8px;
+}
+
+.min-img {
+  min-width: 200px;
+}
+
+/*minimum width to certain images*/
+
+.img-mark {
+  grid-row: span 2;
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+/*span two rows*/
+
+.solid-background {
+  grid-column: span 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  border-radius: 8px;
+  height: 100%;
+}
+
+.img-glass {
+  max-width: 45%;
+  max-height: 45%;
+}
+
+.text-wide {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 300px;
+}
+
+.dropdown-content-main {
+  display: grid;
+  grid-column: 2;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.1fr 0.1fr;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.dropdown-content-main h3 {
+  font-size: 18px;
+  text-align: center;
+}
+
+footer {
+  display: flex;
+  background-color: #f58d42;
+  height: 120px;
+  justify-content: space-between;
+  transition: 0.2 linear;
+}
+
+.foot {
+  display: flex;
+  margin-left: 3%;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-parent-two {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin-right: 3%;
+}
+
+.flex-child-two {
+  text-decoration: none;
+}
+
+.logo {
+  margin-top: 5px;
+  width: 30px;
+  height: auto;
+  flex-shrink: 0;
+  max-width: 100%;
+  max-height: 100%;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.flex-child-two:hover {
+  .logo {
+    margin-top: 15px;
+  }
+}
+
+@keyframes spin {
+  to {
+    rotate: 360deg;
+  }
+}
+
+@keyframes load {
+  to {
+    opacity: 0;
+    display: none;
+  }
+}
+
+/*keyframes for the starting animations. "load" being the large background*/

@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <link
+    rel="stylesheet"
+    href="default-styles.css"
+  >
+  <link
+    rel="stylesheet"
+    href="small-desktop-styles.css"
+  />
+  <link
+    rel="stylesheet"
+    href="tablet-styles.css"
+  />
+  <link
+    rel="stylesheet"
+    href="mobile-styles.css"
+  />
+  <link
+    rel="stylesheet"
+    href="iphone5s.css"
+  />
+  <!--Links to font from googleapis-->
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+  <link
+    href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Merienda:wght@300..900&display=swap"
+    rel="stylesheet"
+  >
+  <script
+    defer
+    src="hamburger.js"
+  ></script>
+  <script
+    defer
+    src="validation.js"
+  ></script>
+  <script
+    defer
+    src="darkmode.js"
+  ></script>
+  <!--"defer" keyword makes sure DOM is ready when the script runs-->
+  <title>js-project-business-site</title>
+</head>
+
+<!--most child elements are flex, also header and footer
+container, as well as dropdown, is a grid-->
+
+<body>
+  <section class="loader">
+    <figure class="spinner">
+    </figure>
+  </section>
+  <header>
+    <button id="theme-switch">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        height="24px"
+        viewBox="0 -960 960 960"
+        width="24px"
+        fill="#e8eaed"
+      >
+        <path
+          d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"
+        />
+      </svg>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        height="24px"
+        viewBox="0 -960 960 960"
+        width="24px"
+        fill="#e8eaed"
+      >
+        <path
+          d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"
+        />
+      </svg>
+    </button>
+    <article class="title">
+      <h1>
+        <bold>Whiskey.inc</bold>
+      </h1>
+    </article>
+    <nav class="flex-parent">
+      <a
+        class="flex-child"
+        src="#"
+      >News</a>
+      <p>┇</p>
+      <a
+        class="flex-child"
+        src="#"
+      >Reviews</a>
+      <p>┇</p>
+      <a
+        class="flex-child"
+        src="#"
+      >Subsribe</a>
+    </nav>
+    <nav
+      id="hidden-ham"
+      class="hidden-ham-properties"
+    >
+      <div
+        id="bar-one"
+        class="all-bar"
+      ></div>
+      <div
+        id="bar-two"
+        class="all-bar"
+      ></div>
+      <div
+        id="bar-three"
+        class="all-bar"
+      ></div>
+    </nav>
+  </header>
+  <aside
+    id="dropdown"
+    class="dropdown-content"
+  >
+    <nav class="links-parent">
+      <a>News</a>
+      <a>Reviews</a>
+    </nav>
+    <h3>Subscribe to our <u>digital</u> newsletter!</h3>
+    <form
+      action="https://httpbin.org/anything"
+      method="post"
+      class="form-parent"
+      id="form"
+    >
+      <div class="form-input">
+        <label
+          class="email"
+          for="email-input"
+        >
+          Email
+        </label>
+      </div>
+      <div class="form-input email-pos">
+        <input
+          type="text"
+          id="email-input"
+          name="email"
+          placeholder="example@gmail.com"
+          required
+        >
+      </div>
+      <div class="form-input type-pos">
+        <label
+          class="type"
+          for="whsiky"
+        >
+          Whisky
+        </label>
+        <input
+          type="radio"
+          id="whisky"
+          name="type"
+          value="whisky"
+          required
+        >
+      </div>
+      <div class="form-input type-pos">
+        <label
+          class="type"
+          for="bourbon"
+        >
+          Bourbon
+        </label>
+        <input
+          type="radio"
+          id="bourbon"
+          name="type"
+          value="bourbon"
+        >
+      </div>
+      <div class="form-input type-pos">
+        <label
+          class="type"
+          for="scotch"
+        >
+          Scotch
+        </label>
+        <input
+          type="radio"
+          id="scotch"
+          name="type"
+          value="scotch"
+        >
+      </div>
+      <div class="form-input">
+        <label
+          class="frequency"
+          for="frequency-input"
+        >
+          Frequency
+
+        </label>
+      </div>
+      <div class="form-input frequency-pos">
+        <select
+          name="frequency"
+          id="frequency-input"
+          value="week"
+          type="select"
+          required
+        >
+          <option value="week">Weekly</option>
+          <option value="month">Montly</oprion>
+          <option value="year">Yearly</option>
+        </select>
+      </div>
+      <div class="form-input">
+        <label
+          class="amount"
+          for="amount-input"
+        >
+          Amount
+
+        </label>
+      </div>
+      <div class="form-input amount-pos">
+        <select
+          name="amount"
+          id="amount-input"
+          value="one"
+          type="select"
+          required
+        >
+          <option value="one">1</option>
+          <option value="two">2</oprion>
+          <option value="three">3</option>
+          <option value="four">4</option>
+          <option value="five">5</oprion>
+        </select>
+      </div>
+      <div class="order-parent">
+        <button
+          class="order"
+          type="submit"
+        >
+          Subscribe
+        </button>
+      </div>
+    </form>
+  </aside>
+  <section class="container">
+    <figure class="hero">
+      <video
+        class="video"
+        autoplay
+        muted
+        loop
+        disablePictureInPicture
+      >
+        <source
+          src="./vid/glass.mp4"
+          type="video/mp4"
+        >
+      </video>
+    </figure>
+    <!--
+    Earlier pictures for site which were replaced by hero video
+    <figure class="item-img img-top">
+      <img class="min-img" src="img/img2.jpg">
+    </figure>
+    <figure class="item-img img-top">
+      <img class="min-img" src="img/img1.jpg">
+    </figure>
+    <figure class="item-img img-top">
+      <img class="min-img" src="img/img3.jpg">
+    </figure>
+    -->
+    <figure class="item-img img-body-a">
+      <img
+        class="min-img"
+        src="img/img4.jpg"
+      >
+    </figure>
+    <article class="item-text text-jack">
+      <h2>Ol' Jack</h2>
+      <p>
+        Jack Daniel’s Tennessee Whiskey is charcoal-mellowed for a smooth, rich taste with hints of caramel,
+        vanilla,
+        and toasted oak. Perfect neat, on the rocks, or in a cocktail, it delivers bold character with every sip.
+        With
+        over 150 years of craftsmanship, Jack Daniel’s isn’t just whiskey—it’s a legend in a bottle.
+      </p>
+    </article>
+    <article class="item-text text-news">
+      <h2>Recent news!</h2>
+      <p>
+        In Scotland, two rugby players, Duhan van Der Merwe and Pierre Schoeman, have founded the whisky brand
+        Hirundine, which has secured a significant contract to be supplied in 21 Buzzworks venues.
+      </p>
+    </article>
+    <figure class="item-img img-mark">
+      <img src="img/img5.jpg">
+    </figure>
+    <article class="item-text text-wide">
+      <h2>Bullseye</h2>
+      <p>
+        Maker’s Mark is a handcrafted Kentucky bourbon that stands out with its smooth, rich flavor and signature
+        red
+        wax seal. Unlike most bourbons, it’s made with soft red winter wheat instead of rye, giving it a sweeter,
+        more
+        approachable taste. Every batch is carefully aged to taste, not time, ensuring consistent quality in every
+        bottle. The result is a velvety-smooth whiskey with notes of caramel, vanilla, and warm oak, perfect for
+        sipping
+        neat or mixing into classic cocktails.
+
+        Crafted in small batches at the Maker’s Mark Distillery in Loretto, Kentucky, this bourbon is still produced
+        the
+        old-fashioned way. Each bottle is hand-dipped in wax, making every one unique and instantly recognizable.
+        The
+        attention to detail doesn’t stop there—the limestone-filtered water and carefully charred oak barrels
+        enhance
+        its complexity. Whether you’re a seasoned whiskey lover or just starting out, Maker’s Mark is incredibly
+        easy to
+        enjoy.
+      </p>
+    </article>
+    <div class="solid-background">
+      <figure class="item-imgex img-glass">
+        <img
+          class="min-img"
+          src="img/img7.jpg"
+        >
+      </figure>
+    </div>
+    <article class="item-text text-sandwich">
+      <h2>Lord Calvert</h2>
+      <p>
+        Lord Calvert Whisky is rough, cheap, and barely drinkable. The nose reeks of harsh alcohol with little depth. On
+        the palate, it's thin, overly sweet, and artificial. The finish is short but leaves an unpleasant bitterness. It
+        lacks complexity, warmth, or any redeeming qualities. Even mixed, it tastes like regret. Spend your money
+        elsewhere.
+      </p>
+    </article>
+    <article class="item-text text-sandwich">
+      <h2>A reliable irish brew</h2>
+      <p>
+        Jameson Irish Whiskey is a solid, approachable choice for any occasion. The nose is light and inviting, with
+        notes of vanilla, honey, and a touch of spice. On the palate, it’s smooth and balanced, offering hints of
+        toasted wood, sweet malt, and a gentle nuttiness. The triple distillation process gives it a clean,
+        easy-drinking character. The finish is mellow, with a lingering warmth and subtle spice. It works well neat, on
+        the rocks, or in cocktails. While not the most complex whiskey, it delivers consistent quality. A reliable
+        staple for both beginners and seasoned whiskey drinkers alike.
+      </p>
+    </article>
+    <article class="item-text text-sandwich">
+      <h2>True scotch!</h2>
+      <p>
+        Grant’s Blended Scotch Whisky is an outstanding value with a rich, well-balanced profile. The nose greets you
+        with honeyed sweetness, ripe fruits, and a touch of oak. On the palate, it’s smooth and layered, offering notes
+        of vanilla, malt, and a hint of smoke. The blend is expertly crafted, delivering depth and character beyond its
+        price point. The finish is long, warm, and slightly spiced, leaving you wanting another sip. It’s
+        versatile—great neat, on the rocks, or in cocktails. Consistently smooth and enjoyable, it outshines many in its
+        category. A fantastic go-to whisky for any occasion!
+      </p>
+    </article>
+    <div class="dropdown-content-main">
+      <h3>Subscribe to our <u>digital</u> newsletter!</h3>
+      <form
+        action="https://httpbin.org/anything"
+        method="post"
+        class="form-parent dissappear"
+        id="form"
+      >
+        <div class="form-input">
+          <label
+            class="email"
+            for="email-input"
+          >
+            Email
+          </label>
+        </div>
+        <div class="form-input email-pos">
+          <input
+            type="text"
+            id="email-input"
+            name="email"
+            placeholder="example@gmail.com"
+            required
+          >
+        </div>
+        <div class="form-input type-pos">
+          <label
+            class="type"
+            for="whisky"
+          >
+            Whisky
+          </label>
+          <input
+            type="radio"
+            id="whisky"
+            name="type"
+            value="whisky"
+            required
+          >
+        </div>
+        <div class="form-input type-pos">
+          <label
+            class="type"
+            for="bourbon"
+          >
+            Bourbon
+          </label>
+          <input
+            type="radio"
+            id="bourbon"
+            name="type"
+            value="bourbon"
+          >
+        </div>
+        <div class="form-input type-pos">
+          <label
+            class="type"
+            for="scotch"
+          >
+            Scotch
+          </label>
+          <input
+            type="radio"
+            id="scotch"
+            name="type"
+            value="scotch"
+          >
+        </div>
+        <div class="form-input">
+          <label
+            class="frequency"
+            for="frequency"
+          >
+            Frequency
+
+          </label>
+        </div>
+        <div class="form-input frequency-pos">
+          <select
+            name="frequency"
+            id="frequency"
+            value="week"
+            type="select"
+            required
+          >
+            <option value="week">Weekly</option>
+            <option value="month">Montly</oprion>
+            <option value="year">Yearly</option>
+          </select>
+        </div>
+        <div class="form-input">
+          <label
+            class="amount"
+            for="amount"
+          >
+            Amount
+
+          </label>
+        </div>
+        <div class="form-input amount-pos">
+          <select
+            name="amount"
+            id="amount"
+            value="one"
+            type="select"
+            required
+          >
+            <option value="one">1</option>
+            <option value="two">2</oprion>
+            <option value="three">3</option>
+            <option value="four">4</option>
+            <option value="five">5</oprion>
+          </select>
+        </div>
+        <div class="order-parent">
+          <button
+            class="order"
+            type="submit"
+          >
+            Subscribe
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+  <footer>
+    <article class="foot">
+      <h2>Well-hidden footer message</h2>
+    </article>
+    <nav class="flex-parent-two">
+      <a
+        class="flex-child-two"
+        src="#"
+        href="https://www.facebook.com"
+      >
+        <img
+          class="logo"
+          src="img/faceb.png"
+        >
+      </a>
+      <p>┇</p>
+      <a
+        class="flex-child-two"
+        src="#"
+        href="https://www.instagram.com"
+      >
+        <img
+          class="logo"
+          src="img/insta.png"
+        >
+      </a>
+      <p>┇</p>
+      <a
+        class="flex-child-two"
+        src="#"
+        href="https://www.tiktok.com"
+      >
+        <img
+          class="logo"
+          src="img/tiktok.png"
+        >
+      </a>
+    </nav>
+  </footer>
+</body>
+
+</html>

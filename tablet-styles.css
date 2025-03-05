@@ -1,0 +1,115 @@
+/*repeating code because of starting responsive code from desktop*/
+/*larger than mobile - tablet */
+@media (min-width: 667px) and (max-width: 1024px) {
+  .dropdown-content-main {
+    display: none;
+  }
+
+  header {
+    height: 100px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .flex-parent {
+    display: none;
+  }
+
+  .hidden-ham-properties {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 3%;
+    cursor: pointer;
+    width: 50px;
+  }
+
+  .all-bar {
+    display: block;
+    width: 35px;
+    height: 3px;
+    background-color: black;
+    margin: 4px 0;
+    transition: 0.25s linear;
+  }
+
+  .change {
+    transition: .25s linear;
+    margin: 0;
+  }
+
+  .show {
+    transition: .25s linear;
+    right: 0;
+  }
+
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 0.3fr 1fr repeat(4, 0.3fr);
+    gap: 1%;
+    margin: 30px 5% 5% 5%;
+  }
+
+  .hero {
+    grid-column: span 2;
+  }
+
+  .video {
+    border-radius: 8px;
+  }
+
+  .item-text {
+    margin-top: 60px;
+    height: 110%;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .text-news {
+    padding-left: 5px;
+  }
+
+  .img-body-a {
+    display: none;
+  }
+
+  .img-mark {
+    grid-row: span 1;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+  }
+
+  .text-news {
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+
+  .text-wide {
+    grid-column: span 2;
+    justify-content: flex-end;
+    height: 250px;
+  }
+
+  .text-sandwich {
+    padding: 0 10px 0 10px;
+  }
+
+  footer h2 {
+    font-size: 20px;
+  }
+
+  .flexchild-two {
+    font-size: 14px;
+  }
+
+}
