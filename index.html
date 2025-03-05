@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarot for Developers</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <header>
+    <nav class="desktop-nav">
+      <h1>Tarot for Developers</h1>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+
+    <div id="hamburger-menu" class="hamburger-menu">☰</div>
+
+    <ul id="mobile-nav" class="mobile-nav">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </header>
+
+  <main>
+
+    <header class="headline">
+      <h2>Your random reading 👇 </h2>
+    </header>
+
+    <section class="tarot-spread">
+      <article class="card">
+        <h3>The Commit</h3>
+        <p>Stability, confidence, and pushing code that you think is bug-free.</p>
+        <div class="card-description">A moment of clarity when you finally commit your code—but beware, for what
+          is done cannot be undone (unless you force push).</div>
+
+      </article>
+
+      <article class="card">
+        <h3>The Merge Conflict</h3>
+        <p>Chaos, miscommunication, and the battle between multiple branches.</p>
+      </article>
+
+      <article class="card">
+        <h3>The Infinite Loop</h3>
+        <p>Repetition, getting stuck, and debugging late into the night.</p>
+      </article>
+      <article class="card">
+        <h3>The 404</h3>
+        <p>Lost direction, confusion, and missing information.</p>
+      </article>
+
+      <article class="card">
+        <h3>The Rubber Duck</h3>
+        <p>Clarity, self-reflection, and debugging through explanation.</p>
+      </article>
+
+      <article class="card">
+        <h3>The Stack Overflow</h3>
+        <p>Knowledge, wisdom, and the power of community.</p>
+      </article>
+      <article class="card">
+        <h3>The Deprecation</h3>
+        <p>Change, evolution, and letting go of the past.</p>
+      </article>
+
+      <article class="card">
+        <h3>The Feature Creep</h3>
+        <p>Ambition, scope expansion, and never-ending requirements.</p>
+      </article>
+
+    </section>
+
+    <form class="tarot-form" action="https://httpbin.org/anything" method="post">
+      <fieldset class="fieldset">
+        <legend>ask-the-cards</legend>
+        <div class="wrapper-col">
+          <p>How many cards do you want in your spread?</p>
+          <div class="wrapper-row">
+            <label class="radiobutton-container"> 1
+              <input type="radio" name="answer" value="1" checked>
+              <span class="custom-radio"></span>
+            </label>
+            <label class="radiobutton-container"> 4
+              <input type="radio" name="answer" value="4">
+              <span class="custom-radio"></span>
+            </label>
+            <label class="radiobutton-container"> 6
+              <input type="radio" name="answer" value="6">
+              <span class="custom-radio"></span>
+            </label>
+            <label class="radiobutton-container"> 8
+              <input type="radio" name="answer" value="8">
+              <span class="custom-radio"></span>
+            </label>
+          </div>
+        </div>
+        <p>
+          <label>
+            We'll send copy to your email <br>
+            <input type="email" name="email" placeholder="lostsoul@example.com" required>
+          </label>
+        </p>
+        <button type="submit">Show my reading!</button>
+
+      </fieldset>
+    </form>
+
+
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 New reading | <a href="https://github.com/VariaSlu" target="_blank">Visit my site</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+
+
+</body>
+
+</html>
