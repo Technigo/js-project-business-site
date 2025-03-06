@@ -1,0 +1,635 @@
+/*Makes the scroll from the article buttons to the form and the link to the navigation smooth*/
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/*Body as a Flex parent setting parameters for the children header, main and footer.*/
+body {
+  font-family: akzidenz-grotesk, Open Sans, ui-sans-serif, system-ui; 
+  background: #DABFAE;
+  color: #DABFAE;
+  padding: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Removes the underline for all links */
+a {
+  text-decoration: none;
+}
+
+/*Header is a child to body and a Flexbox parent to the headers, image and hamburger menu.
+Contains a hero image, hamburger menu that opens and colaps on click.*/
+header {
+  background-image: url(./images/berryfield.jpg);
+  height: 50vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  padding: 50px;
+}
+
+.header-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 75%;
+  border: 2px solid #3F4E3D;
+  background-color: #6A7A5C;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 4px;
+}
+
+h1 {
+  flex: 1;
+  font-size: 35px;
+}
+
+h2 {
+  font-weight: 100;
+  flex: 1;
+  font-size: 20px;
+}
+
+.hamburger-section p {
+  color: #DABFAE;
+  border: 2px solid #3F4E3D;
+  padding: 2px;
+  border-radius: 4px;
+  min-width: 110px;
+}
+
+.hamburger-menu-closed {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #6A7A5C;
+  height: 50px;
+  width: 50px;
+ position: relative;
+}
+
+.hamburger-menu-open {
+  background-color: #6A7A5C;
+  height: 100vh;
+  width: 100%;
+  max-width: 768px;
+  position: fixed;
+  top: 0;
+  right: -768px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 3rem;
+  transition: .3s ease;
+}
+
+.hamburger-menu-open.active {
+  left: 0;
+}
+
+
+main {
+  text-align: center;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+/*.berry-articles is a Flex parent to child article, positioning the articles.*/
+.berry-articles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  max-width: 100%;
+}
+
+p {
+  color: black;
+  font-size: 15px;
+}
+
+.berry {
+  display: flex; /*overrides articles the same!!*/
+  flex-direction: column;
+  background-color: #6A7A5C;
+  padding: 2px;
+  border: 2px solid #3F4E3D;
+  border-radius: 4px;
+  margin: 0 auto;
+}
+
+.berry h3 {
+  font-size: 30px;
+}
+
+.berry p {
+  font-size: 15px;
+}
+
+.berry-img {
+  width: 100%;
+}
+
+.section-order-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.order-form {
+  background-color: #6A7A5C;
+  border: 2px solid #3F4E3D;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  padding: 2px;
+  max-width: 100%;
+  min-width: 150px;
+}
+
+output {
+  display: inline;
+}
+
+label {
+  display: flex;
+  font-size: 15px;
+  padding: 5px;
+}
+
+span {
+  flex: 1;
+  width: 100%;
+  text-align: center;
+  margin-right: 15px;
+}
+
+input {
+  flex: 1;
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+  font-size: 10px;
+  min-width: 130px;
+}
+
+.order-form-selection {
+  flex: 1;
+  width: 100%;
+  margin: 10px 0px 10px 0;
+  border-radius: 4px;
+  color: black;
+  font-size: 10px;
+  min-width: 130px;
+  height: 50px;
+}
+
+.order-form-selection {
+  flex: 1;
+  font-style: italic;
+  text-align: center;
+}
+
+/*css placeholder css tricks*/
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #DABFAE;
+  font-style: italic;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #DABFAE;
+  font-style: italic;
+}
+
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #DABFAE;
+  font-style: italic;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #DABFAE;
+  font-style: italic;
+}
+
+button {
+  width: 100%;
+  background-color: #DABFAE;
+  appearance: none;
+  padding: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+
+.contact {
+  background-color: #6A7A5C;
+  border: 2px solid #3F4E3D;
+  border-radius: 4px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.contact h3 {
+  font-size: 30px;
+}
+
+/*Footer is CSS Grid parent positioning navigation, facebook and instagram image and links.*/
+.footer-navigation {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);  
+  background-color: #3F4E3D;
+  gap: 20px;
+  padding: 10px;
+  /* display: flex;
+  flex-direction: row; */
+  justify-content: center;
+  width: 100%;
+}
+
+.footer-navigation p {
+  color: #DABFAE;
+}
+
+.instagram-img{
+  grid-column: 1 / 2;  
+}
+
+.facebook-img{
+  grid-column: 2 / 3;
+}
+
+/*Responsive for mobile, tablet, desktop and widescreen.
+Changing the Flex direction from column for mobile to row for tablet, desktop and widescreen.*/
+
+/* Mobile */
+@media only screen and (max-width: 500px) {
+
+  /*Hiding .nav home, about and contact for mobile*/
+  .footer-nav {
+    display: none;
+  }
+
+  .hero-container {
+    display: none;
+  }
+}
+
+/* Tablet */
+@media (min-width: 501px) and (max-width: 768px) {
+
+  .berry-articles {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .main-text-content {
+    width: 100%;
+  }
+
+  .berry-img {
+    width: 300px;
+  }
+
+  button {
+    font-size: 20px;
+  }
+
+  .section-order-form {
+    flex: 1;
+    padding: 20px;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    gap: 20px;
+
+  }
+
+  .order-form {
+    padding: 2px;
+  }
+
+  label{
+    align-items: center;
+  }
+
+  input{
+   width: 50%;
+  }
+
+  .order-form-selection{
+    width: 50%;
+  }
+
+  .contact {
+    margin-top: 0px;
+    width: 50%;
+  }
+
+  .footer-navigation{
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  .instagram-img{
+    grid-column: 2 / 3;   
+  }
+  
+  .facebook-img{
+    grid-column: 3 / 4;    
+  }
+
+  .footer-nav.one{
+    grid-column: 4 / 5;        
+  }
+
+  .footer-nav.two{
+    grid-column: 5 / 6;          
+  }
+
+  .footer-nav.three{
+    grid-column: 6 / 7;          
+  }
+
+  .footer-nav.four{
+    grid-column: 7 / 8;          
+  }
+
+}
+
+/* Desktop */
+@media (min-width: 769px) and (max-width: 1200px) {
+
+  h1 {
+    font-size: 50px;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+
+  .hamburger-menu-closed {
+    display: none;
+  }
+
+  .hamburger-menu-open {
+    height: 15vh;
+    width: 50%;
+    position: static;
+    top: 0;
+    left: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: linear;
+  }
+
+  .hamburger-section {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 4px;
+  }
+
+  /*Parent to article .berry*/
+  .berry-articles {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /*Child to berry-articles*/
+  .main-text-content {
+    width: 100%;
+  }
+
+  .berry-img {
+    width: 300px;
+  }
+
+  button {
+    font-size: 20px;
+  }
+
+  .section-order-form {
+    flex: 1;
+    padding: 20px;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    gap: 20px;
+  }
+
+  .order-form {
+    justify-content: center;
+    align-items: center;   
+    flex: 1;
+  }
+
+  label {
+    width: 100%;
+  }
+
+  input{
+    font-size: 15px;    
+  }
+
+  .order-form-selection{
+    font-size: 15px;  
+  }
+
+  .form-button {
+    width: 75%;
+  }
+
+  .contact {
+    margin-top: 0px;
+    width: 50%;
+  }
+
+  
+  .footer-navigation{
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .instagram-img{
+    grid-column: 4 / 5;   
+  }
+  
+  .facebook-img{
+    grid-column: 5 / 6;    
+  }
+
+  .footer-nav.one{
+    grid-column: 6 / 7;        
+  }
+
+  .footer-nav.two{
+    grid-column: 7 / 8;          
+  }
+
+  .footer-nav.three{
+    grid-column: 8 / 9;          
+  }
+
+  .footer-nav.four{
+    grid-column: 9 / 10;          
+  }
+ 
+}
+
+/* wideScreen */
+@media (min-width: 1201px) {
+
+  h1 {
+    font-size: 50px;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+
+  .hamburger-menu-closed {
+    display: none;
+  }
+
+  .hamburger-menu-open {
+    height: 15vh;
+    width: 50%;
+    position: static;
+    top: 0;
+    left: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: linear;
+  }
+
+  .hamburger-section {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 4px;
+  }
+
+  /*Parent to article .berry*/
+  .berry-articles {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /*Child to main*/
+  .main-text-content {
+    width: 100%;
+  }
+
+  .berry-img {
+    width: 300px;
+  }
+
+  button {
+    font-size: 20px;
+  }
+
+  .section-order-form {
+    padding: 20px;
+    flex: 1;
+    padding: 20px;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    gap: 20px;
+  }
+
+  .order-form {
+    max-width: 50%;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 50%;
+    flex: 1;
+  }
+
+  input{
+    font-size: 15px;
+  }
+
+  .order-form-selection{
+    font-size: 15px;
+  }
+
+  .contact {
+    margin-top: 0px;
+    width: 50%;
+  }
+
+  label {
+    width: 70%;
+  }
+
+  .form-button {
+    width: 75%;
+  }
+
+  .footer-navigation{
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .instagram-img{
+    grid-column: 4 / 5;   
+  }
+  
+  .facebook-img{
+    grid-column: 5 / 6;    
+  }
+
+  .footer-nav.one{
+    grid-column: 6 / 7;        
+  }
+
+  .footer-nav.two{
+    grid-column: 7 / 8;          
+  }
+
+  .footer-nav.three{
+    grid-column: 8 / 9;          
+  }
+
+  .footer-nav.four{
+    grid-column: 9 / 10;          
+  }
+ 
+}

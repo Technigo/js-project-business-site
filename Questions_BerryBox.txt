@@ -1,0 +1,9 @@
+Questions BerryBox
+
+* Navigation bar clickable?
+* Should Navigation be hidden in mobile?
+* How do a center my button?
+* How do I adjust the img?
+
+*Header img - How do I remove the green field under?
+

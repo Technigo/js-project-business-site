@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <title>Project Berry Box</title>
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+</head>
+
+<body>
+
+
+  <!--Header with buisiness name and plot, hero image, hamburger navigation bar that toggles on click (mobile/tablet) or show (desktop/widescreen). -->
+  <header>
+    <section
+      id="header-text"
+      class="header-text"
+    >
+      <h1>Berry Box</h1>
+      <h2>Meet us at the farm</h2>
+
+      <!-- hamburger navigation bar toggles on click with different icons (mobile/tablet) or show (desktop/widescreen) -->
+      <div
+        id="hamburger-menu-closed"
+        class="hamburger-menu-closed"
+      >
+        <img
+          id="hamburger-image"
+          class="hamburger-image"
+          src="./images/hamburger_filled.png"
+          alt="hamburger-image"
+        >
+      </div>
+      <!-- Open when you click hambuger icon or show on desktop/widescreen -->
+      <div
+        id="hamburger-menu-open"
+        class="hamburger-menu-open"
+      >
+        <img
+          id="strawberry-image"
+          class="strawberry-image"
+          src="./images/strawberry_filled.png"
+          alt="strawberry-image"
+        />
+        <section class="hamburger-section">
+          <a href="#header-text">
+            <p
+              id="home"
+              class="hamburger-section-selection"
+            >Home</p>
+          </a>
+          <a href="#main-text-content">
+            <p
+              id="hamburger-section-selection-about"
+              class="hamburger-section-selection"
+            >About the farm</p>
+          </a>
+          <a href="#berry-articles">
+            <p
+              id="hamburger-section-selection-buy"
+              class="hamburger-section-selection"
+            >Buy a box</p>
+          </a>
+          <a href="#contact">
+            <p
+              id="hamburger-section-selection-contact"
+              class="hamburger-section-selection"
+            >Contact</p>
+          </a>
+        </section>
+      </div>
+    </section>
+  </header>
+
+  <!--Main including content describing the buisiness, articles displaying the product for sale (devided into seperate classes), 
+  form for order and a contact card.-->
+  <main>
+    <div
+      id="main-text-content"
+      class="main-text-content"
+    >
+      <p>
+        At Berry Box Farm, we take pride in growing the juiciest, freshest berries, picked with love and care. Our farm
+        is a place where nature and family come together, offering a rich variety of strawberries, blueberries and
+        raspberries.</p>
+      <p>We believe in sustainable farming, using eco-friendly practices to nurture our land and produce berries
+        bursting with flavor. Whether you're here for a farm tour, a berry-picking adventure, or just to enjoy the
+        beautiful scenery, we welcome you to experience the sweetness of farm-fresh berries.</p>
+      <p>
+        Come taste the difference at Berry Box Farm—where every berry is grown with love!</p>
+
+    </div>
+
+    <section
+      id="berry-articles"
+      class="berry-articles"
+    >
+      <article class="berry strawberry">
+
+        <img
+          class="berry-img"
+          src="./images/kid2.webp"
+        />
+        <h3>Strawberry</h3>
+        <p>Price 145kr/kg</p>
+        <a href=#order-form><button>Buy a box</button></a>
+      </article>
+
+      <article class="berry raspberry">
+        <img
+          class="berry-img"
+          src="./images/raspberry.webp"
+        />
+        <h3>Raspberry</h3>
+        <p>Price 195kr/kg</p>
+        <a href=#order-form><button>Buy a box</button></a>
+      </article>
+
+      <article class="berry blueberry">
+        <img
+          class="berry-img"
+          src="./images/blueberry.webp"
+        />
+        <h3>Blueberry</h3>
+        <p>Price 195kr/kg</p>
+        <a href=#order-form> <button>Buy a box</button><a>
+      </article>
+    </section>
+
+    <section class="section-order-form">
+
+      <form
+        class="order-form"
+        id="order-form"
+        action="http://httpbin.org/anything"
+        method="POST"
+      >
+        <label>
+          <span>Name</span>
+          <input
+            type="text"
+            name="name"
+            placeholder="Anna Andersson"
+            required
+          ></input>
+        </label>
+        <label>
+          <span>Email</span>
+          <input
+            type="email"
+            name="email"
+            placeholder="anna@mail.com"
+            required
+          ></input>
+        </label>
+        <label>
+          <span>Phone</span>
+          <input
+            type="tel"
+            name="phone-number"
+            placeholder="070-111 22 33"
+            required
+          ></input>
+        </label>
+        <label class="order-form-selection-container">
+          <span>Meet us at the farm and </span>
+          <select class="order-form-selection" name="order-form-selection">
+            <option
+              class="order-form-selection-default-text"
+              value="select"
+            >-- make your selection --</option>
+            <option value="pick">pick your own berries</option>
+            <option value="pickup">pick up a box of berries</option>
+          </select></label>
+        <label>
+          <span>Pick a date</span>
+          <input
+            type="date"
+            name="date"
+          ></input>
+        </label>
+        <label>
+          <span>How many?</span>
+          <input
+            type="number"
+            name="amount"
+            value="1"
+          ></input>
+        </label>
+        <button
+          class="form-button"
+          type="submit"
+        >Summery 195kr</button>
+      </form>
+
+      <section
+        id="contact"
+        class="contact"
+      >
+        <h3>Welcome to the farm</h3>
+        <p>Berry Box Farm</p>
+        <p>Road of berries 753</p>
+        <p>Harvest Valley, WV 26789</p>
+        <p>Phone: +46 75 555 44 33</p>
+      </section>
+    </section>
+  </main>
+
+  <!--Footer including a navigation bar and icons/links to facebook and instagram-->
+  <footer class="footer-navigation">
+    <div class="instagram-img">
+      <a
+        href="https://www.instagram.com/"
+        target="_blank"
+      >
+        <img
+          src="./images/instagram2.png"
+          alt="instagram link"
+        ></a>
+    </div>
+    <div class="facebook-img">
+      <a
+        href="https://www.facebook.com/"
+        target="_blank"
+      >
+        <img
+          src="./images/facebook.png"
+          alt="facebook icon"
+        ></a>
+    </div>
+    <div class="footer-nav one">
+      <a href="#header-text">
+        <p>Home</p>
+      </a>
+    </div>
+    <div class="footer-nav two">
+      <a href="#main-text-content">
+        <p>About the farm</p>
+      </a>
+    </div>
+    <div class="footer-nav three">
+      <a href="#berry-articles">
+        <p>Buy a box</p>
+      </a>
+    </div>
+    <div class="footer-nav four">
+      <a href="#contact">
+        <p>Contact</p>
+      </a>
+    </div>
+  </footer>
+
+  <script src="hamburger.js"></script>
+
+</body>
+
+</html>
