@@ -220,6 +220,12 @@ h1 {
 input {
   margin: 2%;
   border: none;
+  font-family: "Poppins", serif;
+  padding-left: 5px;
+}
+
+::placeholder {
+  color: rgb(201, 201, 202);
 }
 
 .personal-data,
