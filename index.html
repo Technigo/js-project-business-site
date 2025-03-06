@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <title>Soft Stiches</title>
+  <link
+    rel="stylesheet"
+    href="./style.css"
+  >
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins&display=swap"
+    rel="stylesheet"
+  >
+
+</head>
+
+<body>
+  <!-- HEADER----------------------- -->
+  <header>
+    <div class="menu">
+      <div class="menu-left">
+        <h1>Soft Stiches</h1>
+      </div>
+      <div class="menu-right">
+        <nav class="nav">
+          <div
+            class="nav-links"
+            id="mobile-menu"
+          >
+            <a href="#">Home</a>
+            <a href="#">Products</a>
+            <a href="#">About</a>
+          </div>
+        </nav>
+        <div class="icon-container">
+          <img
+            src="images/user.png"
+            alt="menu-button"
+          >
+        </div>
+        <div class="icon-container">
+          <img
+            src="images/shopping-cart.png"
+            alt="menu-button"
+          >
+        </div>
+        <div
+          class="logo-container"
+          id="hamburger"
+        >
+          <img
+            id="menu-icon"
+            class="menu-icon"
+            src="images/menu.png"
+            alt="menu-button"
+          >
+        </div>
+      </div>
+    </div>
+    <div class="hero-pic">
+    </div>
+  </header>
+
+  <!-- MAIN  ---------------------- -->
+
+  <main>
+    <section class="description-container">
+
+      <article class="description text-box">
+        <h2>Handmade with Love</h2>
+        <p>At Soft Stitches, we create handmade crochet pieces designed to bring warmth and charm to your life. Each
+          item is crafted with care using eco-friendly materials, blending style with sustainability.
+
+          Explore our collection to find the perfect cozy treat for yourself or a loved one!</p>
+      </article>
+    </section>
+
+    <h3 class="product-head">Products</h3>
+    <section class="product-container">
+      <article class="product">
+        <img
+          class="ad-pic"
+          src="images/dress-1.webp"
+          alt="dress-1"
+        >
+        <div class="ad-text">
+          <h4>Morgan</h4>
+        </div>
+      </article>
+
+      <article class="product">
+        <img
+          class="ad-pic"
+          src="images/dress-4.webp"
+          alt="dress-2"
+        >
+        <div class="ad-text">
+          <h4>Dakota</h4>
+        </div>
+      </article>
+
+      <article class="product">
+        <img
+          class="ad-pic"
+          src="images/dress-3.webp"
+          alt="dress-2"
+        >
+        <div class="ad-text">
+          <h4>Sage</h4>
+        </div>
+      </article>
+
+      <article class="product">
+        <img
+          class="ad-pic"
+          src="images/skirt-1.webp"
+          alt="dress-2"
+        >
+        <div class="ad-text">
+          <h4>Avery</h4>
+        </div>
+      </article>
+
+      <article class="product">
+        <img
+          class="ad-pic"
+          src="images/vest-1.webp"
+          alt="dress-2"
+        >
+        <div class="ad-text">
+          <h4>Taylor</h4>
+        </div>
+      </article>
+
+      <article class="product">
+        <img
+          class="ad-pic"
+          src="images/shirt-1.webp"
+          alt="dress-2"
+        >
+        <div class="ad-text">
+          <h4>Riley</h4>
+        </div>
+      </article>
+
+      <article class="product">
+        <img
+          class="ad-pic"
+          src="images/dress-5.webp"
+          alt="dress-2"
+        >
+        <div class="ad-text">
+          <h4>Quinn</h4>
+        </div>
+      </article>
+
+      <article class="product">
+        <img
+          class="ad-pic"
+          src="images/dress-2.webp"
+          alt="dress-2"
+        >
+        <div class="ad-text">
+          <h4>Emery</h4>
+        </div>
+      </article>
+    </section>
+
+    <!-- FORM to get 10% off -->
+
+    <section class="form-container">
+
+      <form
+        class="form"
+        action="https://httpbin.org/anything"
+        method="POST"
+      >
+
+        <div class="signup-text">
+          <h3>No bullshit, just amazing offers</h3>
+          <p>Sign up to our newsletter and get 20% off your first order</p>
+        </div>
+        <div class="input-container">
+          <label for="email"></label>
+          <input
+            id="email"
+            class="personal-data"
+            type="email"
+            name="email"
+            placeholder="Email"
+            required
+          >
+          <label for="tel"></label>
+          <input
+            id="tel"
+            class="personal-data"
+            type="tel"
+            name="tel"
+            placeholder="Phone number (optional)"
+          >
+          <div class="terms">
+            <label for="checkbox"></label>
+            <input
+              id="checkbox"
+              class="checkbox"
+              type="checkbox"
+              name="checkbox"
+              checked
+              required
+            >
+            <label class="label-checkbox">Subscribe to our newsletter</label>
+          </div>
+          <button
+            type="submit"
+            name="submit"
+            class="submit-button"
+          >Subscribe</button>
+        </div>
+      </form>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>

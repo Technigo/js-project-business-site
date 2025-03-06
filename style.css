@@ -1,0 +1,446 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(252, 251, 244);
+  font-family: "Poppins", serif;
+}
+
+/* HEADER-----------------------*/
+h1 {
+  font-size: 23px;
+  padding-left: 5%;
+  margin: 5%;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu-left {
+  min-width: 170px;
+}
+
+.logo-container,
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 60px;
+  max-width: 60px;
+  border-radius: 2px;
+  cursor: pointer;
+
+}
+
+.logo-container {
+  z-index: 1;
+  background-color: rgb(108, 148, 96);
+}
+
+.logo-container img {
+  width: 40%;
+  z-index: 2;
+}
+
+.icon-container {
+  min-width: 25px;
+  max-width: 30px;
+  margin-right: 5%;
+}
+
+.icon-container img {
+  width: 60%;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  position: fixed;
+  right: -100%;
+  top: 0;
+  height: 230px;
+  width: 100px;
+  transition: right 0.3s ease-in-out;
+  background-color: rgb(252, 251, 244);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.nav-links.active {
+  right: 0;
+}
+
+.logo-container.active {
+  background-color: white;
+}
+
+.menu-icon.active {
+  content: url(images/close.png);
+}
+
+.nav-links a {
+  font-size: 16px;
+  color: black;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: darkolivegreen;
+  text-decoration: underline;
+}
+
+.hero-pic {
+  background-image: url(images/hero-pic2.webp);
+  height: 45vh;
+  background-size: cover;
+  background-position: left;
+}
+
+/* MIDDLE PART */
+
+.description-container {
+  background-color: white;
+}
+
+.text-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2% 7%;
+}
+
+.text-box h2,
+.text-box p {
+  margin: 2%;
+  text-align: center;
+}
+
+.text-box h2 {
+  font-size: 20px;
+}
+
+.text-box p {
+  font-size: 15px;
+}
+
+/* MAIN  ----------------------*/
+.product-head {
+  text-align: center;
+  font-size: 20px;
+}
+
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0 10%;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  background-color: rgb(37, 90, 21, 0.3);
+  margin-top: 5%;
+  max-width: 260px;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+  grid-column: span 4;
+}
+
+.ad-pic {
+  width: 100%;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.ad-text {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 5px 5px;
+}
+
+.ad-text h4 {
+  font-size: 15px;
+  margin: 5px 0px;
+}
+
+/* FORM to get 20% off  */
+.form-container {
+  background-image: url(images/form-img1-turned.webp);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+  padding: 5%;
+}
+
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  padding: 5px;
+}
+
+.form h3,
+.form p,
+.label-checkbox,
+.submit-button {
+  font-size: 14px;
+  margin: 2%;
+  text-align: center;
+}
+
+.label-checkbox {
+  margin: 0;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5%;
+}
+
+input {
+  margin: 2%;
+  border: none;
+  font-family: "Poppins", serif;
+  padding-left: 5px;
+}
+
+::placeholder {
+  color: rgb(201, 201, 202);
+}
+
+.personal-data,
+.submit-button,
+.terms {
+  min-width: 240px;
+  min-height: 25px;
+  border-radius: 4px;
+  border: none;
+}
+
+.submit-button {
+  font-weight: 600;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.terms {
+  display: flex;
+}
+
+.submit-button:hover {
+  background-color: #637464;
+}
+
+/* -------------MEDIA QUERIES--------------------- */
+@media (min-width: 400px) {
+  .menu-right {
+    min-width: 200px;
+  }
+
+  .product-container {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .product {
+    grid-column: span 3;
+    margin: 5% 5%;
+  }
+
+  .text-box {
+    min-height: 200px;
+  }
+}
+
+@media (min-width: 481px) {
+
+  .icon-container {
+    margin-right: 7%;
+  }
+
+  .icon-container img {
+    width: 70%;
+  }
+
+  .product-container {
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  .product {
+    grid-column: span 4;
+  }
+
+  .form {
+    flex-grow: 2;
+  }
+}
+
+@media (min-width: 600px) {
+  .icon-container img {
+    width: 75%;
+  }
+
+  .product-container {
+    grid-template-columns: repeat(9, 1fr);
+  }
+
+  .product {
+    grid-column: span 3;
+  }
+
+  .form-container {
+    min-height: 200px;
+  }
+
+  .form {
+    flex-direction: row;
+    padding: 10% 0;
+    justify-content: space-evenly;
+  }
+
+  .signup-text {
+    margin: 0 5%;
+    max-width: 350px;
+  }
+
+  .signup-text h3 {
+    font-size: 20px;
+  }
+
+  .input-container {
+    margin: 0 5% 0 0;
+  }
+
+  .personal-data,
+  .submit-button,
+  .terms {
+    min-width: 220px;
+  }
+}
+
+
+@media (min-width: 769px) {
+
+  .nav {
+    display: flex;
+    align-items: center;
+    min-width: 300px;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    z-index: auto;
+    position: static;
+    width: 100%;
+    background: none;
+    height: auto;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .icon-container {
+    margin-right: 3%;
+  }
+
+  .logo-container {
+    display: none;
+  }
+
+  .text-box {
+    padding: 0% 10%;
+  }
+
+  .product-container {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .product {
+    grid-column: span 3;
+  }
+
+  .form-container {
+    max-height: 300px;
+  }
+
+  .form {
+    max-height: 250px;
+  }
+
+}
+
+@media (min-width: 850px) {
+  .icon-container {
+    margin: 0 4%;
+  }
+
+  .nav {
+    min-width: 320px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .text-box {
+    padding: 0% 20%;
+  }
+
+  .nav {
+    min-width: 350px;
+  }
+
+  .form {
+    padding: 5% 0;
+  }
+
+  .personal-data,
+  .submit-button,
+  .terms {
+    min-width: 260px;
+  }
+
+  .form p,
+  .label-checkbox,
+  .submit-button {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .nav {
+    min-width: 420px;
+  }
+}
+
+
+@media (min-width: 1400px) {
+  .nav {
+    min-width: 370px;
+  }
+
+  .product-container {
+    grid-template-columns: repeat(16, 1fr);
+  }
+
+  .product {
+    grid-column: span 3;
+  }
+}
