@@ -1,0 +1,689 @@
+/* ======================
+   Mobile-First Styles
+   ====================== */
+
+body {
+    background: #f5f5f5;
+    color: #f3eaf2;
+    font-family: 'Times New Roman', serif;
+    font-style: italic;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling */
+}
+
+/* ======================
+   Navbar (Mobile First)
+   ====================== */
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    /* background: #572541; */
+    position: relative;
+    z-index: 1000;
+    max-width: 100vw;
+    /* Ensure elements do not exceed viewport width */
+    box-sizing: border-box;
+    /* Include padding and border in element's total width and height */
+}
+
+.navbar-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    background: #572541;
+    position: relative;
+    z-index: 1000;
+    width: 100%;
+    max-width: 100vw;
+    /* Ensure elements do not exceed viewport width */
+    box-sizing: border-box;
+    /* Include padding and border in element's total width and height */
+}
+
+.branding {
+    /* display: flex; */
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.branding h3 {
+    color: #C9A600;
+}
+
+.logo {
+    width: 80px;
+    /* margin-right: 10px; */
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+.nav-links {
+    display: none;
+    flex-direction: column;
+    background: rgba(129, 58, 98, 0.95);
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    top: 80px;
+    border-radius: 8px;
+    left: 0;
+    /* Ensure it starts from the left */
+    z-index: 1100;
+    /* Higher than hero-content */
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-links.show {
+    transform: translateY(0);
+    display: flex;
+}
+
+
+.nav-links.show .close-menu {
+    display: block;
+    /* Show close button when menu is open */
+}
+
+.nav-links.show~.menu-icon {
+    display: none;
+    /* Hide hamburger when menu is open */
+}
+
+
+.nav-links a {
+    padding: 10px;
+    color: #ecdfec;
+    text-decoration: solid;
+    display: block;
+    transition: color 0.3s ease-in-out;
+    position: relative;
+
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 50%;
+    background-color: #FFD700;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.nav-links a:hover {
+    color: #FFD700;
+}
+
+.menu-icon {
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #FFD700;
+    margin-top: 0px;
+    transition: transform 0.3s ease-in-out;
+    align-items: flex-end;
+    z-index: 1000;
+}
+
+.close-menu {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+.menu-icon:hover {
+    transform: scale(1.1);
+}
+
+
+
+/* ======================
+   Hero Section
+   ====================== */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+    z-index: 100;
+    /* Lower than nav-links */
+}
+
+.hero video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-content {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    z-index: 900;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* ======================
+   Sliding Text Section
+   ====================== */
+.sliding-text-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: #FFF5E1;
+    padding: 10px 0;
+    white-space: nowrap;
+}
+
+.sliding-text {
+    display: inline-block;
+    white-space: nowrap;
+    animation: slideText 15s linear infinite;
+}
+
+.sliding-text p {
+    display: inline;
+    font-size: 1.2rem;
+    color: #572541;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding-right: 50px;
+}
+
+@keyframes slideText {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+/* ======================
+   Promo Section
+   ====================== */
+.promo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    background: #572541;
+    max-width: 100vw;
+    /* Ensure elements do not exceed viewport width */
+    box-sizing: border-box;
+    /* Include padding and border in element's total width and height */
+}
+
+.promo-card {
+    background: #FFF5E1;
+    border-radius: 8px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    max-width: 90%;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 100vw;
+    /* Ensure elements do not exceed viewport width */
+    box-sizing: border-box;
+    /* Include padding and border in element's total width and height */
+}
+
+/* Adds extra space at the bottom like a real Polaroid */
+.promo-card::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 30px;
+    background: #FFF5E1;
+    position: absolute;
+    bottom: -10px;
+    border-radius: 0 0 8px 8px;
+}
+
+.promo-card:hover {
+    transform: scale(1.05) rotate(0deg);
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.promo-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.promo-text h2,
+h3,
+p {
+    color: #572541;
+    font-size: 1.2rem;
+}
+
+/* ======================
+   Contact Section
+   ====================== */
+.contact-section {
+    background: #FFF5E1;
+    text-align: center;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 100vw;
+    /* Ensure elements do not exceed viewport width */
+    box-sizing: border-box;
+    /* Include padding and border in element's total width and height */
+}
+
+.contact-container {
+    max-width: 600px;
+}
+
+.contact-container h2 {
+    font-size: 2rem;
+    color: #572541;
+    margin-bottom: 10px;
+}
+
+.contact-container p {
+    font-size: 1.2rem;
+    color: #2C2C2C;
+    margin-bottom: 20px;
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #FFD700;
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.contact-button:hover {
+    background: #C9A600;
+    transform: scale(1.05);
+}
+
+/* ======================
+   Footer Section
+   ====================== */
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #4b2246;
+    color: white;
+    padding: 20px;
+    max-width: 100vw;
+    /* Ensure elements do not exceed viewport width */
+    box-sizing: border-box;
+    /* Include padding and border in element's total width and height */
+}
+
+.footer-left,
+.footer-middle,
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* Adds space between elements */
+}
+
+.footer a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer p {
+    color: white;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+
+    color: #572541;
+    text-align: center;
+}
+
+/* ======================
+   Responsive Enhancements
+   ====================== */
+
+@media (min-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1px 3px;
+    }
+
+    .navbar-contact {
+        flex-direction: row;
+        background-color: #572541;
+        justify-content: space-between;
+        /* padding: 15px 30px; */
+        padding: 1px 3px;
+
+    }
+
+    .nav-links {
+        display: flex !important;
+        flex-direction: row;
+        position: static;
+        width: auto;
+        background: none;
+        justify-content: center;
+        /* Centers menu items */
+        align-items: center;
+        /* Aligns them properly */
+        gap: 20px;
+        /* Adds spacing between items */
+        margin-top: 70px;
+    }
+
+    .nav-links a {
+        font-size: 2.0rem;
+    }
+
+    .menu-icon {
+        display: none !important;
+    }
+
+    .close-menu {
+        display: none !important;
+    }
+
+    .promo-section {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .promo-card {
+        max-width: 45%;
+    }
+
+    .footer {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    .footer div {
+        min-width: 150px;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+        box-shadow: 0 0 8px rgba(255, 215, 0, 0.8);
+        /* Stronger glow on desktops */
+        border-width: 3px;
+        /* Thicker border on larger screens */
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero {
+        height: 100vh;
+    }
+
+    .hero-content {
+        font-size: 2rem;
+    }
+
+    .promo-card {
+        max-width: 30%;
+    }
+
+    .footer {
+        padding: 50px;
+        flex-direction: row;
+    }
+}
+
+/* ======================
+   Order Form Styling (Mobile First)
+   ====================== */
+
+.form-container {
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    box-sizing: border-box;
+    /* Prevents overflow */
+}
+
+
+.form-container h2 {
+    font-size: 1.8rem;
+    color: #572541;
+    margin-bottom: 10px;
+}
+
+.form-group {
+    text-align: left;
+    margin-bottom: 15px;
+    width: 100%;
+    /* Ensures full width */
+}
+
+.form-group label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #572541;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #572541;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    box-sizing: border-box;
+    /* Prevents input overflow */
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #FFD700;
+    background-color: #FFF9D9;
+    box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+}
+
+.submit-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #FFD700;
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.submit-btn:hover {
+    background: #C9A600;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .form-container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .submit-btn {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-container {
+        width: 100%;
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .form-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .submit-btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 320px) {
+
+    .navbar,
+    .navbar-contact,
+    .promo-section,
+    .promo-card,
+    .contact-section,
+    .footer {
+        padding: 5px;
+        margin: 0;
+    }
+
+    .promo-card {
+        max-width: 100%;
+    }
+
+    .promo-text h2,
+    .promo-text h3,
+    .promo-text p {
+        font-size: 1rem;
+    }
+
+    .hero-content {
+        font-size: 1rem;
+    }
+
+    .nav-links a {
+        font-size: 1rem;
+    }
+
+    .footer div {
+        min-width: 100px;
+    }
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #1a1a1a;
+    color: #f5f5f5;
+}
+
+/* Navbar Dark Mode */
+.dark-mode .navbar {
+    background-color: #333;
+}
+
+/* Form Dark Mode */
+.dark-mode .form-container {
+    background: #2a2a2a;
+    color: white;
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode input,
+.dark-mode select,
+.dark-mode textarea {
+    background: #444;
+    color: white;
+    border: 2px solid #FFD700;
+}
+
+/* Dark Mode Button */
+.theme-button {
+    background: #FFD700;
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+    margin: 10px;
+}
+
+.theme-button:hover {
+    background: #C9A600;
+}

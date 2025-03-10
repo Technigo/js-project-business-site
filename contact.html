@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasara Clothing</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+
+<body>
+
+
+    <section>
+        <nav class="navbar-contact">
+            <div class="branding">
+                <img class="logo" src="./assets/logo1.jpg" />
+                <h3>Hasara Clothing</h3>
+            </div>
+            <div class="menu-icon">☰</div> <!-- hamburger menu-->
+            <button class="close-menu">&times;</button>
+            <div class="nav-links">
+
+                <a href="index.html">Home</a>
+                <a href="index.html">About</a>
+                <a href="index.html">Product</a>
+                <a href="contact.html">Contact</a>
+                <button id="theme-toggle" class="theme-button">Dark Mode</button>
+            </div>
+        </nav>
+
+    </section>
+    <!-- contact form added here -->
+    <main>
+        <div class="form-container">
+            <h2>Order Form</h2>
+            <form action="https://httpbin.org/anything" method="POST">
+                <div class="form-group">
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" name="first-name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" name="last-name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="order-type">Order Type</label>
+                    <select id="order-type" name="order-type" required>
+                        <option value="">Select Order Type</option>
+                        <option value="T-Shirt">T-Shirt</option>
+                        <option value="Hoodie">Hoodie</option>
+                        <option value="Jacket">Jacket</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="size">Clothing Size</label>
+                    <select id="size" name="size" required>
+                        <option value="">Select Size</option>
+                        <option value="S">Small (S)</option>
+                        <option value="M">Medium (M)</option>
+                        <option value="L">Large (L)</option>
+                        <option value="XL">Extra Large (XL)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="count">Product Count</label>
+                    <input type="number" id="count" name="count" min="1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="comments">Additional Comments</label>
+                    <textarea id="comments" name="comments" placeholder="Enter any special requests..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Order</button>
+            </form>
+        </div>
+    </main>
+    <!-- contact form code ended -->
+    <footer class="footer">
+        <div class="footer-left">
+            <p>98 Centrum, Uppsala</p>
+            <p>Uppsala, Sweden</p>
+            <p>Email: qwerdssf@gmail.com</p>
+            <p>Phone: 076-12323456</p>
+        </div>
+
+        <div class="footer-middle">
+            <a class="navlinks" href="index.html">About</a>
+            <a class="navlinks" href="index.html">Products</a>
+            <a class="navlinks" href="index.html">Contact Us</a>
+            <a class="navlinks" href="index.html">Map</a>
+        </div>
+
+        <div class="footer-right">
+            <a class="social-media-icon" href="index.html">Facebook</a>
+            <a class="social-media-icon" href="index.html">Twitter</a>
+            <a class="social-media-icon" href="index.html">Instagram</a>
+        </div>
+    </footer>
+    <div class="copyright">copyright@danu</div>
+    <script src="./script.js"></script>
+    <script src="./mode.js"></script>
+</body>
+
+</html>
