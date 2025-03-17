@@ -1,0 +1,294 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: 131512;
+  color: #333;
+  padding: 12px 15px;
+}
+
+/* Logo image */
+header div img {
+  display: block;
+  max-width: 100%;
+  width: 80px;
+  height: auto;
+}
+
+/* Logotype and heading*/
+header div {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  margin-left: 40px; /* Space between logo and title */
+  color:#0C457C;
+}
+
+nav ul {
+  display: flex; /* Horizontal menu layout */
+  list-style: none; /* Removes bullet points/numbers */
+  padding: 0; /* remove any padding */
+  margin: 0; /* remove default margin */
+  max-width: 100%; /* prevent overflow */
+  overflow-x: hidden; /* hides horizontal scroll */
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+nav ul li a {
+  text-decoration: none; /* Removes underline from links */
+  color: #333;
+  font-weight: bold;
+  font-size: 19px;
+}
+
+nav a:hover {
+  text-decoration: underline; /* Underline links on hover */
+}
+
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  padding: 20px;
+  list-style: none;
+  gap: 1rem;
+  background-color: #547CA3;
+  border-radius: 15px/20px;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.nav-title {
+  margin: 15px, 15px, 15px, 22x;
+  text-align: center;
+  font-size: 25px;
+  line-height: 2;
+  letter-spacing: 1px; 
+}
+
+.nav-list li {
+  margin: 0 15px;
+}
+
+.nav-list a {
+
+  color: white;
+  text-decoration: none;
+  font-weight: bold;  
+}
+
+.hamburger {
+  display: none;
+}
+
+/*Hero section*/
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 50vh; /* Adjust height as needed */
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-text {
+  padding: 0 10px 0 10px;
+}
+
+/* Signup Form */
+.signup-container {
+  width: 33%;
+  max-width: 400px;
+  padding: 2rem;
+  text-align: center;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px #0000001a;
+  background-color: #fff;
+  display: none;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+button {
+  background-color: #547CA3;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Focus Effect  */
+input:focus {
+  border-color: #0056b3;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+/*Grid */
+
+section h2 {
+  padding: 20px;
+}
+
+.property-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.property-card {
+  padding: 20px;
+  background-color: #89AD6B;
+  border-radius: 10px 10px;
+  margin: 10px 10px 10px 10px;
+  color: white; 
+
+  display: flex; 
+  flex-direction: column; /* Ensures content stacks properly */
+  align-items: center;
+}
+
+.property-card p {
+  text-align: justify;
+}
+
+.property-card img {
+  display: block;
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border-radius: 10px 10px;
+}
+
+/*end Grid */
+
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  padding: 20px;
+  list-style: none;
+  gap: 1rem;
+  background-color: #547CA3;
+  border-radius: 15px/20px;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.footer-links {
+  text-decoration: none; /* Removes underline from links */
+  color: #333;
+  font-size: 10px;
+}
+
+.footer-links a {
+  text-decoration: none; /* Removes underline from links */
+  color: #333;
+  font-weight: bold;
+  font-size: 15px;
+  margin-right: 15px;
+}
+
+footer a:hover {
+  text-decoration: underline; /* Underline links on hover */
+}
+
+/* ------------------------------------Media Queries--------------------------------------- */
+
+/* Desktop screen */
+@media (max-width: 1200px) {
+  .property-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Tablets and mobiles */
+@media (max-width: 800px) {
+  .hero {
+    flex-direction: column;
+  }
+
+  .hero div {
+    padding-left: 0;
+  }
+
+  .property-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Small mobiles */
+@media (max-width: 480px) {
+  .property-grid {
+    grid-template-columns: 1fr;
+  }
+  nav {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+}

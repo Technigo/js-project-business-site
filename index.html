@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- For responsive websites -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <!-- Webpage's title -->
+  <title>Nova Property Management</title>
+</head>
+
+<body>
+
+  <header>
+    <!-- Div: wraps the img logo and title together as well as hamburger menu -->
+    <div>
+      <img src="images/NovaLogo.png" alt="NovaLogo">
+      <!-- The title of the website -->
+      <h1 class="nav-title">Nova Property Management</h1>
+      <img src="images/hamburger.webp" alt="hamburger" class="hamburger" id="hamburgerID">
+    </div>
+    <!-- Navigation section -->
+    <nav id="nav">
+      <!--Unordered list for navigation links-->
+      <ul class="nav-list">
+        <li><a href="#">About us</a></li>
+        <li><a href="https://discoverhalifaxns.com/" target="_blank">About Halifax, NS, CA</a></li>
+        <li><a href="#">Work with us</a></li>
+        <li><a href="#" id="newsletter">Newsletter</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="signup-container" id="newsletterForm">
+      <h3>Subscription Form</h3>
+      <form id="signupForm" action="https://httpbin.org/anything" method="post">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+        <div class="form-group">
+          <p>Interests:</p>
+          <label><input type="checkbox" name="interests" value="3bedroom"> 3-bedroom apartments</label>
+          <label><input type="checkbox" name="interests" value="4bedroom"> 4-bedroom apartments</label>
+        </div>
+        <button type="submit">Subscribe to Our Newsletter</button>
+      </form>
+    </section>
+    
+    <!--Hero section-->
+    <section class="hero">
+      <video autoplay loop muted playsinline class="hero-video">
+        <source src="heroVideo25fps.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="hero-overlay">
+        <div class="hero-text">
+          <h2>Welcome to Nova Property Management</h2>
+          <p>Established in 2000, our family-owned and operated Nova Real Estate management company is built on trust,
+            dedication, and a personal approach. We prioritize tenant satisfaction by offering tailored solutions to
+            meet individual needs, ensuring a comfortable and stress-free living experience. With a strong reputation
+            for reliability and care, we are proud to be a trusted and recommended choice for rental management."</p>
+        </div>
+      </div>
+    </section>
+
+    <!--Section with a grid of properties-->
+    <section class="properties">
+      <h2>Our properties</h2>
+      <div class="property-grid">
+        <div class="property-card">
+          <img src="images/EdwardsSt.jpeg" alt="EdwardsSt">
+          <h3>4 bedroom flat on Edwards St.</h3>
+          <p>Located just minutes from Dalhousie University, this spacious 4-bedroom unit is perfect 
+            for students looking for comfort and convenience. It features a cozy living room, a 
+            fully equipped shared kitchen, and a single bathroom. Enjoy a private backyard for 
+            relaxing or studying outdoors. Close to grocery stores, cafés, and public transport.</p>
+        </div>
+        <div class="property-card">
+          <img src="images/RobieSt.jpg" alt="RobieSt">
+          <h3>3 bedroom flat on Robie St.</h3>
+          <p>This bright and modern 3-bedroom unit is designed for student living, offering a 
+            comfortable shared space near Dalhousie University. The unit includes a spacious 
+            living room, a well-equipped kitchen, and a shared bathroom. The backyard provides 
+            a great place to unwind. Located near all essential amenities, including shops and 
+            restaurants.</p>
+        </div>
+        <div class="property-card">
+          <img src="images/VernonSt.jpg" alt="VernonSt">
+          <h3>4 bedroom flat on Vernon St.</h3>
+          <p>A fantastic 4-bedroom unit just a short walk from Dalhousie University, perfect
+             for students looking for a shared living experience. The unit includes a welcoming 
+             living room, a shared kitchen, and one bathroom. The backyard is great for 
+             gatherings or quiet study sessions. Easy access to local cafés, parks, and 
+             public transit.</p>
+        </div>
+        <div class="property-card">
+          <img src="images/OakSt.jpg" alt="OakSt">
+          <h3>3 bedroom flat on Oak St.</h3>
+          <p>Designed with students in mind, this spacious 4-bedroom unit offers a 
+            comfortable and convenient lifestyle close to Dalhousie University. Featuring a 
+            bright living room, a shared kitchen, and a well-maintained backyard, this unit is 
+            ideal for roommates. All essential amenities, including grocery stores and 
+            restaurants, are within walking distance.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!--Footer section-->
+  <footer>
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms and conditions</a>
+      <a href="#">Contact us</a>
+    </div>
+  </footer>
+  <!-- JavaScript file -->
+  <script src="script.js"></script>
+
+</body>
+
+</html>
