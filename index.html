@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <html>
+  <title>The Stockholm Buzz</title>
+</head>
+
+<body>
+  <!-- Header and Nav -->
+  <header>
+    <nav class="navbar">
+      <img 
+        class="nav-logo" 
+        src="./assets/logo-large-transparent.png" 
+        alt="The Stockholm Buzz logo"
+        style="width: 100px;">
+        
+      <div class="hamburger-menu">
+          <a href="javascript:void(0);" class="hamburger-icon">
+          <i class="fa fa-bars"></i></a>
+        </div>
+        <div class="nav-links"> 
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </div>
+
+      <img 
+        class="bees" 
+        src="./assets/3.svg" 
+        alt="decorative bees" 
+        style="width: 100px;">
+    </nav>
+  </header>
+
+  <!-- Hero Video/Image -->
+  <section class="hero-container">
+    <div class="overlay"></div>
+      <video
+        autoplay
+        loop
+        muted
+        playsinline
+        class="hero-video"
+        poster="./assets/drinks-group.jpg">
+      <source
+          src="./assets/hero-video.mp4" type="video/mp4">
+        Your browser doesn't support the video tag
+      </video>
+    <h1 class="hero-heading">What's the buzz around town
+    </h1>
+  </section>
+
+  <hr>
+  
+  <div class="article-heading">
+    <h2>Buzzing Topics
+      <img 
+        class="bees" 
+        src="./assets/3.svg" 
+        alt="decorative bees" 
+        style="width: 100px;">
+    </h2>
+  </div>
+  
+  <!-- Article cards -->
+<section class="grid-container">  
+    <div class="grid-item article">
+      <h3> Tastiest Ramen in town</h3>
+       <img 
+          src="./assets/ramen.jpg" 
+          alt="bowl of ramen soup" 
+          style="width: 100%;">
+        <a class="article-button" href="#">Read more...</a>
+    </div>
+
+    <div class="grid-item article">
+      <h3> Finally, Semla season!</h3>
+        <img 
+          src="./assets/semla.jpg" 
+          alt="swedish semla bun" 
+          style="width: 100%;">
+        <a class="article-button" href="#">Read more...</a>
+    </div>
+
+    <div class="grid-item article">
+      <h3> Pizza. Say less.</h3>
+        <img 
+          src="./assets/pizza.jpg" 
+          alt="pizza" 
+          style="width: 100%;">
+        <a class="article-button" href="#">Read more...</a>
+    </div>
+      
+    <div class="grid-item article">
+      <h3> In search of the perfect burger</h3>
+        <img 
+          src="./assets/burger2.jpg" alt="burger" 
+          style="width: 100%;">
+        <a class="article-button" href="#">Read more...</a>
+    </div>
+  
+    <div class="grid-item article">
+      <h3> Dog-approved and pet-positive</h3>
+        <img 
+          src="./assets/dog-cafe.jpg" alt="happy dog cafe" 
+          style="width: 100%;">
+        <a class="article-button" href="#">Read more...</a>
+    </div>
+   
+    <div class="grid-item article">
+      <h3> Boozy Brunches for that thing you did, woo!</h3>
+        <img 
+          src="./assets/drinks-group.jpg" alt="group brunch" 
+          style="width: 100%;">
+        <a class="article-button" href="#">Read more...</a>
+    </div>
+
+    <div class="grid-item article">
+      <h3> My #1 favorite restaurant </h3>
+        <img 
+          src="./assets/favorite.jpg" alt="barbro restaurant" 
+          style="width: 100%;">
+        <a class="article-button" href="#">Read more...</a>
+    </div>
+
+    <div class="grid-item article">
+      <h3> Don't be fooled, eat real tacos</h3>
+        <img 
+          src="./assets/tacos.jpg" 
+          alt="tacos" 
+          style="width: 100%;">
+        <a class="article-button" href="#">Read more...</a>
+    </div>
+</section>
+
+<!-- Form -->
+<form action="https://httpbin.org/anything" method="POST">
+  <fieldset>
+    <legend>Let's keep you up-to-buzz</legend>
+      <div>
+        <label for="name">Your Name</label>
+        <input 
+          id="name"
+          class="form-input"
+          type="text" 
+          placeholder="Your Name"
+          name="name" 
+          required>
+      </div>
+      <div>
+        <label for="email">Email Address</label>
+        <input 
+          id="email"
+          class="form-input"
+          type="email" 
+          placeholder="example@email.com"
+          name="email" 
+          required>
+      </div>
+
+      <section class="content-options">
+        <h3>What type of content would you like to see more of?</h3>
+
+          <div class="checkbox-card">
+            <label>
+              <input 
+                class="form-checkbox" 
+                type="checkbox" 
+                name="content_trending_shops">
+              <span class="card-text">Trending Shops</span>
+            </label>
+          </div>
+
+          <div class="checkbox-card">
+            <label>
+              <input 
+                class="form-checkbox" 
+                type="checkbox" 
+                name="content_video_reviews">
+              <span class="card-text">Video Reviews</span>
+            </label>
+          </div>
+
+          <div class="checkbox-card">
+            <label>
+              <input 
+                class="form-checkbox" 
+                type="checkbox" 
+                name="content_community_stories">
+              <span class="card-text">Community Stories</span>
+            </label>
+          </div>
+      </section>
+
+      <section class="content-options">
+        <h3>Would you like to participate in:</h3>
+
+          <div class="checkbox-card">
+            <label>
+              <input 
+                class="form-checkbox" 
+                type="checkbox" 
+                name="participate_testing_new_features">
+              <span class="card-text">Testing New Features</span>
+            </label>
+          </div>
+
+          <div class="checkbox-card">
+            <label>
+              <input 
+                class="form-checkbox" 
+                type="checkbox" 
+                name="participate_early_access_offers">
+              <span class="card-text">Exclusive Early Access Offers</span>
+            </label>
+          </div>
+      </section>
+
+      <button 
+        class="form-button"
+        type="submit">
+        I want in 🍯 🐝
+      </button>
+    
+  </fieldset>
+</form>
+
+<footer>
+  <section class="lower-banner">
+    <h1>The latest and greatest buzz about food. drinks. & more.</h1>
+  </section>
+
+  <hr>
+
+  <div class="footer-container">
+    <img 
+      src="./assets/logo-large-transparent.png"
+      alt="The Stockholm Buzz logo"
+      style="width: 100px;">
+    <h2 class="footer-h2">Follow the honey...
+    <img 
+      class="img-footer"
+      alt="dripping honey image" 
+      src="./assets/4.svg" 
+      style="width: 50px;">
+    </h2> 
+  </div>
+
+  <section class="footer-socials">
+    <link 
+      href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" 
+      rel="stylesheet">
+
+      <div class='demopadding'>
+        <div class='icon social fb'><i class='fa fa-facebook'></i></div>
+        <div class='icon social tw'><i class='fa fa-twitter'></i></div>
+        <div class='icon social in'><i class='fa fa-linkedin'></i></div>
+      </div>  
+  </section>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
