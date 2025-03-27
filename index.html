@@ -1,0 +1,155 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Robots Company</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+  
+<header class="site-header">
+<div class="header-content">
+<img src="bilder/AI_robotic_logo.webp" alt="AI Robot Logo" class="header-image" />
+  
+<div class="logo">
+<h1>AI Robots</h1>
+<p>Revolutionizing the Future with AI Robots</p>
+</div>
+  
+<nav class="navbar">
+<button class="menu-toggle">☰</button>
+<ul class="nav-links">
+<li><a href="#home">Home</a></li>
+<li><a href="#products">Products</a></li>
+<li><a href="#about">About Us</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</div>
+</header>
+  
+
+  
+<section id="home" class="hero hero-video-container">
+<video class="hero-video" autoplay muted loop playsinline>
+<source src="/video/herovideo.mp4" type="video/mp4">
+</video>
+<div class="hero-overlay">
+</div>
+<div class="hero-content fade-in-slide">
+<h2>Explore the Cutting-Edge of AI Technology</h2>
+<h3>Discover our range of AI-powered robots to improve efficiency in your world.</h3>
+<button class="grayscale-button" onclick="location.href='#products'">Learn More</button>
+</div>
+</section>
+
+  
+<section id="products" class="products">
+<h1>Our Products</h1>
+<div class="product-grid">
+    
+<article class="product-card fade-in-cards">
+<img src="bilder/AI_cleaning_robot.webp" alt="AI HomeClean">
+<h3>AI HomeClean</h3>
+<p>The perfect cleaning companion for a spotless home.</p>
+</article>
+       
+<article class="product-card fade-in-cards">
+<img src="bilder/AI_gardening_robot.webp" alt="AI GardenMate">
+<h3>AI GardenMate</h3>
+<p>Maintain a lush garden effortlessly with our smart gardening robot.</p>
+</article>
+        
+<article class="product-card fade-in-cards">
+<img src="bilder/AI_companion_robot.webp" alt="AI CareCompanion">
+<h3>AI CareCompanion</h3>
+<p>Provides assistance, safety, and social interaction for all ages.</p>
+</article>
+          
+<article class="product-card fade-in-cards">
+<img src="bilder/AI_kitchen_assistant_robot.webp" alt="AI ChefBot">
+<h3>AI ChefBot</h3>
+<p>Your personal kitchen helper, simplifying everyday cooking.</p>
+</article>
+</div>
+</section>
+
+  
+<section id="about" class="about">
+<h2>About Us</h2>
+<p>We are a leading company in the field of AI technology, pioneering innovations in the world of robotics.</p>
+</section>
+
+  
+<section id="contact" class="contact-section">
+<div class="contact-image">
+<img src="bilder/Professionalandfriendlyfemale.webp" alt="Friendly Business Woman" />
+</div>
+<div class="contact-form">
+<h2>Contact Us</h2>
+<form id="contactForm" action="https://httpbin.org/anything" method="POST">
+<label for="name">Name:</label>
+<input type="text" id="name" name="name" required placeholder="Your Name" />
+<label for="Email">Email:</label>
+<input type="email" id="Email" name="Email" required placeholder="Your Email" />
+<p id="emailError" style="color: red; display: none;"></p>
+<label for="password">Password:</label>
+<input type="password" id="password" name="password" required placeholder="Your Password" />
+<p>Please indicate your experience with AI robotics:</p>
+<div class="radio-group">
+<label>
+<input type="radio" name="experience" value="beginner" required>
+<span>Beginner</span>
+</label>
+<label>
+<input type="radio" name="experience" value="intermediate" required>
+<span>Intermediate</span>
+</label>
+<label>
+<input type="radio" name="experience" value="expert" required>
+<span>Expert</span>
+</label>
+</div>
+
+
+<p>Which robots are you interested in?</p>
+<div class="checkbox-group">
+<label class="checkbox-label">
+<input type="checkbox" name="robot_interest" value="HomeClean" />
+<span>AI HomeClean</span></label>
+<label class="checkbox-label">
+<input type="checkbox" name="robot_interest" value="GardenMate" />
+<span>AI GardenMate</span></label>
+<label class="checkbox-label">
+<input type="checkbox" name="robot_interest" value="CareCompanion" />
+<span>AI CareCompanion</span></label>
+<label class="checkbox-label">
+<input type="checkbox" name="robot_interest" value="ChefBot" />
+<span>AI ChefBot</span>
+</label>
+</div>
+
+<button type="submit">Submit</button>
+</form>
+</div>
+</section>
+
+  
+<div id="thankModal" class="modal">
+<div class="modal-content">
+<img src="/gif/loverobot.gif.gif" alt="Thank You GIF" class="thank-gif" />
+<h2>Thank you for showing interest, <span id="userName"></span>!</h2>
+<p>We will contact you within 24 hours.</p>
+<button id="closeModal">OK</button>
+</div>
+</div>
+
+<footer>
+<p>&copy; 2025 AI Robots Company | By Selin Carbone</p>
+</footer>
+</body>
+</html>
+
