@@ -1,0 +1,376 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  background: #f8fbfd;
+  color: #525f7f;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  /* Make sure the navbar is on top of the content */
+}
+
+.logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#nav-links {
+  list-style: none;
+  padding: 0;
+  justify-content: space-around;
+  font-size: 18px;
+}
+
+#nav-links li {
+  margin: 0 15px;
+  display: inline;
+}
+
+#nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Hamburger menu styles */
+#hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+#hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+}
+
+/* Hero section */
+.hero {
+  background-image: url('https://d3d00swyhr67nd.cloudfront.net/w1200h1200/collection/NTIV/FENT/NTIV_FENT_1449048-001.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  /* Make the hero section cover the entire height of the browser window */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  margin-top: auto
+}
+
+/* To keep the content central and neat */
+.hero-content {
+  max-width: 600px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+/*Call to Action button*/
+.cta-button {
+  background-color: #FF6F61;
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #FF3D2E;
+}
+
+/* Container för grid-layout */
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  /* Creates a dynamic grid with a minimum of 300px per column */
+  gap: 20px;
+  /* Distance between cards */
+  padding: 20px;
+  align-items: center;
+}
+
+/* Style for each article card */
+.article-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.article-card img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.article-card h2 {
+  font-size: 1.8rem;
+  margin: 20px 0;
+}
+
+.article-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.article-card a {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #FF6F61;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.article-card a:hover {
+  background-color: #FF3D2E;
+}
+
+form {
+  border: 1px solid #e8e8fb;
+  border-radius: 4px;
+  padding: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 15px;
+  margin-top: 0;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px 0 rgba(50, 50, 93, 0.15),
+    0 4px 6px 0 rgba(112, 157, 199, 0.15)
+}
+
+label {
+  display: flex;
+  border-bottom: 1px solid #f0f5fa;
+  align-items: center;
+}
+
+label: last-child {
+  border-bottom: none;
+}
+
+span {
+  width: 30%;
+  text-align: right;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+input {
+  width: 100%;
+  font-size: 15px;
+  padding: 5px 0;
+  /*if you want to completly override things=I want to take control of the styling*/
+  appearance: none;
+  /*Getting rid of default border*/
+  border: none;
+  /*Getting rid of default outline glow*/
+  outline: none;
+}
+
+select {
+  width: 100%;
+  margin: 10px 10px 10px 0;
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: none;
+  font-size: 15px;
+  color: #313b3f;
+  outline: none;
+}
+
+button {
+  background: #666ee8;
+  border: none;
+  /*if you want to completly override things=I want to take control of the styling*/
+  appearance: none;
+  border-radius: 4px;
+  width: 100%;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #aab7c4;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #aab7c4;
+}
+
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #aab7c4;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #aab7c4;
+}
+
+/* Mobile (max-width: 667px) */
+@media (min-width: 320px) and (max-width: 667px) {
+  #nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #333;
+    width: 200px;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+  }
+
+  #nav-links.active {
+    display: flex;
+  }
+
+  #hamburger {
+    display: flex;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    /* Reduce the size of the header */
+  }
+
+  .hero p {
+    font-size: 1rem;
+    /* Reduce text size for mobile */
+  }
+
+  .cta-button {
+    font-size: 1rem;
+    /* Adjust button text size*/
+    padding: 10px 20px;
+    /* Reduce the size of the button */
+  }
+
+  .articles-grid {
+    grid-template-columns: 1fr;
+    /* One column for small screens */
+    justify-items: center;
+    align-items: start;
+    /* Start the items vertically */
+    padding: none;
+  }
+
+  .article-card h2 {
+    font-size: 1.5rem;
+    /* Reduce the size of the header */
+    width: 90%;
+    /* Make the header take up more space */
+    max-width: 350px;
+    margin: 0%;
+  }
+}
+
+/* For tablet (min-width: 668px and max-width: 1024px) */
+@media (min-width: 668px) and (max-width: 1024px) {
+  .hero h1 {
+    font-size: 2.5rem;
+    /* Makes h1 smaller on tablets */
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+    /* Makes fonts smaller on tablets */
+  }
+
+  .cta-button {
+    font-size: 1.1rem;
+    /* Adjust button text size */
+    padding: 12px 25px;
+    /* Adjust button size for tablet */
+  }
+
+  .articles-grid {
+    grid-template-columns: repeat(2, 1fr);
+    /* Two columns for tablets */
+  }
+}
+
+/* For desktop (min-width: 1025px) */
+@media (min-width: 1025px) {
+  #hamburger {
+    display: none;
+    /* Hide hamburger menu on desktop */
+  }
+
+  #nav-links {
+    display: flex;
+    /* Show the nav links directly on desktop */
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    /* Larger header for desktop */
+  }
+
+  .hero p {
+    font-size: 1.5rem;
+    /* Larger text on desktop */
+  }
+
+  .cta-button {
+    font-size: 1.2rem;
+    /* The button gets larger text on desktop */
+    padding: 15px 30px;
+    /* Larger button on desktop */
+  }
+
+  .articles-grid {
+    grid-template-columns: repeat(4, 1fr);
+    /* Four columns for larger screens */
+  }
+}
