@@ -1,0 +1,539 @@
+/* Define CSS variables */
+:root {
+  /* Color Variables */
+  --primary-color: #0d453a;
+  --action-color: #ffa3bc;
+  --border-color: #000;
+  --text-color: #f7f7f7;
+}
+
+/* Reset some default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* GENERAL STYLES */
+
+/* Body styles */
+body {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  /* 100vh made the body not go all the way down around the footer*/
+  height: 100vh;
+  font-family: Jost, sans-serif;
+  text-decoration: none;
+  background-color: #f7f7f7;
+}
+
+/*Button styles*/
+button {
+  outline: 0;
+  align-items: center;
+  background: var(--primary-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 14px;
+  gap: 8px;
+  justify-content: center;
+  line-height: 1.5;
+  overflow: hidden;
+  padding: 5px 10px;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  transition: all 0.14s ease-out;
+  white-space: nowrap;
+  box-shadow: 4px 4px 0 #000;
+}
+
+button:hover {
+  /* Smaller shadow for pressed effect */
+  box-shadow: 2px 2px 0 #000;
+  /* Move the bottom downwards and to the right */
+  transform: translate(1px, 1px);
+}
+
+button:focus-visible {
+  outline-offset: 1px;
+}
+
+/* Header styles */
+header {
+  position: sticky;
+  align-items: center;
+  background-color: var(--primary-color);
+  box-shadow: 10px 10px #000;
+  /* This will span the header across all 4 columns */
+  grid-column: span 4;
+  /* Put this on top of everything */
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.logo img {
+  width: auto;
+  height: auto;
+}
+
+.nav-links {
+  /* Hide by default, show on larger screens */
+  display: none;
+}
+
+.nav-links a {
+  color: var(--text-color);
+  font-size: smaller;
+  text-decoration: none;
+  padding: 0.2rem 0.5rem;
+  transition: background 0.3s;
+}
+
+.nav-links a:hover {
+  color: #000;
+}
+
+/* Hamburger menu styles */
+.hamburger-button {
+  /* Show by default, hide on bigger screens */
+  display: block;
+  font-size: 2rem;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  background-color: var(--primary-color);
+  box-shadow: 10px 10px gray;
+  position: absolute;
+  /* Adjust based on header height */
+  top: 100%;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 1000;
+}
+
+.hamburger-menu a {
+  color: var(--text-color);
+  padding: 1rem;
+  text-decoration: none;
+  display: block;
+  transition: background 0.3s;
+}
+
+.hamburger-menu a:hover {
+  background-color: var(--action-color);
+}
+
+.hamburger-menu.active {
+  /* Show the menu when active */
+  display: flex;
+}
+
+/* Footer styles */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  padding: 1rem 0;
+  text-align: center;
+  /*Have the footer extend to the bottom*/
+  flex-grow: 1;
+  grid-column: span 4;
+}
+
+.social-media {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.social-media a {
+  display: inline-block;
+}
+
+.social-media img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s;
+}
+
+.social-media img:hover {
+  transform: scale(1.1);
+}
+
+/* HOME PAGE  */
+
+/*Hero section styles */
+/* Main covers the hero + cta:s section of the page */
+main {
+  position: relative;
+  grid-column: span 4;
+  margin: 0;
+}
+
+.hero {
+  position: relative;
+  /* Ensure the text is positioned relative to this container */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-video {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  filter: blur(5px);
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: var(--text-color);
+  /* Ensure the text takes up 90% of the image width */
+  width: 90%;
+  /* Ensure the text does not exceed the image width */
+  max-width: 100%;
+  /* Include padding and border in the element's total width and height */
+  box-sizing: border-box;
+}
+
+.hero-text h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.hero-text h2 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* CTA card styles */
+.cta-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0rem 0rem 1rem 0rem;
+  margin: 1rem;
+  gap: 1rem;
+  /* Ensures all cards take up equal space */
+  flex: 1;
+  grid-column: span 4;
+}
+
+.cta-card {
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-align: left;
+  border-width: 3px 8px 8px 0px;
+  border-style: solid;
+  padding: 1rem;
+  /* Prevents cards from overflowing */
+  min-width: 0;
+  box-shadow: 10px 10px gray;
+  /*Cta-card show*/
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.cta-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Specific styles for cards with additional classes */
+.cta-card.one {
+  border-color: #0d453a;
+}
+
+.cta-card.two {
+  border-color: #f47068;
+}
+
+.cta-card.three {
+  border-color: #fe918b;
+}
+
+/* Text inside CTA cards */
+.cta-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.cta-card h3 {
+  font-size: 1rem;
+}
+
+/* Paragraphs inside CTA cards */
+.cta-card p {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  /* Ensure the paragraph takes up the full width of the card */
+  width: 100%;
+}
+
+/* CTA button styles */
+.cta-button {
+  /* Push the button to the bottom of the card */
+  margin-top: auto;
+  margin-top: 1rem;
+  /*I'm aware I'm using two margin-tops's but without both it doesn't look as good*/
+}
+
+/* CONTACT PAGE specific styles */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+  grid-column: span 4;
+}
+
+fieldset {
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  padding: 1rem;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 5px 5px gray;
+}
+
+input[name="name"],
+input[name="email"],
+textarea {
+  appearance: none;
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  font-size: 15px;
+  width: 100%;
+  border-radius: 4px;
+}
+
+input[name="name"]:active,
+input[name="email"]:active,
+textarea:active {
+  /* Removes the standard blue outline - NOT working */
+  outline: none;
+  border: solid 2px var(--action-color);
+}
+
+input[name="name"]:focus,
+input[name="email"]:focus,
+textarea:focus {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  box-shadow: inset 0 1px 4px #cacaca, 0 0 20px 2px #cacaca;
+}
+
+input[name="accept-terms"] {
+  width: fit-content;
+  margin-right: 0.5rem;
+}
+
+input[type="checkbox"]:checked {
+  /* Changes the color of the checkbox */
+  accent-color: #0d453a;
+}
+
+textarea {
+  height: 150px;
+  /* Allow vertical resizing only */
+  resize: vertical;
+  font-family: Jost, sans-serif;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.name-container,
+.email-container,
+.message-container {
+  align-items: center;
+  gap: 1rem;
+  margin: 0.3rem;
+  width: 100%;
+}
+
+.checkbox-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 1rem;
+  margin-left: 0.3rem;
+}
+
+.checkbox-container input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 768px) {
+  body {
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  header {
+    grid-column: span 8;
+    padding: 0 3rem 0 3rem;
+  }
+
+  .hamburger-button {
+    /* Show the hamburger menu button */
+    display: block;
+  }
+
+  footer {
+    grid-column: span 8;
+  }
+
+  /*Home page*/
+  body {
+    grid-column: span 8;
+  }
+
+  main {
+    grid-column: span 8;
+  }
+
+  .hero-text h1 {
+    font-size: 3rem;
+  }
+
+  .hero-text h2 {
+    font-size: 1.5rem;
+    margin-top: 0;
+  }
+
+  .cta-container {
+    display: flex;
+    /* Change to row on larger screens */
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    padding: 0 2rem 2rem 2rem;
+    gap: 1rem;
+    margin: 1rem;
+    grid-column: span 8;
+  }
+
+  .cta-container h3 {
+    font-size: 1.2rem;
+  }
+
+  .cta-container p {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+  }
+
+  .cta-card {
+    padding: 2rem 2rem 1rem 2rem;
+  }
+
+  /*Contact page*/
+  form[name="contact-form"] {
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto 1fr auto;
+  }
+
+  header {
+    grid-column: span 12;
+  }
+
+  .nav-links {
+    display: block;
+  }
+
+  .nav-links a {
+    padding: 1rem 1rem;
+    font-size: medium;
+  }
+
+  .hamburger-button {
+    display: none;
+  }
+
+  main {
+    grid-column: span 12;
+  }
+
+  footer {
+    grid-column: span 12;
+  }
+
+  /*Home page*/
+
+  .hero-text h1 {
+    font-size: 4rem;
+  }
+
+  .hero-text h2 {
+    font-size: 2rem;
+    margin-top: 0;
+  }
+
+  .cta-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0 6rem 2rem 6rem;
+    margin: 1rem;
+    grid-column: span 12;
+  }
+
+  .cta-container h3 {
+    font-size: 1.5rem;
+  }
+
+  .cta-container p {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .cta-card {
+    padding: 2rem;
+  }
+
+  /*Contact page*/
+  form[name="contact-form"] {
+    padding: 2rem;
+  }
+}

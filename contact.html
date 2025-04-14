@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+  <link
+    rel="stylesheet"
+    href="./style.css"
+  />
+  <title>Linda Schönfeldt | Contact</title>
+  <link
+    href="https://fonts.googleapis.com/css?family=Jost&display=swap"
+    rel="stylesheet"
+  >
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a
+        href="./index.html"
+        class="logo"
+      >
+        <img
+          src="./assets/logo.png"
+          alt="logo"
+        />
+      </a>
+      <div class="hamburger-button">
+        <!-- Hamburger icon (you can use an icon or text) -->
+        <div class="hamburger-icon">&#9776; </div>
+        <!-- This is a simple hamburger icon using HTML entity -->
+      </div>
+      <div class="hamburger-menu">
+        <a href="./index.html">Home</a>
+        <a href="#">About</a>
+        <a href="#">Portfolio</a>
+        <a href="./contact.html">Contact</a>
+      </div>
+      <div class="nav-links">
+        <a href="./index.html">Home</a>
+        <a href="#">About</a>
+        <a href="#">Portfolio</a>
+        <a href="./contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <form
+    name="contact-form"
+    method="POST"
+    action="https://httpbin.org/anything"
+  >
+    <h2>Get in contact</h2>
+    <fieldset>
+      <div class="name-container">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+        />
+      </div>
+      <div class="email-container">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+        />
+      </div>
+      <div class="message-container">
+        <label for="message">Message</label>
+        <textarea
+          id="message"
+          name="message"
+          required
+        > </textarea>
+      </div>
+      <div class="checkbox-container">
+        <input
+          type="checkbox"
+          id="accept-terms"
+          name="accept-terms"
+          required
+        />
+        <label for="accept-terms">I accept the terms and conditions</label>
+      </div>
+    </fieldset>
+    <button
+      id="submit-button"
+      type="submit"
+    >Submit</button>
+  </form>
+
+  <footer>
+    <p>&copy; 2025 Linda Schönfeldt. All rights reserved.</p>
+    <div class="social-media">
+      <a
+        href="https://www.linkedin.com/in/linda-sch%C3%B6nfeldt/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="./assets/icons/linkedin.svg"
+          alt="LinkedIn"
+        />
+      </a>
+      <a
+        href="https://dribbble.com/lindaschonfeldt"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="./assets/icons/dribbble.svg"
+          alt="Dribbble"
+        />
+      </a>
+      <a
+        href="https://github.com/LindaSchonfeldt"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="./assets/icons/github.svg"
+          alt="GitHub"
+        />
+      </a>
+      <a
+        href="https://www.instagram.com/linda.schonfeldt/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="./assets/icons/instagram.svg"
+          alt="Instagram"
+        />
+      </a>
+    </div>
+  </footer>
+  <script src="./scripts.js"></script>
+</body>
+
+</html>
