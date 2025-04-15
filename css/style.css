@@ -1,0 +1,420 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0.9;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+}
+
+.navbar {
+  background-color: #FFFFFF;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 3;
+}
+
+.nav-links a {
+  margin: 0px 25px;
+  font-family: 'Darumadrop One', Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  text-transform: uppercase;
+  padding: 15px;
+}
+
+.nav-links a:hover {
+  opacity: 0.5;
+}
+
+.nav-links {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background: white;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links.active {
+  display: flex;
+}
+
+.menu-icon {
+  cursor: pointer;
+}
+
+.hero-container {
+  position: relative;
+  height: 40vh;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.502);
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-video {
+  position: absolute;
+}
+
+.hero-heading {
+  position: relative;
+  z-index: 2;
+}
+
+.logo {
+  width: 250px;
+}
+
+.main-logo {
+  width: 140px;
+  opacity: 0;
+  animation: fadeIn 3s ease-in forwards;
+}
+
+/* Texts and button styling */
+
+h2,
+h4 {
+  font-family: 'Darumadrop One', Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 35px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+h1 {
+  margin: 12px 0px;
+  font-family: 'Shadows Into Light';
+  font-size: 40px;
+}
+
+h3 {
+  font-family: 'Shadows Into Light', Helvetica, sans-serif;
+  color: #fff;
+  font-size: 65px;
+  text-shadow: 2px 2px 4px #000000;
+  margin: -90px 0px 10px 0px;
+}
+
+span {
+  font-family: 'Darumadrop One', Helvetica, sans-serif;
+  text-transform: uppercase;
+}
+
+p,
+a {
+  font-family: 'Roboto', Helvetica, sans-serif;
+  text-decoration: none;
+  letter-spacing: 0.4px;
+  color: black;
+}
+
+.button {
+  appearance: none;
+  border: 2px solid black;
+  color: #000000;
+  text-transform: uppercase;
+  padding: 5px 20px 10px;
+  background-color: transparent;
+  font-size: 18px;
+  font-family: 'Darumadrop One', Helvetica, sans-serif;
+  margin: 10px 10px 20px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.2s;
+}
+
+.button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+/* First part of page with cards */
+
+.grid-parent {
+  padding: 20px 20px 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+/* how the cards span on mobile*/
+
+.grid-2 {
+  grid-column: span 4;
+}
+
+.grid-3 {
+  grid-column: span 2;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  opacity: 0.9;
+}
+
+.card-img {
+  width: 100%;
+}
+
+.container {
+  padding: 2px 16px;
+}
+
+/* second part of page with instructions for each project */
+
+.project-section {
+  background-color: #f9f9f9;
+  padding: 0;
+  margin: 0;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-text {
+  padding: 30px;
+}
+
+.projects h3 {
+  color: #000000;
+  font-family: 'Shadows Into Light', Helvetica, sans-serif;
+  font-size: 30px;
+  text-shadow: none;
+  margin: 0;
+}
+
+/* Last section with the form */
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 5px;
+}
+
+fieldset {
+  border: none;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 10px 0px;
+  margin: 10px 0px;
+}
+
+input,
+textarea,
+select {
+  font-size: 15px;
+  color: #000;
+  background-color: #FFFFFF;
+  font-family: 'Roboto';
+  border: 2px solid #000000;
+  border-radius: 0px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  outline: none;
+  padding: 10px;
+  margin-top: 5px;
+  width: 300px;
+  appearance: none;
+}
+
+textarea {
+  max-width: 350px;
+  min-width: 300px;
+}
+
+form h4 {
+  font-size: 20px;
+}
+
+/* footer */
+
+footer h4 {
+  margin: 0;
+}
+
+footer {
+  background-color: #f9f9f9;
+  padding: 50px 30px;
+}
+
+
+footer .logo {
+  width: 140px;
+  margin: 20px 2px;
+}
+
+.icons {
+  display: flex;
+}
+
+i {
+  color: #000000;
+  font-size: 25px;
+  padding: 5px;
+}
+
+i:hover {
+  opacity: 0.6;
+}
+
+/* Tablet screen size */
+
+@media (min-width: 668px) and (max-width: 1024px) {
+
+  .hero-container {
+    height: 40vh;
+  }
+
+  .grid-parent {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+  }
+
+  .grid-2 {
+    grid-column: span 4;
+  }
+
+  .grid-3 {
+    grid-column: span 2;
+  }
+
+  .projects {
+    flex-direction: row;
+  }
+
+  .project-text {
+    flex: 3;
+  }
+
+  .project-img {
+    flex: 2;
+  }
+}
+
+/* Desktop screen size */
+
+@media (min-width: 1024px) {
+
+  .menu-icon {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    box-shadow: none;
+  }
+
+  .nav-links a {
+    padding: 0px;
+  }
+
+  .hero-video {
+    width: 100%;
+  }
+
+  .hero-container {
+    height: 60vh;
+  }
+
+  .main-logo {
+    width: 200px;
+  }
+
+  .card-section {
+    padding: 40px 10px;
+  }
+
+  .grid-parent {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .grid-2 {
+    grid-column: span 6;
+  }
+
+  .grid-3 {
+    grid-column: span 3;
+  }
+
+  .projects {
+    flex-direction: row;
+  }
+
+  .project-text {
+    flex: 3;
+  }
+
+  .project-img {
+    flex: 2;
+  }
+
+  footer p {
+    width: 50%;
+  }
+}
+
+/* To make the site look good on larger screens the content stays within 1200px*/
+@media (min-width: 1201px) {
+
+  .card-section,
+  .projects,
+  .form-section {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
