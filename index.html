@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Konnichiwa! ❤️</title>
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100..900&family=Outfit:wght@100..900&family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Knewave&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Video Section with Navigation -->
+    <div class="video-container">
+        <div class="overlay">
+            <h1 id="main-title">Konnichiwa!</h1>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav id="nav-menu" class="menu">
+                <ul>
+                    <li><a href="#">MENU</a></li>
+                    <li><a href="#">FIND US</a></li>
+                    <li><a href="#">BOOK TABLE</a></li>
+                    <li><a href="#">ABOUT US</a></li>
+                </ul>
+            </nav>
+        </div>
+        <video autoplay loop muted playsinline class="hero-video">
+            <source src="img/sushi_720p_30fps - 2.mp4" type="video/mp4">
+        </video>
+    </div>
+    
+    <!-- Header Section -->
+    <div class="header">
+        <div class="flex-navi">
+            <button class="menuButtons">MENU</button>
+            <button class="menuButtons">FIND US</button>
+            <button class="menuButtons">BOOK TABLE</button>
+            <button class="menuButtons">ABOUT US</button>
+        </div>
+    </div>
+
+    <!-- Card Section -->
+    <div class="card-container">
+        <div class="cards">
+            <p>Sushi Dish 1</p>
+            <img src="img/img-cards.jpg" alt="Sushi Dish 1" class="cardsImage">
+            <button class="addToCart">Add to cart</button>
+        </div>
+        <div class="cards">
+            <p>Sushi Dish 2</p>
+            <img src="img/img-cards.jpg" alt="Sushi Dish 1" class="cardsImage">
+            <button class="addToCart">Add to cart</button>
+        </div>
+        <div class="cards">
+            <p>Sushi Dish 3</p>
+            <img src="img/img-cards.jpg" alt="Sushi Dish 1" class="cardsImage">
+            <button class="addToCart">Add to cart</button>
+        </div>
+        <div class="cards">
+            <p>Sushi Dish 4</p>
+            <img src="img/img-cards.jpg" alt="Sushi Dish 1" class="cardsImage">
+
+            <button class="addToCart">Add to cart</button>
+        </div>
+        <div class="cards">
+            <p>Sushi Dish 5</p>
+            <img src="img/img-cards.jpg" alt="Sushi Dish 1" class="cardsImage">
+
+            <button class="addToCart">Add to cart</button>
+        </div>
+        <div class="cards">
+            <p>Sushi Dish 6</p>
+            <img src="img/img-cards.jpg" alt="Sushi Dish 1" class="cardsImage">
+            <button class="addToCart">Add to cart</button>
+        </div>
+    </div>
+
+    <!-- Image Grid -->
+    <div class="container">
+        <div class="flex-item-1"><img src="img/img-1.jpg" class="img-container"></div>
+        <div class="flex-item-2"><img src="img/img-2.jpg" class="img-container"></div>
+        <div class="flex-item-3"><img src="img/img-3.jpg" class="img-container"></div>
+        <div class="flex-item-4"><img src="img/img-4.jpg" class="img-container"></div>
+    </div>
+
+    <!-- Booking Section -->
+    <div class="container" id="bookTable2">
+        <div class="form-container" id="bookTable1">
+            <form action="https://httpbin.org/anything" method="post">
+                <h2>For larger companies please call!</h2>
+                <h3>08-1234567</h3>
+
+                <fieldset>
+                    <label>
+                        <span>Name</span>
+                        <input type="text" name="name" placeholder="Sushi McSushi">
+                    </label>
+                    <label>
+                        <span>E-mail</span>
+                        <input type="email" name="email" placeholder="E-mail@example.com">
+                    </label>
+                    <label>
+                        <span>Phone</span>
+                        <input type="number" name="phone" placeholder="+46 123456789">
+                    </label>
+                    <label>
+                        <span>Date</span>
+                        <input type="date" name="date">
+                    </label>
+                    <label>
+                        <span>Time</span>
+                        <input type="time" id="appt" name="appt" min="16:00" max="21:00" required>
+                    </label>
+                    <label>
+                        <span>Guests</span>
+                        <input type="number" id="numberInput" name="guests" min="1" max="9" step="1" placeholder="Number of guests">
+                    </label>
+                </fieldset>
+
+                <button type="submit" id="bookTable">BOOK TABLE</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-item">
+                <h3>Opening Hours</h3>
+                <p>Monday - Friday: 16:00 - 21:00</p>
+                <p>Saturday - Sunday: 12:00 - 21:00</p>
+            </div>
+            <div class="footer-item">
+                <h3>Address</h3>
+                <p>123 Sushi Street</p>
+                <p>123 45 Sushi City</p>
+            </div>
+            <div class="footer-item">
+                <h3>Contact</h3>
+                <p>08-1234567</p>
+                <p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
