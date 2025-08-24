@@ -1,0 +1,9 @@
+{
+<<<<<<< HEAD
+    "files.associations": {
+        "STYLES.C": "cpp"
+    }
+=======
+    "liveServer.settings.port": 5501
+>>>>>>> f40d2a0 (responsiveness fix and hamburger menu overhaul)
+}

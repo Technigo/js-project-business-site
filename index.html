@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="Välkommen till vår restaurang upplev en utsökt meny med rätter som steak, pasta och schnitzel i en trivsam miljö. Boka bord online idag!">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Restaurant</title>
+
+  <!-- Preload critical resources -->
+  <link rel="preload" as="image" href="img/1000_F_294263329_1IgvqNgDbhmQNgDxkhlW433uOFuIDar4.webp">
+  <link rel="preload" as="style" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+  <link rel="preload" as="font" href="https://unpkg.com/boxicons@2.1.4/fonts/boxicons.woff2" type="font/woff2" crossorigin>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"></noscript>
+
+  <style>
+    @font-face {
+      font-family: 'boxicons';
+      src: url('https://unpkg.com/boxicons@2.1.4/fonts/boxicons.woff2') format('woff2');
+      font-display: swap;
+    }
+  </style>
+</head>
+
+<body>
+<header>
+  <nav>
+    <button id="hamburger" class="hamburger" aria-label="Öppna meny" aria-expanded="false" aria-controls="primary-navigation" type="button">
+      <i class="bx bx-menu" aria-hidden="true"></i> Menu
+    </button>
+    <ul id="primary-navigation" class="nav-list" role="menubar" hidden>
+      <li role="none"><a role="menuitem" href="#hero">Hem</a></li>
+      <li role="none"><a role="menuitem" href="#about">Om oss</a></li>
+      <li role="none"><a role="menuitem" href="#menu">Meny</a></li>
+      <li role="none"><a role="menuitem" href="#contact">Kontakta oss</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <!-- Hero Section -->
+  <section id="hero" class="hero" tabindex="-1">
+    <img
+      src="img/1000_F_294263329_1IgvqNgDbhmQNgDxkhlW433uOFuIDar4.webp"
+      alt="Restaurang Hero"
+      class="hero-bg"
+      decoding="async"
+      fetchpriority="high"
+      width="1200"
+      height="800"
+    />
+    <h1>Välkommen till vår Restaurang</h1>
+    <p>Upptäck den finaste upplevelsen i stan.</p>
+    <button id="bokabord" type="button">Boka bord</button>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about" tabindex="-1">
+    <h2>Om Restaurangen</h2>
+    <p>
+      Utforska vår varierade meny som bjuder på enastående smakupplevelser och kulinariska höjdpunkter. Från våra saftiga hamburgare till de smakrika pastaarrabiata-rätterna, varje måltid är en perfekt kombination av noggrant utvalda ingredienser och kreativ matlagning. Våra rätter är skapade med passion och omsorg för att tillfredsställa dina smaklökar och ge en minnesvärd gastronomisk upplevelse varje gång du besöker oss.
+    </p>
+  </section>
+
+  <!-- Menu Section -->
+  <section id="menu" class="menu" tabindex="-1" aria-label="Vår meny">
+    <h2>Vår meny</h2>
+    <div class="menu-items">
+      <!-- Menu items -->
+      <div class="menu-item" id="menu_item-1">
+        <img src="img/1.webp" alt="Dish 1" loading="lazy">
+        <h3 id="steakName">Steak</h3>
+        <p id="steakDesc">A delightful dish made with the finest ingredients.</p>
+        <p id="steakPrice">170 kr</p>
+        <button class="order-button" type="button" aria-labelledby="steakName steakPrice">Order Now</button>
+      </div>
+
+      <div class="menu-item" id="menu_item-2">
+        <img src="img/2.webp" alt="Dish 2" loading="lazy">
+        <h3 id="pastaName">Pasta arrabiata</h3>
+        <p id="pastaDesc">A mouth-watering culinary creation you won't forget.</p>
+        <p id="pastaPrice">155 kr</p>
+        <button class="order-button" type="button" aria-labelledby="pastaName pastaPrice">Order Now</button>
+      </div>
+
+      <div class="menu-item" id="menu_item-3">
+        <img src="img/3.webp" alt="Dish 3" loading="lazy">
+        <h3 id="burgerName">Hamburgare</h3>
+        <p id="burgerDesc">A delectable dish that will tantalize your taste buds.</p>
+        <p id="burgerPrice">135 kr</p>
+        <button class="order-button" type="button" aria-labelledby="burgerName burgerPrice">Order Now</button>
+      </div>
+
+      <div class="menu-item" id="menu_item-4">
+        <img src="img/4.webp" alt="Dish 4" loading="lazy">
+        <h3 id="schnitzelName">Schnitzel</h3>
+        <p id="schnitzelDesc">A flavorful and visually stunning dish you must try.</p>
+        <p id="schnitzelPrice">155 kr</p>
+        <button class="order-button" type="button" aria-labelledby="schnitzelName schnitzelPrice">Order Now</button>
+      </div>
+
+      <div class="menu-item" id="menu_item-5">
+        <img src="img/5.webp" alt="Dish 5" loading="lazy">
+        <h3 id="laxName">Lax</h3>
+        <p id="laxDesc">A flavorful and visually stunning dish you must try.</p>
+        <p id="laxPrice">155 kr</p>
+        <button class="order-button" type="button" aria-labelledby="laxName laxPrice">Order Now</button>
+      </div>
+
+      <div class="menu-item" id="menu_item-6">
+        <img src="img/6.webp" alt="Dish 6" loading="lazy">
+        <h3 id="lammName">Lammkotlett</h3>
+        <p id="lammDesc">A flavorful and visually stunning dish you must try.</p>
+        <p id="lammPrice">155 kr</p>
+        <button class="order-button" type="button" aria-labelledby="lammName lammPrice">Order Now</button>
+      </div>
+    </div>
+
+    <div class="menu-confirm">
+      <h2>Bekräfta din Beställning</h2>
+      <button id="bekräfta" type="button">Bekräfta</button>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <h2>Recensioner</h2>
+    <div class="testimonial-grid">
+      <article class="testimonial-item">
+        <img src="img/3455-1579506060.webp" alt="Customer 1" loading="lazy">
+        <p>"Maten är helt fantastisk! Jag har aldrig smakat något liknande. Rekommenderas starkt!"</p>
+        <h4>- Zlatan Ibra</h4>
+      </article>
+      <article class="testimonial-item">
+        <img src="img/bob.webp" alt="Customer 2" loading="lazy">
+        <p>"Den här restaurangen är en dold pärla! Servicen är oklanderlig och atmosfären är helt enkelt himmelsk."</p>
+        <h4>- Bob Marley</h4>
+      </article>
+      <article class="testimonial-item">
+        <img src="img/ronne.webp" alt="Customer 3" loading="lazy">
+        <p>"Om du letar efter en oförglömlig matupplevelse är det här stället att besöka. Jag kommer tillbaka om och om igen!"</p>
+        <h4>- Cristiano Ronaldo</h4>
+      </article>
+    </div>
+  </section>
+
+  <!-- Contact / Booking Section -->
+  <section id="contact" class="contact">
+    <h2>Boka bord!</h2>
+    <form id="order-form" action="https://httpbin.org/anything" method="POST" target="_blank" class="contact-form">
+      <input type="text" id="name" name="name" placeholder="Namn" required>
+      <input type="email" id="email" name="email" placeholder="Email" required>
+      <input type="number" id="guests" name="guests" placeholder="Antal personer" required>
+
+      <fieldset id="time-selection">
+        <legend>Välj bokningstid</legend>
+        <label><input type="radio" name="booking_time" value="15" required> 15:00</label>
+        <label><input type="radio" name="booking_time" value="17"> 17:00</label>
+        <label><input type="radio" name="booking_time" value="19"> 19:00</label>
+        <label><input type="radio" name="booking_time" value="21"> 21:00</label>
+        <label><input type="radio" name="booking_time" value="23"> 23:00</label>
+      </fieldset>
+
+      <input type="password" id="password" name="password" placeholder="Lösenord" required autocomplete="current-password">
+
+      <fieldset>
+        <legend>Betalningsmetod:</legend>
+        <label><input type="radio" name="payment" value="kort" required> Kort</label>
+        <label><input type="radio" name="payment" value="kontant"> Kontant</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Önskade tillval:</legend>
+        <label><input type="checkbox" name="extras" value="vin"> Vin</label>
+        <label><input type="checkbox" name="extras" value="öl"> Öl</label>
+        <label><input type="checkbox" name="extras" value="vatten"> Vatten</label>
+      </fieldset>
+
+      <textarea id="message" name="message" placeholder="Meddelande" required></textarea>
+      <button type="submit" id="skicka">Skicka</button>
+    </form>
+  </section>
+</main>
+
+<!-- Order Modal -->
+<div id="order-modal" class="modal" hidden>
+  <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="order-modal-title" tabindex="-1">
+    <button class="close-button" aria-label="Stäng beställning">&times;</button>
+    <h2 id="order-modal-title">Din Beställning</h2>
+    <ul id="order-list"></ul>
+    <button id="confirm-order" type="button">Bekräfta Beställning</button>
+  </div>
+</div>
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" defer></script>
+<script src="src/index.js" defer></script>
+</body>
+</html>
