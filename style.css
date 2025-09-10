@@ -1,0 +1,277 @@
+html, body {
+  height: 100%; /*Let body fill the full viewport height*/
+  margin: 0;  /* ermove browser default margin*/
+  display: flex; /*makin tje body to be at flex container*/
+  flex-direction: column; /*stack children vertically: header, main and footer*/
+}
+
+/*BACKGROUND*/
+body{
+  background-image: url("Coffeebeans.jpg"); /* byt ut till din bild */
+  background-size: cover;       /* gör så bilden täcker hela sidan */
+  background-position: center;  /* centrerar bilden */
+  background-repeat: no-repeat; /* hindrar att bilden upprepas */
+  background-attachment: fixed;  /*keeps background in place while scrolling*/
+}
+
+/*TITLE*/
+h1{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size:50px;
+    -webkit-text-stroke: 2px black;
+    font-weight: bold;
+    background: rgba(0,0,0,0.4); /* halvtransparent svart bakgrund */
+    display: inline-block;       /* så bakgrunden bara ligger bakom texten */
+    padding: 4px 8px;
+    border-radius: 6px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.9);
+
+
+}
+
+/*making h3 responsive. Setting scale between min-max value depending on screen size*/
+h3{
+font-size: clamp(0.5rem, 6vw, 2.0rem); 
+font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+margin-top: 12px;
+-webkit-text-stroke: 0.5px black;
+ text-shadow: 2px 2px 4px rgba(0,0,0,0.9);
+}
+
+/*HEADER STYLING*/
+.site-header{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding:20px 16px;
+    display:flex;                   /*Flexbox, placeing brand and nav on same row*/
+    justify-content: space-between; /*spread brand to left, menu/nav to right*/
+    align-items: center;   
+      background: rgba(0,0,0,0.4); /* halvtransparent svart bakgrund */
+  min-width: 300px; 
+}
+
+/*Hero sector banner*/
+.hero {
+  color: rgb(250, 249, 249);              /* vit text */
+  text-align: center;       /* centrera texten */
+  padding: 5px;       /* gör den högre (”banner-känsla”) */
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+/*LOGO IMAGE*/
+.logo{
+    width:30px;
+    height: auto;
+    margin-right: 8px;
+    vertical-align:bottom;
+}
+
+/*HIDE THE BRAND TEXT ON SMALLER SCREENS*/
+@media (max-width: 768px) {
+  .logo-text {
+    display: none; /* gömmer texten på mobil */
+  }
+}
+
+/*BRAND LINK TEXT*/
+.brand {
+  text-decoration: none;    
+  color: #f9f3f3;               
+  font-weight: bold;         
+  font-size: 1.2rem;         
+}
+
+/*TEMPORARY HAMURGER MENU*/
+.menu-toggle {
+  background: none;
+  border: none;
+  cursor:pointer;
+  display: flex; 
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px;
+}
+
+.menu-toggle span{
+  display:block;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+}
+
+
+.primary-nav{
+    display:none; /*hide the nav list on smal displays. Just the button exist*/
+}
+
+.primary-nav ul{
+    list-style: none; /*no dots*/
+    margin: 0;
+    padding: 0;   
+}
+
+.primary-nav a{
+    color:#f8f1e7; 
+    text-decoration: none; 
+    padding: 7px; 
+    border-radius: 4px;
+}
+
+/*Makes main grow to push footer down*/
+main{
+  flex:1;
+}
+
+/*FOOTER STYLING*/
+footer{
+  color: rgb(255, 255, 255);              /* vit text */
+  text-align: center;       /* centrera texten */
+  font-size: 20px;
+  padding: 40px;       /* gör den högre (”banner-känsla”) */
+  border-radius: 12px;
+  margin-top: 20px;
+  background: rgba(0,0,0,0.4); /* halvtransparent svart bakgrund */
+  display: inline-block;       /* så bakgrunden bara ligger bakom texten */
+  
+
+}
+
+/*GRID: PRODUCT/NEWS CARDS*/
+   .grid-info {                   /*parent crid container*/
+      display: grid;              /*CSS grid handles rows/columns*/
+      grid-template-columns: auto; /*Mobile first: 1 column on smal screens*/
+      gap: 12px;
+      padding:10px;
+      justify-items: center;   /* centrera barn horisontellt */
+      align-items: stretch; /*Boxarna fyller samma höjd*/
+      grid-auto-rows: 1fr; /*alla rader får samma höjd*/
+      max-width: 100%;       /* hindra att grid fyller hela skärmen */
+      margin: 0 auto;
+    }
+
+    /*CHILD CARDS*/
+.box { 
+  background: rgba(255, 255, 255, 0.2); /* lite genomskinlig vit bakgrund */
+  backdrop-filter: blur(5px);          /* suddar det som ligger bakom */
+  -webkit-backdrop-filter: blur(10px);  /* för bättre stöd i Safari */
+  border: 1px solid rgb(40, 38, 38);
+  border-radius: 10px;                  /* rundade hörn */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* skugga */
+  text-align: center;
+  color: white;
+
+  width: 100%;
+  max-width: 270px;  /* justera efter smak (t.ex. 200–280px) */
+  margin: 0 auto;    /* säkerhetsbälte för centrering */
+  margin-top: px;
+  margin-bottom: 10px;
+  /*Centrerar innehållet*/
+  display:flex;
+  flex-direction:column; /*rubrik, text och button i kolumn*/
+  justify-content: center; /*centrerar lodrätt*/
+  align-items: center; /*centrerar vågrätt*/
+  text-align: center; /*centreraar textinnehåll*/
+  
+  padding: 0 20px;           /* bara sidopadding, inget top/bottom */
+  min-height: 20px;
+}
+
+/*================MEDIA QUERIES===============*/
+
+/*Mobile*/
+ 
+@media (max-width: 360px) {
+  .box {
+    width: 90%;           /* ta bort %-styrningen */
+    max-width: none;   
+    margin: 10px auto; /* auto = centrerad horisontellt */
+  }
+  h1{
+    font-size: 30px;
+    color:white;
+    -webkit-text-stroke: 0.5px rgb(13, 12, 12);
+    font-weight:bold;
+    margin-top: 10px;
+    width: 80%;  
+}
+h3{
+    font-size: 25px;
+    color:white;
+    -webkit-text-stroke: 0.5px rgb(13, 12, 12);
+    margin-top: 10px;
+}
+
+
+
+}
+/*TABLET*/
+ /*ON TABLET: 2 COLUMNS*/
+ @media (min-width: 667px){
+.grid-info {
+    grid-template-columns: repeat(2, 1fr);
+}
+  .box { 
+    min-height: 250px; 
+  }  
+}
+
+
+/*DESKTOP*/
+/* On desktop: 4 columns (assignment requirement) + slightly taller cards */
+@media (min-width: 1024px) {
+  .grid-info {
+    grid-template-columns: repeat(4, 1fr);
+  } 
+
+  .box { min-height: 300px; }  
+  
+
+  .box:hover {
+    transform: scale(1.05); /* växer med 5 % */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4); /* lite starkare skugga */
+  }
+
+  .menu-toggle { /*oN DESKTOP: Show nav links in a row, no hamburger menu*/
+     display:none;
+  }
+
+  .primary-nav{
+        display:block;
+  }
+  
+   .primary-nav ul{
+      display:flex; 
+      gap:50px;
+      align-items: center; /*Center the links vertical*/
+      justify-content: flex-end;
+  }
+}
+
+
+/* Hover effect for top menu links */
+.primary-nav a:hover{
+    color:black;
+}
+
+/* Button styling in box 3*/
+.button {
+  width: auto;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #f6a2a2, #fcbaba); /* rosa gradient */
+  background: linear-gradient(145deg, rgb(160, 30, 30), rgb(100, 0, 0)); /*när pilen är över knappen så blir färgen brunn*/
+  color: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 10px;
+
+}
+
+/* Hover: darker gradient + white text */
+button:hover {
+  background: linear-gradient(145deg, rgb(30, 160, 52), rgb(13, 23, 11)); /*när pilen är över knappen så blir färgen brunn*/
+  color: #fff; 
+}
