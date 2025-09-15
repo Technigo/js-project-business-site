@@ -1,5 +1,7 @@
 # js-project-business-site
 
+https://shatat.online
+
 # js-project-business-site – De-News
 
 This is the **Business Site Project** for the *Frontend Development with JavaScript* course.  
