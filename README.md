@@ -31,3 +31,5 @@ Responsive design via @media queries at 640px (tablet) and 1024px (desktop).
 Flexbox & Grid
 Grid for page layout and card grid.
 Flexbox for nav, header alignment, and form fields.
+
+Netlify : https://frontendproject2025.netlify.app/
