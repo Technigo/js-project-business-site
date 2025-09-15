@@ -1,0 +1,1205 @@
+<!doctype html>
+<html lang="en" id="top">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Stockholm Central Apartment • Local Guide</title>
+  <!-- Using system fonts for that clean Apple look -->
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header with navigation -->
+  <header class="header">
+    <div class="header-content">
+      <h1 class="logo">
+        <a href="#top">
+          Stockholm apartment
+        </a>
+      </h1>
+      <!-- Desktop navigation -->
+      <nav class="desktop-nav">
+        <a href="#about">
+          About
+        </a>
+        <a href="#rooms">
+          Rooms
+        </a>
+        <a href="#amenities">
+          Amenities
+        </a>
+        <a href="#location">
+          Location
+        </a>
+        <a href="#book">
+          Book
+        </a>
+        <button class="folder-toggle active" id="folder-toggle" aria-label="Toggle folder layout">
+          <i data-lucide="folder"></i>
+          <span class="folder-toggle-text">Normal</span>
+        </button>
+      </nav>
+      <!-- Hamburger for mobile -->
+      <button class="burger" aria-label="Toggle navigation" id="burger-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+    <!-- Mobile navigation -->
+    <nav class="mobile-nav">
+      <a href="#about">
+        About
+      </a>
+      <a href="#rooms">
+        Rooms
+      </a>
+      <a href="#amenities">
+        Amenities
+      </a>
+      <a href="#location">
+        Location
+      </a>
+      <a href="#book">
+        Book
+      </a>
+    </nav>
+
+  <!-- Main content wrapper - semantic HTML structure -->
+  <main class="wrapper">
+    
+    <!-- Hero title section - primary heading and value proposition -->
+    <section class="big-title">
+      <h1 class="typo-hero-title">
+        Stockholm living
+      </h1>
+      <div class="typo-subtitle">
+        <p>
+          Central apartment
+        </p>
+        <p>
+          Flexible stays
+        </p>
+        <p>
+          Local experience
+        </p>
+      </div>
+      <a href="#hero" class="circle-btn">
+        <i data-lucide="arrow-down"></i>
+      </a>
+    </section>
+
+    <!-- Hero Image Section -->
+    <div class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-image">
+          <img src="images/hero.png" alt="Stockholm apartment hero view" />
+          <div class="hero-overlay">
+            <a href="#contact" class="hero-tag">
+              <i data-lucide="check-circle"></i>
+              Available on request</a>
+            <div class="hero-text">
+              <h2 class="typo-heading-large">
+                Your Stockholm Base
+              </h2>
+              <p class="typo-body-large">
+                Central • Comfortable • Connected
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Property overview - key facts with entrance image -->
+    <div class="container">
+      <div id="about" class="folder">
+        <div class="grid-section">
+          <div class="image-large">
+            <img src="images/entrance.png" alt="Apartment entrance" />
+          </div>
+          <div class="facts-block">
+            <ul class="fact-list">
+              <li>
+                <i data-lucide="star"></i> 
+                4.9/5 stars
+              </li>
+              <li>
+                <i data-lucide="users"></i> 
+                Up to 2 people
+              </li>
+              <li>
+                <i data-lucide="map-pin"></i>
+                Kungsholmen
+              </li>
+              <li><i data-lucide="train"></i>
+                Metro & busses
+              </li>
+              <li>
+                <i data-lucide="wifi"></i>
+                100 Mbps
+              </li>
+              <li>
+                <i data-lucide="sofa"></i>
+                Furnished
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Social proof section - bedroom showcase with guest reviews -->
+      <div id="rooms" class="folder">
+        <div class="content-mix">
+          <div class="room-feature">
+            <img src="images/bed-1.png" alt="Bedroom" />
+            <div class="room-info">
+              <h3 class="typo-heading-small">
+                Sleep Well
+              </h3>
+              <p class="typo-body">
+                Comfortable double bed with quality Swedish linens. Blackout curtains for those bright summer nights. Beautiful wooden floors throughout.
+              </p>
+            </div>
+          </div>
+          <div class="reviews-slider">
+            <div class="reviews-header">
+              <div class="rating-summary">
+                <div class="overall-rating">
+                  <span class="rating-number">
+                    4.9
+                  </span>
+                  <div class="stars-display">
+                    <i data-lucide="star"></i>
+                    <i data-lucide="star"></i>
+                    <i data-lucide="star"></i>
+                    <i data-lucide="star"></i>
+                    <i data-lucide="star"></i>
+                  </div>
+                  <span class="review-count">
+                    110 reviews
+                  </span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="reviews-container">
+              <div class="review-slide">
+                <blockquote class="typo-quote">
+                  "Perfect place to stay when visiting Stockholm. Great location and Daniel was very responsive!"
+                </blockquote>
+                <p class="reviewer typo-caption">
+                  — Stefanos, Greece • 5 stars
+                </p>
+              </div>
+              
+              <div class="review-slide">
+                <blockquote>
+                  "Daniel was an excellent host with valuable advice. House was very clean and equipped with every comfort."
+                </blockquote>
+                <p class="reviewer">
+                  — Giulia, Italy • 5 stars
+                </p>
+              </div>
+              
+              <div class="review-slide">
+                <blockquote>
+                  "Great location. Quiet place facing the back. Shower was excellent with plenty of hot water."
+                </blockquote>
+                <p class="reviewer">
+                  — Ulric, Washington DC • 5 stars
+                </p>
+              </div>
+              
+              <div class="review-slide">
+                <blockquote>
+                  "Couldn't have been better. Very clean and comfortable flat. Daniel was very responsive. 10/10!"
+                </blockquote>
+                <p class="reviewer">
+                  — Camilla, UK • 5 stars
+                </p>
+              </div>
+              
+              <div class="review-slide">
+                <blockquote>
+                  "A lovely tidy apartment with clear instructions and arm's length list of great local recommendations."
+                </blockquote>
+                <p class="reviewer">
+                  — Jessica, USA • 5 stars
+                </p>
+              </div>
+              
+              <div class="review-slide">
+                <blockquote>
+                  "Very good place in regards to walkability. Didn't have to use public transport at all!"
+                </blockquote>
+                <p class="reviewer">
+                  — Marek, Poland • 5 stars
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Key amenities overview - kitchen, workspace, entertainment -->
+      <div id="amenities" class="folder">
+        <div class="amenities-scattered">
+          <div class="amenity-item kitchen">
+            <span class="amenity-icon">
+              <i data-lucide="chef-hat"></i>
+            </span>
+            <p>
+              <strong>Full kitchen with everything you need</strong>
+              Coffee • Tea • Basic spices
+            </p>
+          </div>
+          <div class="amenity-item work">
+            <span class="amenity-icon">
+              <i data-lucide="monitor"></i>
+            </span>
+            <p>
+              <strong>Dedicated workspace</strong>
+              External monitor • Ergonomic chair • USB hub
+            </p>
+          </div>
+          <div class="amenity-item comfort">
+            <span class="amenity-icon">
+              <i data-lucide="home"></i>
+            </span>
+            <p>
+              <strong>Entertainment & Comfort</strong>
+              Bluetooth speaker
+              Local guidebooks • Cozy lighting • Quality linens
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Big typography section -->
+      <div id="greeting" class="folder">
+        <section class="big-type">
+          <h2>
+            Feel at home
+          </h2>
+        </section>
+      </div>
+
+      <div id="host" class="folder">
+        <!-- About the host - building trust and personal connection -->
+        <div class="host-profile">
+          <div class="host-content">
+            <div class="host-image">
+              <img src="images/profile.png" alt="Daniel - Your Host" class="host-avatar"/>
+              <h5>
+                Meet Your Host
+              </h5>
+            </div>
+            <div class="host-info">
+              <h3>
+                Daniel Lauding
+              </h3>
+              <h4>
+                Digital Nomad & Remote Worker
+              </h4>
+              <p>
+                As someone who's traveled the world while working remotely, I understand what makes a perfect stay. This apartment has been curated with the modern traveler in mind - from the ergonomic workspace to the local insider tips.
+              </p>
+              <p>
+                I'm passionate about sharing Stockholm's hidden gems and helping fellow remote workers find their perfect productivity space.
+              </p>
+              <div class="host-links">
+                <a href="https://www.daniellauding.se" target="_blank" class="btn-primary btn-sm">
+                  Visit portfolio
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kitchen Section - my favorite room in the apartment -->
+      <div id="kitchen" class="folder">
+        <div class="kitchen-header section-header">
+          <h2>
+            Culinary playground
+          </h2>
+          <p>Full kitchen</p>
+          <p>Premium appliances</p>
+          <p>Nordic design</p>
+        </div>
+
+        <section class="kitchen-section">
+          
+          <div class="kitchen-showcase">
+            <img src="images/kitchen-1.png" alt="Kitchen view 1" class="kitchen-main" />
+            <img src="images/kitchen-2.png" alt="Kitchen view 2" class="kitchen-detail" />
+            
+            <div class="kitchen-equipment">
+              <blockquote>
+                "The kitchen is the heart of this apartment"
+              </blockquote>
+            </div>
+            
+            <!-- <div class="kitchen-vibe">
+              <p>
+                <i data-lucide="utensils-crossed"></i>
+                <i data-lucide="cup-soda"></i>
+                <i data-lucide="fridge"></i>
+                <i data-lucide="oven"></i>
+                <i data-lucide="microwave"></i>
+                <i data-lucide="sparkles"></i>
+                <i data-lucide="apple"></i>
+                <i data-lucide="pizza"></i>
+              </p>
+            </div> -->
+
+            <div class="kitchen-icons" aria-hidden="true">
+              <div class="icon">
+                <i data-lucide="utensils-crossed"></i>
+              </div>
+              <div class="icon">
+                <i data-lucide="cup-soda"></i>
+              </div>
+              <div class="icon">
+                <i data-lucide="pizza"></i>
+              </div>
+              <div class="icon">
+                <i data-lucide="apple"></i>
+              </div>
+              
+              <div class="icon">
+                <i data-lucide="carrot"></i>
+              </div>
+              <div class="icon">
+                <i data-lucide="fish"></i>
+              </div>
+              <div class="icon">
+                <i data-lucide="coffee"></i>
+              </div>
+              <div class="icon">
+                <i data-lucide="chef-hat"></i>
+              </div>
+              
+              <div class="icon">
+                <i data-lucide="ice-cream"></i>
+              </div>
+              <div class="icon">
+                <i data-lucide="citrus"></i>
+              </div>
+              <div class="icon">
+                <i data-lucide="grape"></i>
+              </div>
+              <div class="icon">
+                <i data-lucide="egg"></i>
+              </div>
+
+              <div class="icon">
+                <i data-lucide="cookie"></i>
+              </div>
+              <div class="icon">
+                <i data-lucide="sparkles"></i>
+              </div>
+              <div class="icon">
+                <i data-lucide="check-circle"></i>
+              </div>
+              <div class="icon">
+                <i data-lucide="wine"></i>
+              </div>
+            </div>
+
+          </div>
+        </section>
+      </div>
+
+      <!-- Big workspace section -->
+      <div id="workspace" class="folder">
+        <div class="workspace-header section-header">
+          <h2>
+            Remote work ready
+          </h2>
+          <p>Professional setup</p>
+          <p>High-speed internet</p>
+          <p>Quiet neighborhood</p>
+        </div>
+
+        <section class="workspace-section">
+          
+          <div class="workspace-grid">
+            <img src="images/office-1.png" alt="Main workspace" class="workspace-main" />
+            
+            <div class="workspace-features">
+              <div class="feature-list">
+                <div class="feature-item">
+                  <i data-lucide="monitor"></i>
+                  <span>
+                    External monitor
+                  </span>
+                </div>
+                <div class="feature-item">
+                  <i data-lucide="wifi"></i>
+                  <span>
+                    100 Mbps fiber internet
+                  </span>
+                </div>
+                <div class="feature-item">
+                  <i data-lucide="headphones"></i>
+                  <span>
+                    Quiet neighborhood
+                  </span>
+                </div>
+                <div class="feature-item">
+                  <i data-lucide="usb"></i>
+                  <span>
+                    USB hub
+                  </span>
+                </div>
+                <div class="feature-item">
+                  <i data-lucide="armchair"></i>
+                  <span>
+                    Ergonomic chair
+                  </span>
+                </div>
+                <div class="feature-item">
+                  <i data-lucide="lamp-desk"></i>
+                  <span>
+                    Task lighting
+                  </span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="workspace-review">
+              <div class="stars">
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+              </div>
+              <blockquote>
+                "Perfect setup for remote work. Great wifi, comfortable desk, super quiet neighborhood."
+              </blockquote>
+              <p class="reviewer">
+                — John, London • Digital nomad
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- Scattered outdoor images with ALL patio images -->
+
+      <div id="outdoor" class="folder">
+
+        <div class="outdoor-header section-header">
+          <h2>
+            Outdoor Vibes
+          </h2>
+          <p>Shared courtyard</p>
+        </div>
+
+        <section class="outdoor-scattered">
+          
+          <div class="outdoor-grid">
+            <img src="images/patio-0.png" alt="Patio entrance" class="patio-main" />
+            <div class="outdoor-text">
+              <h3>
+                Your Private Oasis
+              </h3>
+              <p>
+                Shared courtyard • Morning coffee • Evening wine • BBQ in summer
+              </p>
+            </div>
+            <img src="images/patio-1.png" alt="Patio 1" class="patio-small" />
+            <img src="images/patio-2.png" alt="Patio 2" class="patio-tall" />
+            <img src="images/patio-3.png" alt="Patio 3" class="patio-medium" />
+            <img src="images/patio-4.png" alt="Patio 4" class="patio-wide" />
+            <img src="images/patio-5.png" alt="Patio 5" class="patio-extra" />
+          </div>
+        </section>
+
+      </div>
+
+      <!-- Local Gems -->
+
+      <div id="gems" class="folder">
+
+        <div class="gems-header section-header">
+          <h2>
+            Local Gems
+          </h2>
+          <p>Your host's curated</p>
+          <p>Stockholm favorites</p>
+        </div>
+        
+        <!-- Scrolling Local Gems - Grid Layout with Real Gems -->
+        <section class="scrolling-gems" id="local">
+          <div class="scrolling-gems-container">
+            <!-- Track 1 - Top row -->
+            <div class="scrolling-gems-track track-1">
+              <a href="https://maps.google.com/?q=Café+Pascal+Stockholm" target="_blank" class="gem-item">
+                <strong>Café Pascal</strong>
+                Good croissants in the city • Fresh daily
+              </a>
+              <a href="https://maps.google.com/?q=Meno+Male+Stockholm+Kungsholmen" target="_blank" class="gem-item">
+                  <strong>Meno Male</strong>
+                Renowned pizza spot • Authentic Italian flavors
+              </a>
+              <a href="https://maps.google.com/?q=Take+Ramen+Stockholm" target="_blank" class="gem-item">
+                <strong>Take Ramen</strong>
+                Authentic Japanese ramen • Perfect comfort food
+              </a>
+              <a href="https://maps.google.com/?q=GelatoKiosken+Norr+Mälarstrand+Stockholm" target="_blank" class="gem-item">
+                <strong>GelatoKiosken</strong>
+                Espresso bar & gelato on Norr Mälarstrand • Waterfront views
+              </a>
+              <a href="https://maps.google.com/?q=Vete-Katten+Fridhemsplan+Stockholm" target="_blank" class="gem-item">
+                <strong>Vete-Katten</strong>
+                Historic Swedish pastry house • Cinnamon buns & coffee
+              </a>
+              <a href="https://maps.google.com/?q=Restaurant+AG+Stockholm" target="_blank" class="gem-item">
+                <strong>Restaurant AG</strong>
+                Renowned steakhouse • Premium cuts & wine
+              </a>
+              <a href="https://maps.google.com/?q=Fjäderholmarna+Stockholm" target="_blank" class="gem-item">
+                <strong>Fjäderholmarna</strong>
+                Beautiful archipelago island • Traditional crafts & restaurants
+              </a>
+              <!-- Duplicate for seamless loop -->
+              <a href="https://maps.google.com/?q=Café+Pascal+Stockholm" target="_blank" class="gem-item">
+                <strong>Café Pascal</strong>
+                Good croissants in the city • Fresh daily
+              </a>
+              <a href="https://maps.google.com/?q=Meno+Male+Stockholm+Kungsholmen" target="_blank" class="gem-item">
+                <strong>Meno Male</strong>
+                Renowned pizza spot • Authentic Italian flavors
+              </a>
+              <a href="https://maps.google.com/?q=Take+Ramen+Stockholm" target="_blank" class="gem-item">
+                <strong>Take Ramen</strong>
+                Authentic Japanese ramen • Perfect comfort food
+              </a>
+              <a href="https://maps.google.com/?q=GelatoKiosken+Norr+Mälarstrand+Stockholm" target="_blank" class="gem-item">
+                <strong>GelatoKiosken</strong>
+                Espresso bar & gelato on Norr Mälarstrand • Waterfront views
+              </a>
+              <a href="https://maps.google.com/?q=Vete-Katten+Fridhemsplan+Stockholm" target="_blank" class="gem-item">
+                <strong>Vete-Katten</strong>
+                Historic Swedish pastry house • Cinnamon buns & coffee
+              </a>
+              <a href="https://maps.google.com/?q=Restaurant+AG+Stockholm" target="_blank" class="gem-item">
+                <strong>Restaurant AG</strong>
+                Renowned steakhouse • Premium cuts & wine
+              </a>
+              <a href="https://maps.google.com/?q=Fjäderholmarna+Stockholm" target="_blank" class="gem-item">
+                <strong>Fjäderholmarna</strong>
+                Beautiful archipelago island • Traditional crafts & restaurants
+              </a>
+            </div>
+
+            <!-- Track 2 - Second row -->
+            <div class="scrolling-gems-track track-2">
+              <a href="https://maps.google.com/?q=SS+Stockholm+Ship+Museum" target="_blank" class="gem-item">
+                <strong>SS Stockholm Ship</strong>
+                Historic steamship museum • Maritime heritage experience
+              </a>
+              <a href="https://maps.google.com/?q=Hornhuset+Stockholm" target="_blank" class="gem-item">
+                <strong>Hornhuset</strong>
+                Historic building • Architectural gem in the city center
+              </a>
+              <a href="https://maps.google.com/?q=Djurgården+Stockholm" target="_blank" class="gem-item">
+                <strong>Djurgården</strong>
+                Museum island • Vasa Museum, ABBA Museum, beautiful parks
+              </a>
+              <a href="https://maps.google.com/?q=Kungsholmen+Runt" target="_blank" class="gem-item">
+                <strong>Kungsholmen Runt</strong>
+                9 km walking/jogging trail around the island • Lake views all around
+              </a>
+              <a href="https://maps.google.com/?q=Hötorgshallen+Stockholm" target="_blank" class="gem-item">
+                  <strong>Hötorgshallen</strong>
+                Food market • Swedish delicacies & fresh produce
+              </a>
+              <a href="https://maps.google.com/?q=Thaiboat+Stockholm" target="_blank" class="gem-item">
+                <strong>Thaiboat</strong>
+                Floating Thai restaurant • Cocktails & beach vibe
+              </a>
+              <a href="https://maps.google.com/?q=Wan+Thai+St+Eriksplan+Stockholm" target="_blank" class="gem-item">
+                <strong>Wan Thai</strong>
+                Authentic Thai flavors • Great lunch & dinner spot
+              </a>
+              <!-- Duplicate for seamless loop -->
+              <a href="https://maps.google.com/?q=SS+Stockholm+Ship+Museum" target="_blank" class="gem-item">
+                <strong>SS Stockholm Ship</strong>
+                Historic steamship museum • Maritime heritage experience
+              </a>
+              <a href="https://maps.google.com/?q=Hornhuset+Stockholm" target="_blank" class="gem-item">
+                <strong>Hornhuset</strong>
+                Historic building • Architectural gem in the city center
+              </a>
+              <a href="https://maps.google.com/?q=Djurgården+Stockholm" target="_blank" class="gem-item">
+                <strong>Djurgården</strong>
+                Museum island • Vasa Museum, ABBA Museum, beautiful parks
+              </a>
+              <a href="https://maps.google.com/?q=Kungsholmen+Runt" target="_blank" class="gem-item">
+                <strong>Kungsholmen Runt</strong>
+                9 km walking/jogging trail around the island • Lake views all around
+              </a>
+              <a href="https://maps.google.com/?q=Hötorgshallen+Stockholm" target="_blank" class="gem-item">
+                <strong>Hötorgshallen</strong>
+                Food market • Swedish delicacies & fresh produce
+              </a>
+              <a href="https://maps.google.com/?q=Thaiboat+Stockholm" target="_blank" class="gem-item">
+                <strong>Thaiboat</strong>
+                Floating Thai restaurant • Cocktails & beach vibe
+              </a>
+              <a href="https://maps.google.com/?q=Wan+Thai+St+Eriksplan+Stockholm" target="_blank" class="gem-item">
+                <strong>Wan Thai</strong>
+                Authentic Thai flavors • Great lunch & dinner spot
+              </a>
+            </div>
+
+            <!-- Track 3 - Third row -->
+            <div class="scrolling-gems-track track-3">
+              <a href="https://maps.google.com/?q=Koh+Phangan+Stockholm" target="_blank" class="gem-item">
+                <strong>Koh Phangan</strong>
+                Quirky Thai restaurant • Neon lights & tropical interior
+              </a>
+              <a href="https://maps.google.com/?q=Prime+Burger+Kungsholmen+Stockholm" target="_blank" class="gem-item">
+                <strong>Prime Burger</strong>
+                Juicy burgers • American-style comfort food
+              </a>
+              <a href="https://maps.google.com/?q=Belgobaren+Stockholm" target="_blank" class="gem-item">
+                <strong>Belgobaren</strong>
+                Belgian beer hall • Mussels & fries • Huge beer selection
+              </a>
+              <a href="https://maps.google.com/?q=ICA+Kungsholmstorg+Stockholm" target="_blank" class="gem-item">
+                <strong>ICA Kungsholmstorg</strong>
+                Main grocery store • Open late (23:00)
+              </a>
+              <a href="https://maps.google.com/?q=Systembolaget+Fridhemsplan+Stockholm" target="_blank" class="gem-item">
+                <strong>Systembolaget Fridhemsplan</strong>
+                Official alcohol shop • Weekdays 10–19, Sat 10–15
+              </a>
+              <a href="https://maps.google.com/?q=Willys+Fridhemsplan+Stockholm" target="_blank" class="gem-item">
+                <strong>Willys Fridhemsplan</strong>
+                Budget-friendly supermarket • Large selection
+              </a>
+              <a href="https://maps.google.com/?q=Mälarpaviljongen+Stockholm" target="_blank" class="gem-item">
+                <strong>Mälarpaviljongen</strong>
+                Floating summer bar • LGBTQ+ friendly • Stunning waterfront
+              </a>
+              <!-- Duplicate for seamless loop -->
+              <a href="https://maps.google.com/?q=Koh+Phangan+Stockholm" target="_blank" class="gem-item">
+                <strong>Koh Phangan</strong>
+                Quirky Thai restaurant • Neon lights & tropical interior
+              </a>
+              <a href="https://maps.google.com/?q=Prime+Burger+Kungsholmen+Stockholm" target="_blank" class="gem-item">
+                <strong>Prime Burger</strong>
+                Juicy burgers • American-style comfort food
+              </a>
+              <a href="https://maps.google.com/?q=Belgobaren+Stockholm" target="_blank" class="gem-item">
+                <strong>Belgobaren</strong>
+                Belgian beer hall • Mussels & fries • Huge beer selection
+              </a>
+              <a href="https://maps.google.com/?q=ICA+Kungsholmstorg+Stockholm" target="_blank" class="gem-item">
+                <strong>ICA Kungsholmstorg</strong>
+                Main grocery store • Open late (23:00)
+              </a>
+              <a href="https://maps.google.com/?q=Systembolaget+Fridhemsplan+Stockholm" target="_blank" class="gem-item">
+                <strong>Systembolaget Fridhemsplan</strong>
+                Official alcohol shop • Weekdays 10–19, Sat 10–15
+              </a>
+              <a href="https://maps.google.com/?q=Willys+Fridhemsplan+Stockholm" target="_blank" class="gem-item">
+                <strong>Willys Fridhemsplan</strong>
+                Budget-friendly supermarket • Large selection
+              </a>
+              <a href="https://maps.google.com/?q=Mälarpaviljongen+Stockholm" target="_blank" class="gem-item">
+                <strong>Mälarpaviljongen</strong>
+                Floating summer bar • LGBTQ+ friendly • Stunning waterfront
+              </a>
+            </div>
+
+            <!-- Track 4 - Fourth row -->
+            <div class="scrolling-gems-track track-4">
+              <a href="https://maps.google.com/?q=Solstugan+Kungsholmen+Stockholm" target="_blank" class="gem-item">
+                <strong>Solstugan</strong>
+                Rooftop bar & terrace • Sunset views over the water
+              </a>
+              <a href="https://maps.google.com/?q=Tak+Stockholm" target="_blank" class="gem-item">
+                <strong>Tak</strong>
+                Rooftop bar & restaurant • Amazing city views
+              </a>
+              <a href="https://maps.google.com/?q=Rålambshovsparken+Stockholm" target="_blank" class="gem-item">
+                <strong>Rålambshovsparken</strong>
+                Huge park by the water • Picnic spot • Outdoor theater in summer
+              </a>
+              <a href="https://maps.google.com/?q=Smedsuddsbadet+Kungsholmen+Stockholm" target="_blank" class="gem-item">
+                  <strong>Smedsuddsbadet</strong>
+                Sandy beach on Kungsholmen • Swim in Lake Mälaren
+              </a>
+              <a href="https://maps.google.com/?q=Stadshuset+Stockholm" target="_blank" class="gem-item">
+                  <strong>City Hall (Stadshuset)</strong>
+                Famous landmark • Nobel Banquet Hall • Best sunset views
+              </a>
+              <a href="https://maps.google.com/?q=Il+Caffe+Kungsholmen+Stockholm" target="_blank" class="gem-item">
+                <strong>Il Caffè Kungsholmen</strong>
+                Hip café & restaurant • Great coffee • Fresh seasonal dishes
+              </a>
+              <a href="https://maps.google.com/?q=L%C3%A5ngholmen+Stockholm" target="_blank" class="gem-item">
+                  <strong>Långholmen Island</strong>
+                Historic prison island turned park • Swim spots • Café Lasse i Parken
+              </a>
+              <!-- Duplicate for seamless loop -->
+              <a href="https://maps.google.com/?q=Solstugan+Kungsholmen+Stockholm" target="_blank" class="gem-item">
+                <strong>Solstugan</strong>
+                Rooftop bar & terrace • Sunset views over the water
+              </a>
+              <a href="https://maps.google.com/?q=Tak+Stockholm" target="_blank" class="gem-item">
+                <strong>Tak</strong>
+                Rooftop bar & restaurant • Amazing city views
+              </a>
+              <a href="https://maps.google.com/?q=Rålambshovsparken+Stockholm" target="_blank" class="gem-item">
+                <strong>Rålambshovsparken</strong>
+                Huge park by the water • Picnic spot • Outdoor theater in summer
+              </a>
+              <a href="https://maps.google.com/?q=Smedsuddsbadet+Kungsholmen+Stockholm" target="_blank" class="gem-item">
+                <strong>Smedsuddsbadet</strong>
+                Sandy beach on Kungsholmen • Swim in Lake Mälaren
+              </a>
+              <a href="https://maps.google.com/?q=Stadshuset+Stockholm" target="_blank" class="gem-item">
+                <strong>City Hall (Stadshuset)</strong>
+                Famous landmark • Nobel Banquet Hall • Best sunset views
+              </a>
+              <a href="https://maps.google.com/?q=Il+Caffe+Kungsholmen+Stockholm" target="_blank" class="gem-item">
+                <strong>Il Caffè Kungsholmen</strong>
+                Hip café & restaurant • Great coffee • Fresh seasonal dishes
+              </a>
+              <a href="https://maps.google.com/?q=L%C3%A5ngholmen+Stockholm" target="_blank" class="gem-item">
+                <strong>Långholmen Island</strong>
+                Historic prison island turned park • Swim spots • Café Lasse i Parken
+              </a>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <div id="bathroom" class="folder">
+
+        <!-- Bathroom section -->
+        <div class="bathroom-header section-header">
+          <h2>
+            Bathroom
+          </h2>
+          <p>Fresh &amp; spotless</p>
+          <p>Modern design</p>
+          <p>Daily cleaned</p>
+        </div>
+        <section class="bathroom-section">
+          <div class="bathroom-grid">
+            <img src="images/toilet-1.png" alt="Modern bathroom" class="bathroom-large">
+            
+            <div class="bathroom-subheader">
+              <h2>
+                Pristine &amp; modern
+              </h2>
+              <p>
+                Renovated 2017 • Scandinavian design • Everything new
+              </p>
+            </div>
+            
+            <img src="images/toilet-2.png" alt="Bathroom details" class="bathroom-small">
+            
+            <div class="bathroom-quote">
+              <blockquote>
+                "The bathroom is spotless and the shower pressure is amazing!"
+              </blockquote>
+              <p class="reviewer">
+                — Sarah, New York
+              </p>
+            </div>
+            
+            <div class="bathroom-features-grid">
+              <div class="bath-feature">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="droplets" class="lucide lucide-droplets"><path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"></path><path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97"></path></svg>
+                <h4>
+                  Rainfall Shower
+                </h4>
+                <p>
+                  Luxurious water pressure
+                </p>
+              </div>
+              <div class="bath-feature">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="sparkles" class="lucide lucide-sparkles"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path><path d="M20 2v4"></path><path d="M22 4h-4"></path><circle cx="4" cy="20" r="2"></circle></svg>
+                <h4>
+                  Daily Cleaned
+                </h4>
+                <p>
+                  Fresh &amp; spotless
+                </p>
+              </div>
+              <div class="bath-feature">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="thermometer" class="lucide lucide-thermometer"><path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z"></path></svg>
+                <h4>
+                  Instant Hot Water
+                </h4>
+                <p>
+                  Never wait for warmth
+                </p>
+              </div>
+              <div class="bath-feature">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="shirt" class="lucide lucide-shirt"><path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"></path></svg>
+                <h4>
+                  Premium Linens
+                </h4>
+                <p>
+                  Soft fluffy towels
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <div id="location" class="folder">
+
+        <!-- Location section with street view -->
+        <div class="location-header section-header">
+          <h2>
+            Neighborhood
+          </h2>
+          <p>Quiet street</p>
+          <p>Central location</p>
+          <p>Everything walkable</p>
+        </div>
+        <section class="location-section">
+          <div class="location-grid">
+            <img src="images/street.png" alt="Street view" class="street-image">
+            <div class="location-info">
+              <h3>
+                Kungsholmen
+              </h3>
+              <p>
+                One of Stockholm's most desirable neighborhoods. Tree-lined streets, waterfront walks, and everything you need within walking distance.
+              </p>
+              <div class="location-highlights">
+                <div class="highlight-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="trees" class="lucide lucide-trees"><path d="M10 10v.2A3 3 0 0 1 8.9 16H5a3 3 0 0 1-1-5.8V10a3 3 0 0 1 6 0Z"></path><path d="M7 16v6"></path><path d="M13 19v3"></path><path d="M12 19h8.3a1 1 0 0 0 .7-1.7L18 14h.3a1 1 0 0 0 .7-1.7L16 9h.2a1 1 0 0 0 .8-1.7L13 3l-1.4 1.5"></path></svg>
+                  <span>
+                    Green &amp; quiet
+                  </span>
+                </div>
+                <div class="highlight-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="waves" class="lucide lucide-waves"><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"></path><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"></path><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"></path></svg>
+                  <span>
+                    Waterfront nearby
+                  </span>
+                </div>
+                <div class="highlight-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="store" class="lucide lucide-store"><path d="M15 21v-5a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v5"></path><path d="M17.774 10.31a1.12 1.12 0 0 0-1.549 0 2.5 2.5 0 0 1-3.451 0 1.12 1.12 0 0 0-1.548 0 2.5 2.5 0 0 1-3.452 0 1.12 1.12 0 0 0-1.549 0 2.5 2.5 0 0 1-3.77-3.248l2.889-4.184A2 2 0 0 1 7 2h10a2 2 0 0 1 1.653.873l2.895 4.192a2.5 2.5 0 0 1-3.774 3.244"></path><path d="M4 10.95V19a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8.05"></path></svg>
+                  <span>
+                    Local shops
+                  </span>
+                </div>
+                <div class="highlight-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="coffee" class="lucide lucide-coffee"><path d="M10 2v2"></path><path d="M14 2v2"></path><path d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1"></path><path d="M6 2v2"></path></svg>
+                  <span>
+                    Cafés everywhere
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="map-container">
+              <iframe width="100%" height="100%" frameborder="0" scrolling="no" src="https://www.openstreetmap.org/export/embed.html?bbox=18.027,59.332,18.037,59.337&amp;layer=mapnik&amp;marker=59.3345,18.032">
+              </iframe>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <div id="rules" class="folder">
+        
+        <!-- House rules mixed with final bedroom image -->
+        <div class="rules-bedroom">
+          <div class="rules-scattered">
+            <h3>
+              House Rules
+            </h3>
+            <div class="rule-item">
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="key" class="lucide lucide-key"><path d="m15.5 7.5 2.3 2.3a1 1 0 0 0 1.4 0l2.1-2.1a1 1 0 0 0 0-1.4L19 4"></path><path d="m21 2-9.6 9.6"></path><circle cx="7.5" cy="15.5" r="5.5"></circle></svg>
+                Check-in/out
+              </span>
+              <p>
+                11:00 • Self check-in with Code
+              </p>
+              <p>
+                12:00 • Self check-out with Code
+              </p>
+            </div>
+            <div class="rule-item">
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="leaf" class="lucide lucide-leaf"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path></svg>
+                Patio
+              </span>
+              <p>
+                Use freely • Lock inner door after
+              </p>
+            </div>
+            <div class="rule-item">
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="moon" class="lucide lucide-moon"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"></path></svg>
+                Quiet
+              </span>
+              <p>
+                Respect 22:00-08:00 quiet hours
+              </p>
+            </div>
+          </div>
+          <img src="images/bed-2.png" alt="Cozy bedroom" class="final-bedroom">
+        </div>
+
+      </div>
+
+      <div id="contact" class="folder">
+
+        <!-- Big final call to action -->
+        <section class="final-cta">
+          <div class="cta-content">
+            <h2>
+              Ready?
+            </h2>
+            <p class="cta-text">
+              Book your Stockholm experience
+            </p>
+            <div class="cta-buttons">
+              <a href="mailto:daniel@lauding.se?subject=Stockholm%20Apartment%20Booking%20Inquiry" class="btn-primary btn-lg">
+                Email me
+              </a>
+              <a href="https://airbnb.com/h/daniellauding" target="_blank" class="btn-alt  btn-lg">
+                Airbnb
+              </a>
+            </div>
+            <p class="response-time">
+              Response within 24h • English/Swedish
+              <small>
+                <a href="https://www.svenskfast.se/bostadsratt/stockholm/stockholm/stockholm/kungsholmen/gambrinusgatan-2/330871?utm_source=booli&utm_medium=referral&utm_campaign=till-salu&utm_content=gambrinusgatan%2B2" target="_blank">
+                  Also available for purchase via Svenskfast
+                  <i data-lucide="external-link"></i>
+                </a>
+              </small>
+            </p>
+          </div>
+        </section>
+
+      </div>
+
+      <div id="book" class="folder">
+ 
+        <!-- Inquiry form section -->
+        <section class="inquiry-form" id="inquiry">
+          <div class="form-content">
+            <h2>
+              Send Inquiry
+            </h2>
+            <p class="form-description">
+              Have questions? Planning a visit? Drop me a message!
+            </p>
+            
+            <!-- Form with semantic HTML and validation -->
+            <form id="inquiry_form" class="contact-form" action="https://httpbin.org/anything" method="post" novalidate>
+              <!-- Name field -->
+              <div class="form-group">
+                <label for="inquiry_name" class="form-label">
+                  Your Name
+                </label>
+                <input 
+                  type="text" 
+                  id="inquiry_name" 
+                  name="name" 
+                  class="form-input" 
+                  placeholder="Enter your full name"
+                  required
+                  autocomplete="name"
+                />
+              </div>
+
+              <!-- Email field -->
+              <div class="form-group">
+                <label for="inquiry_email" class="form-label">
+                  Email Address
+                </label>
+                <input 
+                  type="email" 
+                  id="inquiry_email" 
+                  name="email" 
+                  class="form-input" 
+                  placeholder="your.email@example.com"
+                  required
+                  autocomplete="email"
+                />
+              </div>
+
+              <!-- Visit dates field -->
+              <div class="form-group">
+                <label for="inquiry_dates" class="form-label">
+                  Preferred Visit Dates
+                </label>
+                <input 
+                  type="text" 
+                  id="inquiry_dates" 
+                  name="visit_dates" 
+                  class="form-input" 
+                  placeholder="e.g., March 15-20, 2026 (flexible)"
+                />
+              </div>
+
+              <!-- Guest count radio buttons -->
+              <div class="form-group">
+                <fieldset class="radio-group">
+                  <legend class="form-label">
+                    Number of Guests
+                  </legend>
+                  <div class="radio-options">
+                    <label class="radio-option">
+                      <input type="radio" name="guest_count" value="1" required />
+                      <span class="radio-label">
+                        1 Guest
+                      </span>
+                    </label>
+                    <label class="radio-option">
+                      <input type="radio" name="guest_count" value="2" required />
+                      <span class="radio-label">
+                        2 Guests
+                      </span>
+                    </label>
+                  </div>
+                </fieldset>
+              </div>
+
+              <!-- Interests checkboxes -->
+              <div class="form-group">
+                <fieldset class="checkbox-group">
+                  <legend class="form-label">
+                    Interested In
+                  </legend>
+                  <div class="checkbox-options">
+                    <label class="checkbox-option">
+                      <input type="checkbox" name="interests" value="short_stay" />
+                      <span class="checkbox-label">
+                        Short Stay (1-7 days)
+                      </span>
+                    </label>
+                    <label class="checkbox-option">
+                      <input type="checkbox" name="interests" value="extended_stay" />
+                      <span class="checkbox-label">
+                        Extended Stay (1+ weeks)
+                      </span>
+                    </label>
+                    <label class="checkbox-option">
+                      <input type="checkbox" name="interests" value="purchase" />
+                      <span class="checkbox-label">
+                        Purchase Information
+                      </span>
+                    </label>
+                  </div>
+                </fieldset>
+              </div>
+
+              <!-- Message textarea -->
+              <div class="form-group">
+                <label for="inquiry_message" class="form-label">
+                  Message
+                </label>
+                <textarea 
+                  id="inquiry_message" 
+                  name="message" 
+                  class="form-textarea" 
+                  rows="4"
+                  placeholder="Tell me about your Stockholm plans, any questions, or special requirements..."
+                  required
+                ></textarea>
+              </div>
+
+              <!-- Submit button -->
+              <div class="form-actions">
+                <button type="submit" class="btn-primary form-submit">
+                  <i data-lucide="send"></i>
+                  Send Inquiry
+                </button>
+                <p class="form-note">
+                  This form will show you the submission data for testing purposes
+                </p>
+              </div>
+            </form>
+          </div>
+        </section>
+
+      </div>
+
+    </div>
+
+    <!-- Casual footer -->
+    <footer class="footer">
+      <p>Stockholm Apartment Guide • September 2025 • Made with ❤️ for guests</p>
+    </footer>
+
+  </main>
+
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+    
+    // Mobile navigation toggle
+    document.addEventListener('DOMContentLoaded', function() {
+      const burgerToggle = document.getElementById('burger-toggle');
+      const mobileNav = document.querySelector('.mobile-nav');
+      const folderToggle = document.getElementById('folder-toggle');
+      
+      // Mobile navigation
+      burgerToggle.addEventListener('click', function() {
+        // Toggle active class on burger
+        burgerToggle.classList.toggle('active');
+        // Toggle active class on mobile nav
+        mobileNav.classList.toggle('active');
+      });
+      
+      // Close mobile nav when clicking on a link
+      const mobileNavLinks = document.querySelectorAll('.mobile-nav a');
+      mobileNavLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          burgerToggle.classList.remove('active');
+          mobileNav.classList.remove('active');
+        });
+      });
+      
+      // Folder layout toggle
+      folderToggle.addEventListener('click', function() {
+        const folderSections = document.querySelectorAll('.folder');
+        const isActive = folderToggle.classList.contains('active');
+        
+        if (isActive) {
+          // Remove folder layout
+          folderSections.forEach(section => {
+            section.classList.remove('folder');
+          });
+          folderToggle.classList.remove('active');
+          folderToggle.querySelector('.folder-toggle-text').textContent = 'Folder';
+        } else {
+          // Add folder layout
+          folderSections.forEach(section => {
+            section.classList.add('folder');
+          });
+          folderToggle.classList.add('active');
+          folderToggle.querySelector('.folder-toggle-text').textContent = 'Normal';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
