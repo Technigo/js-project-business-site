@@ -73,9 +73,8 @@ At least 4 stretch goals are implemented:
   - Icon changes dynamically to indicate expanded/collapsed state  
   - Slide-in animation applied for smooth transitions  
 
-- **Animations & Dark Mode**  
+- **Animations **  
   - CSS animations (fade/slide effects) enhance interactivity  
-  - JavaScript allows toggling between dark mode and light mode by applying/removing a `dark-mode` class  
 
 - **Deployment**  
   The site is deployed live via **Netlify** at [shatat.online](https://shatat.online).  
@@ -86,5 +85,4 @@ At least 4 stretch goals are implemented:
 
 1. Clone the repo:  
    ```bash
-   git clone https://github.com/yourusername/shatat-online.git
-   cd shatat-online
+  https://github.com/qabalany/js-project-business-site.git
