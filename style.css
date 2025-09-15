@@ -1,0 +1,574 @@
+        /* ===========================================
+           CSS RESET & BASE STYLES
+           =========================================== */
+        
+        /* Modern CSS reset to normalize default browser styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Remove default list styling */
+        ul, ol {
+            list-style: none;
+        }
+        
+        /* Remove default link styling */
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        /* Improve image handling */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* ===========================================
+           CSS CUSTOM PROPERTIES (VARIABLES)
+           =========================================== */
+        
+        :root {
+            
+            --bg-primary: #0d1117;      /* Main dark background */
+            --bg-secondary: #161b22;    /* Secondary darker background */
+            --bg-card: #21262d;         /* Card background color */
+            --neon-green: #2ea043;      /* Primary neon accent */
+            --neon-blue: #58a6ff;       /* Secondary neon accent */
+            --text-primary: #ffffff;    /* Main text color */
+            --text-secondary: #8b949e;  /* Secondary text color */
+            --text-muted: #6e7681;      /* Muted text color */
+            
+            /* Typography */
+            --font-tech: 'Orbitron', monospace;      /* Futuristic font for headers */
+            --font-body: 'Montserrat', sans-serif;   /* Clean font for body text */
+            
+            /* Spacing system */
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 1.5rem;
+            --spacing-lg: 2rem;
+            --spacing-xl: 3rem;
+            
+            /* Border radius for consistent rounded corners */
+            --border-radius: 8px;
+            --border-radius-lg: 12px;
+            
+            /* Transition timing for smooth animations */
+            --transition: all 0.3s ease;
+        }
+        
+        /* ===========================================
+           BASE TYPOGRAPHY & LAYOUT
+           =========================================== */
+        
+        /* base font and background for entire page */
+        body {
+            font-family: var(--font-body);
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            /* Animated background gradient  */
+            background: linear-gradient(45deg, var(--bg-primary), var(--bg-secondary), var(--bg-primary));
+            background-size: 400% 400%;
+            animation: gradientPulse 15s ease infinite;
+        }
+        
+        /*  Pulsing background gradient animation */
+        @keyframes gradientPulse {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        /* Container for consistent content width and centering */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-sm);
+        }
+        
+        /* ===========================================
+           HEADER & NAVIGATION STYLES
+           =========================================== */
+        
+        /* Main header container with flexbox layout */
+        .header {
+            background: rgba(22, 27, 34, 0.95); /* Semi-transparent for layering */
+            backdrop-filter: blur(10px); /* blur effect */
+            border-bottom: 1px solid var(--bg-card);
+            position: sticky; /* Header sticks to top when scrolling */
+            top: 0;
+            z-index: 100; /* header stays above other content */
+        }
+        
+        /* Flexbox container for header content */
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--spacing-sm) 0;
+        }
+        
+        /* Logo styling  */
+        .logo {
+            font-family: var(--font-tech);
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--neon-green);
+            text-shadow: 0 0 20px var(--neon-green); /* Neon glow effect */
+            transition: var(--transition);
+        }
+        
+        /* Enhanced glow on logo hover */
+        .logo:hover {
+            text-shadow: 0 0 30px var(--neon-green), 0 0 40px var(--neon-green);
+            transform: scale(1.05); 
+        }
+        
+        /* ===========================================
+           DESKTOP NAVIGATION
+           =========================================== */
+        
+        /* Desktop navigation container */
+        .nav-desktop {
+            display: flex;
+            gap: var(--spacing-lg);
+        }
+        
+        /*  navigation links */
+        .nav-link {
+            position: relative; /* For animated underline positioning */
+            padding: var(--spacing-xs) var(--spacing-sm);
+            color: var(--text-secondary);
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        
+        /* Animated underline effect using pseudo-element */
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--neon-blue), var(--neon-green));
+            transition: var(--transition);
+            transform: translateX(-50%); /* Center the underline */
+        }
+        
+        /* Hover effects for navigation links */
+        .nav-link:hover {
+            color: var(--text-primary);
+            text-shadow: 0 0 15px var(--neon-blue);
+        }
+        
+        /* Expand underline on hover */
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        /* ===========================================
+           MOBILE HAMBURGER MENU
+           =========================================== */
+        
+        /* Hide checkbox input (used for toggle functionality) */
+        .menu-toggle {
+            display: none;
+        }
+        
+        /* Hamburger icon container */
+        .hamburger {
+            display: none; /* Hidden on desktop */
+            flex-direction: column;
+            cursor: pointer;
+            padding: var(--spacing-xs);
+        }
+        
+        /* Individual hamburger lines */
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: var(--neon-green);
+            margin: 3px 0;
+            transition: var(--transition);
+            border-radius: 2px;
+            box-shadow: 0 0 10px var(--neon-green); /* Neon glow */
+        }
+        
+        /* Mobile navigation menu (hidden by default) */
+        .nav-mobile {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--bg-card);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+
+        
+        /* Mobile navigation links */
+        .nav-mobile .nav-link {
+            display: block;
+            padding: var(--spacing-md);
+            border-bottom: 1px solid var(--bg-card);
+        }
+        
+        /* Show mobile menu when checkbox is checked */
+        .menu-toggle:checked ~ .nav-mobile {
+            display: block;
+        }
+        
+        /* Animate hamburger to X when menu is open */
+        .menu-toggle:checked ~ .hamburger span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        
+        .menu-toggle:checked ~ .hamburger span:nth-child(2) {
+            opacity: 0; /* Hide middle line */
+        }
+        
+        .menu-toggle:checked ~ .hamburger span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+        
+        /* ===========================================
+           HERO SECTION
+           =========================================== */
+        
+        /* Hero banner */
+        .hero {
+            text-align: center;
+            padding: var(--spacing-xl) 0;
+            background: linear-gradient(135deg, var(--bg-secondary), var(--bg-primary));
+            border-bottom: 1px solid var(--bg-card);
+        }
+        
+        /* Main hero title */
+        .hero h1 {
+            font-family: var(--font-tech);
+            font-size: clamp(2rem, 5vw, 4rem); /* Responsive font sizing */
+            font-weight: 700;
+            margin-bottom: var(--spacing-sm);
+            background: linear-gradient(45deg, var(--neon-green), var(--neon-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        
+    
+
+       
+        /* Hero slogan */
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* ===========================================
+           MAIN CONTENT AREA
+           =========================================== */
+        
+        .main-content {
+            padding: var(--spacing-xl) 0;
+        }
+        
+        /* Section heading */
+        .section-title {
+            font-family: var(--font-tech);
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: var(--spacing-xl);
+            color: var(--neon-blue);
+            text-shadow: 0 0 20px var(--neon-blue);
+        }
+        
+        /* ===========================================
+           NEWS GRID LAYOUT
+           =========================================== */
+        
+        /* CSS Grid container */
+        .news-grid {
+            display: grid;
+            gap: var(--spacing-lg);
+    
+            /* Mobile: 1 column */
+            grid-template-columns: 1fr; 
+        }
+        
+        /* Tablet breakpoint: 2 columns */
+        @media (min-width: 768px) {
+            .news-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        /* Desktop breakpoint: 4 columns */
+        @media (min-width: 1024px) {
+            .news-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        
+        /* ===========================================
+           ARTICLE CARD STYLING
+           =========================================== */
+        
+        /*  article card container */
+        .article-card {
+            background: var(--bg-card);
+            border-radius: var(--border-radius-lg);
+            overflow: hidden; /* Ensure child elements don't overflow rounded corners */
+            transition: var(--transition);
+            border: 1px solid transparent;
+            cursor: pointer;
+        }
+        
+        /* Hover effects for article cards */
+        .article-card:hover {
+            transform: translateY(-5px); /* Lift effect */
+            border-color: var(--neon-green);
+            box-shadow: 0 10px 30px rgba(46, 160, 67, 0.2); /* Neon glow shadow */
+        }
+        
+        /* Article image container */
+        .article-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(45deg, var(--neon-green), var(--neon-blue));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-tech);
+            font-weight: bold;
+            color: var(--bg-primary);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Animated background for placeholder images */
+        .article-image::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+            transform: rotate(45deg);
+            animation: shimmer 3s infinite;
+        }
+        
+        /* Shimmer animation for images */
+        @keyframes shimmer {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+        
+        /* Article content container */
+        .article-content {
+            padding: var(--spacing-md);
+        }
+        
+        /* Article title styling */
+        .article-title {
+            font-family: var(--font-tech);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: var(--spacing-sm);
+            color: var(--text-primary);
+            line-height: 1.4;
+            /* Limit title to 3 lines with ellipsis */
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        /* Article summary text */
+        .article-summary {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: var(--spacing-md);
+            /* Limit summary to 4 lines with ellipsis */
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        /* Article source attribution */
+        .article-source {
+            color: var(--neon-blue);
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+/* ======================
+   Styles for the contact form
+   ====================== */
+.contact-section {
+    padding: var(--spacing-lg) 0; 
+}
+
+.contact-form {
+    max-width: 600px; 
+    margin: 0 auto; 
+}
+
+.form-group {
+    margin-bottom: var(--spacing-sm); 
+}
+
+.form-label {
+    display: block; 
+    margin-bottom: var(--spacing-xs); 
+    color: var(--text-primary); 
+}
+
+.form-input,
+.form-textarea {
+    width: 100%; 
+    padding: var(--spacing-xs); 
+    border: 1px solid rgba(255, 255, 255, 0.1); 
+    border-radius: var(--border-radius); 
+    background-color: var(--bg-card); 
+    color: var(--text-primary); 
+    font-family: inherit; 
+}
+
+/* Focus states for form elements */
+.form-input:focus,
+.form-textarea:focus {
+    outline: none; 
+    border-color: rgb(144, 236, 23);
+    box-shadow: 0 0 0 2px rgba(0, 255, 255, 0.2); /* Glow effect on focus */
+}
+
+.form-textarea {
+    min-height: 150px;
+    resize: vertical; 
+}
+
+.radio-group,
+.checkbox-group {
+    margin-bottom: var(--spacing-xs); 
+}
+
+.radio-label,
+.checkbox-label {
+    display: flex; 
+    align-items: center;
+    margin-bottom: var(--spacing-xs); 
+    cursor: pointer;    
+}
+
+.radio-input,
+.checkbox-input {
+    margin-right: var(--spacing-xs); 
+    accent-color: var(--neon-green); 
+}
+
+.submit-btn {
+    background-color: var(--neon-blue); 
+    color:var(--bg-primary); 
+    border: none; 
+    padding: var(--spacing-xs) var(--spacing-md); 
+    border-radius: var(--border-radius); 
+    font-weight: bold;
+    cursor: pointer; 
+    transition: all 0.4s ease; 
+}
+
+.submit-btn:hover {
+    background-color: var(--neon-green);
+    color: var(--text-primary);
+    background-color: var(--neon-green);
+}
+
+        /* ===========================================
+           FOOTER SECTION
+           =========================================== */
+        
+        .footer {
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--bg-card);
+            padding: var(--spacing-xl) 0;
+            text-align: center;
+        }
+        
+        /* Social links container */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        /* Individual social link styling */
+        .social-link {
+            color: var(--text-secondary);
+            font-weight: 600;
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border: 1px solid var(--text-muted);
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+        }
+        
+        /* Social link hover effects with different neon colors */
+        .social-link:hover {
+            color: var(--text-primary);
+            border-color: var(--neon-green);
+            box-shadow: 0 0 15px var(--neon-green);
+        }
+        
+       
+        /* Copyright text */
+        .copyright {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        
+        /* ===========================================
+           RESPONSIVE DESIGN BREAKPOINTS
+           =========================================== */
+        
+        /* Tablet and mobile responsive adjustments */
+        @media (max-width: 1023px) {
+            /* Hide desktop navigation, show hamburger menu */
+            .nav-desktop {
+                display: none;
+            }
+            
+            .hamburger {
+                display: flex;
+            }
+        }
+        
+        /* Mobile-specific adjustments */
+        @media (max-width: 767px) {
+            .container {
+                padding: 0 var(--spacing-xs);
+            }
+            
+            .hero {
+                padding: var(--spacing-lg) 0;
+            }
+            
+            .social-links {
+                flex-wrap: wrap;
+                gap: var(--spacing-sm);
+            }
+        }
