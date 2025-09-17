@@ -75,3 +75,9 @@ This project includes more than the required 4 stretch goals:
 ---
 
 ## 📂 Project Structure
+├── README.md
+├── hero-music-video.mp4
+├── hero-png
+├── index.html # main HTML page
+├── style.css # styles and responsive design
+└── script.js # hamburger menu interactivity
