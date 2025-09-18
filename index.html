@@ -20,9 +20,22 @@
     <header class="header">
         <div class="container">
             <div class="header-content">
+                                <!-- Dark/Light mode toggle button -->
+                                <button id="theme-toggle" aria-label="Toggle dark/light mode" class="theme-toggle">
+                                    <span id="theme-icon">🌙</span>
+                                </button>
+                <!-- Mobile Hamburger Menu Toggle -->
+                <!-- Uses hidden checkbox and CSS sibling selectors  -->
+                <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                <label for="menu-toggle" class="hamburger" id="hamburger-label" aria-label="Open mobile menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+
                 <!-- Logo with neon styling -->
                 <a href="index.html" class="logo" aria-label="De-News Home">De-News</a>
-            
+
                 <!-- Desktop Navigation Menu -->
                 <nav class="nav-desktop" role="navigation" aria-label="Main navigation">
                     <a href="index.html" class="nav-link">Home</a>
@@ -32,16 +45,7 @@
                     <a href="index.html" class="nav-link">Crypto</a>
                     <a href="index.html" class="nav-link">Web3</a>
                 </nav>
-                
-                <!-- Mobile Hamburger Menu Toggle -->
-                <!-- Uses hidden checkbox and CSS sibling selectors  -->
-                <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Toggle mobile menu">
-                <label for="menu-toggle" class="hamburger" aria-label="Open mobile menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </label>
-                
+
                 <!-- Mobile Navigation Menu -->
                 <nav class="nav-mobile" role="navigation" aria-label="Mobile navigation">
                     <a href="index.html" class="nav-link">Home</a>
@@ -60,15 +64,19 @@
          Main banner with title and slogan with splime 3D viewer
          =========================================== -->
     <section class="hero">
-        <div class="container">
-            <!--  slogan -->
-            <h1>Decode the Future </h1>
-            <p>of Decentralization</p>
-            <!-- Spline 3D viewer  -->   
-            <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.57/build/spline-viewer.js"></script>
-            <spline-viewer url="https://prod.spline.design/l2QvLNNvmAu3J60M/scene.splinecode"></spline-viewer>
-            
-            
+        <div class="container hero-content-float">
+            <div class="hero-slogan-float">
+                <h1>Decode the Future</h1>
+                <p>of Decentralization</p>
+            </div>
+                 <!-- Spline 3D viewer  -->   
+                 <iframe 
+                  src='https://my.spline.design/nexbotrobotcharacterconcept-B1o54Qcwti6O9FxE6lDMj4ej/' 
+                  frameborder='0'
+                  width='100%' 
+                  height='100%'>
+                </iframe>
+                 
         </div>
     </section>
 
@@ -86,8 +94,8 @@
                 <article class="article-card">
                     <div class="article-image">
                         <img 
-                        src="/images/ethereum2staking.jpg"
-                        alt="Ethereum 2.0 Staking"/>
+                         src="/images/ethereum2staking.jpg"
+                         alt="Ethereum 2.0 Staking"/>
                     </div>
                     <div class="article-content">
                         <h3 class="article-title">Ethereum 2.0 Staking Reaches New Milestone</h3>
@@ -96,7 +104,7 @@
                             href="https://cryptopotato.com/ethereum-hitting-new-records-47-36-million-eth-stake-in-the-eth2-beacon-deposit-contract/?utm_source=chatgpt.com" 
                             target="_blank" 
                             rel="noopener noreferrer">
-                        read more
+                            read more
                         </a>
                     </div>
                 </article>
@@ -105,8 +113,8 @@
                 <article class="article-card">
                     <div class="article-image">
                         <img 
-                        src="/images/defitvl100b.jpg" 
-                        alt="DeFi TVL Surpasses $100 Billion" />
+                         src="/images/defitvl100b.jpg" 
+                         alt="DeFi TVL Surpasses $100 Billion" />
                     </div>
                     <div class="article-content">
                         <h3 class="article-title">DeFi TVL Surpasses $100 Billion Again</h3>
@@ -349,8 +357,8 @@
                     </div>
                     <div class="radio-group">
                         <label class="radio-label">
-                            <input 
-                                type="radio" 
+                                <input 
+                                 type="radio" 
                                  name="contact-method" 
                                  value="phone" 
                                  class="radio-input">
@@ -428,6 +436,18 @@
                     </textarea>
                 </div>
                 
+                <!-- Select dropdown: How did you hear about us? -->
+                <div class="form-group">
+                    <label for="referral" class="form-label">How did you hear about us?</label>
+                    <select id="referral" name="referral" class="form-input" required>
+                        <option value="">Please select</option>
+                        <option value="search">Search Engine</option>
+                        <option value="social">Social Media</option>
+                        <option value="friend">Friend/Colleague</option>
+                        <option value="event">Event/Conference</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
                 <!-- Submit button -->
                 <button type="submit" class="submit-btn">Send Message</button>
             </form>
@@ -438,16 +458,34 @@
          Social links and copyright information
          =========================================== -->
     <footer class="footer">
-        <div class="container">
-            <div class="social-links">
-                <a href="index.html" class="social-link">Discord</a>
-                <a href="index.html" class="social-link">Twitter</a>
-                <a href="index.html" class="social-link">GitHub</a>
-                <a href="index.html" class="social-link">LinkedIn</a>
+    <div class="container footer-center">
+            <div>
+                <div class="social-links">
+                    <a href="index.html" class="social-link">Discord</a>
+                    <a href="index.html" class="social-link">Twitter</a>
+                    <a href="index.html" class="social-link">GitHub</a>
+                    <a href="index.html" class="social-link">LinkedIn</a>
+                </div>
+                <button id="footer-auth-modal-btn" class="submit-btn footer-auth-modal-btn">Sign In / Sign Up</button>
+                <p class="copyright">&copy; 2025 De-News. Technigo.</p>
             </div>
-            <p class="copyright">&copy; 2025 De-News. Technigo.</p>
+        </div>
+
+        <!-- Modal for sign in/up -->
+    <div id="footer-auth-modal" class="modal-overlay hide">
+            <div class="modal-content">
+                <button class="modal-close" id="footer-auth-modal-close" aria-label="Close modal">&times;</button>
+                <h3 class="footer-auth-modal-title">Sign In / Sign Up</h3>
+                <form class="footer-auth-form" action="https://httpbin.org/anything" method="POST">
+                    <input type="email" name="footer-email" class="form-input" placeholder="Email" required>
+                    <input type="password" name="footer-password" class="form-input" placeholder="Password" required>
+                    <button type="submit" name="action" value="signinup" class="submit-btn">Sign In / Sign Up</button>
+                </form>
+            </div>
         </div>
     </footer>
-   
+    
+    <!-- Connect JavaScript file -->
+    <script src="javascript.js"></script>
 </body>
 </html>
