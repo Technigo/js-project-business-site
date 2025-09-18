@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <h1>Welcome To Our Airbnb</h1>
+
+        <h3>
+            Hello everyone, so we 
+            (me Emil, my girlfriend Alina and our dog Maya). 
+            We have a some options that you can choose from,
+            hope you find something you like.
+            Have a nice day!
+        </h3>
+    </header>
+
+    <div class="hamburger" id="hamburger">
+      ☰
+    </div>
+
+    <nav class="navbar">
+        <ul class="nav-ul" id="navUl">
+            <li><a href="start"><button class="button-navbar">Start</button></a></li>
+            <li><a href="camps"><button class="button-navbar">Camps</button></a></li>
+            <li><button class="button-navbar" id="button-navbar-contact">Contact Us</button></li>
+            <li><button class="button-navbar" id="button-navbar-rules">Rules</button></li>
+            <div class="rulesBox" id="rulesBox" style="display: none;">
+                <p> 
+                    Be kind to each other.
+                    Respect nature and,
+                    the place your staying in.
+                    Have fun!
+                </p>
+            </div>
+
+        </ul>
+    </nav>
+    
+    <div class="card-container">
+            <div class="card card-button-home">
+                <div>
+                    <h3>Our Home And Safeplace,
+                        Hopefully You Can Feel The Same, For A Short Time Atleast.
+                    </h3>
+                </div>
+                <div>
+                    <button class="arrow left" id="prevBtn">←</button>
+                    <p>Our Home And Safeplace!</p>
+                    <p>Here you can see and get some infomation </p>
+                    <button class="arrow right" id="nextBtn">→</button>
+                </div>   
+            </div>
+            <a href="/destination" class="card card-button-tent">
+                <div>
+                    <h3>If You Want To Camp But Don`t Want To Miss Out On Luxury. </h3>
+                </div>
+                <div>
+                    <p>Live in the middle of nowhere with everything you need! </p>
+                    <p>Here you can see and get some infomation about our Tent</p>
+                </div>   
+            </a>
+            <a href="/destination" class="card card-button-italy">
+                <div>
+                    <h3>A House In The Sunny Italy.</h3>
+                </div>
+                <div>
+                    <p>Just imagine sharing a House in Italy with family and friends.</p>
+                    <p>Here you can see and get some infomation about our House</p>
+                </div>   
+            </a>
+    </div>
+    
+    <div class="contact" id="contact">
+        <input type="text" placeholder="Name & Lastname">
+        <input type="email" placeholder="exampel@gmail.com">
+        <input type="tel" placeholder="Phone Number">
+        <input type="text" placeholder="DD-MM-ÅÅÅÅ" onfocus="(this.type='date')"> 
+       <!--  <label for="datum">Välj ett datum: <input type="date" placeholder="When You Want To Visit"></label>-->
+    </div>
+
+    <footer class="footer-box">
+        Check Out Our <a href="https://www.instagram.com/emilfloren96/">Instagram</a>
+    </footer>
+
+    
+    <script src="script.js"></script>
+
+</body>
+</html>
