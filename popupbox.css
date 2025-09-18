@@ -1,0 +1,61 @@
+/* =========================================
+   POPUP OVERLAY (background layer)
+   - Hidden by default, shown when .active is added by JS
+   ========================================= */
+
+.box-popup {
+  display: none; /* hidden by default */
+  position: fixed; /* covers the whole screen */
+  inset: 0; /* shorthand: top/right/bottom/left = 0 */
+  z-index: 1000; /* sits above normal content */
+  background: rgba(5, 8, 8, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(8px); /* Safari compatibility */
+  place-items: center;
+  padding: 15px;
+}
+
+/* =========================================
+   VISIBLE STATE
+   - When JavaScript adds the .active class,
+     the popup becomes visible and uses CSS grid
+   ========================================= */
+
+.box-popup.active {
+  display: grid; /* show overlay and center its content */
+}
+
+/* =========================================
+   POPUP CONTENT BOX (shared style)
+   - The inner box that holds text/images inside the popup
+   ========================================= */
+
+.info {
+  display: flex;
+  flex-direction: column; /* stack elements vertically on mobile */
+  justify-content: flex-start;
+  width: 90%; /* take most of the screen width on small devices */
+  max-width: 720px;
+  max-height: 90vh; /* avoid overflowing the viewport vertically */
+  border: 2px solid black;
+  border-radius: 10px;
+  background: rgb(6, 6, 6);
+  box-sizing: border-box;
+  overflow: auto; /* allow scroll if content is long */
+  text-align: center;
+  color: white;
+}
+
+/* =========================================
+   POPUP CONTENT TYPOGRAPHY
+   ========================================= */
+
+.info h2 {
+  padding-top: 10px;
+  margin: 0 1rem;
+}
+
+.info p {
+  padding-top: 15px;
+  margin: 0.1rem 0.1rem;
+}

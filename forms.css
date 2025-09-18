@@ -1,0 +1,200 @@
+/*TESTING IF PUSH WORK*/
+
+/* =========================================
+   FORM STYLES (modal order form)
+   - Layout and look for the form inside the modal
+   - Mobile-first; tablet/desktop tweaks via media queries
+   ========================================= */
+
+* {
+  box-sizing: border-box; /* include padding and border in element's total width*/
+}
+
+/*The style for the form*/
+form {
+  border: 2px solid rgb(255, 254, 254);
+  border-radius: 10px;
+  padding: 0 10px;
+  max-width: 250px;
+  margin: 0 auto 0;
+  text-align: center;
+  background: rgba(0, 0, 0);
+}
+
+/*Style for h2 in the form*/
+form h2 {
+  font-size: 16px;
+  color: white;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-style: normal;
+  margin-bottom: 10px;
+}
+
+/* Grouped sections with a title (legend) */
+fieldset {
+  text-align: center;
+  border-radius: 10px;
+  color: rgb(255, 253, 253);
+  font-size: 12px;
+  border: 2px solid rgb(255, 255, 255);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin-bottom: 10px;
+}
+
+/* Text/number/time inputs share the same base styling */
+input {
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  border: 2px solid rgb(255, 255, 255);
+  background-color: #ffffff;
+  width: 100%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+/* Coffee select dropdown */
+select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 10px;
+}
+
+/* Radio group row layout */
+.size-row {
+  display: flex;
+  justify-content: center;
+}
+
+/* Dropdown visual reset to match inputs */
+.choice {
+  background-color: #ffffff;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+/* One block per custom radio option (label wraps input + visuals) */
+.radiobutton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+/* Hide the native radio, we’ll show a custom dot instead */
+.radiobutton input[type="radio"] {
+  display: none;
+}
+
+/* The custom radio “dot” */
+.style-radiobutton {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid rgb(255, 255, 255);
+  cursor: pointer;
+  background-color: #ffffff;
+}
+
+/* Selected/checked state of the custom radio */
+.radiobutton input:checked ~ .style-radiobutton {
+  background: rgb(12, 85, 1);
+}
+
+/* =========================
+   MODAL (form) CONTAINER
+   - Hidden by default; shown when JS adds .active
+   ========================= */
+
+.form-popup {
+  display: none; /* hidden by default */
+  position: fixed; /* overlay on top of the page */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000; /* above other content */
+  overflow: auto; /* allow scroll if content is tall */
+  padding: 15px;
+  place-items: center; /* will center children when display:grid is active */
+}
+
+/* Visible state of the modal overlay */
+.form-popup.active {
+  display: grid;
+  place-items: center;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/*================MEDIA QUERIES=======================*/
+
+/* ===== Tablet (>= 667px) ===== */
+@media (min-width: 667px) {
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    max-width: 100%;
+    margin: 0 auto 0;
+    padding: 10px;
+  }
+
+  form h2 {
+    font-size: 15px;
+  }
+  fieldset {
+    font-size: 15px;
+    padding: 5px;
+  }
+}
+
+/* ===== Desktop (>= 1024px) ===== */
+@media (min-width: 1024px) {
+  .radiobutton input {
+    cursor: pointer;
+  }
+
+  form {
+    width: 300px;
+    max-width: 100%;
+    margin: 0 auto 0;
+    padding: 10px;
+  }
+
+  form h2 {
+    font-size: 15px;
+  }
+  fieldset {
+    font-size: 15px;
+    padding: 5px;
+  }
+
+  /* Hover feedback on desktop for the custom radio */
+  .radiobutton:hover input ~ .style-radiobutton {
+    background-color: rgb(68, 70, 68);
+  }
+
+  /* Slightly larger custom radio on desktop */
+  .style-radiobutton {
+    width: 15px;
+    height: 15px;
+  }
+
+  .radiobutton span {
+    font-size: 15px;
+  }
+
+  /* Input sizing on desktop */
+  input {
+    width: 100%;
+    height: 35px;
+    font-size: 15px;
+  }
+
+  /* Dropdown sizing on desktop */
+  .choice {
+    width: 100%;
+    height: 40px;
+    font-size: 15px;
+  }
+}
