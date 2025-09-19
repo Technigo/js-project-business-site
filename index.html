@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Snus</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  </head>
+  <body>
+    <!-- Header nav-->
+    <header class="header">
+      <div class="header__inner container">
+        <a class="header__brand" href="#form">Elvis Snus</a>
+
+        <!-- Hamburger menu -->
+
+        <button
+          class="header__toggle"
+          aria-expanded="false"
+          aria-controls="site-nav">
+          <span class="sr-only">Menu</span>
+          <span class="header__toggle-box" aria-hidden="true">
+            <span class="header__toggle-line"></span>
+            <span class="header__toggle-line"></span>
+            <span class="header__toggle-line"></span>
+          </span>
+        </button>
+
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#about">About</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#project__grid">service</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#form">Get Started</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="hero__section">
+      <div class="hero__content">
+        <h1 class="hero__title">Elvis Snus Fabrik</h1>
+        <p class="hero__subtitle">We have all the flavors</p>
+        <a class="hero__btn" href="#form">Buy now</a>
+      </div>
+    </section>
+
+    <main>
+      <!--section-->
+      <section class="section__article" id="about">
+        <div class="container">
+          <header class="section__header">
+            <h2 class="section__title">
+              Welcome to Elvis Snus. Your trusted source for high-quality snus.
+            </h2>
+            <p class="section__subtitle">
+              At Elvis Snus, we are passionate about snus and the culture
+              surrounding it. Our goal is to provide high-quality products,
+              reliable service, and clear information so that both new and
+              experienced users can enjoy snus with confidence. .
+            </p>
+          </header>
+          <!--About-->
+          <div class="about">
+            <article class="about-card">
+              <h3>Crafted for taste</h3>
+              <p class="section__subtitle">
+                We believe in quality, transparency, and customer care
+              </p>
+              <ul>
+                <li>
+                  Whether you’re looking for classic flavors, modern nicotine
+                  pouches, or simply want to learn more about snus, we are here
+                  to guide you every step of the way.
+                </li>
+              </ul>
+            </article>
+            <figure class="about__media">
+              <img
+                class="about__img"
+                src="img/90951266-e7f5-4dd0-8975-d85cb8321b4e.avif"
+                alt="" />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!--Service grid-->
+      <section class="section__article" id="project__grid">
+        <div class="container">
+          <header class="section__header">
+            <h2>Service</h2>
+            <p>
+              Wide selection of snus products from leading brands. Fast and
+              secure shipping across Sweden and Europe. Subscription service for
+              regular deliveries. Customer support to help you choose the right
+              product.
+            </p>
+          </header>
+
+          <div class="cards">
+            <article class="card">
+              <div class="card__media">
+                <img
+                  src="img/49acad3f-svenskarnas-favoritsnus-2018.jpg"
+                  alt="snus picture" />
+              </div>
+              <div class="card__body">
+                <h3 class="card__title">Classic Tobacco</h3>
+                <p class="card__text">
+                  We offer a wide range of snus products from both classic and
+                  modern brands. Whether you prefer traditional loose snus,
+                  portion snus, or tobacco-free alternatives, you’ll find the
+                  perfect fit for your taste and lifestyle.
+                </p>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card__media">
+                <img src="img/mintfresh.jpg" alt="snus picture" />
+              </div>
+              <div class="card__body">
+                <h3 class="card__title">Mint & Fresh</h3>
+                <p class="card__text">
+                  Order today and get your snus delivered quickly and safely
+                  right to your doorstep. Our packaging ensures freshness, and
+                  we provide reliable shipping across Sweden and Europe.
+                </p>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card__media">
+                <img src="img/Fruity Flavors.jpg" alt="snus picture" />
+              </div>
+              <div class="card__body">
+                <h3 class="card__title">Fruity Flavors</h3>
+                <p class="card__text">
+                  Never run out of snus again! With our subscription service,
+                  you can choose your favorite products and have them delivered
+                  automatically at intervals that suit you — simple, flexible,
+                  and hassle-free.
+                </p>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card__media">
+                <img
+                  src="img/Tobacco-free Nicotine Pouches.jpg"
+                  alt="snus picture" />
+              </div>
+              <div class="card__body">
+                <h3 class="card__title">Tobacco-free Nicotine Pouches</h3>
+                <p class="card__text">
+                  Not sure which snus is right for you? Our team is here to help
+                  with expert advice, product recommendations, and customer
+                  support to make your shopping experience smooth and easy.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!--Form-->
+
+      <section class="container">
+        <header class="section__form" id="form">
+          <h2>Get Started</h2>
+          <p>
+            Have a question about our snus, shipping options, or subscription
+            plans? Fill out the form and we’ll get back to you quickly with the
+            answers you need.
+          </p>
+        </header>
+
+        <form class="form" action="https://httpbin.org/anything">
+          <!-- Text and password -->
+          <div class="form__row">
+            <div>
+              <label class="form__label" for="fullName">Full name</label>
+              <input
+                class="form__control"
+                type="text"
+                name="fullname"
+                id="fullName"
+                placeholder="Anna Smith"
+                required />
+            </div>
+            <div>
+              <label class="form__label" for="email">Email adress</label>
+              <input
+                class="form__control"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="anna@gmail.com"
+                required />
+            </div>
+          </div>
+
+          <!-- Radio button -->
+
+          <div class="form__row">
+            <span class="form__label">Preferred order type</span>
+            <div class="form__choices">
+              <label
+                ><input
+                  type="radio"
+                  name="plan"
+                  value="starter"
+                  required />One-time order</label
+              >
+              <label
+                ><input
+                  type="radio"
+                  name="plan"
+                  value="starter"
+                  required />Monthly subscription</label
+              >
+              <label
+                ><input
+                  type="radio"
+                  name="plan"
+                  value="starter"
+                  required />Weekly subscription</label
+              >
+            </div>
+          </div>
+
+          <!-- Checkbox group -->
+          <div class="form__row">
+            <span class="form__label">I'm interested in</span>
+            <div class="form__choices">
+              <label
+                ><input
+                  type="checkbox"
+                  name="interests"
+                  value="classic" />Classic Tobacco</label
+              >
+              <label
+                ><input type="checkbox" name="interests" value="mint" />Mint &
+                Fresh</label
+              >
+              <label
+                ><input type="checkbox" name="interests" value="Fruity" />Fruity
+                Flavors</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="interests"
+                  value="tobacco-free" />Tobacco-free Nicotine Pouches</label
+              >
+            </div>
+          </div>
+
+          <!-- Select + Date -->
+
+          <div class="form__row">
+            <div>
+              <label class="form__label" for="strength">Strength</label>
+              <select class="form__control" name="strength" id="strength">
+                <option value="">Select...</option>
+                <option value="light">Light (2–4 mg)</option>
+                <option value="medium">Medium (6–8 mg)/option></option>
+                <option value="strong">Strong (10–14 mg)</option>
+                <option value="extra">Extra Strong (15mg+)/option></option>
+              </select>
+            </div>
+            <div>
+              <label class="form__label" for="deliveryDate"
+                >Preferred delivery date</label
+              >
+              <input
+                class="form__control"
+                type="date"
+                name="deliveryDate"
+                id="deliveryDate" />
+            </div>
+          </div>
+
+          <!-- Message -->
+          <div class="form__row">
+            <label class="from__label" for="message"
+              >Tell us about your favorite snus</label
+            >
+            <textarea
+              class="form__control"
+              name="message"
+              id="message"
+              rows="4"
+              placeholder="Which flavors or brands do you enjoy most?"></textarea>
+          </div>
+
+          <div class="form__actions">
+            <button class="btn" type="submit">Send request</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <small>@2025 Elvis Snus fabrik. All rights reserved</small>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

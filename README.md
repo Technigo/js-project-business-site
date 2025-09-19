@@ -1,1 +1,1 @@
-# js-project-business-site
+# snus-business-site
