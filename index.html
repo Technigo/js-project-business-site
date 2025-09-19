@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="De-News - Your ultimate source for decentralization news, DeFi updates, NFTs, blockchain technology, and Web3 innovations.">
+    <meta name="keywords" content="blockchain, cryptocurrency, DeFi, NFT, Web3, decentralization, crypto news">
+    <meta name="author" content="De-News">
     <title>De-News - Decode the Future of Decentralization</title>
     
     <!-- Google Fonts for modern typography -->
@@ -10,7 +13,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    
 </head>
 <body>
     <!-- ===========================================
@@ -20,10 +22,11 @@
     <header class="header">
         <div class="container">
             <div class="header-content">
-                                <!-- Dark/Light mode toggle button -->
-                                <button id="theme-toggle" aria-label="Toggle dark/light mode" class="theme-toggle">
-                                    <span id="theme-icon">🌙</span>
-                                </button>
+                <!-- Dark/Light mode toggle button -->
+                <button id="theme-toggle" aria-label="Toggle dark/light mode" class="theme-toggle">
+                    <span id="theme-icon">🌙</span>
+                </button>
+                
                 <!-- Mobile Hamburger Menu Toggle -->
                 <!-- Uses hidden checkbox and CSS sibling selectors  -->
                 <input type="checkbox" id="menu-toggle" class="menu-toggle">
@@ -39,21 +42,21 @@
                 <!-- Desktop Navigation Menu -->
                 <nav class="nav-desktop" role="navigation" aria-label="Main navigation">
                     <a href="index.html" class="nav-link">Home</a>
-                    <a href="index.html" class="nav-link">DeFi</a>
-                    <a href="index.html" class="nav-link">NFTs</a>
-                    <a href="index.html" class="nav-link">Blockchain</a>
-                    <a href="index.html" class="nav-link">Crypto</a>
-                    <a href="index.html" class="nav-link">Web3</a>
+                    <a href="#defi" class="nav-link">DeFi</a>
+                    <a href="#nfts" class="nav-link">NFTs</a>
+                    <a href="#blockchain" class="nav-link">Blockchain</a>
+                    <a href="#crypto" class="nav-link">Crypto</a>
+                    <a href="#web3" class="nav-link">Web3</a>
                 </nav>
 
                 <!-- Mobile Navigation Menu -->
                 <nav class="nav-mobile" role="navigation" aria-label="Mobile navigation">
                     <a href="index.html" class="nav-link">Home</a>
-                    <a href="index.html" class="nav-link">DeFi</a>
-                    <a href="index.html" class="nav-link">NFTs</a>
-                    <a href="index.html" class="nav-link">Blockchain</a>
-                    <a href="index.html" class="nav-link">Crypto</a>
-                    <a href="index.html" class="nav-link">Web3</a>
+                    <a href="#defi" class="nav-link">DeFi</a>
+                    <a href="#nfts" class="nav-link">NFTs</a>
+                    <a href="#blockchain" class="nav-link">Blockchain</a>
+                    <a href="#crypto" class="nav-link">Crypto</a>
+                    <a href="#web3" class="nav-link">Web3</a>
                 </nav>
             </div>
         </div>
@@ -61,7 +64,7 @@
 
     <!-- ===========================================
          HERO SECTION
-         Main banner with title and slogan with splime 3D viewer
+         Main banner with title and slogan with spline 3D viewer
          =========================================== -->
     <section class="hero">
         <div class="container hero-content-float">
@@ -69,14 +72,15 @@
                 <h1>Decode the Future</h1>
                 <p>of Decentralization</p>
             </div>
-                 <!-- Spline 3D viewer  -->   
-                 <iframe 
-                  src='https://my.spline.design/nexbotrobotcharacterconcept-B1o54Qcwti6O9FxE6lDMj4ej/' 
-                  frameborder='0'
-                  width='100%' 
-                  height='100%'>
-                </iframe>
-                 
+            <!-- Spline 3D viewer -->   
+            <iframe 
+                src="https://my.spline.design/nexbotrobotcharacterconcept-B1o54Qcwti6O9FxE6lDMj4ej/" 
+                frameborder="0"
+                width="100%" 
+                height="100%"
+                title="3D Robot Character Animation"
+                loading="lazy">
+            </iframe>
         </div>
     </section>
 
@@ -94,8 +98,9 @@
                 <article class="article-card">
                     <div class="article-image">
                         <img 
-                         src="/images/ethereum2staking.jpg"
-                         alt="Ethereum 2.0 Staking"/>
+                            src="/images/ethereum2staking.jpg"
+                            alt="Ethereum 2.0 Staking Milestone Visualization"
+                            loading="lazy"/>
                     </div>
                     <div class="article-content">
                         <h3 class="article-title">Ethereum 2.0 Staking Reaches New Milestone</h3>
@@ -103,7 +108,8 @@
                         <a class="article-source" 
                             href="https://cryptopotato.com/ethereum-hitting-new-records-47-36-million-eth-stake-in-the-eth2-beacon-deposit-contract/?utm_source=chatgpt.com" 
                             target="_blank" 
-                            rel="noopener noreferrer">
+                            rel="noopener noreferrer"
+                            aria-label="Read more about Ethereum 2.0 staking milestone">
                             read more
                         </a>
                     </div>
@@ -113,8 +119,9 @@
                 <article class="article-card">
                     <div class="article-image">
                         <img 
-                         src="/images/defitvl100b.jpg" 
-                         alt="DeFi TVL Surpasses $100 Billion" />
+                            src="/images/defitvl100b.jpg" 
+                            alt="DeFi Total Value Locked reaching $100 billion milestone chart"
+                            loading="lazy"/>
                     </div>
                     <div class="article-content">
                         <h3 class="article-title">DeFi TVL Surpasses $100 Billion Again</h3>
@@ -122,7 +129,8 @@
                         <a class="article-source" 
                             href="https://www.theblock.co/post/280657/defi-tvl-breaks-100-billion-for-first-time-since-may-2022?utm_source=chatgpt.com" 
                             target="_blank" 
-                            rel="noopener noreferrer">
+                            rel="noopener noreferrer"
+                            aria-label="Read more about DeFi TVL milestone">
                             read more
                         </a>
                     </div>
@@ -131,18 +139,21 @@
                 <!-- Article 3 -->
                 <article class="article-card">
                     <div class="article-image">
-                        <img src="/images/nftutilitytokens.jpg" 
-                        alt="NFT Utility Tokens"/>
+                        <img 
+                            src="/images/nftutilitytokens.jpg" 
+                            alt="NFT utility tokens and digital ownership concept visualization"
+                            loading="lazy"/>
                     </div>
                     <div class="article-content">
                         <h3 class="article-title">NFT Utility Tokens Transform Digital Ownership</h3>
                         <p class="article-summary">Major brands are integrating NFTs with real-world utilities, creating new paradigms for digital ownership and customer engagement in the Web3 ecosystem.</p>
                         <a class="article-source" 
-                              href="https://nftevening.com/nft-utility/?utm_source=chatgpt.com" 
-                             target="_blank" 
-                             rel="noopener noreferrer">
-                             read more
-                         </a>
+                            href="https://nftevening.com/nft-utility/?utm_source=chatgpt.com" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            aria-label="Read more about NFT utility tokens">
+                            read more
+                        </a>
                     </div>
                 </article>
 
@@ -318,27 +329,26 @@
             <form class="contact-form" action="https://httpbin.org/anything" method="POST">
                 <!-- Name input field -->
                 <div class="form-group">
-                    <label for="name" class="form-label"> Name
-                    </label>
-                         <input 
-                             type="text" 
-                             id="name" 
-                             name="name" 
-                             class="form-input" 
-                             required>
+                    <label for="name" class="form-label">Name</label>
+                    <input 
+                        type="text" 
+                        id="name" 
+                        name="name" 
+                        class="form-input" 
+                        placeholder="Your full name"
+                        required>
                 </div>
                 
                 <!-- Email input field -->
                 <div class="form-group">
-                    <label for="email" class="form-label" >Email</label>
+                    <label for="email" class="form-label">Email</label>
                     <input 
                         type="email" 
                         id="email" 
-                        placeholder="example@email.com"
                         name="email" 
                         class="form-input" 
-                        required
->
+                        placeholder="example@email.com"
+                        required>
                 </div>
                 
                 <!-- Radio button group for contact preference -->
@@ -348,21 +358,21 @@
                         <label class="radio-label">
                             <input 
                                 type="radio" 
-                                 name="contact-method" 
-                                 value="email" 
-                                 class="radio-input" 
-                                 checked>
-                                 Email
+                                name="contact-method" 
+                                value="email" 
+                                class="radio-input" 
+                                checked>
+                            Email
                         </label>
                     </div>
                     <div class="radio-group">
                         <label class="radio-label">
-                                <input 
-                                 type="radio" 
-                                 name="contact-method" 
-                                 value="phone" 
-                                 class="radio-input">
-                                 Phone
+                            <input 
+                                type="radio" 
+                                name="contact-method" 
+                                value="phone" 
+                                class="radio-input">
+                            Phone
                         </label>
                     </div>
                     <div class="radio-group">
@@ -372,7 +382,7 @@
                                 name="contact-method" 
                                 value="none" 
                                 class="radio-input">
-                                No contact
+                            No contact
                         </label>
                     </div>
                 </div>
@@ -383,10 +393,10 @@
                     <div class="checkbox-group">
                         <label class="checkbox-label">
                             <input 
-                            type="checkbox" 
-                            name="topics" 
-                            value="bitcoin" 
-                            class="checkbox-input">
+                                type="checkbox" 
+                                name="topics" 
+                                value="bitcoin" 
+                                class="checkbox-input">
                             Bitcoin
                         </label>
                     </div>
@@ -397,7 +407,7 @@
                                 name="topics" 
                                 value="ethereum" 
                                 class="checkbox-input">
-                                Ethereum
+                            Ethereum
                         </label>
                     </div>
                     <div class="checkbox-group">
@@ -407,32 +417,30 @@
                                 name="topics" 
                                 value="defi" 
                                 class="checkbox-input">
-                                DeFi
+                            DeFi
                         </label>
                     </div>
                     <div class="checkbox-group">
                         <label class="checkbox-label">
                             <input 
-                                 type="checkbox" 
-                                 name="topics" 
-                                 value="nft" 
-                                 class="checkbox-input">
-                                 NFTs
+                                type="checkbox" 
+                                name="topics" 
+                                value="nft" 
+                                class="checkbox-input">
+                            NFTs
                         </label>
                     </div>
                 </div>
                 
                 <!-- Message textarea -->
                 <div class="form-group">
-                    <label 
-                         for="message" 
-                         class="form-label">
-                         Message
-                    </label>
-                    <textarea id="message"
-                          name="message" 
-                          class="form-textarea" 
-                          required>
+                    <label for="message" class="form-label">Message</label>
+                    <textarea 
+                        id="message"
+                        name="message" 
+                        class="form-textarea" 
+                        placeholder="Tell us about your interests in Web3 and decentralization..."
+                        required>
                     </textarea>
                 </div>
                 
@@ -448,6 +456,7 @@
                         <option value="other">Other</option>
                     </select>
                 </div>
+                
                 <!-- Submit button -->
                 <button type="submit" class="submit-btn">Send Message</button>
             </form>
@@ -458,28 +467,44 @@
          Social links and copyright information
          =========================================== -->
     <footer class="footer">
-    <div class="container footer-center">
+        <div class="container footer-center">
             <div>
                 <div class="social-links">
-                    <a href="index.html" class="social-link">Discord</a>
-                    <a href="index.html" class="social-link">Twitter</a>
-                    <a href="index.html" class="social-link">GitHub</a>
-                    <a href="index.html" class="social-link">LinkedIn</a>
+                    <a href="#discord" class="social-link" aria-label="Join our Discord community">Discord</a>
+                    <a href="#twitter" class="social-link" aria-label="Follow us on Twitter">Twitter</a>
+                    <a href="#github" class="social-link" aria-label="View our GitHub repositories">GitHub</a>
+                    <a href="#linkedin" class="social-link" aria-label="Connect with us on LinkedIn">LinkedIn</a>
                 </div>
-                <button id="footer-auth-modal-btn" class="submit-btn footer-auth-modal-btn">Sign In / Sign Up</button>
+                <button id="footer-auth-modal-btn" class="submit-btn footer-auth-modal-btn">
+                    Sign In / Sign Up
+                </button>
                 <p class="copyright">&copy; 2025 De-News. Technigo.</p>
             </div>
         </div>
 
         <!-- Modal for sign in/up -->
-    <div id="footer-auth-modal" class="modal-overlay hide">
+        <div id="footer-auth-modal" class="modal-overlay hide" role="dialog" aria-labelledby="footer-auth-modal-title">
             <div class="modal-content">
                 <button class="modal-close" id="footer-auth-modal-close" aria-label="Close modal">&times;</button>
-                <h3 class="footer-auth-modal-title">Sign In / Sign Up</h3>
+                <h3 id="footer-auth-modal-title" class="footer-auth-modal-title">Sign In / Sign Up</h3>
                 <form class="footer-auth-form" action="https://httpbin.org/anything" method="POST">
-                    <input type="email" name="footer-email" class="form-input" placeholder="Email" required>
-                    <input type="password" name="footer-password" class="form-input" placeholder="Password" required>
-                    <button type="submit" name="action" value="signinup" class="submit-btn">Sign In / Sign Up</button>
+                    <input 
+                        type="email" 
+                        name="footer-email" 
+                        class="form-input" 
+                        placeholder="Email" 
+                        aria-label="Email address"
+                        required>
+                    <input 
+                        type="password" 
+                        name="footer-password" 
+                        class="form-input" 
+                        placeholder="Password" 
+                        aria-label="Password"
+                        required>
+                    <button type="submit" name="action" value="signinup" class="submit-btn">
+                        Sign In / Sign Up
+                    </button>
                 </form>
             </div>
         </div>
