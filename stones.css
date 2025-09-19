@@ -1,0 +1,81 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-image: url(backgrounds/back1.jpg);
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+
+.card{
+     background-color: rgb(135, 219, 219);
+     width: 220px;
+     height: 500px;
+     margin: 50px;
+     border-radius: 90px;
+     box-shadow: 5px 20px 20px;
+
+     
+}
+
+.card-image{
+    background-color: yellowgreen;
+    height: 200px;
+    margin-bottom: 15px;
+    background-size: cover;
+}
+
+
+.ama{
+    background-image: url(stones/amazonite.jpg);
+}
+
+.ame{
+    background-image: url(stones/amethyst.jpg);
+}
+
+.mal{
+    background-image: url(stones/malachite2.jpg);
+}
+
+.qua{
+    background-image: url(stones/quartz.jpg);
+}
+
+.str{
+    background-image: url(stones/strawberry.jpg);
+}
+
+.yel{
+    background-image: url(stones/yellowcalcite.jpg);
+}
+
+.sma{
+    background-image: url(stones/small.jpg);
+}
+
+
+
+
+
+.card h4{
+   text-align: center;
+}
+
+.card p{
+    padding: 20px;
+}
+
+.card:hover{
+    background-color: white;
+    cursor: pointer;
+    transform: scale(1.1);
+}

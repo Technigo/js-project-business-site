@@ -1,0 +1,100 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-image: url(backgrounds/back1.jpg);
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+
+header{
+    background-color: black;
+    color: #18a7a7;
+}
+
+
+li{
+    list-style: none;
+}
+
+a{
+    color:  #18a7a7;
+    text-decoration:  none;
+}
+/*
+
+.button{
+   button working on it
+}*/
+.navbar{
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+.card{
+     background-color: rgb(135, 219, 219);
+     width: 220px;
+     height: 500px;
+     margin: 50px;
+     border-radius: 90px;
+     box-shadow: 5px 20px 20px;
+
+     
+}
+
+.card-image{
+    background-color: yellowgreen;
+    height: 200px;
+    margin-bottom: 15px;
+    background-size: cover;
+}
+
+
+.br1{
+    background-image: url(jew/bracelet1.jpg);
+}
+
+.br2{
+    background-image: url(jew/bracelet2.jpg);
+}
+
+.ne1{
+    background-image: url(jew/necklace1.jpg);
+}
+
+.ne2{
+    background-image: url(jew/necklace2.jpg);
+}
+
+.ri1{ 
+    background-image: url(jew/ring1.jpg);
+}
+
+.ri2{
+    background-image: url(jew/rings2.jpg);
+}
+
+
+.card h4{
+   text-align: center;
+}
+
+.card p{
+    padding: 20px;
+}
+
+.card:hover{
+    background-color: white;
+    cursor: pointer;
+    transform: scale(1.1);
+}

@@ -1,0 +1,49 @@
+Label{ 
+    display: block;
+    padding: 5px;
+
+}
+
+body{
+    background-color: rgb(236, 255, 234);
+}
+/*
+.overlay{
+    border-width: 10px;
+    border-style: solid;
+    border-image-source: linear-gradient( red, blue);
+    border-image-slice: fill 1;
+
+}*/
+
+
+.hero{
+    background-image: url(backgrounds/back1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* gives the image boxshadow inside the immage*/
+    box-shadow: 40px 30px 30px rgb(236, 255, 234) inset;
+
+    min-block-size: 30vh;
+   
+}
+
+
+
+.container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+
+.card{
+     background-color: rgb(135, 219, 219);
+     width: 340px;
+     height: 450px;
+     margin: 50px;
+     border-radius: 10px;
+     box-shadow: 5px 20px 20px;
+    
+}
+

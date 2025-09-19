@@ -1,0 +1,138 @@
+*{
+Margin: 0;
+Padding: 0;
+Box-sizing: border-box;
+}  
+
+
+header{
+    background-color: black;
+    color: #18a7a7;
+}
+
+
+li{
+    list-style: none;
+}
+
+a{
+    color:  #08fcfc;
+    text-decoration:  none;
+    
+}
+
+.hero{
+    position: relative;
+    background-image: url(backgrounds/hero1.jpg);
+    background-size: cover;
+    height: 200px;
+    overflow: hidden;
+    /* overlay image makes the gradient arround the heroimage */
+    border-width: 10px;
+    border-style: solid;
+    border-image-source: linear-gradient( rgb(167, 247, 240), rgb(191, 191, 243));
+    border-image-slice: 1;
+}
+ 
+
+.nav-menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 50px;
+}
+
+.nav-link{
+    transition: 0.7s ease;
+}
+
+.nav-link:hover{
+    color: cornflowerblue;
+}
+
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 90%;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #2fa7a7;
+
+}
+@media(max-width:768px){
+    .hamburger{
+        display: block;
+    }
+    
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu{
+        position: fixed;
+        right: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: black;
+        width: 30%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-item{
+        margin: 16px 0;
+
+    }
+
+    .nav-menu.active{
+        right: 0;
+    }
+
+
+}
+
+body{ 
+    min-height: 100vh;
+    background-image: url(backgrounds/back1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+ 
+
+section{
+    padding: 20px;
+}
+
+section h2{
+    color: rgb(3, 112, 112);
+}
+
+
+
+footer{
+background-color: blanchedalmond;
+}
+
+
+
+img{
+    display: block;
+    max-inline-size: 70%;
+    padding: 10px;
+}

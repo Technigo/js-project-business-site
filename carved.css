@@ -1,0 +1,85 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-image: url(backgrounds/back1.jpg);
+}
+
+
+.container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+
+.card{
+     background-color: rgb(135, 219, 219);
+     width: 220px;
+     height: 500px;
+     margin: 50px;
+     border-radius: 90px;
+     box-shadow: 5px 20px 20px;
+
+     
+}
+
+.card-image{
+    background-color: yellowgreen;
+    height: 200px;
+    margin-bottom: 15px;
+    background-size: cover;
+}
+
+
+.rab{
+    background-image: url(carved/Malachite.jpg);
+}
+.uni{
+    background-image: url(carved/oceanjasper.jpg);
+}
+
+.bust{
+ background-image: url(carved/rose.jpg);
+}
+
+.skull{
+    background-image: url(carved/QuartzSkul.jpg);
+}
+
+.kya{
+    background-image: url(carved/kyanite.jpg);
+}
+
+.moss{
+    background-image: url(carved/mossagate.jpg);
+}
+
+.phoe{
+    background-image: url(carved/phoenix.jpg);
+}
+
+.tur{
+    background-image: url(carved/turmaline.jpg);
+}
+
+.sel{
+    background-image: url(carved/selenite.jpg);
+}
+
+.card h4{
+   text-align: center;
+}
+
+.card p{
+    padding: 20px;
+}
+
+.card:hover{
+    background-color: white;
+    cursor: pointer;
+    transform: scale(1.1);
+}
