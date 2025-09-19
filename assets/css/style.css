@@ -1,0 +1,596 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root {
+  --bg: #112658;          /* mörkblå bakgrund */  
+  --panel: #111827;       /* mörk panel */
+  --muted: #94a3b8;       /* sekundär text */
+  --text: #e5e7eb;        /* huvudtext */
+  --accent: #f59e0b;      /* orange/guld-accent */
+  --accent-2: #38bdf8; 
+  /*--maxw: 1080px;*/
+}
+
+/* MÅSTE FIXA MED GRID CARDS, BAKGRUNDSBILDERNA OCH TEXTEN I DEM */
+/* ÄVEN FIXA CONTACT FORMEN MED FLER ALTERNATIV FÖR INPUTS OCH SÅ */
+
+/* === Base (320px och uppåt) === */
+html, body{
+height: 100%;
+}
+
+body {
+  display: flex;
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100dvh;
+  flex-direction: column;
+}
+
+main{
+  flex: 1 0 auto;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  color: var(--text);
+  gap: 12px;
+  background: var(--bg);
+}
+
+.logo{
+  order: 2;
+  margin-left: auto;
+}
+  /* liten nog för 320px */
+.logo img {
+  height: 40px;
+  width: auto;
+  background: transparent;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.nav-toggle {
+  font-size: 1.5rem;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+/* CODEPEN TRYING OUT HE HAM IN JAVASCRIPT*/
+
+.off-screen-menu{
+  background-color: var(--bg);
+  height: 100vh;
+  width: 100%;
+  max-width: 450px;
+  position: fixed;
+  top: 0;
+  left: -450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 3rem;
+  transition: .3s ease;
+  z-index: 1;
+}
+
+.off-screen-menu ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.off-screen-menu a{
+  color: #fff;
+  text-decoration: none;
+}
+
+.off-screen-menu.active{
+  left: 0;
+}
+
+.nav{
+  padding: 0.5rem;
+  /*display: flex;
+  background-color: rgb(34, 37, 49);*/
+}
+
+.ham-menu{
+  height: 50px;
+  width: 50px;
+  border: 0;
+  position: relative;
+  cursor: pointer;
+  background: none;
+  order: 0;
+  display: inline-block;
+}
+
+.ham-menu span{
+  height: 5px;
+  width: 100%;
+  background-color: var(--text);
+  border-radius: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: .3s ease;
+  z-index: 2;
+}
+
+.ham-menu span:nth-child(1) {
+  top: 25%;
+}
+.ham-menu span:nth-child(3) {
+  top: 75%;
+} 
+
+.ham-menu.active span:nth-child(1){
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.ham-menu.active span:nth-child(2){
+  opacity: 0;
+}
+.ham-menu.active span:nth-child(3){
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/*desktop*/
+.desktop-nav { 
+  display: none;
+  order: 0; 
+}
+
+.desktop-nav ul {
+  list-style: none; 
+  display: flex; 
+  gap: 24px;
+  margin: 0; 
+  padding: 0;
+}
+
+.desktop-nav a { 
+  color: var(--text); 
+  text-decoration: none; 
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 999px;
+  transition: transform .15s ease, background .2s ease, color .2s ease;
+}
+
+.desktop-nav a:hover {
+  background: rgba(148,163,184,.14);
+  transform: translateY(-1px);
+}
+
+/* The old code with a new hamburger menu*/
+
+.home-img {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  overflow: hidden;
+}
+
+.home-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.contact-img {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  overflow: hidden;
+}
+
+.contact-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/*.bb-image-text {
+  position: absolute;
+  bottom: 60%;
+  left: 50%;
+  width: 850px;
+  transform: translateX(-50%);
+  font-size: 1.5rem;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, .7);
+  text-align: center;
+}*/
+
+/* responsiv hero-text */
+.bb-image-text{
+  position: absolute;
+  inset: auto 0 10% 0;          /* centrerad, 10% från botten */
+  margin: 0 auto;
+  width: min(92%, 900px);       /* maxbredd men krymper snyggt */
+  padding: 0 1rem;              /* lite sidomarginal på mobil */
+  text-align: center;
+
+  /* typografi som skalar */
+  font-size: clamp(1.1rem, 3.5vw, 2.6rem);
+  line-height: 1.2;
+  color: #fff;
+  text-shadow: 0 2px 6px rgba(0,0,0,.55);
+
+  /* undvik radbryt-strul på små skärmar */
+  overflow-wrap: anywhere;
+  hyphens: auto;
+}
+
+/* Grid – mobil: 1 kolumn */
+.container{
+  width: min(100% - 2rem, 1200px);
+  margin-inline: auto;
+  height: auto;
+}
+
+.services-sec {
+  padding-top: 24px;
+  padding-bottom: 50px;
+  min-height: 0px;
+}
+
+.services-title{
+  margin: 0 15px 12px;
+  font-size: clamp(50px, 3.6vw, 40px);
+  line-height: 1.2;
+  text-align: left;
+}
+
+.grid-container {
+  display: grid;
+  width: min(100% - 2rem, 1200px);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+  padding: 16px;
+  margin: 0 auto;
+}
+
+/* Cards – enkel, ljus stil */
+.card{
+  background: transparent;
+  color: var(--text);
+  border: 3px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 150px;
+  transition: transform .15s ease, box-shadow .2s ease, border-color .2s ease;
+  cursor: pointer;
+}
+
+.card:hover{
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.card .icon{
+  font-size: 40px;
+  line-height: 1;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,.12));
+}
+
+.card-overlay {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+/* === Contact form – card style === */
+form {
+  max-width: 720px;
+  margin: 40px auto;
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #e6e8eb;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.06);
+}
+
+form > h1 {
+  margin: 0 0 16px 0;
+  font: 600 1.6rem/1.2 system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: #111827;
+}
+
+/* Inre layout */
+.contact-form {
+  display: grid;
+  gap: 14px;
+}
+
+/* Etiketter */
+.contact-form label {
+  font: 600 0.95rem/1.2 system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: #374151;
+}
+
+/* Inputs & textarea */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form textarea,
+.radio-group {
+  width: 95%;
+  padding: 12px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  background: #f9fafb;
+  color: #111827;
+  outline: none;
+  transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
+}
+
+.contact-form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+/* Focus states */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--accent); /* blå accent */
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(37,99,235,.15);
+}
+
+/* Radio group – kompakt och tillgänglig */
+.contact-form .radio-group{
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  border: 0;
+  padding: 0;
+  margin: 6px 0 10px;
+}
+.contact-form .radio-group legend{
+  width: 100%;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 6px;
+}
+
+/* Etikett som “pill” */
+.contact-form .radio{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid #e6e8eb;
+  border-radius: 999px;
+  background: #fff;
+  cursor: pointer;
+}
+
+/* Själva radion – custom, med fokus och accent */
+.contact-form .radio input{
+  appearance: none;
+  width: 16px; height: 16px;
+  border: 2px solid #9ca3af;
+  border-radius: 50%;
+  display: grid; place-content: center;
+  margin: 0;
+  outline: none;
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+.contact-form .radio input::before{
+  content: "";
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: transform .12s ease;
+  background: var(--accent, #2563eb);
+}
+.contact-form .radio input:checked{
+  border-color: var(--accent, #2563eb);
+}
+.contact-form .radio input:checked::before{
+  transform: scale(1);
+}
+.contact-form .radio input:focus-visible{
+  box-shadow: 0 0 0 3px rgba(37,99,235,.25);
+  border-color: var(--accent, #2563eb);
+}
+
+/* Texten bredvid radion */
+.contact-form .radio span{
+  color: #111827;
+  font-weight: 600;
+}
+
+/* Button */
+.contact-form button[type="submit"] {
+  margin-top: 6px;
+  padding: 12px 16px;
+  border: 0;
+  border-radius: 12px;
+  background: var(--bg); /* blå accent */
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform .06s ease, box-shadow .2s ease, background .2s ease;
+  box-shadow: 0 10px 20px rgba(37,99,235,.25);
+}
+.contact-form button[type="submit"]:hover {
+  background: var(--accent); /*orange accent */
+  box-shadow: 0 12px 24px rgba(37,99,235,.28);
+}
+.contact-form button[type="submit"]:active {
+  transform: translateY(1px);
+}
+
+/* Accessible focus ring för knappen */
+.contact-form button[type="submit"]:focus-visible {
+  outline: 3px solid rgba(37,99,235,.6);
+  outline-offset: 3px;
+}
+
+/* Hjälptext / fel (om du lägger till senare) */
+.form-hint { 
+  color: #6b7280; 
+  font-size: 0.9rem; 
+}
+.form-error { 
+  color: #b91c1c; 
+  font-size: 0.9rem; 
+}
+
+/*footer*/
+.footer {
+  margin-top: auto;
+  text-align: center;
+  justify-content: center;
+  flex-direction: row;
+  padding: 20px;
+  background: #f1f1f1;
+  color: #333;
+  font-size: 0.9rem;
+  display: block;
+}
+
+.footer p{
+  color: black;
+}
+
+
+/* === Tablet (≥600px) === */
+@media (min-width: 600px) {
+ .ham-menu{
+    display: none !important;
+  }
+  
+  .off-screen-menu{
+    display: none !important;
+  }
+  
+  .desktop-nav{
+    display: block;
+    order: 1;
+    margin-left: 0;
+  }
+
+  .desktop-nav ul {
+    list-style: none; 
+    display: flex; 
+    gap: 24px;
+    margin: 0; 
+    padding: 0;
+  }
+  
+  .logo{
+    order: 2;
+    margin-left: auto;
+  }
+  
+  .logo img {
+    height: 60px;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  .home-img {
+    height: 60vh;
+  }
+
+  .bb-image-text{ 
+    inset: auto 0 12% 0; 
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #menu li a:hover { 
+    text-decoration: underline; 
+  }
+ } /*.footer{/*fixa längs ner på mobilsida*/
+    /*display: flex;
+    flex-direction: column;
+    align-items: center;
+  }*/
+
+
+/* === Desktop (≥1000px) === */
+@media (min-width: 1000px) {
+  .header {
+    padding: 20px 50px;
+  }
+
+  .ham-menu, .off-screen-menu{
+    display: none !important;
+  }
+  
+  .desktop-nav{
+    display: block;
+    order: 1;
+  }
+  
+  .logo{
+    order: 3;
+    margin-left: auto;
+  }
+
+  .logo img {
+    height: 80px;
+  }
+
+  .home-img {
+    height: 70vh;
+  }
+
+  .nav{
+    order: 2;
+    margin-right: auto;
+    margin-left: 0;
+    position: static;
+    transform: none;
+    width: auto;
+    height: auto;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+  
+  .bb-image-text{ 
+    inset: auto 0 14% 0; 
+    font-size: clamp(1.4rem, 3vw, 3rem); 
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  #menu {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+  }
+  .ham-menu, .off-screen-menu {
+    display: none;
+  }
+}
