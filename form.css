@@ -7,14 +7,7 @@ Label{
 body{
     background-color: rgb(236, 255, 234);
 }
-/*
-.overlay{
-    border-width: 10px;
-    border-style: solid;
-    border-image-source: linear-gradient( red, blue);
-    border-image-slice: fill 1;
 
-}*/
 
 
 .hero{
@@ -28,7 +21,10 @@ body{
    
 }
 
-
+a{
+    color:  #18a7a7;
+    text-decoration:  none;
+}
 
 .container{
     display: flex;
