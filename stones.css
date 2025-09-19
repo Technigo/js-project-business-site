@@ -41,6 +41,11 @@ p{
     grid-row: 3/4;
 }
 
+a{
+    color:  #18a7a7;
+    text-decoration:  none;
+}
+
 .card{
      background-color: rgb(135, 219, 219);
      width: 220px;

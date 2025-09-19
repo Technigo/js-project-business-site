@@ -34,6 +34,13 @@ p{
     grid-column: 6/7;
     grid-row: 3/4;
 }
+
+a{
+    color:  #18a7a7;
+    text-decoration:  none;
+}
+
+
 .container{
     display: flex;
     justify-content: center;
