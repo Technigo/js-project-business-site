@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pawsome</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body> 
+  
+  <!-- This is the nagvigation part --> 
+    <nav class="navbar"> 
+    <div class="logo">Paw Pals 🐾</div>
+
+  <!-- Hamburger menu, yumyum, add more options later? -->
+    <button class="hamburger" aria-label="Toggle menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <ul class="nav-menu">
+      <li><a href="#services" class="nav-link">Services</a></li>
+      <li><a href="#team" class="nav-link">Team</a></li>
+      <li><a href="#signup" class="nav-link">Sign Up</a></li>
+    </ul>
+  </nav>
+
+  <!-- The Hero header -->
+  <header class="hero">
+    <h1>We Walk. They Wag.</h1>
+    <a href="#signup" class="btn-cta">Join Now</a>
+    
+  </header>
+
+  <!-- The Services provided --> <!-- maybe change some icons -->
+  <section id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="grid">
+      <div class="card"><div class="icon">🐾</div><h3>Safe Walks</h3><p>GPS-tracked routes.</p></div>
+      <div class="card"><div class="icon">🎾</div><h3>Playtime</h3><p>Fun & exercise.</p></div>
+      <div class="card"><div class="icon">🛁</div><h3>Grooming</h3><p>Keep pets fresh.</p></div>
+      <div class="card"><div class="icon">🎓</div><h3>Training</h3><p>Obedience & tricks.</p></div>
+    </div>
+  </section>
+
+  <!-- Team -- dont know if I want to keep it --> <!-- dont forgets to add pics -->
+  <section id="team" class="team">
+    <h2>Meet Our Team</h2>
+    <div class="profiles">
+      <div class="member"><img src="images/Luke.jpg" alt="Lead Walker"><h4>Luke</h4><p>Lead Walker</p></div>
+      <div class="member"><img src="images/Alice.jpg" alt="Trainer"><h4>Alice</h4><p>Trainer</p></div>
+      <div class="member"><img src="images/Carin.jpg" alt="Groomer"><h4>Carin</h4><p>Groomer</p></div>
+    </div>
+  </section>
+
+  <!-- The form menu-->
+  <section id="signup" class="booking">
+    <h2>Sign Up for Paw Pals</h2>
+    <form action="https://httpbin.org/anything" method="POST">
+      
+      <!-- Text fields -->
+      <label for="fullname">Full Name</label>
+      <input type="text" id="fullname" name="fullname" placeholder="Your full name" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="Your email" required>
+
+      <!-- Password -->
+      <label for="password">Create Password</label>
+      <input type="password" id="password" name="password" placeholder="Choose a password" required>
+
+      <!-- Radio buttons -->
+      <fieldset>
+        <legend>Preferred Service</legend>
+        <label><input type="radio" name="service" value="walking" required> Walking</label>
+        <label><input type="radio" name="service" value="grooming"> Grooming</label>
+        <label><input type="radio" name="service" value="training"> Training</label>
+      </fieldset>
+
+      <!-- Checkboxes -->
+      <fieldset>
+        <legend>Extras</legend>
+        <label><input type="checkbox" name="extras" value="newsletter"> Subscribe to newsletter</label>
+        <label><input type="checkbox" name="extras" value="offers"> Receive special offers</label>
+      </fieldset>
+
+      <!-- Date picker -->
+        <label for="appointment">Preferred Appointment Date</label>
+         <input type="date" id="appointment" name="appointment" required>
+      
+      <!-- Submit -->
+      <button type="submit">Sign Up 🐾</button>
+    </form>
+  </section>
+  
+  <!-- Footer -->
+
+  <footer>
+    <p>© 2025 Paw Pals. All rights reserved.</p>
+  </footer>
+
+  <script>
+  const hamburger = document.querySelector('.hamburger'); 
+  const navMenu = document.querySelector('.nav-menu');
+
+  hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('active');
+    });
+  });
+</script>
+</body>
+</html>
+</body>
+</html>
+

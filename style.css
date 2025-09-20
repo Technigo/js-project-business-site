@@ -1,0 +1,406 @@
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  background-color: #F7F3F2;
+  color: #2c3e50;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+
+/* The Nagivation bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10%;
+  background-color: #2C4875;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.nav-menu a {
+  color: white;
+  font-weight: 500;
+  position: relative;
+}
+
+
+/* The HERO section */
+.hero {
+  text-align: center;
+  padding: 180px 20px;
+  background: 
+    linear-gradient(rgba(44, 72, 117, 0.6), rgba(44, 72, 117, 0.6)),
+    url('images/GGG.jpg') center/cover no-repeat;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  text-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+
+
+.btn-cta {
+  display: inline-block;
+  padding: 16px 40px;
+  background: #D8A7B1;
+  color: white;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.btn-cta:hover {
+  background: #c48d9c;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.25);
+}
+
+/* Our Services */
+.services {
+  padding: 80px 10%;
+  text-align: center;
+  background: linear-gradient(135deg, #F9F7F7, #FCEFEF);
+}
+
+.services h2 {
+  color: #2C4875;
+  margin-bottom: 50px;
+  font-size: 2.2rem;
+}
+
+.grid {
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+}
+
+.icon {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  color: #2C4875;
+  margin: 10px 0 5px;
+  font-size: 1.3rem;
+}
+
+/* Tema section */
+.team {
+  padding: 80px 10%;
+  background-color: #E7EAF3;
+  text-align: center;
+}
+
+.team h2 {
+  color: #2C4875;
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+.profiles {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.member {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  width: 200px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+.member img {     /* Profile pictures are added */
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  background-color: #ddd;
+}
+
+.member h4 {
+  margin: 10px 0 5px;
+  font-size: 1.1rem;
+  color: #2C4875;
+}
+
+/* The Sign Up form */
+.booking {
+  padding: 80px 10%;
+  text-align: center;
+  background: linear-gradient(135deg, #F9F7F7, #FCEFEF)
+}
+
+.booking h2 {
+  color: #2C4875;
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+/* no changes in the style of the form */
+.booking form {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 480px;
+  margin: 0 auto;
+  gap: 20px;
+  text-align: left;
+}
+
+.booking label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #2C4875;
+}
+
+.booking input[type="text"],
+.booking input[type="email"],
+.booking input[type="password"] 
+{
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.booking input[type="text"]:focus,
+.booking input[type="email"]:focus,
+.booking input[type="password"]:focus {
+  border-color: #2C4875;
+  box-shadow: 0 0 0 3px rgba(44,72,117,0.15);
+  outline: none;
+}
+
+.booking fieldset {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 15px 20px;
+}
+
+.booking legend 
+{
+  font-weight: 600;
+  color: #2C4875;
+  padding: 0 5px;
+}
+
+.booking input[type="radio"],
+.booking input[type="checkbox"] 
+
+{
+  margin-right: 8px;
+  accent-color: #2C4875;
+}
+
+/* Style for date picker and select menu */
+.booking select,
+.booking input[type="date"] {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  background-color: #fff;
+  color: #2C4875;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  appearance: none;       /* Removes default browser arrow for consistent look */
+}
+
+/* Focus states for date picker and select */
+.booking select:focus,
+.booking input[type="date"]:focus {
+  border-color: #2C4875;
+  box-shadow: 0 0 0 3px rgba(44,72,117,0.15);
+  outline: none;
+}
+
+.booking button {
+  background-color: #2C4875;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 16px 0;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.booking button:hover {
+  background-color: #21345a;
+  transform: translateY(-2px);
+}
+
+/* The Hamburger buttons */
+.hamburger {
+  display: none; /* hidden by default */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  gap: 5px;
+}
+
+/* Responsive layout desktop tablet and mobile */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .btn-cta {
+    font-size: 1rem;
+    padding: 14px 28px;
+  }
+
+  .profiles {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    text-align: center ;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    position: static;
+    width: auto;
+    background-color: transparent;
+  }
+
+  .booking form {
+    gap: 15px;
+  }
+
+  .booking fieldset {
+    padding: 12px 15px;
+  }
+}
+
+/*The hamburger menu for mobile*/
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex; /* show hamburger on mobile */
+    flex-direction: column;
+    justify-content: space-between;
+    margin: auto 0;
+    cursor: pointer;
+    width: 30px;
+    height: 22px;
+    z-index: 100; /* Ensure it's above other elements */
+  }
+  .hamburger span {
+    display: block;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+  .nav-menu {
+    display: none; /* hidden until acvtived */
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    background-color: #2C4875;
+    left: 0;
+    position: absolute;
+    top: 60px;
+    padding: 15px 0;
+    z-index: 99;
+ 
+    /* center items after clicking the menu*/
+    align-items: center;      /* horizontal centering in column layout */
+    text-align: center;       /* ensures text inside links is centered */
+ }
+    .nav-menu.active {
+      display: flex;
+    }
+  }
+ 
+  /* Footer */
+footer {
+  background-color: #2C4875;   
+  color: #ffffff;              
+  text-align: center;         
+  padding: 20px 10px;        
+  font-size: 0.9rem;          
+  margin-top: 40px;           
+}
+
+footer p {
+  margin: 0;                   
+  line-height: 1.4;
+}
