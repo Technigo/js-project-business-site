@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 50">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: SSFlora-Regular, 'SS Flora';
+        font-size: 21.89px;
+      }
+
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        font-family: Pixelated-Elegance, 'Pixelated Elegance';
+        font-size: 8.76px;
+        letter-spacing: -.1em;
+      }
+    </style>
+  </defs>
+  <text class="cls-1" transform="translate(37.78 27.33) scale(.91) skewX(-24)"><tspan x="0" y="0">N</tspan></text>
+  <text class="cls-2" transform="translate(47.17 27.25) scale(.91) skewX(-24)"><tspan x="0" y="0">AVI</tspan></text>
+</svg>
