@@ -8,6 +8,7 @@ Box-sizing: border-box;
 header{
     background-color: black;
     color: #18a7a7;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 
@@ -43,7 +44,7 @@ a{
 }
 
 .nav-link{
-    transition: 0.7s ease;
+    transition: 0.9s ease;
 }
 
 .nav-link:hover{
@@ -65,6 +66,7 @@ a{
     background-color: #2fa7a7;
 
 }
+
 @media(max-width:768px){
     .hamburger{
         display: block;
@@ -112,8 +114,12 @@ body{
     background-position: center;
 }
 
+img{
+    display: block;
+    max-inline-size: 70%;
+    padding: 10px;
+}
 
- 
 
 section{
     padding: 20px;
@@ -123,16 +129,37 @@ section h2{
     color: rgb(3, 112, 112);
 }
 
-
-
-footer{
-background-color: blanchedalmond;
+.container{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(7, 1fr);
+    background-color: black;
+    color: #18a7a7;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+.foot-link{
 
 
-img{
-    display: block;
-    max-inline-size: 70%;
-    padding: 10px;
+    transition: 0.9s ease;
+}
+
+.foot-link:hover{
+    color: cornflowerblue;
+}
+
+.foot-1{
+    grid-row: 1/2;
+    grid-column: 1/1;
+}
+
+.foot-2{
+    grid-row: 1/2;
+    grid-column: 4/4;
+}
+
+.foot-3{
+    grid-row: 1/2;
+    grid-column: 7/7;
 }
