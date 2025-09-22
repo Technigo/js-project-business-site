@@ -1,0 +1,551 @@
+/* =========================================
+   BASE LAYOUT
+   ========================================= */
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: flex; /* sticky-footer layout */
+  flex-direction: column; /* header, main, footer i column */
+  background: rgb(251, 247, 247);
+  padding: 0;
+}
+main,
+#content {
+  flex: 1 0 auto;
+  min-height: 0;
+}
+
+/* =========================================
+   TYPOGRAPHY (headings + paragraphs)
+   ========================================= */
+
+h1 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 25px;
+  -webkit-text-stroke: 0.5px black; /* subtle outline around text */
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.4); /* translucent background for readability */
+  display: inline-block; /* shrink to fit text */
+  padding: 4px 8px;
+  border-radius: 6px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+  margin-top: 10px;
+}
+
+h2 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 18px;
+  text-align: center;
+  padding-top: 8px;
+  font-style: italic;
+  margin-top: 0;
+  margin-bottom: 0px;
+}
+
+h3 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 20px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
+  margin-top: 12px;
+  color: white;
+  -webkit-text-stroke: 0.5px black;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.4);
+  display: inline-block;
+}
+
+h4 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 25px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
+  margin-top: 12px;
+  color: white;
+  -webkit-text-stroke: 0.5px black;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.4);
+  display: inline-block;
+}
+
+p {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 15px;
+  text-align: center;
+  font-style: italic;
+  margin-top: 0.5em;
+  margin-bottom: 15px;
+  padding: 0 10px;
+}
+
+/* =========================================
+   About us class
+   ========================================= */
+
+.about {
+  margin-top: 0;
+  margin-bottom: 0px;
+  padding: 0px;
+}
+
+.about h2 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+/* =========================================
+   contact-text class
+   ========================================= */
+
+.contact-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 200px;
+  padding: 15px;
+}
+
+.contact-text p {
+  margin: 8;
+  padding: 8;
+}
+
+/* =========================================
+   HEADER (site top bar)
+   ========================================= */
+
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  padding: 20px;
+  align-items: center;
+  background: black;
+  position: relative;
+  z-index: 10; /* keeps nav above hero video */
+}
+
+.brand {
+  display: flex; /* logo + text next to each other */
+}
+
+.logo-text {
+  display: none; /* hidden on mobile, shown later in MQ */
+}
+
+/*LOGO IMAGE*/
+.logo {
+  width: 30px;
+  height: auto;
+  margin-right: 8px;
+  display: block;
+}
+
+/* =========================================
+   NAVIGATION MENU (mobile first)
+   ========================================= */
+
+.top-nav {
+  display: none; /* hidden by default on mobile */
+  position: absolute;
+  top: 100%; /* right below the header */
+  left: 0;
+  right: 0;
+  background: black;
+  z-index: 20; /* above content */
+}
+
+.top-nav ul {
+  list-style: none; /* remove bullets */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column; /* stacked links */
+  gap: 0.4rem;
+}
+
+.top-nav a {
+  display: block;
+  padding: 10px 15px;
+  background: #222;
+  border: 1px solid #444;
+  border-radius: 6px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Hamburger button (mobile only) */
+.menu-toggle {
+  display: block;
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: white;
+}
+
+/* Navigation when menu is opened */
+.top-nav.active {
+  display: block;
+  width: 100%;
+  padding: 10px 10px;
+  text-align: end;
+}
+
+/* Blur effect when nav or modal is open */
+.blur {
+  filter: blur(5px);
+  transition: filter 0.3s ease;
+}
+
+/* =========================================
+   HERO SECTION
+   ========================================= */
+
+.hero {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  color: rgb(250, 249, 249);
+  text-align: center;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fill hero without distortion */
+  z-index: 10; /* behind the text */
+}
+
+.hero-opening {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  color: rgb(250, 249, 249);
+  text-align: center;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.hero-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fill hero without distortion */
+  z-index: -1; /* behind the text */
+  object-position: center;
+}
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  margin-top: 10px;
+  background-color: black;
+}
+
+footer p {
+  text-align: center;
+  font-size: 13px;
+  padding: 0px;
+  font-style: normal;
+  margin: 10px;
+}
+
+/*Instagram Link*/
+a {
+  color: rgb(154, 146, 225);
+}
+
+/* =========================================
+   GRID CARDS (about, menu, order, etc.)
+   ========================================= */
+
+.grid-info {
+  display: grid;
+  justify-items: center;
+  align-items: start;
+  grid-auto-rows: 1fr;
+  grid-template-columns: 1fr; /* one column on mobile */
+  padding: 2px;
+  box-sizing: border-box;
+  gap: 10px;
+}
+
+.box {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 2px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2), 0 8px 30px rgba(0, 0, 0, 0.15);
+  color: white;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 12px 10px;
+  min-height: 250px;
+  box-sizing: border-box;
+}
+
+/* Background images for the 4 cards */
+.box1 {
+  background-image: url("images/coffeeheart.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.box2 {
+  background-image: url("images/coffeemaking.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.box3 {
+  background-image: url("images/menu.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.box4 {
+  background-image: url("images/coffeetakeaway.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* =========================================
+   BUTTONS (open, close, general)
+   ========================================= */
+
+/* Base style for all buttons except menu-toggle and close-btn */
+button:not(.menu-toggle):not(.close-btn),
+.open-btn {
+  display: inline-block;
+  padding: 8px 20px;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  width: 90%;
+}
+
+/* Primary "open" buttons on the cards */
+.open-btn {
+  background-color: rgba(255, 255, 255, 0.6);
+  color: black;
+  border: 2px solid black;
+}
+
+/* Close buttons inside modals/popups */
+.close-btn {
+  display: block;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: 2px solid white;
+  width: 90%;
+  margin: 1rem auto;
+}
+
+/* Hover effect for all buttons (except menu-toggle and close) */
+button:not(.menu-toggle):not(.close-btn):hover,
+.open-btn:hover {
+  background: linear-gradient(145deg, rgb(244, 246, 245), rgb(13, 23, 11));
+  color: #fff;
+  cursor: pointer;
+}
+
+/* =========================================
+   MEDIA QUERIES
+   ========================================= */
+
+/* ===== Tablet (>= 667px) ===== */
+@media (min-width: 667px) {
+  .brand {
+    text-decoration: none;
+  }
+
+  .site-header {
+    align-items: center;
+  }
+
+  .logo-text {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  }
+
+  .top-nav {
+    display: block;
+    width: auto;
+    position: static;
+    padding: 20px;
+    text-decoration: none;
+  }
+
+  .top-nav ul {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 50px;
+  }
+
+  .top-nav a {
+    background: none;
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+    display: inline-block;
+    color: #f8f1e7;
+    text-decoration: none;
+    line-height: 1;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  .grid-info {
+    grid-template-columns: repeat(2, 1fr); /* 2-column layout */
+    gap: 6px;
+  }
+
+  .box {
+    min-height: 330px;
+    width: 100%;
+    padding: 8px;
+    margin: 0px;
+  }
+
+  button {
+    width: 80%;
+    padding: 6px 14px;
+    font-size: 13px;
+    align-self: center;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+  p {
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  footer p {
+    text-align: center;
+    font-size: 15px;
+  }
+}
+
+/* ===== Desktop (>= 1024px) ===== */
+@media (min-width: 1024px) {
+  .hero {
+    height: 60vh;
+  }
+
+  .grid-info {
+    grid-template-columns: repeat(4, 1fr); /* 4-column layout */
+    gap: 5px;
+  }
+
+  .box {
+    min-height: 360px;
+    max-width: 360px;
+    margin-bottom: 30px;
+  }
+
+  button {
+    width: 80%;
+    padding: 6px 14px;
+    font-size: 13px;
+    align-self: center;
+    cursor: pointer;
+  }
+
+  /* On hover, each box slightly grows and gets a stronger shadow
+   to create an interactive "lift up" effect */
+  .box:hover {
+    transform: scale(1.05); /* slight zoom effect */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .top-nav {
+    display: block;
+  }
+
+  .top-nav ul {
+    flex-direction: row;
+    gap: 50px;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  h1 {
+    font-size: 50px;
+  }
+
+  button:hover {
+    background: linear-gradient(145deg, rgb(244, 246, 245), rgb(13, 23, 11));
+    color: #fff;
+  }
+
+  .top-nav a:hover {
+    color: rgb(91, 163, 14);
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  footer p {
+    text-align: center;
+    font-size: 15px;
+  }
+
+  /*Instagram Link hover on desktop*/
+
+  a:hover {
+    color: green;
+  }
+}

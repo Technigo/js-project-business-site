@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!--Making the page responsive on different screen sizes-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+
+    <!--=====External CSS files====-->
+    <!--CSS for the popup boxes-->
+    <link rel="stylesheet" href="popupbox.css" />
+    <!--Css for the form-->
+    <link rel="stylesheet" href="forms.css" />
+    <!--Css for the overal style on the page-->
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!--Font "Awesome" for icons, used for hambruger meny-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!--Javascript file (menu and popup functionality)-->
+    <script src="index.js" defer></script>
+  </head>
+
+  <body>
+    <!--=====================HEADER===========================-->
+    <!--named the class for the header to "site-header"-->
+    <header class="site-header">
+      <!--Logo and brand text for the site-->
+      <a class="brand" href="index.html">
+        <img src="images/expresso.png" alt="Coffee logo" class="logo" />
+        <span class="logo-text">Legacy Coffee</span></a
+      >
+
+      <!--hamburger menu button (only visible on mobile)-->
+      <button
+        class="menu-toggle"
+        aria-label="Open menu"
+        aria-controls="myTopnav"
+        aria-expanded="false"
+      >
+        <!-- Font Awesome solid (fylld ikon) + bars (hamburgerikon) -->
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <!--navigation links-->
+      <nav class="top-nav" id="myTopnav">
+        <ul>
+          <li><a href="openinghours.html">OPENING HOURS</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!--========================MAIN CONTENT====================================-->
+    <div id="page">
+      <main id="content">
+        <!-- Hero-sektion with a background video-->
+        <section class="hero-opening" aria-labelledby="hero-title">
+          <img src="./images/barista.jpg" alt="cake" class="hero-img" />
+          <h1 id="hero-title">CONTACT</h1>
+        </section>
+        <section class="contact-text">
+          <p><strong>Phone number</strong>: 08-123 456 78</p>
+          <p><strong>Email</strong>: LegacyCoffee@gmail.com</p>
+          <p>
+            Would like to collaborate with us? Feel free to contact us via our
+            Instagram
+          </p>
+        </section>
+      </main>
+
+      <!--===Footer with contact details====-->
+      <footer>
+        <p>@2025 Legacy Coffee</p>
+        <p>Storgatan 29 Stockholm</p>
+        <p>
+          Follow our instagram:
+          <!-- This link opens in a new tab.
+            The rel="noopener noreferrer" part improves security
+            by preventing the new page from accessing our site,
+             and also hides the referrer information. -->
+          <a
+            href="https://www.instagram.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Instagram</a
+          >
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!--Making the page responsive on different screen sizes-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Legacy Coffee</title>
+
+    <!--=====External CSS files====-->
+    <!--CSS for the popup boxes-->
+    <link rel="stylesheet" href="popupbox.css" />
+    <!--Css for the form-->
+    <link rel="stylesheet" href="forms.css" />
+    <!--Css for the overal style on the page-->
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!--Font "Awesome" for icons, used for hambruger meny-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!--Javascript file (menu and popup functionality)-->
+    <script src="index.js" defer></script>
+  </head>
+
+  <body>
+    <!--=====================HEADER===========================-->
+    <!--named the class for the header to "site-header"-->
+
+    <header class="site-header">
+      <!--Logo and brand text for the site-->
+      <a class="brand" href="index.html">
+        <img src="images/expresso.png" alt="Coffee logo" class="logo" />
+        <span class="logo-text">Legacy Coffee</span></a
+      >
+
+      <!--hamburger menu button (only visible on mobile)-->
+      <button
+        class="menu-toggle"
+        aria-label="Open menu"
+        aria-controls="myTopnav"
+        aria-expanded="false"
+      >
+        <!-- Font Awesome solid (fylld ikon) + bars (hamburgerikon). i=icon element -->
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <!--navigation links-->
+      <nav class="top-nav" id="myTopnav">
+        <ul>
+          <li><a href="openinghours.html">OPENING HOURS</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!--========================MAIN CONTENT====================================-->
+    <div id="page">
+      <main id="content">
+        <!-- Hero-sektion with a background video-->
+        <section class="hero" aria-labelledby="hero-title">
+          <video autoplay muted loop playsinline class="hero-video">
+            <source src="videos/coffeemaking.mp4" type="video/mp4" />
+          </video>
+          <h1 id="hero-title">WELCOME TO LEGACY COFFEE</h1>
+        </section>
+
+        <section class="about">
+          <!--short intro text-->
+          <h2>About us</h2>
+          <p>
+            Our family has run this café for generations, serving exceptional
+            coffee made from beans grown under fair and sustainable conditions.
+          </p>
+        </section>
+
+        <!--Grid with four info cards-->
+        <section>
+          <div class="grid-info">
+            <!--==BOX 1==-->
+            <!--Each card has a button that opens a popup. class= box is the overal style for all the boxes. Then each boxes has their one class=boxX-->
+            <article class="box box1">
+              <h3>A coffee with heart in every cup</h3>
+              <!-- Button that opens a popup. 
+                 - class="open-btn": all buttons with this class get the same JS event listener.
+                 - data-target="box1": tells JavaScript which popup to open (matches the popup <div> with id="box1").-->
+              <button class="open-btn" data-target="box1">
+                Read more about us
+              </button>
+            </article>
+
+            <!--==BOX 2==-->
+            <article class="box box2">
+              <h3>Coffee that makes a difference</h3>
+              <!-- Works the same way as Box 1:
+                 - open-btn: handled by JavaScript. 
+                 - data-target="box2": opens the popup with id="box2". -->
+              <button class="open-btn" data-target="box2">Read more</button>
+            </article>
+
+            <!--==BOX 3==-->
+            <article class="box box3">
+              <h3>Take a look at our coffee menu</h3>
+              <!-- Same logic again:
+                  - open-btn: all these buttons share the same event in JS. 
+                  - data-target="box3": opens the popup with id="box3". -->
+              <button class="open-btn" data-target="box3">Menu</button>
+            </article>
+
+            <!--==BOX 4==-->
+            <article class="box box4">
+              <h3>Skip the line, order in advance</h3>
+              <button class="open-btn" data-target="myForm">Order here</button>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <!--===Footer with contact details====-->
+      <footer>
+        <p>@2025 Legacy Coffee</p>
+        <p>Storgatan 29 Stockholm</p>
+        <p>
+          Follow our instagram:
+          <!-- This link opens in a new tab.
+            The rel="noopener noreferrer" part improves security
+            by preventing the new page from accessing our site,
+             and also hides the referrer information. -->
+          <a
+            href="https://www.instagram.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Instagram</a
+          >
+        </p>
+      </footer>
+    </div>
+
+    <!-- ================= POPUPS ================= -->
+    <!-- Each popup corresponds to one of the cards above -->
+
+    <!-- Popup 1: About us -->
+    <div class="box-popup" id="box1">
+      <article class="info">
+        <h2>About us</h2>
+        <p>
+          When coffee became scarce during World War II, Aunt Agda opened her
+          little café. Whenever real beans could be found, she served a genuine
+          cup – a rare luxury in a time of rationing and substitutes.
+        </p>
+        <p>
+          After the war, her daughter Ingrid took over and turned the café into
+          a symbol of hope. As real coffee returned, she focused on quality and
+          care in every cup.
+        </p>
+        <p>
+          Today, the café is still run by the family. Agda’s legacy lives on
+          through organic, toxin-free coffee grown under fair conditions – and a
+          warm sense of community that tastes just as good now as it did then.
+        </p>
+        <!-- Close button for this popup.
+      - class="close-btn": JavaScript listens for clicks on all elements with this class. 
+      - data-target="box1": tells the script which popup to close (matches this <div id="box1">). -->
+        <button class="close-btn" data-target="box1">Back</button>
+      </article>
+    </div>
+
+    <!-- Popup 2: Our passion -->
+    <div class="box-popup" id="box2">
+      <article class="info">
+        <h2>Our passion</h2>
+        <p>
+          We are passionate about coffee that does good – both in the cup and
+          for the world. That’s why we source beans from farmers who use
+          sustainable methods that respect nature and the climate. Just as
+          important is ensuring that the people behind the coffee have fair
+          working conditions and receive fair pay for their work.
+        </p>
+        <p>
+          Our coffee is certified by internationally recognized labels such as
+          Fairtrade, KRAV, and Rainforest Alliance – a guarantee of both great
+          taste and a responsible choice. The result is high-quality coffee you
+          can truly enjoy with a clear conscience.
+        </p>
+        <!-- Same logic as popup 1:
+      - close-btn: used by JavaScript to attach the close action.
+      - data-target="box2": closes <div id="box2"> when clicked.-->
+        <button class="close-btn" data-target="box2">Back</button>
+      </article>
+    </div>
+
+    <!-- Popup 3: Menu -->
+    <div class="box-popup" id="box3">
+      <article class="info">
+        <img src="./images/menu.png" alt="menu" class="popup-img" />
+        <!--Same again:
+      - close-btn: activates the close function.
+      - data-target="box3": closes <div id="box3">.-->
+        <button class="close-btn" data-target="box3">Back</button>
+      </article>
+    </div>
+
+    <!-- ================= ORDER FORM (Modal) ================= -->
+
+    <div class="form-popup" id="myForm">
+      <div class="modal-content">
+        <!--  This <form> is inside a modal (hidden at first). 
+      When the "Order here" button is clicked, JavaScript shows this modal.
+      When "Back" is clicked, JavaScript hides it again.-->
+        <form action="http://httpbin.org/anything" method="POST">
+          <h2>ORDER</h2>
+
+          <!-- Contact details -->
+          <fieldset>
+            <legend>Contact details</legend>
+            <label for="name">Name</label><br />
+            <input type="text" id="name" name="name" required /><br />
+            <label for="phonenumber">Phone number</label><br />
+            <input
+              type="number"
+              id="phonenumber"
+              name="phonenumber"
+              required
+            /><br />
+          </fieldset>
+
+          <!-- Choice of coffee -->
+          <fieldset>
+            <legend>Choice of coffee</legend>
+            <!-- Dropdown menu with different coffee types -->
+            <select class="choice" name="choice" id="choice">
+              <option value="Cappuccino">Cappuccino</option>
+              <option value="Espresso">Espresso</option>
+              <option value="Latte">Latte</option>
+              <option value="Macchiato">Macchiato</option>
+              <option value="Flat White">Flat White</option>
+              <option value="Mocha">Mocha</option>
+              <option value="Cortado">Cortado</option>
+              <option value="Iced Coffee">Iced Coffee</option>
+              <option value="Americano">Americano</option>
+            </select>
+          </fieldset>
+
+          <!-- Coffee size -->
+          <fieldset>
+            <legend>Size</legend>
+            <div class="size-row">
+              <!-- Custom-styled radio buttons. 
+               Only one size can be chosen. 
+               "Small" is checked by default. -->
+              <label class="radiobutton">
+                <span>Small</span>
+                <input type="radio" name="size" value="Small" checked />
+                <span class="style-radiobutton"></span>
+              </label>
+              <label class="radiobutton">
+                <span>Medium</span>
+                <input type="radio" name="size" value="Medium" />
+                <span class="style-radiobutton"></span>
+              </label>
+              <label class="radiobutton">
+                <span>Large</span>
+                <input type="radio" name="size" value="Large" />
+                <span class="style-radiobutton"></span>
+              </label>
+            </div>
+          </fieldset>
+
+          <!-- Pickup time -->
+          <fieldset>
+            <legend>Pickup time</legend>
+            <!-- The customer must select a time for when they want to pick up the order -->
+            <input type="time" id="pickup-time" name="pickup-time" required />
+          </fieldset>
+
+          <!-- Buttons (side by side) -->
+          <div class="center-button">
+            <!-- "Send" submits the form data to http://httpbin.org/anything 
+             (a test service that simply returns the sent data) -->
+            <button type="submit">Send</button>
+            <!-- "Back" closes the modal without submitting anything
+          - close-btn: handled by JavaScript. 
+          - data-target="myForm": closes <div id="myForm">.-->
+            <button class="close-btn" data-target="myForm">Back</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
