@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SportLink</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <header class="hero">
+    <img
+      class="hero-image"
+      src="./hero-modified.jpeg"
+      alt="group of running people"
+    >
+    <nav class="navbar" id="nav">
+      <div 
+        class="menu-icon" 
+        id="menuIcon">
+        <img 
+          class="hamburger-icon" 
+          id="hamburgerIcon" 
+          src="./burger-menu-white.svg" 
+          alt="hamburger menu icon">
+        <img 
+          class="cross-icon hidden" 
+          id="crossIcon" 
+          src="./burger-menu-cross-white.svg"
+          alt="cross menu icon">
+      </div>
+      <ul class="nav-links" id="links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </nav>
+    <div class="hero-content">
+      <img
+        class="logo"
+        src="./logo.png"
+        alt="logo">
+      <div>
+        <img
+        class="hamburger-logo"
+        id="hamburgerLogo"
+        src="./logo.png"
+        alt="logo">
+        </div>
+      <p>All the city's free social workouts—gathered in one place so you can stay active and make
+        friends along the way.</p>
+      <a href="#form">
+        <button class="primary-cta">
+          Sign up!
+        </button>
+      </a>
+    </div>
+  </header>
+  <main>
+    <section class="introduction">
+        <h1>Bored of working out solo? We've got you!</h1>
+        <p>Staying active doesn't have to be boring—or solo. Our platform brings together the city's free social sports
+          events so you can find activities that fit your schedule, your energy, and your mood. Whether you're into
+          early
+          morning run clubs, yoga sessions in the park, or high-energy group workouts, everything is in one place. Join,
+          and connect with like-minded people who love to move.</p>
+    </section>
+    <section class="events-section" id="events">
+      <h2>Current events</h2>
+      <section class="card-section">
+        <div class="modal-overlay hidden" id="modalOverlay">
+          <img 
+          class="cross-icon" 
+          id="modalCrossIcon" 
+          src="./burger-menu-cross-white.svg" alt="cross menu icon">
+          <div class="modal" id="modalPopup">
+            <div class="modal-content" id="modalContent"></div>
+            <p><b>Connect with the club on social media</b></p>
+            <div class="social-links">
+              <a href="#" class="fa fa-facebook"></a>
+              <a href="#" class="fa fa-instagram"></a>
+            </div>
+          </div>
+        </div>
+        <div class="card" id="card">
+          <h3 class="card-title">Thursday Run Club</h3>
+          <img
+            src="./group-run.jpeg"
+            alt="group of runners"
+          >
+          <div class="card-description">
+            <div class="location-date-box">
+              <p>📍 Mariatorget, Stockholm <br> 🕐 18.00 every Thursday</p>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do il dolore eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+          <button class="card-button">Read more</button>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Vinyasa Flow Mornings</h3>
+          <img
+            src="./yoga-session.jpeg"
+            alt="group yoga session in park"
+          >
+          <div class="card-description">
+            <div class="location-date-box">
+              <p>📍 Vasaparken, Stockholm <br> 🕐 11.00 every Saturday</p>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do il dolore eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+          <button class="card-button">Read more</button>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Tuesday Run Club - Cruisers (Slow)</h3>
+          <img
+            src="./group-run.jpeg"
+            alt="group of runners"
+          >
+          <div class="card-description">
+            <div class="location-date-box">
+              <p>📍 Mariatorget, Stockholm <br> 🕐 18.30 every Tuesday</p>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do il dolore eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+          <button class="card-button">Read more</button>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Stretch & Mobility</h3>
+          <img
+            src="./yoga-in-park.jpeg"
+            alt="group yoga session in park"
+          >
+          <div class="card-description">
+            <div class="location-date-box">
+              <p>📍 Tantolunden, Stockholm <br> 🕐 12.00 every Saturday and Sunday</p>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do il dolore eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+          <button class="card-button">Read more</button>
+        </div>
+      </section>
+      <div class="button-wrapper">
+      <a href="">
+        <button class="events-button">
+          More events
+        </button>
+      </div>
+      </a>
+    </section>
+    <section class="form-section" id="form">
+      <h2>Sign up to not miss out on new events!</h2>
+      <p>Sign up to get the latest social sports events straight to your inbox. Pick the activities you love and your skill level, and we'll make sure you get updates on new events that match your interests and pace.</p>
+      <form
+        class="sign-up-form"
+        action="https://httpbin.org/anything"
+        method="POST"
+      >
+        <fieldset>
+          <legend>Newsletter Sign up</legend>
+          <label class="text-field">
+            <span>First name</span>
+            <input
+              type="text"
+              name="first-name"
+              placeholder="Emma"
+              required
+            >
+          </label>
+          <label class="text-field">
+            <span>Last name</span>
+            <input
+              type="text"
+              name="last-name"
+              placeholder="Andersson"
+              required
+            >
+          </label>
+          <label class="text-field">
+            <span>Email</span>
+            <input
+              type="email"
+              name="email"
+              placeholder="example@example.com"
+              required
+            >
+          </label>
+          <p>What are you interested in?</p>
+          <label class="checkbox">Running
+            <input
+              type="checkbox"
+              name="interest"
+              value="running"
+              checked
+            >
+            <span class="custom-checkbox"></span>
+          </label>
+          <label class="checkbox">Cycling
+             <input
+              type="checkbox"
+              name="interest"
+              value="cycling"
+             >
+            <span class="custom-checkbox"></span>
+          </label>
+          <label class="checkbox">Yoga
+            <input
+              type="checkbox"
+              name="interest"
+              value="yoga"
+            >
+            <span class="custom-checkbox"></span>
+          </label>
+          <label class="checkbox">Mobility
+            <input
+              type="checkbox"
+              name="interest"
+              value="mobility"
+            >
+            <span class="custom-checkbox"></span>
+          </label>
+          <p>What is your skill level?</p>
+          <label class="radio-button">Beginner
+            <input
+              type="radio"
+              name="skill-level"
+              value="beginner"
+              checked
+              > 
+            <span class="custom-radio-button"></span>
+          </label>
+          <label class="radio-button">Intermediate
+            <input
+              type="radio"
+              name="skill-level"
+              value="intermediate"
+            >
+            <span class="custom-radio-button"></span>
+          </label>
+          <label class="radio-button">Advanced
+            <input
+              type="radio"
+              name="skill-level"
+              value="advanced"
+            >
+            <span class="custom-radio-button"></span>
+          </label>
+          <button class="submit-button" type="submit">
+            Sign me up!
+          </button>
+        </fieldset>
+      </form>
+    </section>
+  </main>
+  <script src="script.js"></script>
+  <footer>
+    <p>© Copyright</p>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,577 @@
+body {
+  margin: 0;
+  padding: 0;
+  /* remove default space on the sides */
+  background-color: rgba(238, 234, 228, 0.438);
+  /*background-color: rgba(248, 248, 248, 0.94);*/
+  color: rgb(53, 51, 32);
+  font-family: "Libre Franklin", sans-serif;
+}
+
+.hero {
+  position: relative;
+  /* prevents hero to take up the entire page */
+  height: 450px;
+  overflow: hidden;
+  box-shadow: 0 0 2px grey;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  /* prevent from pushing the hero content below the hero image */
+  z-index: 0;
+  /* put image as bottom layer */
+  object-position: bottom center;
+}
+
+.logo {
+  width: 200px;
+  height: auto;
+  margin-top: 30px;
+}
+
+.navbar,
+.hero-content {
+  position: relative;
+  z-index: 1;
+  /* appear on top of image */
+  color: white;
+}
+
+.navbar {
+  cursor: pointer;
+  padding: 7px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hamburger-icon {
+  width: 50px;
+  margin: 18px;
+  display: none;
+}
+
+.cross-icon {
+  width: 50px;
+  margin: 18px;
+}
+
+.hamburger-logo {
+  width: 120px;
+  display: none;
+}
+
+.hidden {
+  display: none !important;
+  /* marking it important so it has higher importance than the styling in media query. This to make classList toggle in JS to work */
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 50px;
+}
+
+.hero-content p {
+  margin-bottom: 36px;
+}
+
+.header-title {
+  margin-bottom: 0px;
+}
+
+.primary-cta,
+.events-button,
+.sign-up-form button {
+  background-color: rgb(164, 88, 236);
+  border: none;
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+}
+
+.primary-cta {
+  padding: 10px 24px;
+  font-size: 16px;
+  box-shadow: 3px 3px 2px rgba(38, 38, 38, 0.544),
+    0 0 0 transparent,
+    0 0 0 transparent;
+}
+
+.events-button {
+  padding: 10px 20px;
+  box-shadow: 3px 3px 2px rgba(193, 193, 193, 0.771),
+    0 0 0 transparent,
+    0 0 0 transparent;
+}
+
+.button-wrapper {
+  margin: 42px;
+}
+
+.card-button {
+  border: 2px solid rgb(164, 88, 236);
+  background-color: transparent;
+  padding: 7px 10px;
+  color: rgb(164, 88, 236);
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.card-button:hover {
+  background-color: rgba(212, 185, 238, 0.202);
+}
+
+.primary-cta:hover,
+.events-button:hover,
+.sign-up-form button:hover {
+  background-color: rgb(154, 82, 220);
+}
+
+.introduction {
+  text-align: center;
+  margin: 62px;
+}
+
+.events-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(222, 219, 213, 0.281);
+  box-shadow: 0 0 5px rgba(193, 193, 193, 0.48);
+  border-radius: 5px;
+  padding: 2px 8px;
+  margin: 60px 12px 60px;
+}
+
+.events-section h2 {
+  margin: 42px 40px;
+}
+
+.card-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  gap: 20px 30px;
+  padding: 10px 30px;
+  margin-bottom: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(246, 244, 242);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgb(193, 193, 193);
+  transition: 0.5s;
+}
+
+.card-description {
+  flex: 1;
+  /* make buttons align vertically */
+}
+
+.location-date-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 0 2px grey;
+}
+
+.card:hover {
+  transform: translate(0, -5px);
+  /* add card up movement on hover */
+  background-color: rgb(247, 246, 246);
+}
+
+.card-title {
+  font-size: 14px;
+}
+
+.modal-overlay {
+  display: flex;
+  flex-direction: column;
+  position: fixed; /* stay in place */
+  z-index: 1; /* sit on top */
+  left: 0;
+  top: 0;
+  width: 100vw; /* full width */
+  height: 100vh; /* full height */
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-overlay .cross-icon {
+  width: 60px;
+  align-self: end;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed; /* stay in place */
+  z-index: 1; /* sit on top */
+  left: 10%;
+  right: 10%;
+  height: 80vh;
+  top: 0;
+  margin: 70px auto;
+  overflow: auto; /* enable scroll if needed */
+  border-radius: 5px;
+  background-color: rgb(247, 244, 241);
+  padding: 20px;
+  max-width: 700px;
+}
+
+.modal img {
+  width: 70%;
+  box-shadow: 0 0 2px grey;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 12px 20px 20px 20px;
+}
+
+.modal h3 {
+  font-size: x-large;
+}
+
+.modal .social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+
+.fa {
+  padding: 10px;
+  width: 20px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+/* Instagram */
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 30px;
+}
+
+.sign-up-form {
+  max-width: 500px;
+  margin: 40px auto;
+}
+
+.sign-up-form fieldset {
+  background-color: rgb(250, 248, 247);
+  box-shadow: 4px 4px 2px rgba(193, 193, 193, 0.771),
+    0 0 0 transparent,
+    0 0 0 transparent;
+  border: 1px solid rgba(193, 193, 193, 0.771);
+  padding: 30px 20px;
+  border-radius: 5px;
+}
+
+.text-field {
+  display: flex;
+  padding: 5px 0;
+  border-bottom: 1px solid rgb(231, 229, 219);
+}
+
+.text-field span {
+  width: 40%;
+}
+
+.text-field input {
+  margin-left: 7px;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+}
+
+.text-field input:focus {
+  border: 2px solid rgb(164, 88, 236);
+  outline: none;
+}
+
+
+.sign-up-form p {
+  margin-top: 30px;
+  font-weight: 600;
+}
+
+/* styling for the parent/box of the checkbox */
+.checkbox {
+  position: relative;
+  padding-left: 25px;
+  margin: 10px 5px;
+  user-select: none;
+}
+/*
+/* remove default styling of the checkboxes */
+.checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* style our custom checkboxes */
+.custom-checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 19px;
+  width: 19px;
+  background-color: #eee;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.checkbox:hover input~.custom-checkbox {
+  background-color: #ccc;
+}
+
+.checkbox input:checked~.custom-checkbox {
+  background-color: rgb(164, 88, 236);
+}
+
+/* The styling to be applied when custom-radio-button is checked */
+.custom-checkbox:after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 6px;
+  top: 5px;
+  left: 7px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+  /* To only make it visible when checked */
+  display: none;
+}
+
+.checkbox input:checked~.custom-checkbox:after {
+  display: block;
+}
+
+.checkbox input:focus+.custom-checkbox {
+  outline: rgba(118, 117, 119, 0.666) auto 1px;
+}
+
+/* styling for the parent/box of the radio buttons */
+.radio-button {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin: 10px 5px;
+}
+
+/* remove default styling */
+.radio-button input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* style our custom radio buttons */
+.custom-radio-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 19px;
+  width: 19px;
+  background-color: #eee;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.radio-button:hover input~.custom-radio-button {
+  background-color: #ccc;
+}
+
+.radio-button input:checked~.custom-radio-button {
+  background-color: rgb(164, 88, 236);
+}
+
+/* The styling to be applied when custom-radio-button is checked */
+.custom-radio-button:after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 7px;
+  height: 7px;
+  background-color: white;
+  border-radius: 50%;
+  /* To only make it visible when checked */
+  display: none;
+}
+
+.radio-button input:checked~.custom-radio-button:after {
+  display: block;
+}
+
+.radio-button input:focus+.custom-radio-button {
+  outline: rgba(118, 117, 119, 0.666) auto 1px;
+}
+
+.sign-up-form button {
+  display: flex;
+  margin: 40px auto 0;
+  padding: 7px 20px;
+  box-shadow: 3px 3px 2px rgba(193, 193, 193, 0.771),
+    0 0 0 transparent,
+    0 0 0 transparent
+}
+
+
+footer {
+  padding: 20px;
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+}
+
+
+/* specific styling for small screen */
+@media only screen and (max-width: 500px) {
+
+  .menu-icon {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .hamburger-logo{
+    display: block;
+  }
+
+  .hamburger-icon {
+    display: block;
+  }
+
+  .navbar {
+    height: 100%;
+    width: 100px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 65%;
+    height: 100%;
+    padding: 0 7px 16px 16px;
+    margin-left: 5px;
+    /* hide nav links */
+    display: none;
+  }
+
+  .nav-links li {
+    margin-top: 7px;
+    border-bottom: 1px solid #f9f7f36b;
+  }
+
+  .nav-links a {
+    /*color: rgb(53, 51, 32);*/
+    font-weight: 500;
+  }
+
+  .hero {
+      display: flex;
+      flex-direction: column;
+  }
+
+  .hero-content {
+    margin: 100px auto;
+    position: absolute;
+    /* prevent from pushing the hero content below the hero image */
+    z-index: 0;
+  }
+
+  .card-section {
+    grid-template-columns: 1fr;
+    /* limit to 1 column */
+  }
+
+  .card:hover {
+    transform: translate(5px, 0);
+    /* add card movement to right side instead of up on hover */
+  }
+
+}
+
+@media only screen and (max-width: 649px) {
+
+  .introduction {
+    flex-direction: column;
+  }
+
+  .card:hover {
+    transform: translate(5px, 0);
+    /* add card movement to right side instead of up on hover */
+  }
+
+}
+
+
+/* specific styling for wide-screen */
+@media only screen and (min-width: 1500px) {
+
+  .card-section {
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 2rem;
+  }
+}
