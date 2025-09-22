@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Floral Edit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Header -->
+
+    <header>
+      <!-- Navigation -->
+
+      <nav aria-label="Main navigation">
+        <span style="cursor: pointer"></span>
+        <!-- Always visible -->
+        <ul class="logo">
+          <li class="logo-link">
+            <a href="#"><h2>((F.E.))</h2></a>
+          </li>
+        </ul>
+        <!-- / Always visible -->
+
+        <!-- Hamburger menu -->
+        <button class="hamburger" id="hamburger" aria-label="menu-hamburger">
+          <svg
+            class="icon icon-hamburger"
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M 3.5 3 A 0.50005 0.50005 0 1 0 3.5 4 L 20.5 4 A 0.50005 0.50005 0 1 0 20.5 3 L 3.5 3 z M 3.5 11 A 0.50005 0.50005 0 1 0 3.5 12 L 20.5 12 A 0.50005 0.50005 0 1 0 20.5 11 L 3.5 11 z M 3.5 19 A 0.50005 0.50005 0 1 0 3.5 20 L 20.5 20 A 0.50005 0.50005 0 1 0 20.5 19 L 3.5 19 z"
+            ></path>
+          </svg>
+          <svg
+            class="icon icon-close"
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M 20.496094 2.9921875 A 0.50005 0.50005 0 0 0 20.146484 3.1464844 L 12 11.292969 L 3.8535156 3.1464844 A 0.50005 0.50005 0 0 0 3.4941406 2.9941406 A 0.50005 0.50005 0 0 0 3.1464844 3.8535156 L 11.292969 12 L 3.1464844 20.146484 A 0.50005 0.50005 0 1 0 3.8535156 20.853516 L 12 12.707031 L 20.146484 20.853516 A 0.50005 0.50005 0 1 0 20.853516 20.146484 L 12.707031 12 L 20.853516 3.8535156 A 0.50005 0.50005 0 0 0 20.496094 2.9921875 z"
+            ></path>
+          </svg>
+        </button>
+        <!--/  Hamburger menu -->
+
+        <!-- Collapsable menu -->
+        <ul class="main-menu" id="nav-links">
+          <li class="menu"><a href="#">Home</a></li>
+          <li class="menu"><a href="#about-section">About</a></li>
+          <li class="menu">
+            <a href="#subscription-section">Subscriptions</a>
+          </li>
+          <li class="menu"><a href="#news-section">Blog</a></li>
+          <li class="menu"><a href="#contact-section">Contact us</a></li>
+        </ul>
+        <!-- / Collapsable menu -->
+      </nav>
+    </header>
+    <!-- / Navigation -->
+
+    <!-- Hero section -->
+    <section class="hero" aria-labelledby="hero-block">
+      <div id="hero-content">
+        <h1>(( The Floral Edit ))</h1>
+        <p id="hero-description">Sustainable beauty, right at your doorstep</p>
+        <div class="btn-wrapper">
+          <button class="action action-main">Choose your flowers</button>
+          <button class="action action-secondary">Learn more</button>
+        </div>
+      </div>
+    </section>
+    <!-- / Hero section -->
+    <!-- / Header -->
+
+    <!-- About -->
+    <article id="about-section" class="about-container">
+      <h2>(What is flower subsription?)</h2>
+
+      <div class="about-point about-1">
+        <img
+          id="pic-time"
+          class="about-pic"
+          width="100"
+          height="100"
+          src="./assets/v783-noon-70 1.png"
+          alt="delivery-time"
+        />
+        <div class="about-text">
+          <h3>((Fresh beauty, always))</h3>
+          <p>
+            A flower subscription means never missing out on seasonal blooms.
+            Each delivery brings fresh, locally grown flowers straight to your
+            home—always styled and ready to enjoy.
+          </p>
+        </div>
+      </div>
+
+      <div class="about-point about-2">
+        <img
+          class="about-pic"
+          width="100"
+          height="100"
+          src="./assets/v783-noon-70 4.png"
+          alt="strategy-board"
+        />
+
+        <div class="about-text">
+          <h3>((Indulge in aesthetics))</h3>
+          <p>
+            Your arrangements arrive in curated vases that match the bouquet, so
+            every drop-off instantly becomes part of your home's aesthetic—no
+            extra shopping or guesswork.
+          </p>
+        </div>
+      </div>
+
+      <div class="about-point about-3">
+        <img
+          class="about-pic"
+          width="100"
+          height="100"
+          src="./assets/v783-noon-70 3.png"
+          alt="money--v1"
+        />
+
+        <div class="about-text">
+          <h3>((Responsible choice))</h3>
+          <p>
+            By subscribing, you support local growers and responsibly sourced
+            flowers. It's beauty you can feel good about, designed to bring joy
+            without harming the planet.
+          </p>
+        </div>
+      </div>
+    </article>
+
+    <!-- / About -->
+
+    <!-- Subscriptions -->
+    <article id="subscription-section" class="subscription">
+      <h2>(Choose your style)</h2>
+      <div class="card">
+        <img
+          src="./assets/rikonavt-oEWdQsbRVZk-unsplash.jpg"
+          alt=""
+          class="card-image"
+        />
+        <h4>Bloom Basic</h4>
+        <p class="card-hide">
+          A simple way to bring seasonal beauty into your home without the fuss.
+          <br />
+        </p>
+        <ul>
+          <li class="card-list">
+            1 bouquet per month, arranged with seasonal, locally grown or
+            responsibly sourced flowers
+          </li>
+          <li class="card-list">
+            Curated vase rental that complements each bouquet
+          </li>
+          <li class="card-list">
+            Care tips to help your flowers stay fresh longer
+          </li>
+          <li class="card-list">Sustainable, minimal packaging</li>
+        </ul>
+        <h5 class="price"><span class="price-before">$45</span> $36/month</h5>
+        <button class="btn-card">Add subscription</button>
+      </div>
+
+      <div class="card">
+        <img
+          src="./assets/annie-spratt-WBpr_yH0Frg-unsplash.jpg"
+          alt=""
+          class="card-image"
+        />
+        <h4>Flourish Monthly</h4>
+        <p>
+          For those who want more variety and a touch of artistry in their
+          space. <br />
+        </p>
+        <ul>
+          <li class="card-list">
+            2 bouquets per month, using seasonal & responsibly sourced flowers
+          </li>
+          <li class="card-list">
+            Designer vase rentals rotated monthly for variety and style
+          </li>
+          <li class="card-list">
+            Exclusive floral style themes (color palettes, seasonal mood boards)
+          </li>
+          <li class="card-list">Option to swap delivery week if you're away</li>
+        </ul>
+        <h5 class="price"><span class="price-before">$80</span> $68/month</h5>
+        <button class="btn-card">Add subscription</button>
+      </div>
+      <div class="card">
+        <img
+          src="./assets/hugo-kruip-ckyGhu5efWU-unsplash.jpg"
+          alt=""
+          class="card-image"
+        />
+        <h4>Flowers Overtake</h4>
+        <p>
+          An immersive floral experience for those who love living with beauty.
+        </p>
+        <ul>
+          <li class="card-list">
+            <b>Weekly</b> bouquets of premium, locally grown or ethically
+            sourced flowers
+          </li>
+          <li class="card-list">Everything in <b>Flourish monthly</b></li>
+          <li class="card-list">
+            Access to <b>limited-edition bouquets</b> not available in other
+            plans
+          </li>
+          <li class="card-list">
+            <b>Seasonal extras</b> (dried floral accents, greenery, or surprise
+            stems)
+          </li>
+          <li class="card-list">Priority scheduling & flexible delivery</li>
+        </ul>
+        <h5 class="price"><span class="price-before">$175</span> $145/month</h5>
+        <button class="btn-card">Add subscription</button>
+      </div>
+    </article>
+    <!-- / Subscriptions -->
+
+    <!-- News block -->
+
+    <article id="news-section" class="news-container">
+      <h2>((Something for you))</h2>
+      <div class="news-wrapper">
+        <div class="first-news news-block">
+          <p>
+            Stories, tips, and <span>inspiration</span> from the world of
+            locally grown blooms—because flowers are more than just decoration,
+            they're a way of living beautifully and sustainably.
+            <a class="link-news" href="#">Read all</a>
+          </p>
+        </div>
+        <div class="news-block">
+          <img
+            class="news-image"
+            src="./assets/lauren-gray-e_6GhIVXoLU-unsplash.jpg"
+            alt=""
+          />
+          <h4>Behind the Bouquet: Our Sourcing Story</h4>
+          <p>
+            Take a peek into how we choose responsible growers and why local
+            flowers make all the difference.
+            <a class="link-news" href="#">Read more</a>
+          </p>
+        </div>
+        <div class="third-news news-block">
+          <img
+            class="news-image-big"
+            src="./assets/ruslan-aiginin-vGw2uwHcnU0-unsplash.jpg"
+            alt=""
+          />
+          <h4>Seasonal Spotlight: Autumn Blooms</h4>
+          <p>
+            Discover which locally grown flowers shine in autumn and how to
+            style them for a cozy, seasonal touch at home.<br /><br />
+            Think warm colors, rich textures, and bouquets that mirror the
+            changing leaves outside your window. From rustic dahlias to elegant
+            chrysanthemums, autumn flowers bring natural artistry to your table.
+            We'll show you how to pair them with the right vases and accents to
+            create effortless seasonal charm.
+            <a class="link-news" href="#">Read more</a>
+          </p>
+        </div>
+        <div class="news-block">
+          <img
+            class="news-image"
+            src="./assets/luisa-brimble-Ikcn0alusdg-unsplash.jpg"
+            alt=""
+          />
+          <h4>Fall/Winter '25-26 Floral Trends</h4>
+          <p>
+            Explore the colors, textures, and bouquet styles set to define the
+            new season—straight from the fields to your home.
+            <a class="link-news" href="#">Read more</a>
+          </p>
+        </div>
+        <div class="news-block">
+          <img
+            class="news-image"
+            src="./assets/johanne-pold-jacobsen-o47uTPGoayA-unsplash.jpg"
+            alt=""
+          />
+          <h4>Vases that Make the Mood</h4>
+          <p>
+            Learn how the right vase transforms a simple bouquet into a design
+            statement.
+            <a class="link-news" href="#">Read more</a>
+          </p>
+        </div>
+        <div class="news-block">
+          <img
+            class="news-image"
+            src="./assets/irena-carpaccio-_6oPsp-XaIc-unsplash.jpg"
+            alt=""
+          />
+          <h4>Flower Care Made Simple</h4>
+          <p>
+            Easy, sustainable tips to keep your blooms fresher for
+            longer—without complicated routines.
+            <a class="link-news" href="#">Read more</a>
+          </p>
+        </div>
+      </div>
+    </article>
+
+    <!-- / News block -->
+
+    <!-- Contact block -->
+
+    <article id="contact-section" class="contact-container">
+      <h2 class="">Would you like to order something special?</h2>
+      <p>Please write us here and we will get back to you within 24 hours:</p>
+      <form
+        id="contact-form"
+        class="form-contact"
+        action="http://httpbin.org/anything"
+        method="post"
+      >
+        <div class="form-input">
+          <label for="topic">What can we help you with?</label>
+          <select name="topic" id="topic">
+            <option value="Order a bouquet">Order a bouquet</option>
+            <option value="Wedding arrangements">Wedding arrangements</option>
+            <option value="Apartment greenery">Apartment greenery</option>
+            <option value="Dried flowers arangements">
+              Dried flowers arangements
+            </option>
+            <option value="Apartment greenery">Apartment greenery</option>
+            <option value="Other">Other</option>
+            <option value="placeholder" selected disabled>
+              Choose a topic
+            </option>
+          </select>
+        </div>
+
+        <div class="form-input">
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="12"
+            cols="33"
+            spellcheck="true"
+            placeholder="Write your question here"
+            required
+          ></textarea>
+        </div>
+
+        <div class="form-input">
+          <label for="email">Your email</label>
+          <input
+            id="email"
+            type="email"
+            name="email"
+            placeholder="example@email.com"
+            required
+          />
+        </div>
+
+        <div class="form-input">
+          <label for="phone">Your phone <span>(optional)</span></label>
+          <input
+            id="phone"
+            type="tel"
+            name="phone"
+            placeholder="enter your phone"
+            pattern="^\+?\d{10,15}$"
+          />
+        </div>
+
+        <div class="wrapper-col" id="wrapper_radio">
+          <label
+            >If you would like us to call you, please choose time for the call
+            here:
+
+            <div class="radio-wrap">
+              <label class="radio-container" for="call-morning"
+                >Morning
+                <input
+                  class="radiobutton"
+                  type="radio"
+                  name="answer_radio"
+                  value="morning"
+                  id="call-morning"
+                  checked
+                />
+                <span class="checkmark"></span>
+              </label>
+              <label class="radio-container" for="call-lunch"
+                >Lunch time
+                <input
+                  class="radiobutton"
+                  type="radio"
+                  name="answer_radio"
+                  value="lunch"
+                  id="call-lunch"
+                />
+                <span class="checkmark"></span>
+              </label>
+
+              <label class="radio-container" for="call-afternoon"
+                >Afternoon
+                <input
+                  class="radiobutton"
+                  type="radio"
+                  name="answer_radio"
+                  value="afternoon"
+                  id="call-afternoon"
+                />
+                <span class="checkmark"></span>
+              </label>
+
+              <label class="radio-container" for="call-evening"
+                >Evening
+                <input
+                  class="radiobutton"
+                  type="radio"
+                  name="answer_radio"
+                  value="evening"
+                  id="call-evening"
+                />
+                <span class="checkmark"></span>
+              </label></div
+          ></label>
+        </div>
+
+        <button id="btn-contact" class="action-tetriary" type="submit">
+          Send message
+        </button>
+      </form>
+    </article>
+
+    <!-- / Contact block -->
+
+    <!-- Footer -->
+
+    <footer class="footer">
+      <ul class="logo">
+        <li class="logo-link">
+          <a href="#"><h2>((F.E.))</h2></a>
+        </li>
+      </ul>
+      <!--  <button class="action action-main">Choose your flowers</button> -->
+      <div class="footer-contacts">
+        <h5 class="footer-heading">Contact us</h5>
+        <p id="address">
+          Sveavägen 68B<br />
+          Stockholm<br />
+          111 11<br />
+          Sweden<br />
+          +46 123 456 789 <br />
+          +46 987 654 321
+        </p>
+        <ul class="footer-contacts"></ul>
+      </div>
+      <div class="footer-links">
+        <h5 class="footer-heading">Links</h5>
+        <ul class="footer-menu">
+          <li class="menu"><a href="#">Home</a></li>
+          <li class="menu"><a href="#About-section">About</a></li>
+          <li class="menu">
+            <a href="#subscription-section">Subscriptions</a>
+          </li>
+          <li class="menu"><a href="#news-section">Blog</a></li>
+          <li class="menu"><a href="#contact-section">Contact us</a></li>
+        </ul>
+      </div>
+      <h4>Join our list for updates and offers</h4>
+      <form
+        id="subscription-form"
+        class="form-subscribtion"
+        action="http://httpbin.org/anything"
+        method="post"
+      >
+        <label for="email-subscription"> </label>
+        <input
+          type="email"
+          name="email"
+          id="email-subscription"
+          placeholder="example@email.com"
+          required
+        />
+        <button
+          id="btn-news-subscribe"
+          class="action action-tetriary"
+          type="submit"
+        >
+          Sing up
+        </button>
+      </form>
+      <div class="copyright">&copy;copyright 2025</div>
+    </footer>
+
+    <!-- / Footer -->
+
+    <script src="./index.js"></script>
+  </body>
+</html>
