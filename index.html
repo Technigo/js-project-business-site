@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Business-project</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="navbar">
+      <div class="logo">BrödRevolt</div>
+      <ul class="links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Our history</a></li>
+        <li><a href="#">Find us</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <div class="toggle-btn"><i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+
+    <div class="dropdown-menu">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Our history</a></li>
+        <li><a href="#">Find us</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- GRID CONTAINER -->
+  <section class="grid-container">
+    <div class="box-wrapper">
+
+      <!-- Boxes row 1 -->
+      <div class="grid-box-1"> <img src="box1.jpg" alt="Box1"> </div>
+
+      <div class="grid-box-3">
+        <h2>Made with love</h2>
+        <p>With us, most of the work is done by hand – from kneading the dough to shaping many of our breads and
+          pastries. At the same time, we use machines where needed, to support the process without compromising quality.
+          For us, craftsmanship is key, which is why we let skilled hands guide as much as possible. The result is bread
+          with soul, care, and a character that only true craftsmanship can create.</p>
+      </div>
+
+      <div class="grid-box-5"> <img src="box5.jpg" alt="box5"> </div>
+
+      <!-- Boxes row 2 -->
+      <div class="grid-box-2">
+        <h2> The Sourdough</h2>
+        <p>Sourdough is the heart of our bakery – a living culture that gives the bread its unique flavor, character,
+          and natural shelf life. Through slow fermentation, both aroma and texture are developed, resulting in moist
+          bread with a crisp crust. We nurture our sourdoughs every day, just as bakers have done for generations. With
+          us, you’ll find bread baked with true sourdough –
+          from classic loaves to innovative creations.</p>
+      </div>
+
+      <div class="grid-box-4"> <img src="box4.jpg" alt="box4"></div>
+
+      <div class="grid-box-6">
+        <h2>Sweet bread</h2>
+        <p> In addition to our sourdough breads, we also bake sweet pastries – from classic cinnamon buns to other
+          delightful treats. With the same care and craftsmanship as in our breads, you get a sweeter experience,
+          freshly baked every day. The aroma of warm buns fills the bakery and makes it hard to resist a little real
+          "Swedish fika".</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- NEWSLETTER FORM -->
+  <section class="form-box">
+    <form action="https://httpbin.org/anything" method="POST">
+      <h2>Newsletter and recipes? </h2>
+      <h3>Fill in your name and email and we will register you &#128235; </h3>
+
+      <fieldset>
+        <label>
+          <span>Name</span>
+          <input type="text" name="name">
+        </label>
+        <label>
+          <span>E-mail</span>
+          <input type="email" name="email">
+        </label>
+      </fieldset>
+
+      <div class="wrapper-row">
+        <label class="radiobutton-container">
+          <input type="radio" name="answer">
+          <span class="custom-radio"></span>
+          <span>I accept that my information is being stored.</span>
+        </label>
+      </div>
+
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+
+      <!-- Opening hours -->
+      <div class="footer-section">
+        <h3>Opening hours</h3>
+        <p>Mon–Fri: 07:00 – 18:00</p>
+        <p>Sat: 08:00 – 15:00</p>
+        <p>Sun: Closed</p>
+      </div>
+
+      <!-- Contact-->
+      <div class="footer-section">
+        <h3>Contact us</h3>
+        <p>Bagarvägen 12<br>123 45 Brödby</p>
+        <p>Tel: 0123-456 789</p>
+        <p>E-post: hej@brodrevolt.se</p>
+      </div>
+
+      <!-- Follow us -->
+      <div class="footer-section">
+        <h3>Follow us</h3>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+          <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+          <a href="#"><i class="fab fa-tiktok"></i> TikTok</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © 2025 BrödRevolt. All right reserved.
+      </div>
+  </footer>
+
+  <script>
+    const toggleBtn = document.querySelector('.toggle-btn');
+    const toggleBtnIcon = toggleBtn.querySelector('i');
+    const dropdownMenu = document.querySelector('.dropdown-menu');
+
+    toggleBtn.addEventListener('click', () => {
+      const isOpen = dropdownMenu.classList.toggle('open');
+
+
+      toggleBtnIcon.className = isOpen
+        ? 'fa-solid fa-xmark'
+        : 'fa-solid fa-bars';
+    });
+  </script>
+
+</body>
+
+</html>

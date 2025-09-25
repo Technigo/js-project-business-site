@@ -1,0 +1,420 @@
+/* BODY-LAYOUT */
+body {
+  background-color: rgb(196, 181, 163);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* HEADER & NAVBAR */
+li {
+  list-style: none;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+}
+
+a:hover {
+  color: #e7c782;
+  transition: 0.3s;
+}
+
+header {
+  position: relative;
+  padding: 0 2rem;
+  background-image: url(herobild.jpg);
+  background-size: cover;
+  background-position: center 40%;
+  height: 400px;
+}
+
+.navbar {
+  width: 100%;
+  height: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+}
+
+.links {
+  display: flex;
+  gap: 4rem;
+}
+
+.toggle-btn {
+  position: relative;
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  right: 2rem;
+  top: 60px;
+  max-height: 0;
+  width: 200px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: max-height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  /* specialkurva för hastigheten, får en studsande effekt när höjden ändras  */
+}
+
+.dropdown-menu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-menu li {
+  padding: 0.7rem;
+  display: flex;
+  align-items: left;
+  justify-content: left;
+}
+
+.dropdown-menu.open {
+  max-height: 400px;
+}
+
+/* GRID / BOXES */
+.grid-container {
+  width: 100%;
+}
+
+.box-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  width: min(1200px, 100%);
+  /* krymper med skärmen, max 1200px */
+  margin: 50px auto 0;
+  padding: 24px;
+  grid-auto-rows: auto;
+}
+
+.grid-box-1,
+.grid-box-2,
+.grid-box-3,
+.grid-box-4,
+.grid-box-5,
+.grid-box-6 {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  border-radius: 16px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  background-color: #fff;
+  aspect-ratio: 1 /1;
+}
+
+/* Img-boxes */
+.grid-box-1 img,
+.grid-box-4 img,
+.grid-box-5 img {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* Text-boxes */
+.grid-box-2,
+.grid-box-3,
+.grid-box-6 {
+  flex: 1;
+  padding: 20px;
+  font-size: 18px;
+  line-height: 1.4;
+  min-height: 0;
+}
+
+.grid-box-2 h2,
+.grid-box-3 h2,
+.grid-box-6 h2 {
+  margin-bottom: 0, 5rem;
+}
+
+
+/* FORM */
+.form-box {
+  align-items: center;
+  background-color: #ddd;
+  font-size: 14px;
+  border: 1px solid lightgray;
+  border-radius: 16px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 10px;
+}
+
+.form-box h2,
+.form-box h3 {
+  display: flex;
+  justify-content: center;
+  padding-left: 10px;
+}
+
+.form-box h2 {
+  font-size: 16px;
+}
+
+.form-box h3 {
+  font-size: 12px;
+}
+
+fieldset {
+  border: none;
+}
+
+label {
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  margin-left: 50px;
+}
+
+span {
+  margin-right: 10px;
+}
+
+input {
+  width: 70%;
+  font-size: 12px;
+}
+
+button {
+  display: block;
+  background: rgb(198, 165, 106);
+  font-size: 12px;
+  color: white;
+  border-radius: 4px;
+  width: 50%;
+  margin: 10px auto;
+}
+
+/* RADIOBUTTON */
+.wrapper-row {
+  display: flex;
+  justify-content: center;
+}
+
+.radiobutton-container {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+}
+
+.radiobutton-container input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  /* Gör att klick går på labeln */
+}
+
+.custom-radio {
+  flex-shrink: 0;
+  height: 16px;
+  width: 16px;
+  background-color: #eee;
+  border-radius: 50%;
+  margin-right: 8px;
+  position: relative;
+}
+
+.radiobutton-container input:checked+.custom-radio::after {
+  content: "";
+  /*behövs för att cirkeln ska fyllas*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  background-color: #dc9b52;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* FOOTER */
+footer {
+  background-color: white;
+  padding: 20px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+.footer-section {
+  flex: 1 1 250px;
+  /*börjar på 250px men växer/krymper med utrymmet */
+  display: block;
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.footer-section p {
+  text-align: center;
+  margin: 5px 0;
+  line-height: 1.5;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #333;
+  margin: 5px 0;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #d2691e;
+}
+
+.footer-bottom {
+  width: 100%;
+  text-align: center;
+  margin-top: 15px;
+  padding-top: 15px;
+  font-size: 14px;
+  color: #666;
+  border-top: 1px solid #ddd;
+}
+
+/* MEDIA QUERIES */
+/* --- Tablet --- */
+@media (max-width: 1024px) {
+  .navbar .links {
+    display: none;
+  }
+
+  .navbar .toggle-btn {
+    color: white;
+    display: block;
+  }
+
+  .box-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: min(900px, 95%);
+  }
+
+  .grid-box-1,
+  .grid-box-4,
+  .grid-box-5 {
+    aspect-ratio: 1/1;
+  }
+
+  .grid-box-2,
+  .grid-box-3,
+  .grid-box-6 {
+    padding: 12px;
+    font-size: 14px;
+  }
+}
+
+/* --- Mobile: --- */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    gap: 1rem;
+  }
+
+  .dropdown-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 60px;
+    margin-top: 60px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 70%;
+    max-width: 200px;
+  }
+
+  .box-wrapper {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    width: 80%;
+    margin-top: 30px;
+  }
+
+  /* Gör bildboxarna mindre i höjd på mobilen (så de inte fyller hela skärmen) */
+  .grid-box-1,
+  .grid-box-4,
+  .grid-box-5 {
+    min-height: 140px;
+  }
+
+  .grid-box-2,
+  .grid-box-3,
+  .grid-box-6 {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .form-box {
+    width: 90%;
+    max-width: none;
+    margin: 20px auto;
+    padding: 15px;
+  }
+
+  .form-box form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  label {
+    margin-left: 0;
+  }
+
+  .form-box .h2 {
+    width: 80%;
+    font-size: 12px;
+  }
+
+  footer {
+    font-size: 12px;
+  }
+}
