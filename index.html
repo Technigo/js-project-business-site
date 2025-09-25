@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photography by Louise</title>
+    <link 
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link 
+      rel="stylesheet"
+      href="style.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h1>Photography by Louise</h1>
+        <button class="hamburger" aria-label="Menu">☰</button>
+        <nav class="navbar">
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="#sessions">Sessions</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <section class="hero">
+          <div class="hero-content">
+            <h2>Catch the moments that means the most</h2>
+            <p>Beautiful memories, captured forever</p>
+             <a
+              href="#contact"
+              class="hero-button"
+            >
+              Book a session
+            </a>
+          </div>
+        </section>
+
+        <section
+          id="about"
+          class="about"
+        >
+          <div class="about wrapper">
+           <img
+              class="about-img"
+              src="../images/photographer.jpg"
+              alt="photographer portrait"
+            />
+            <div class="about-text">
+              <h2>About Me</h2>
+              <p>
+                Hello! I'm Louise, a passionate photographer who loves capturing
+                authentic moments. Whether it's a wedding, a couple shoot, or
+                playful kids – my goal is to create timeless memories that you
+                will treasure forever.
+              </p>
+            </div>
+          </div>
+        </section>
+
+         <section
+           id="Sessions"
+           class="grid"
+         >
+          <article class="card">
+            <img
+              src="../images/wed2.jpg"
+              alt="wedding-beach"
+            />
+            <h3>Wedding</h3>
+            <p>Romantic pictures from your big day.</p>
+          </article>
+
+          <article class="card">
+            <img
+              src="../images/couple1.jpg"
+              alt="Couple-photo"
+            />
+            <h3>Couples</h3>
+            <p>Capture love and your special moments</p>
+          </article>
+
+          <article class="card">
+            <img
+              src="../images/kid1.jpg"
+              alt="Family/Children-photo"
+            />
+            <h3>Family/Children</h3>
+            <p>Natural and playful portraits of family/children</p>
+          </article>
+        </section>
+      </main>
+
+      <section
+        id="contact"
+        class="contact"
+      >
+        <h2>Make a request</h2>
+        <form
+          action="https://httpbin.org/anything"
+          method="POST"
+        >
+          <div class="form-input">
+            <label for="name">Name</label>
+            <input
+              required
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Your full name"
+            />
+          </div>
+
+          <div class="form-input">
+            <label for="session">Type of session</label>
+           <select
+              required
+              name="session"
+              id="session"
+            >
+              <option value="">Please choose</option>
+              <option value="wedding">Wedding</option>
+              <option value="couple">Couple</option>
+              <option value="family">Family/Children</option>
+            </select>
+          </div>
+          <div class="form-input">
+            <p>Preferred time of day:</p>
+            <label><input 
+                    type="radio"
+                    name="time" 
+                    value="morning"> Morning
+            </label>
+            <label><input 
+                    type="radio"
+                    name="time" 
+                    value="afternoon"> Afternoon
+            </label>
+            <label><input 
+                    type="radio"
+                    name="time" 
+                    value="Evening"> Evening
+            </label>
+             <label><input 
+                    type="radio"
+                    name="time" 
+                    value="whole"> Whole day
+            </label>
+          </div>
+          <div class="form-input">
+            <label>
+              <input 
+               type="checkbox"
+               name="newsletter"> Sign me up for news
+            </label>
+          </div>
+          <div class="form-input">
+            <label for="date">Preferred date
+            </label>
+           <input
+              required
+              type="date"
+              name="date"
+              id="date"
+            />
+          </div>
+          <div class="form-input">
+            <label for="email">Email</label>
+            <input
+              required
+              type="email"
+              name="email"
+              id="email"
+              placeholder="example@email.com"
+            />
+          </div>
+          <div class="form-input">
+            <label for="message">Message</label>
+            <textarea
+              name="message"
+              id="message"
+              rows="5"
+              cols="50"
+              placeholder="Tell me about your vision?"
+            ></textarea>
+          </div>
+          
+          <button type="submit">Send Request</button>
+        </form>
+      </section>
+
+      <footer>
+        <p>&copy; 2025 Photography by Louise</p>
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
