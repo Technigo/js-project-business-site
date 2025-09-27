@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <title>Willz agency</title>
+  <link
+    rel="stylesheet"
+    href="style.css"
+  />
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+    rel="stylesheet"
+  >
+</head>
+
+<body id="fullBody">
+  <!---NAVBAR DESKTOP------------->
+  <ul
+    id="desktopNav"
+    class="nav-list"
+  >
+    <li><a href="#homePage">Home </a></li>
+    <li><a href="#modelSection">Models </a></li>
+    <li><a href="#information">About us </a></li>
+    <li><a href="#formSection">Contact </a></li>
+
+    <button
+      id="partyMode"
+      class="partyButton"
+    >Party mode</button>
+  </ul>
+
+  <!---HAMBURGER MENU-->
+  <div
+    class="hamburger"
+    onclick="hamburgerFunction(this)"
+  >
+    <div class="barOne"></div>
+    <div class="barTwo"></div>
+    <div class="barThree"></div>
+  </div>
+
+  <nav class="hamburgerLinks">
+    <ul>
+      <span class="hamburgerLinkSpan">
+        <li
+          onclick="closeHamburger()"
+          class="hamburgerList"
+        ><a href="#homePage">Home</li></a>
+      </span>
+      <span class="hamburgerLinkSpan">
+        <li
+          onclick="closeHamburger()"
+          class="hamburgerList"
+        ><a href="#modelSection">Models</li></a>
+      </span>
+      <span class="hamburgerLinkSpan">
+        <li
+          onclick="closeHamburger()"
+          class="hamburgerList"
+        ><a href="#information">About us</li></a>
+      </span>
+      <span class="hamburgerLinkSpan">
+        <li
+          onclick="closeHamburger()"
+          class="hamburgerList"
+        ><a href="#formSection">Contact</li></a>
+      </span>
+      <span class="hamburgerButtonSpan"><button
+          onclick="partyCloseHamburger()"
+          id="partyModeHamburger"
+          class="partyButton"
+        >Party mode</button></span>
+    </ul>
+  </nav>
+
+  <!---HERO SECTION-->
+  <header
+    id="homePage"
+    class="hero"
+  >
+    <div class="header-text">
+      <h1 id="heroText">WILLZ MODELS</h1>
+      <p class="header-paragraph">A one cat model agency</p>
+    </div>
+  </header>
+
+  <!----MAIN section--------->
+  <section
+    id="modelSection"
+    class="main-section"
+  >
+    <div class="card 1">
+      <img src="images/willz-zara.jpeg" />
+      <h3>Fashionable</h3>
+    </div>
+
+    <div class="card 2">
+      <img src="images/Willz-fancy.jpeg" />
+      <h3>Sofisticated</h3>
+    </div>
+
+    <div class="card 3">
+      <img src="images/willz-cowboy.jpeg" />
+      <h3>casual</h3>
+    </div>
+
+    <div class="card 4">
+      <img src="images/Willz-catwalk.jpeg" />
+      <h3>professional</h3>
+    </div>
+
+    <div class="card 5">
+      <img src="images/willz-royal.jpeg" />
+      <h3>Royal</h3>
+    </div>
+
+    <div class="card 6">
+      <img src="images/willz-potato.jpeg" />
+      <h3>stoic</h3>
+    </div>
+
+    <div class="card 7">
+      <img src="images/willz-kpop.jpeg" />
+      <h3>Modern</h3>
+    </div>
+
+    <div class="card 8">
+      <img src="images/willz-jacket.jpeg" />
+      <h3>Focused</h3>
+    </div>
+
+    <div class="card 9">
+      <img src="images/willz-princess.jpeg" />
+      <h3>Feminine</h3>
+    </div>
+
+    <div class="card 10">
+      <img src="images/willz-artsy.jpeg" />
+      <h3>Artistic</h3>
+    </div>
+
+    <div class="card 11">
+      <img src="images/willz-manicure.jpeg" />
+      <h3>Well groomed</h3>
+    </div>
+
+    <div class="card 12">
+      <img src="images/willz-nature.jpeg" />
+      <h3>Natural</h3>
+    </div>
+  </section>
+
+
+  <!--INFO + FORM section------->
+  <section
+    id="information"
+    class="info-section"
+  >
+    <div class="info-text">
+      <h2>ABOUT US</h2>
+      <img
+        class="infoImage"
+        src="images/willz-dreaming.png"
+        alt="cat"
+      >
+      <p>Forget about casting calls, multiple models, or diva drama. Willz is the one-cat wonder your brand
+        has been dreaming of. From slick fashion to casual cool, Willz can pull off any look, any pose and any vibe. All
+        without a single hiss. Professional Purr-fectionist: Takes direction better than most humans. Multi-Look expert:
+        From well dressed sofisticated looks to natural vibes, Willz does it all. Flexible & Focused: Stretches, yawns,
+        or stares
+        dramatically, all on cue. Why hire a dozen models when Willz has mastered it all? Book a shoot and let this
+        feline phenomenon turn you project into a paw-some masterpiece.</p>
+    </div>
+
+    <div
+      id="formSection"
+      class="form-section"
+    >
+      <form
+        action="https://httpbin.org/anything"
+        method="post"
+      >
+        <div class="formHeading">
+          <h3>Request a booking with willz</h3>
+        </div>
+        <fieldset>
+          <label>
+            <span class="customer-name">Name</span>
+            <input
+              type="text"
+              name="name"
+              placeholder="Your name"
+              required
+            >
+          </label>
+
+          <label>
+            <span class="customer-email">Email</span>
+            <input
+              type="email"
+              name="email"
+              placeholder="cat@catmail.meow"
+              required
+            >
+          </label>
+
+          <label>
+            <span class="version-willz">Type of booking</span>
+            <select
+              name="willz-version"
+              id="willz-version"
+              required
+            >
+              <option
+                value="booking type"
+                selected
+                disabled
+              >Choose type of booking</option>
+              <option value="Photo shoot">Photo shoot</option>
+              <option value="Catwalk">Catwalk</option>
+              <option value="Live performance">Live performance</option>
+            </select>
+          </label>
+
+          <label>
+            <span class="requested-date">Requested date</span>
+            <input
+              type="date"
+              name="day"
+              id="day"
+              required
+            >
+          </label>
+
+          <div class="radiobutton-row">
+            <label class="radiobutton-container">Full day
+              <input
+                type="radio"
+                name="time"
+                value="Full day"
+              >
+              <span class="custom-radiobutton"></span>
+            </label>
+            <label class="radiobutton-container">Half day
+              <input
+                type="radio"
+                name="time"
+                value="Half day"
+              >
+              <span class="custom-radiobutton"></span>
+            </label>
+          </div>
+          <div class="button-box">
+            <button
+              id="submit-button"
+              class="submit-button"
+              type="submit"
+            >Submit</button>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+
+  </section>
+
+  <!---FOOTER----------->
+  <footer>
+    <p>Created by: Nicolina Bäcklin Löwenberg</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
