@@ -15,10 +15,9 @@ body.partyBody {
 .nav-list {
   list-style-type: none;
   margin: 0;
-  padding: 0;
   top: 0;
   display: flex;
-  Padding: 20px;
+  padding: 20px;
   font-size: 30px;
   top: 0;
   position: sticky;
@@ -59,7 +58,7 @@ a:hover {
   z-index: 1000;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   .hamburger {
     display: none;
   }
@@ -137,6 +136,7 @@ a:hover {
   border-radius: 10px;
   margin: 0 40px;
   cursor: pointer;
+  font-family: "montserrat";
 }
 
 .partyButton:hover {

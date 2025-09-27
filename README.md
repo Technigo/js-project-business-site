@@ -1,21 +1,47 @@
 # js-project-business-site
 
-## Business site - Willz models
+# Business site - Willz models
 https://willz-models.netlify.app/
 
-This website is my contribution to Technigo bootcamps assignment: project business site. 
+This website is my contribution to Technigo bootcamps assignment: project business site. The goal was to explore responsive design, interactivity, and layout techniques. The aim for me while building this was to learn as much as possible while playing around and having fun with the code. Therefor I chose to make a dummy model agency site featuring my family cat Willz. My goal was to make the website look professional but with fun content. The site combines professional design elements with playful, interactive features, making it both visually appealing and enjoyable to explore.
 
-The aim for me while building this was to learn as much as possible while playing around and having fun with the code. Therefor I chose to make a dummy model agency site featuring my family cat Willz. My goal was to make the website look professional but with fun content. The site acts as a portfolio showing all of Willz different looks aswell as some information and a form to request a booking. It is responsive on desktop, tablet and small phones. Functioning navigation bar on desktop that turns into hamburger menu on smaller screens. 
+## Features
+* Responsive Design: Optimized for desktop, tablet, and mobile devices.
 
-At first glance the styling is simple and clean, but there is an option to change the vibe by turning on ”party mode” by clicking a button in the navigation bar. This was done by using javaScript.
+* Navigation: Full navigation bar for desktop, Hamburger menu on smaller screens with interactive DOM functionality
 
-# Built by using
-* HTML
-* CSS 
-- Flexbox
-- Grid
-* javaScript
-- For interactivity with hamburger menu and color/theme change
+* Interactive Theme: “Party Mode” button changes the site’s color scheme and vibe using JavaScript.
 
-# EASTEREGG:
-Find the hidden potato
+* Layout: Created using grid and flexbox
+
+* Booking Form: Includes multiple input types with POST submission to httpbin.org
+
+## Technologies used
+* HTML – Semantic structure and accessibility
+
+* CSS – Styling with Flexbox and CSS Grid for responsive layouts
+
+* JavaScript – Interactive hamburger menu and dynamic theme toggle
+
+## Project requirements met
+* Fully responsive across all viewport sizes (320px–1600px)
+
+* Responsive navigation bar and layout using Flexbox and Grid
+
+* Responsive header with hero image/video
+
+* Interactive form with multiple input types and POST submission
+
+* Hamburger menu on smaller screens, functional using javaScript
+
+* Successfully deployed on Netlify
+
+## Learning Outcomes
+
+* Practiced responsive design techniques across devices
+
+* Implemented interactive features using JavaScript
+
+* Experimented with theme toggling and playful UI
+
+* Gained experience combining CSS Grid and Flexbox for complex layouts

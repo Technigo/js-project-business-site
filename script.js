@@ -18,12 +18,6 @@ btn.onclick = () => {
   desktopNav.classList.toggle("partyNav")
   heroText.classList.toggle("partyText")
   fullBody.classList.toggle("partyBody")
-
-  /*if (btn.innerText === "Party mode") {
-    btn.innerText = "Normal mode"
-  } else {
-    btn.innerText = "Party mode"
-  } */
 }
 
 btnHamburger.onclick = () => {
@@ -32,12 +26,6 @@ btnHamburger.onclick = () => {
   heroText.classList.toggle("partyText")
   fullBody.classList.toggle("partyBody")
   closeHamburger()
-
-  /*if (btnHamburger.innerText === "Party mode") {
-    btnHamburger.innerText = "Normal mode"
-  } else {
-    btnHamburger.innerText = "Party mode"
-  }*/
 }
 
 function closeHamburger() {
@@ -61,25 +49,4 @@ function closeHamburger() {
 
 
 
-
-/* OLD JAVASCRIPT
-const menu = document.getElementById("menu")
-const menuItems = document.getElementsByClassName("menuItem")
-const hamburger = document.getElementById("hamburger")
-const closeIcon = document.getElementById("closeIcon")
-const menuIcon = document.getElementById("menuIcon")
-
-function toggleMenu() {
-  if (menu.classList.contains("showMenu")) {
-    menu.classList.remove("showMenu")
-    closeIcon.style.display = "none"
-    menuIcon.style.display = "block"
-  } else {
-    menu.classList.add("showMenu")
-    closeIcon.style.display = "block"
-    menuIcon.style.display = "none"
-  }
-}
-
-hamburger.addEventListener("click", toggleMenu)*/
 
