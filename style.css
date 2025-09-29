@@ -1,0 +1,516 @@
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap'); /* Font for logo/h1 */
+
+body {
+  background-color: white;
+  margin: 0;
+}
+
+
+/* Text Styles */
+h1 {
+  color: #2446C2;
+  font-family: "Rock Salt", cursive;
+  font-size: x-large;
+}
+
+h2 {
+  color: #2446C2;
+  font-family: "Roboto", sans-serif;
+  font-size: xxx-large;
+  margin-top: 10px;
+  margin-bottom: 2px;
+}
+
+h3 {
+  color: black;
+  font-family: "Roboto", sans-serif;
+  font-size: x-large;
+  text-decoration: line-through #2446C2;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+h4 {
+  color: #2446C2;
+  font-family: "Roboto", sans-serif;
+  font-size: xx-large;
+  margin: 10px 0 5px 0;
+}
+
+h5 {
+  color: #2446C2;
+  font-family: "Roboto", sans-serif;
+  font-size: large;
+  margin: 10px 0 10px 0;
+}
+
+p {
+  color: black;
+  font-family: "Roboto", sans-serif;
+  font-size: medium;
+  margin: 0;
+}
+
+
+/* Menu Buttons */
+#open-menu-btn {
+  display: block;
+  background: none;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  z-index: 1;
+}
+
+#close-menu-btn {
+  background: none;
+  border: none;
+  padding-left: 7px;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+
+/* Overlay for when menu is open */
+#overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+
+/* Navigation Bar */
+.navbar {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 30px;
+}
+
+.nav-links a {
+  color: black;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: medium;
+  padding: 14px 10px;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: #2446C2;
+  transition: 0.3s;
+}
+
+.logo {
+  font-family: 'Rock Salt', cursive;
+  font-size: x-large;
+  color: #2446C2;
+  margin-left: 20px;
+}
+
+
+/* Hero Section */
+.hero-image {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.hero-container {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  z-index: -1;
+}
+
+.hero-text {
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  transform: translate(-50%, -8%);
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-text h3 {
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+.hero-button a {
+  background-color: lightgray;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  font-size: medium;
+  text-decoration: none;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.hero-button a:hover {
+  background-color: #2446C2;
+  color: white;
+  transition: 0.3s;
+}
+
+
+/* About Section */
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 100px;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+
+/* Adoption Card Section */
+.card-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 60px;
+  padding-right: 60px;
+  padding-left: 60px;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-column: span 4;
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-image {
+  width: 100%;
+}
+
+.card a {
+  background-color: lightgray;
+  color: black;
+  border: none;
+  padding: 5px 20px;
+  font-size: medium;
+  text-decoration: none;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.card a:hover {
+  background-color: #2446C2;
+  color: white;
+  transition: 0.3s;
+}
+
+
+/* View All Button */
+.view-all-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 120px;
+}
+
+.view-all-button a {
+  background-color: lightgray;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  font-size: medium;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.view-all-button a:hover {
+  background-color: #2446C2;
+  color: white;
+  transition: 0.3s;
+}
+
+
+/* Contact Section */
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+.contact-text p {
+  margin-top: 0;
+  margin-bottom: 60px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.name-email {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+.subject-message {
+  display: flex;
+  flex-direction: column;
+  /* width: 100%;----- Had to add to html file instead for it to be the right width for some reason*/
+}
+
+input,
+textarea {
+  /*width: 100%; ----- Had to add to html file instead for it to be the right width for some reason*/
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid gray;
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+  font-size: medium;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #2446C2;
+  box-shadow: 0 0 5px rgba(36, 70, 194, 0.5);
+}
+
+input:valid {
+  border-color: green;
+  box-shadow: 0 0 5px rgba(0, 128, 0, 0.5);
+}
+
+
+input:invalid:not(:placeholder-shown) {
+  border-color: red;
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  padding-left: 25px;
+  margin: 10px 5px;
+  font-family: "Roboto", sans-serif;
+  font-size: medium;
+}
+
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.custom-checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  background-color: transparent;
+  border: 1px solid gray;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.checkbox-container:hover input~.custom-checkbox {
+  background-color: lightgrey;
+}
+
+.checkbox-container input:checked~.custom-checkbox {
+  background-color: #2446C2;
+}
+
+.custom-checkbox::after {
+  content: ""; /* Checkmark */
+  position: absolute;
+  width: 3px;
+  height: 6px;
+  border: 1px solid white;
+  border-width: 0 3px 3px 0;
+  top: 2px;
+  left: 5px;
+  transform: rotate(45deg);
+  display: none;
+}
+
+.checkbox-container input:checked~.custom-checkbox::after {
+  display: block;
+}
+
+.send-button {
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  background-color: white;
+  color: black;
+  border: solid gray 1px;
+  border-radius: 3px;
+  margin-top: 20px;
+  padding: 5px 30px;
+  font-family: "Roboto", sans-serif;
+  font-size: medium;
+  cursor: pointer;
+  align-self: center;
+}
+
+.send-button:hover {
+  background-color: #2446C2;
+  color: white;
+  transition: 0.3s;
+}
+
+
+/* Footer */
+.footer {
+  background-color: #2446C2;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer p {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: small;
+  margin: 0;
+}
+
+
+/* Media Queries */
+@media (max-width: 600px) /* Mobile Devices */ {
+  .card {
+    grid-column: span 4;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: min(10em, 100%);
+    z-index: 1;
+    padding-left: 10px;
+    background-color: white;
+    box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.2), 0 20px 30px 0 rgba(0, 0, 0, 0.19);
+    transition: right 0.5s ease-out;
+  }
+
+  .nav-links.show {
+    right: 0;
+  }
+
+  body.menu-open #overlay {
+    display: block;
+  }
+
+  .logo {
+    font-size: 17pt;
+    font-weight: bold;
+    margin-left: 0;
+
+  }
+
+  .contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1199px) /* Tablets and Small Screens */ {
+
+  #open-menu-btn,
+  #close-menu-btn {
+    display: none;
+  }
+
+  .card {
+    grid-column: span 2;
+  }
+
+  .contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (min-width: 1200px) /* Desktops and Large Screens */ {
+
+  #open-menu-btn,
+  #close-menu-btn {
+    display: none;
+  }
+
+  .card {
+    grid-column: span 1;
+  }
+
+  .contact-section {
+    display: flex;
+    flex-direction: row;
+
+  }
+
+  .contact-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    margin-left: 60px;
+    margin-right: 10px;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .send-button {
+    width: auto;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
