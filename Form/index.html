@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <link
+    rel="stylesheet"
+    href="/style.css"
+  >
+</head>
+
+
+<body>
+
+  <div class="hero-image">
+    <div class="hero-text">
+      <h1>TailTales</h1>
+    </div>
+  </div>
+
+
+  <nav class="navbar">
+    <div
+      class="nav-container"
+      onclick="myFunction(this)"
+    >
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+    <ul>
+      <li class="nav-text"><a href="/">Home</a></li>
+      <li class="nav-text"><a href="/#cat-cards">Cats</a></li>
+      <li class="nav-text"><a href="/#article-cards">Articles</a></li>
+      <li class="nav-text"><a href="/Form/index.html">Application</a></li>
+      <li class="nav-text"><a href="#footer">Contact</a></li>
+    </ul>
+  </nav>
+
+
+  <form
+    action="https://httpbin.org/anything"
+    method="post"
+  >
+    <link
+      rel="stylesheet"
+      href="style.css"
+    >
+
+    <h2>Adoption application</h2>
+
+    <p>We want you to write your information and select the cat you are interested in adopting. We will then send you
+      the
+      questions we want answered and then if everything aligns we can book a meeting.</p>
+
+    <fieldset
+      class="form-input"
+      id="forminput"
+    >
+
+      <label>
+        <span>Name</span>
+        <input
+          type="name"
+          name="name"
+          id="name"
+          autofocus="name"
+          required="text"
+        >
+      </label>
+
+
+      <label>
+        <span>Number</span>
+        <input
+          type="number"
+          name="number"
+          id="number"
+          required="text"
+        >
+      </label>
+
+      <label>
+        <span>E-mail</span>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="example@email.com"
+          required
+        >
+      </label>
+
+      <label>
+        <span>Cat</span>
+        <select
+          name="cat"
+          id="cat"
+          required
+        >
+          <option
+            value=""
+            disabled
+            selected
+            hidden
+          ></option>
+          <option value="Marmalade">Marmalade</option>
+          <option value="Snowball">Snowball</option>
+          <option value="Ashlyn">Ashlyn</option>
+          <option value="Tess">Tess</option>
+        </select>
+      </label>
+
+
+      <label class="checkbox">I confirm that I am 18 years or older
+        <input
+          id="checkbox"
+          type="checkbox"
+          required=""
+        >
+      </label>
+
+    </fieldset>
+
+    <button class="submit">Apply</button>
+
+    <div class="button-back">
+      <a href="/">
+        <button
+          class="submit"
+          type="button"
+        >Back</button>
+      </a>
+    </div>
+
+
+  </form>
+
+
+  <div
+    id="footer"
+    class="footer-container"
+  >
+    <div class="footer-main">
+      <p>All rights reserved</p>
+      <p>+46 123 45 67</p>
+      <p>Tailroad 5, Sweden</p>
+    </div>
+  </div>
+
+
+</body>
+
+<script
+  type="text/javascript"
+  src="/script.js"
+></script>
+
+</html>
