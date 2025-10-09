@@ -1,266 +1,253 @@
 
+// Keep this 'use strict' here. It helps me catch silly mistakes.
+'use strict';
+
+// --- MY GLOBAL VARIABLES ---
+// Grabbing all the elements I need to work with right at the top.
+
+// Theme Toggle Elements
+const themeToggleButton = document.getElementById('theme-toggle');
+const themeIcon = document.getElementById('theme-icon');
+const body = document.body;
+
+// Mobile Navigation Elements
+const menuToggleCheckbox = document.getElementById('menu-toggle');
+const mobileNav = document.querySelector('.nav-mobile');
+const hamburgerButton = document.querySelector('.hamburger');
+const hamburgerLabel = document.getElementById('hamburger-label');
+
+// Modal Elements
+const modalOpenButton = document.getElementById('header-auth-modal-btn');
+const mobileModalOpenButton = document.getElementById('mobile-auth-modal-btn');
+const authModal = document.getElementById('header-auth-modal');
+const modalCloseButton = document.getElementById('header-auth-modal-close');
+
+// --- MY CONFIG & ICONS ---
+// Storing constants and SVG strings here so I don't have to repeat them.
+const THEME_STORAGE_KEY = 'theme';
+const LIGHT_THEME = 'light';
+const DARK_THEME = 'dark';
+
+const SVG_ICONS = {
+    MOON: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>`,
+    SUN: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
+        <line x1="12" y1="1" x2="12" y2="3" stroke="currentColor" stroke-width="2"/>
+        <line x1="12" y1="21" x2="12" y2="23" stroke="currentColor" stroke-width="2"/>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" stroke="currentColor" stroke-width="2"/>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" stroke="currentColor" stroke-width="2"/>
+        <line x1="1" y1="12" x2="3" y2="12" stroke="currentColor" stroke-width="2"/>
+        <line x1="21" y1="12" x2="23" y2="12" stroke="currentColor" stroke-width="2"/>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" stroke="currentColor" stroke-width="2"/>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" stroke="currentColor" stroke-width="2"/>
+    </svg>`
+};
+
+
+// --- THEME TOGGLE FUNCTIONS ---
+
 /**
- * De-News Website JavaScript
+ * Get the theme I saved in localStorage.
+ * Default to dark mode if nothing's there.
+ * This is the part that makes the theme choice stick around.
  */
-(function() {
-    'use strict';
+function getSavedTheme() {
+    return localStorage.getItem(THEME_STORAGE_KEY) || DARK_THEME;
+}
 
-    // Config and constants I use throughout the app
-    const CONFIG = {
-        THEMES: {
-            LIGHT: 'light',
-            DARK: 'dark'
-        },
-        STORAGE_KEY: 'theme',
-        CSS_CLASSES: {
-            LIGHT_MODE: 'light-mode',
-            MODAL_HIDE: 'hide',
-            NAV_OPEN: 'open',
-            HAMBURGER_ACTIVE: 'active'
-        }
-    };
+/**
+ * This function does all the theme-switching work:
+ * - Toggles the 'light-mode' class on the body.
+ * - Swaps the sun/moon icon.
+ * - Updates the aria-label for screen readers.
+ * - Saves the choice back to localStorage.
+ */
+function applyTheme(theme) {
+    const isLight = theme === LIGHT_THEME;
+    
+    body.classList.toggle('light-mode', isLight);
+    themeIcon.innerHTML = isLight ? SVG_ICONS.MOON : SVG_ICONS.SUN;
+    
+    const label = isLight ? 'Switch to dark mode' : 'Switch to light mode';
+    themeToggleButton.setAttribute('aria-label', label);
+    
+    localStorage.setItem(THEME_STORAGE_KEY, theme);
+}
 
-    // SVG icons for theme toggle
-    const SVG_ICONS = {
-        MOON: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>`,
-        SUN: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
-            <line x1="12" y1="1" x2="12" y2="3" stroke="currentColor" stroke-width="2"/>
-            <line x1="12" y1="21" x2="12" y2="23" stroke="currentColor" stroke-width="2"/>
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" stroke="currentColor" stroke-width="2"/>
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" stroke="currentColor" stroke-width="2"/>
-            <line x1="1" y1="12" x2="3" y2="12" stroke="currentColor" stroke-width="2"/>
-            <line x1="21" y1="12" x2="23" y2="12" stroke="currentColor" stroke-width="2"/>
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" stroke="currentColor" stroke-width="2"/>
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" stroke="currentColor" stroke-width="2"/>
-        </svg>`
-    };
+/**
+ * The main handler for the theme toggle button click.
+ */
+function handleThemeToggle() {
+    const currentTheme = body.classList.contains('light-mode') ? LIGHT_THEME : DARK_THEME;
+    const newTheme = currentTheme === LIGHT_THEME ? DARK_THEME : LIGHT_THEME;
+    applyTheme(newTheme);
+}
 
-    // Helper functions to avoid repeating myself
-    function getElementById(id, context = '') {
-        const element = document.getElementById(id);
-        if (!element) {
-            console.error(`${context}: Element with ID '${id}' not found`);
-        }
-        return element;
-    }
 
-    function getElement(selector, context = '') {
-        const element = document.querySelector(selector);
-        if (!element) {
-            console.error(`${context}: Element with selector '${selector}' not found`);
-        }
-        return element;
-    }
+// --- MOBILE NAVIGATION FUNCTIONS ---
 
-    function addEventListenerSafe(element, event, handler, context = '') {
-        if (!element) {
-            console.error(`${context}: Cannot add '${event}' listener - element is null`);
-            return;
-        }
-        element.addEventListener(event, handler);
-    }
+/**
+ * Just a quick check to see if the mobile nav is open.
+ */
+function isMobileNavOpen() {
+    return mobileNav.classList.contains('open');
+}
 
-    // Theme toggle functionality
-    const ThemeToggle = {
-        init() {
-            this.themeToggle = getElementById('theme-toggle', 'Theme Toggle');
-            this.themeIcon = getElementById('theme-icon', 'Theme Toggle');
-            this.body = document.body;
-            
-            if (!this.themeToggle || !this.themeIcon) return;
+/**
+ * Opens the mobile nav and handles the ARIA attributes.
+ */
+function openMobileNav() {
+    mobileNav.classList.add('open');
+    hamburgerButton.classList.add('active');
+    hamburgerButton.setAttribute('aria-expanded', 'true');
+    mobileNav.setAttribute('aria-hidden', 'false');
+}
 
-            this.applyTheme(this.getSavedTheme());
-            addEventListenerSafe(this.themeToggle, 'click', () => this.toggleTheme(), 'Theme Toggle');
-        },
+/**
+ * Closes the mobile nav and resets the ARIA attributes.
+ */
+function closeMobileNav() {
+    mobileNav.classList.remove('open');
+    hamburgerButton.classList.remove('active');
+    hamburgerButton.setAttribute('aria-expanded', 'false');
+    mobileNav.setAttribute('aria-hidden', 'true');
+}
 
-        getSavedTheme() {
-            return localStorage.getItem(CONFIG.STORAGE_KEY) || CONFIG.THEMES.DARK;
-        },
-
-        applyTheme(theme) {
-            const isLight = theme === CONFIG.THEMES.LIGHT;
-            
-            this.body.classList.toggle(CONFIG.CSS_CLASSES.LIGHT_MODE, isLight);
-            this.themeIcon.innerHTML = isLight ? SVG_ICONS.MOON : SVG_ICONS.SUN;
-            
-            const label = isLight ? 'Switch to dark mode' : 'Switch to light mode';
-            this.themeToggle.setAttribute('aria-label', label);
-            
-            localStorage.setItem(CONFIG.STORAGE_KEY, theme);
-        },
-
-        toggleTheme() {
-            const currentTheme = this.body.classList.contains(CONFIG.CSS_CLASSES.LIGHT_MODE) 
-                ? CONFIG.THEMES.LIGHT 
-                : CONFIG.THEMES.DARK;
-            const newTheme = currentTheme === CONFIG.THEMES.LIGHT 
-                ? CONFIG.THEMES.DARK 
-                : CONFIG.THEMES.LIGHT;
-            this.applyTheme(newTheme);
-        }
-    };
-
-    // Mobile navigation handling
-    const MobileNavigation = {
-        init() {
-            this.menuToggle = getElementById('menu-toggle', 'Mobile Navigation');
-            this.navMobile = getElement('.nav-mobile', 'Mobile Navigation');
-            this.hamburger = getElement('.hamburger', 'Mobile Navigation');
-            
-            if (!this.menuToggle || !this.navMobile || !this.hamburger) return;
-
-            this.setupEventListeners();
-            this.menuToggle.style.display = 'none'; // Hide the checkbox
-        },
-
-        setupEventListeners() {
-            // Main hamburger click
-            addEventListenerSafe(this.hamburger, 'click', (e) => {
-                e.preventDefault();
-                this.toggle();
-            }, 'Mobile Navigation');
-
-            // Close menu when clicking nav links
-            const navLinks = this.navMobile.querySelectorAll('.nav-link');
-            navLinks.forEach(link => {
-                addEventListenerSafe(link, 'click', () => this.close(), 'Mobile Navigation');
-            });
-
-            // Close when clicking outside menu
-            addEventListenerSafe(document, 'click', (e) => {
-                const isClickInside = this.navMobile.contains(e.target) || this.hamburger.contains(e.target);
-                if (!isClickInside && this.isOpen()) {
-                    this.close();
-                }
-            }, 'Mobile Navigation');
-
-            // Close with Escape key
-            addEventListenerSafe(document, 'keydown', (e) => {
-                if (e.key === 'Escape' && this.isOpen()) {
-                    this.close();
-                    this.hamburger.focus();
-                }
-            }, 'Mobile Navigation');
-        },
-
-        isOpen() {
-            return this.navMobile.classList.contains(CONFIG.CSS_CLASSES.NAV_OPEN);
-        },
-
-        toggle() {
-            this.isOpen() ? this.close() : this.open();
-        },
-
-        open() {
-            this.navMobile.classList.add(CONFIG.CSS_CLASSES.NAV_OPEN);
-            this.hamburger.classList.add(CONFIG.CSS_CLASSES.HAMBURGER_ACTIVE);
-            this.hamburger.setAttribute('aria-expanded', 'true');
-            this.navMobile.setAttribute('aria-hidden', 'false');
-        },
-
-        close() {
-            this.navMobile.classList.remove(CONFIG.CSS_CLASSES.NAV_OPEN);
-            this.hamburger.classList.remove(CONFIG.CSS_CLASSES.HAMBURGER_ACTIVE);
-            this.hamburger.setAttribute('aria-expanded', 'false');
-            this.navMobile.setAttribute('aria-hidden', 'true');
-        }
-    };
-
-    // Modal handling for sign in/up
-    const AuthModal = {
-        init() {
-            this.modalBtn = getElementById('header-auth-modal-btn', 'Auth Modal');
-            this.mobileModalBtn = getElementById('mobile-auth-modal-btn', 'Mobile Auth Modal');
-            this.modal = getElementById('header-auth-modal', 'Auth Modal');
-            this.modalClose = getElementById('header-auth-modal-close', 'Auth Modal');
-            
-            if (!this.modalBtn || !this.modal || !this.modalClose) return;
-
-            this.setupEventListeners();
-        },
-
-        setupEventListeners() {
-            addEventListenerSafe(this.modalBtn, 'click', () => this.open(), 'Auth Modal');
-            
-            // Handle mobile button if it exists
-            if (this.mobileModalBtn) {
-                addEventListenerSafe(this.mobileModalBtn, 'click', () => this.open(), 'Mobile Auth Modal');
-            }
-            
-            addEventListenerSafe(this.modalClose, 'click', () => this.close(), 'Auth Modal');
-            
-            // Close when clicking outside modal
-            addEventListenerSafe(this.modal, 'click', (e) => {
-                if (e.target === this.modal) this.close();
-            }, 'Auth Modal');
-
-            // Close with Escape key
-            addEventListenerSafe(document, 'keydown', (e) => {
-                if (e.key === 'Escape' && !this.modal.classList.contains(CONFIG.CSS_CLASSES.MODAL_HIDE)) {
-                    this.close();
-                }
-            }, 'Auth Modal');
-        },
-
-        open() {
-            this.modal.classList.remove(CONFIG.CSS_CLASSES.MODAL_HIDE);
-            this.modal.style.display = 'flex';
-            this.modal.setAttribute('aria-hidden', 'false');
-            
-            // Focus first input for better UX
-            const firstInput = this.modal.querySelector('input');
-            if (firstInput) firstInput.focus();
-        },
-
-        close() {
-            this.modal.classList.add(CONFIG.CSS_CLASSES.MODAL_HIDE);
-            this.modal.style.display = 'none';
-            this.modal.setAttribute('aria-hidden', 'true');
-            this.modalBtn.focus(); // Return focus to button
-        }
-    };
-
-    // Hamburger accessibility improvements
-    const HamburgerAccessibility = {
-        init() {
-            this.menuToggle = getElementById('menu-toggle', 'Hamburger Accessibility');
-            this.hamburgerLabel = getElementById('hamburger-label', 'Hamburger Accessibility');
-            
-            if (!this.menuToggle || !this.hamburgerLabel) return;
-
-            this.updateAria();
-            addEventListenerSafe(this.menuToggle, 'change', () => this.updateAria(), 'Hamburger Accessibility');
-        },
-
-        updateAria() {
-            const isOpen = this.menuToggle.checked;
-            const label = isOpen ? 'Close mobile menu' : 'Open mobile menu';
-            this.hamburgerLabel.setAttribute('aria-label', label);
-        }
-    };
-
-    // Initialize everything when page loads
-    function initializeApp() {
-        try {
-            ThemeToggle.init();
-            MobileNavigation.init();
-            AuthModal.init();
-            HamburgerAccessibility.init();
-            
-            console.log('De-News app initialized successfully');
-        } catch (error) {
-            console.error('Error initializing De-News app:', error);
-        }
-    }
-
-    // Start app when DOM is ready
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initializeApp);
+/**
+ * This runs when I click the hamburger button.
+ */
+function handleMobileNavToggle(event) {
+    // I need to prevent the default link behavior here.
+    event.preventDefault();
+    if (isMobileNavOpen()) {
+        closeMobileNav();
     } else {
-        initializeApp();
+        openMobileNav();
+    }
+}
+
+
+// --- AUTH MODAL FUNCTIONS ---
+
+/**
+ * Shows the sign-in modal.
+ */
+function openAuthModal() {
+    authModal.classList.remove('hide');
+    authModal.style.display = 'flex';
+    authModal.setAttribute('aria-hidden', 'false');
+    
+    // Move the cursor to the first input, it's better for UX.
+    const firstInput = authModal.querySelector('input');
+    if (firstInput) {
+        firstInput.focus();
+    }
+}
+
+/**
+ * Hides the sign-in modal.
+ */
+function closeAuthModal() {
+    authModal.classList.add('hide');
+    authModal.style.display = 'none';
+    authModal.setAttribute('aria-hidden', 'true');
+    // Put focus back on the button that opened it. Good for keyboard navigation.
+    modalOpenButton.focus();
+}
+
+
+// --- GLOBAL EVENT HANDLERS ---
+
+/**
+ * This handles clicks anywhere on the page.
+ * I use it to close the mobile menu if I click outside of it.
+ */
+function handleDocumentClick(event) {
+    const isClickInsideNav = mobileNav.contains(event.target) || hamburgerButton.contains(event.target);
+    if (!isClickInsideNav && isMobileNavOpen()) {
+        closeMobileNav();
+    }
+}
+
+/**
+ * This handles key presses.
+ * Mainly for closing the menu or modal with the 'Escape' key.
+ */
+function handleDocumentKeyDown(event) {
+    if (event.key === 'Escape') {
+        if (isMobileNavOpen()) {
+            closeMobileNav();
+            hamburgerButton.focus();
+        }
+        if (!authModal.classList.contains('hide')) {
+            closeAuthModal();
+        }
+    }
+}
+
+
+// --- INITIALIZATION ---
+
+/**
+ * My main function to kick everything off once the page is ready.
+ * I'll set up all my event listeners in here.
+ */
+function initializeApp() {
+    // --- Set up Theme Toggle ---
+    if (themeToggleButton) {
+        const initialTheme = getSavedTheme();
+        applyTheme(initialTheme);
+        themeToggleButton.addEventListener('click', handleThemeToggle);
     }
 
-})();
+    // --- Set up Mobile Navigation ---
+    if (hamburgerButton && mobileNav) {
+        // Hiding the checkbox since I'm controlling the menu with JS.
+        menuToggleCheckbox.style.display = 'none';
+        hamburgerButton.addEventListener('click', handleMobileNavToggle);
+
+        // Make sure the menu closes when I click a link inside it.
+        const navLinks = mobileNav.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', closeMobileNav);
+        });
+    }
+
+    // --- Set up Auth Modal ---
+    if (modalOpenButton && authModal && modalCloseButton) {
+        modalOpenButton.addEventListener('click', openAuthModal);
+        modalCloseButton.addEventListener('click', closeAuthModal);
+
+        // Don't forget the mobile button.
+        if (mobileModalOpenButton) {
+            mobileModalOpenButton.addEventListener('click', openAuthModal);
+        }
+
+        // This is for closing the modal by clicking the background overlay.
+        authModal.addEventListener('click', (event) => {
+            if (event.target === authModal) {
+                closeAuthModal();
+            }
+        });
+    }
+
+    // --- Set up Global Listeners ---
+    // For closing things with outside clicks or the Escape key.
+    document.addEventListener('click', handleDocumentClick);
+    document.addEventListener('keydown', handleDocumentKeyDown);
+
+    console.log('De-News app (Simplified Version) initialized successfully');
+}
+
+// --- START THE APP ---
+// I have to wait for the HTML to be fully loaded before I can find elements.
+// 'DOMContentLoaded' is the event that tells me the page is ready.
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeApp);
+} else {
+    // If the page is already loaded, just run the app.
+    initializeApp();
+}
+
