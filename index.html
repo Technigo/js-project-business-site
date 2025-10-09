@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="De-News - Your ultimate source for decentralization news, DeFi updates, NFTs, blockchain technology, and Web3 innovations.">
+    <meta name="keywords" content="blockchain, cryptocurrency, DeFi, NFT, Web3, decentralization, crypto news">
+    <meta name="author" content="De-News">
+    <title>De-News - Decode the Future of Decentralization</title>
+    
+    <!-- Google Fonts for modern typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section - main navigation and theme toggle -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Mobile hamburger menu checkbox (hidden but controls menu state) -->
+                <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                <label for="menu-toggle" class="hamburger" id="hamburger-label" aria-label="Open mobile menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="3" y1="6" x2="21" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="3" y1="12" x2="21" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="3" y1="18" x2="21" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </label>
+
+                <!-- Theme toggle positioned between hamburger and logo -->
+                <button id="theme-toggle" aria-label="Toggle dark/light mode" class="theme-toggle">
+                    <span id="theme-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                </button>
+
+                <!-- Logo with matrix glitch animation -->
+                <a href="index.html" class="logo" aria-label="De-News Home">De-News</a>
+
+                <!-- Desktop Navigation Menu -->
+                <nav class="nav-desktop" role="navigation" aria-label="Main navigation">
+                    <a href="index.html" class="nav-link nav-home-icon" aria-label="Home">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 3L20 9V21H15V14H9V21H4V9L12 3Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a href="#defi" class="nav-link">DeFi</a>
+                    <a href="#nfts" class="nav-link">NFTs</a>
+                    <a href="#web3" class="nav-link">Web3</a>
+                </nav>
+
+                <!-- Sign In Button -->
+                <button id="header-auth-modal-btn" class="submit-btn header-auth-modal-btn">
+                    Sign In
+                </button>
+
+                <!-- Mobile Navigation Menu -->
+                <nav class="nav-mobile" role="navigation" aria-label="Mobile navigation">
+                    <a href="index.html" class="nav-link" aria-label="Home">Home</a>
+                    <a href="#defi" class="nav-link">DeFi</a>
+                    <a href="#nfts" class="nav-link">NFTs</a>
+                    <a href="#web3" class="nav-link">Web3</a>
+                    <button id="mobile-auth-modal-btn" class="submit-btn mobile-auth-modal-btn">
+                        Sign In
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Modal for sign in/up -->
+    <div id="header-auth-modal" class="modal-overlay hide" role="dialog" aria-labelledby="header-auth-modal-title">
+        <div class="modal-content">
+            <button class="modal-close" id="header-auth-modal-close" aria-label="Close modal">&times;</button>
+            <h3 id="header-auth-modal-title" class="header-auth-modal-title">Sign In / Sign Up</h3>
+            <form class="header-auth-form" action="https://httpbin.org/anything" method="POST">
+                <input 
+                    type="email" 
+                    name="header-email" 
+                    class="form-input" 
+                    placeholder="Email" 
+                    aria-label="Email address"
+                    required>
+                <input 
+                    type="password" 
+                    name="header-password" 
+                    class="form-input" 
+                    placeholder="Password" 
+                    aria-label="Password"
+                    required>
+                <button type="submit" name="action" value="signinup" class="submit-btn">
+                    Sign In / Sign Up
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Hero section with 3D Spline viewer -->
+    <section class="hero">
+        <div class="container hero-content-float">
+            <div class="hero-slogan-float">
+                <h1>Decode the Future</h1>
+                <p>of Decentralization</p>
+            </div>
+            <!-- 3D robot character animation -->   
+            <iframe 
+                src="https://my.spline.design/nexbotrobotcharacterconcept-B1o54Qcwti6O9FxE6lDMj4ej/" 
+                frameborder="0"
+                width="100%" 
+                height="100%"
+                title="3D Robot Character Animation"
+                loading="lazy">
+            </iframe>
+        </div>
+    </section>
+
+    <!-- Main content - news articles grid -->
+    <main class="main-content">
+        <div class="container">
+            <h2 class="section-title">Latest Web3 News</h2>
+            
+            <!-- CSS Grid layout for article cards -->
+            <div class="news-grid" role="main">
+                <!-- Article 1 -->
+                <article class="article-card">
+                    <div class="article-image">
+                        <img 
+                            src="/images/ethereum2staking.jpg"
+                            alt="Ethereum 2.0 Staking Milestone Visualization"
+                            loading="lazy"/>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Ethereum 2.0 Staking Reaches New Milestone</h3>
+                        <p class="article-summary">The Ethereum network has achieved unprecedented staking participation, with over 32 million ETH now secured in the Beacon Chain, marking a significant step toward full decentralization.</p>
+                        <a class="article-source" 
+                            href="https://cryptopotato.com/ethereum-hitting-new-records-47-36-million-eth-stake-in-the-eth2-beacon-deposit-contract/?utm_source=chatgpt.com" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            aria-label="Read more about Ethereum 2.0 staking milestone">
+                            read more
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="article-card">
+                    <div class="article-image">
+                        <img 
+                            src="/images/defitvl100b.jpg" 
+                            alt="DeFi Total Value Locked reaching $100 billion milestone chart"
+                            loading="lazy"/>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">DeFi TVL Surpasses $100 Billion Again</h3>
+                        <p class="article-summary">Decentralized Finance protocols have regained momentum with Total Value Locked reaching a new yearly high, driven by innovative yield farming strategies and institutional adoption.</p>
+                        <a class="article-source" 
+                            href="https://www.theblock.co/post/280657/defi-tvl-breaks-100-billion-for-first-time-since-may-2022?utm_source=chatgpt.com" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            aria-label="Read more about DeFi TVL milestone">
+                            read more
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="article-card">
+                    <div class="article-image">
+                        <img 
+                            src="/images/nftutilitytokens.jpg" 
+                            alt="NFT utility tokens and digital ownership concept visualization"
+                            loading="lazy"/>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">NFT Utility Tokens Transform Digital Ownership</h3>
+                        <p class="article-summary">Major brands are integrating NFTs with real-world utilities, creating new paradigms for digital ownership and customer engagement in the Web3 ecosystem.</p>
+                        <a class="article-source" 
+                            href="https://nftevening.com/nft-utility/?utm_source=chatgpt.com" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            aria-label="Read more about NFT utility tokens">
+                            read more
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article 4 -->
+                <article class="article-card">
+                    <div class="article-image">
+                        <img src="/images/daogovernance.jpg" 
+                        alt="DAO Governance" />
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">DAOs Reshape Corporate Governance Models</h3>
+                        <p class="article-summary">Decentralized Autonomous Organizations are gaining legal recognition worldwide, with several jurisdictions creating frameworks for DAO incorporation and operation.</p>
+                        <a class="article-source" 
+                            href="https://blogs.law.ox.ac.uk/oblb/blog-post/2025/05/code-contract-how-legal-wrappers-are-reshaping-dao-governance?utm_source=chatgpt.com" 
+                            target="_blank" 
+                            rel="noopener noreferrer">
+                            read more
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article 5 -->
+                <article class="article-card">
+                    <div class="article-image">
+                        <img src="/images/layer2growth.jpg" 
+                        alt="Layer 2 Growth"/>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Layer 2 Solutions See Explosive Growth</h3>
+                        <p class="article-summary">Polygon, Arbitrum, and Optimism report record transaction volumes as developers migrate to Layer 2 networks for faster, cheaper blockchain interactions.</p>
+                        <a class="article-source" 
+                            href="https://www.ainvest.com/news/layer-2-solutions-optimism-arbitrum-polygon-drive-60-ethereum-scaling-2507/?utm_source=chatgpt.com" 
+                            target="_blank" 
+                            rel="noopener noreferrer">
+                            read more
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article 6 -->
+                <article class="article-card">
+                    <div class="article-image">
+                        <img src="/images/virtualrealestate.jpg" 
+                        alt="Virtual Real Estate"/>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Virtual Real Estate Market Finds New Ground</h3>
+                        <p class="article-summary">Metaverse platforms are experiencing renewed interest as virtual land sales pick up momentum, with enterprise adoption driving sustainable growth patterns.</p>
+                        <a class="article-source" 
+                            href="https://patentpc.com/blog/virtual-real-estate-sales-metaverse-property-stats/?utm_source=chatgpt.com" 
+                            target="_blank" 
+                            rel="noopener noreferrer">
+                            read more
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article 7 -->
+                <article class="article-card">
+                    <div class="article-image">
+                        <img src="/images/cbdcdevelopment.jpg" 
+                        alt="CBDC Development"/>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Central Banks Accelerate CBDC Development</h3>
+                        <p class="article-summary">Over 90 countries are now exploring Central Bank Digital Currencies, with pilot programs showing promising results for financial inclusion and payment efficiency.</p>
+                        <a class="article-source" 
+                            href="https://www.atlanticcouncil.org/cbdctracker/?utm_source=chatgpt.com" 
+                            target="_blank" 
+                            rel="noopener noreferrer">
+                            read more
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article 8 -->
+                <article class="article-card">
+                    <div class="article-image">
+                        <img src="/images/crosschainbridges.jpg" 
+                        alt="Cross-Chain Bridges"/>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Cross-Chain Bridges Enhance DeFi Liquidity</h3>
+                        <p class="article-summary">New interoperability protocols are breaking down blockchain silos, enabling seamless asset transfers and creating unified liquidity pools across multiple networks.</p>
+                        <a class="article-source" 
+                            href="https://www.chainalysis.com/blog/introduction-to-cross-chain-bridges/?utm_source=chatgpt.com" 
+                            target="_blank" 
+                            rel="noopener noreferrer">
+                            read more
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article 9 -->
+                <article class="article-card">
+                    <div class="article-image">
+                        <img src="/images/web3gaming.jpg" 
+                        alt="Web3 Gaming"/>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Web3 Gaming Reaches Mainstream Adoption</h3>
+                        <p class="article-summary">Play-to-earn games are gaining traction among traditional gamers, with major gaming studios announcing blockchain integration plans for upcoming titles.</p>
+                        <a class="article-source" 
+                            href="https://coinmarketcap.com/academy/article/week-in-gamefi-will-2025-bring-a-real-web3-aaa-game?utm_source=chatgpt.com" 
+                            target="_blank" 
+                            rel="noopener noreferrer">
+                            read more
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article 10 -->
+                <article class="article-card">
+                    <div class="article-image">
+                        <img src="/images/zeroknowledgeproofs.jpg" 
+                        alt="Zero-Knowledge Proofs" />
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Zero-Knowledge Proofs Revolutionize Privacy</h3>
+                        <p class="article-summary">ZK-rollups and privacy-focused protocols are enabling private transactions while maintaining blockchain transparency, opening new possibilities for enterprise adoption.</p>
+                        <a class="article-source" 
+                            href="https://chain.link/education/zero-knowledge-proof-zkp?utm_source=chatgpt.com" 
+                            target="_blank" 
+                            rel="noopener noreferrer">
+                            read more
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article 11 -->
+                <article class="article-card">
+                    <div class="article-image">
+                        <img src="/images/greenblockchain.jpg" 
+                        alt="Green Blockchain"/>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Green Blockchain Initiatives Gain Momentum</h3>
+                        <p class="article-summary">Proof-of-Stake networks and carbon-neutral mining operations are addressing environmental concerns, making blockchain technology more sustainable for the future.</p>
+                        <a class="article-source" 
+                            href="https://101blockchains.com/green-blockchain/?utm_source=chatgpt.com" 
+                            target="_blank" 
+                            rel="noopener noreferrer">
+                            read more
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article 12 -->
+                <article class="article-card">
+                    <div class="article-image">
+                        <img src="/images/cryptoregulation.jpg"
+                        alt="Crypto Regulation"/>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Global Crypto Regulation Framework Emerges</h3>
+                        <p class="article-summary">International regulatory bodies are working toward unified cryptocurrency guidelines, providing clarity for institutions and fostering responsible innovation in the space.</p>
+                        <a class="article-source" 
+                            href="https://www.fsb.org/2023/07/fsb-finalises-global-regulatory-framework-for-crypto-asset-activities/?utm_source=chatgpt.com" 
+                            target="_blank" 
+                            rel="noopener noreferrer">
+                            read more
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+    <!-- Contact form section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <!-- Form submits to httpbin for testing purposes -->
+            <form class="contact-form" action="https://httpbin.org/anything" method="POST">
+                <!-- Name input -->
+                <div class="form-group">
+                    <label for="name" class="form-label">Name</label>
+                    <input 
+                        type="text" 
+                        id="name" 
+                        name="name" 
+                        class="form-input" 
+                        placeholder="Your full name"
+                        required>
+                </div>
+                
+                <!-- Email input -->
+                <div class="form-group">
+                    <label for="email" class="form-label">Email</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        class="form-input" 
+                        placeholder="example@email.com"
+                        required>
+                </div>
+                
+                <!-- Radio buttons for contact preference -->
+                <div class="form-group">
+                    <label class="form-label">Preferred Contact Method</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input 
+                                type="radio" 
+                                name="contact-method" 
+                                value="email" 
+                                class="radio-input" 
+                                checked>
+                            Email
+                        </label>
+                    </div>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input 
+                                type="radio" 
+                                name="contact-method" 
+                                value="phone" 
+                                class="radio-input">
+                            Phone
+                        </label>
+                    </div>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input 
+                                type="radio" 
+                                name="contact-method" 
+                                value="none" 
+                                class="radio-input">
+                            No contact
+                        </label>
+                    </div>
+                </div>
+                
+                <!-- Checkbox group for topics of interest -->
+                <div class="form-group">
+                    <label class="form-label">Topics of Interest</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input 
+                                type="checkbox" 
+                                name="topics" 
+                                value="bitcoin" 
+                                class="checkbox-input">
+                            Bitcoin
+                        </label>
+                    </div>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input 
+                                type="checkbox" 
+                                name="topics" 
+                                value="ethereum" 
+                                class="checkbox-input">
+                            Ethereum
+                        </label>
+                    </div>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input 
+                                type="checkbox" 
+                                name="topics" 
+                                value="defi" 
+                                class="checkbox-input">
+                            DeFi
+                        </label>
+                    </div>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input 
+                                type="checkbox" 
+                                name="topics" 
+                                value="nft" 
+                                class="checkbox-input">
+                            NFTs
+                        </label>
+                    </div>
+                </div>
+                
+                <!-- Message textarea -->
+                <div class="form-group">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea 
+                        id="message"
+                        name="message" 
+                        class="form-textarea" 
+                        placeholder="Tell us about your interests in Web3 and decentralization..."
+                        required>
+                    </textarea>
+                </div>
+                
+                <!-- Dropdown: How did you hear about us? -->
+                <div class="form-group">
+                    <label for="referral" class="form-label">How did you hear about us?</label>
+                    <select id="referral" name="referral" class="form-input" required>
+                        <option value="">Please select</option>
+                        <option value="search">Search Engine</option>
+                        <option value="social">Social Media</option>
+                        <option value="friend">Friend/Colleague</option>
+                        <option value="event">Event/Conference</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <!-- Submit button -->
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+    <!-- Footer with social links -->
+    <footer class="footer">
+        <div class="container footer-center">
+            <div>
+                <div class="social-links">
+                    <a href="#discord" class="social-link" aria-label="Join our Discord community">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515a.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0a12.64 12.64 0 0 0-.617-1.25a.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057a19.9 19.9 0 0 0 5.993 3.03a.078.078 0 0 0 .084-.028a14.09 14.09 0 0 0 1.226-1.994a.076.076 0 0 0-.041-.106a13.107 13.107 0 0 1-1.872-.892a.077.077 0 0 1-.008-.128a10.2 10.2 0 0 0 .372-.292a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127a12.299 12.299 0 0 1-1.873.892a.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028a19.839 19.839 0 0 0 6.002-3.03a.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.956-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.955-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.946 2.418-2.157 2.418z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                    <a href="#twitter" class="social-link" aria-label="Follow us on Twitter">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26l8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                    <a href="#github" class="social-link" aria-label="View our GitHub repositories">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12c0 5.302 3.438 9.8 8.207 11.387c.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416c-.546-1.387-1.333-1.756-1.333-1.756c-1.089-.745.083-.729.083-.729c1.205.084 1.839 1.237 1.839 1.237c1.07 1.834 2.807 1.304 3.492.997c.107-.775.418-1.305.762-1.604c-2.665-.305-5.467-1.334-5.467-5.931c0-1.311.469-2.381 1.236-3.221c-.124-.303-.535-1.524.117-3.176c0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404c2.291-1.552 3.297-1.23 3.297-1.23c.653 1.653.242 2.874.118 3.176c.77.84 1.235 1.911 1.235 3.221c0 4.609-2.807 5.624-5.479 5.921c.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                    <a href="#linkedin" class="social-link" aria-label="Connect with us on LinkedIn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037c-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85c3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065c0-1.138.92-2.063 2.063-2.063c1.14 0 2.064.925 2.064 2.063c0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                </div>
+                <p class="copyright">&copy; 2025 De-News. Technigo.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Load JavaScript -->
+    <script src="javascript.js"></script>
+</body>
+</html>
