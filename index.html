@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="SV">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta 
+  name="viewport" 
+  content="width=device-width, initial-scale=1.0">
+  <title>Malizioso</title>
+  <link 
+  rel="stylesheet" 
+  href="style.css">
+
+</head>
+
+<body>
+
+  <header> 
+
+    <div class="sticky-bar">
+
+      <div class="nav-wrap">
+        <nav class="off-screen-menu">
+          <a href="index.html">HEM</a>
+          <a href="kennel.html">KENNEL</a>
+          <a href="puppies.html">VALPAR</a>
+          <a href="contact.html">KONTAKT</a>
+        </nav>
+
+        <nav>
+          <div class="ham-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </nav>
+      </div>
+
+      <nav class="nav nav-desktop">
+        <a href="index.html">HEM</a>
+        <a href="kennel.html">KENNEL</a>
+        <a href="puppies.html">VALPAR</a>
+        <a href="contact.html">KONTAKT</a>
+     </nav>
+
+    </div>
+  
+    <a href="index.html"> 
+      <img 
+      class= "hero-image" 
+      src="img/header.png" 
+      alt="logga med tre hundar på och kennelnamnet Malizioso">
+    </a>
+
+  </header>
+
+  <main>
+    <h1>Välkommen till Malizioso's kennel!</h1>
+
+    <h2>På vår hemsida kan läsa om uppkommande kullar, vår uppfödning och andra nyheter!</h2>
+
+    <section class="card-grid">
+
+      <article class="card">
+
+        <h3>NYHETER</h3>
+
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto velit voluptates, facilis labore eligendi dolorum non, illo, suscipit placeat nisi illum soluta alias? Neque dolor accusamus quas, distinctio atque modi!
+        </p>
+
+      </article>
+      
+      <article class="card">
+
+        <h3>TEXT</h3>
+
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus perspiciatis expedita corrupti aliquid tempore recusandae porro iste quae accusantium, ea qui, repudiandae minima dolorem tempora non consequatur fugit, sit cum?
+        </p>
+
+      </article>
+
+      <article class="card">
+        
+        <h3>TEXT</h3>
+        
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione libero est at iure voluptatem vel similique
+          maiores praesentium sequi temporibus! Error mollitia repellendus ipsa ut praesentium cum sapiente, perferendis
+         dolore.
+       </p>
+       
+
+      </article>
+
+      <article class="card">
+
+        <h3>TEXT</h3>
+
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero, suscipit explicabo. Debitis tenetur corporis
+          temporibus laborum pariatur facilis, recusandae voluptatum voluptas itaque voluptates fugit praesentium qui, x
+          explicabo officiis molestiae nam.
+        </p>
+        
+      </article>
+
+    </section>
+
+  </main>
+
+  <form 
+  action="https://httpbin.org/anything" 
+  method="POST" 
+  target="_blank"  
+  accept-charset="UTF-8">
+
+    <h3>INTRESSEANMÄLAN VALP</h3>
+
+    <p>
+      Vi väljer ut våra köpare med omsorg. <br> För oss är det viktigt att våra hjärtan hamnar i rätt familj.
+    </p>
+
+    <label>
+
+      <span>För- och efternamn</span>
+      
+      <input 
+        type="text" 
+        name="fullName"
+        placeholder="Namn" 
+        required>
+
+    </label>
+
+    <label>
+
+      <span>Hemort</span>
+
+      <input 
+      type="text" 
+      name="homeTown"
+      placeholder="Ekerö" 
+      required>
+
+    </label>
+
+    <label>
+
+      <span>Mobilnummer</span>
+
+      <input 
+      type="tel" 
+      name="phoneNumber"
+      pattern="^07\\d{8}$" 
+      placeholder="070 - 123 45 67" 
+      required>
+
+    </label>
+
+    <label>
+
+      <span>Mailadress</span>
+
+      <input 
+      type="email" 
+      name="email"
+      placeholder="exempel@exempel.com" 
+      required>
+
+    </label>
+
+    <label>
+
+      <span>*Drop down*</span>
+
+      <select 
+      name="dropdown" 
+      required >
+      <option 
+      class="option-placeholder" 
+      value="" 
+      disabled 
+      selected 
+      hidden>Välj här...</option>
+
+      <option value="alt1">Alternativ 1</option>
+      <option value="alt2">Alternativ 2</option>
+      <option value="alt3">Alternativ 3</option>
+      <option value="alt4">Alternativ 4</option>
+      </select>
+    </label>
+
+
+    <div class="bottom-form-section">
+    
+    
+      <label>
+
+        <span>Hur har ni planerat för att lösa första tiden hemma?</span>
+
+        <textarea 
+          name= "firstTimeHome" 
+          placeholder="T.ex Jag har semester.../Jag jobbar  hemma..." 
+          rows="4" 
+          required>
+        </textarea>
+
+      </label>
+  
+      <label>
+        <span>Övriga kommentarer</span>
+
+        <textarea 
+          name= "comments" 
+          placeholder="Meddelande..." 
+          rows="4">
+        </textarea>
+
+      </label>
+  
+      <button type="submit"onclick="alert('Tack för visat intresse, vi hör av oss!')">Skicka</button>
+  
+    </div>
+
+  </form>
+
+  <footer>
+
+    <div class="bottom-nav">
+
+      <a 
+        target="_blank" 
+        href="https://instagram.com">
+        Instagram 
+      </a>
+
+      <a 
+        target="_blank" 
+        href="https://facebook.com">
+        Facebook 
+      </a>
+
+      <a 
+        target="_blank"
+        href="https://skk.se">
+        SKK 
+      </a>
+
+      <a 
+        target="_blank" 
+        href="https://lagottoklubben.se">
+        SLRK 
+      </a>
+
+    </div>
+
+    <small class="copyright">Copyright &copy; Mikaela Sturk</small>
+
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
