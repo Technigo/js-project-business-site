@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <title>KONTAKT</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;600&family=Julius+Sans+One&display=swap"
+    rel="stylesheet"
+  >
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="navbar-left">
+        <a href="index.html">
+          <img
+            class="logo"
+            src="images/svartlogga.png"
+            alt="Skin Expert Logo"
+          >
+        </a>
+      </div>
+
+      <div class="navbar-center">
+        <div class="nav-links">
+          <a
+            href="#"
+            class="header-nav-link"
+          >SKIN EXPERT</a>
+          <a
+            href="#"
+            class="header-nav-link"
+          >BUTIK</a>
+          <a
+            href="#"
+            class="header-nav-link"
+          >OM</a>
+          <a
+            href="kontakt.html"
+            class="header-nav-link"
+          >KONTAKT</a>
+        </div>
+      </div>
+
+      <div class="navbar-right">
+        <button class="booking-btn">BOKA</button>
+        <button class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <div class="hero-image">
+      <div class="hero-text">
+        <h1>Welcome to Skin Expert</h1>
+        <p>Your one-stop solution for all skin care needs</p>
+        <button class="btn">Läs mer</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <h1 class="form-title">Kontakt</h1>
+
+    <div class="content-wrapper">
+      <form
+        action="https://httpbin.org/anything"
+        method="post"
+      >
+
+        <fieldset>
+          <legend>Dina kontaktuppgifter</legend>
+
+          <label for="name">Namn</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+          >
+
+          <label for="email">E-post</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="example@email.com"
+          >
+
+          <label for="message">Meddelande</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="4"
+            required
+          ></textarea>
+        </fieldset>
+
+        <fieldset>
+          <legend>Välj tjänster</legend>
+
+          <label for="service1">
+            <input
+              type="checkbox"
+              id="service1"
+              name="services"
+              value="service1"
+            >
+            Tjänst 1
+          </label>
+
+          <label for="service2">
+            <input
+              type="checkbox"
+              id="service2"
+              name="services"
+              value="service2"
+            >
+            Tjänst 2
+          </label>
+
+          <label for="service3">
+            <input
+              type="checkbox"
+              id="service3"
+              name="services"
+              value="service3"
+            >
+            Tjänst 3
+          </label>
+        </fieldset>
+
+        <div class="button-wrapper">
+          <input
+            type="submit"
+            class="contact-btn"
+            value="Skicka"
+          >
+        </div>
+      </form>
+
+      <div class="side-content">
+        <h2>Hitta oss</h2>
+        <p>Adress: Hudvårdsgatan 12, 123 45 Skönhetsstad</p>
+        <p>Telefon: 012-345 67 89</p>
+        <p>E-post: kontakt@skinexpert.se</p>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="social-media">
+      <a href="#"><img
+          src="images/facebook-icon.png"
+          alt="Facebook"
+        ></a>
+      <a href="#"><img
+          src="images/Instagram-icon.png"
+          alt="Instagram"
+        ></a>
+      <a href="#"><img
+          src="images/linkedin.webp"
+          alt="LinkedIn"
+        ></a>
+    </div>
+    <p>&copy; 2025 Skin Expert. All rights reserved.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
