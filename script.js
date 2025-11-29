@@ -1,4 +1,3 @@
-
 //hamburger menu
 /*finds the button element with class .hamburger,
  the <nav> element with the ID primary-nav(main menu) and

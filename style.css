@@ -279,6 +279,9 @@ body {
 
 .card-body {
   padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .card h3 {
@@ -291,6 +294,59 @@ body {
   color: var(--color-text-muted);
   font-size: 14px;
 }
+
+
+.meta {
+  margin: 0;
+  color: #a9afd0;
+  font-family: Inconsolata, monospace;
+  font-size: 14px;
+}
+
+.desc {
+  margin: 0;
+  color: #c2c7df;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tags span {
+  font-size: 12px;
+  color: #0b0b0f;
+  background: #27e1f7;
+  border-radius: 999px;
+  padding: 4px 8px;
+  filter: saturate(.9);
+}
+
+.tags span:nth-child(1) {
+  background: #27e1f7
+}
+
+.tags span:nth-child(2) {
+  background: #ff3cac
+}
+
+.tags span:nth-child(3) {
+  background: #7a5cff
+}
+
+.actions {
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price {
+  color: #cfd5f1;
+  font-weight: 700;
+}
+
 
 /* ===== Buttons (all buttons) ===== */
 .btn,

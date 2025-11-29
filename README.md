@@ -2,8 +2,9 @@
 _A responsive business website project_
 
 ## 📖 About the project
-NeonSound Studios is a fictional recording studio website created as a **student project**.  
-The goal was to practice building a **responsive, accessible business site** using only **HTML5, CSS3, and JavaScript**.  
+NeonSound Studios is a fictional recording studio website created my first **student coding project**.  
+The goal was to practice building a **responsive, accessible business site** using only **HTML5, CSS3, and JavaScript**.
+The site has **booking** buttons, it's just for demo and do not have a function, this also goes for the **navigation menu**  
 
 The site demonstrates:
 - Semantic HTML structure
