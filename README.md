@@ -2,7 +2,7 @@
 
 Welcome to **Dian Real Estate** — a modern, interactive real estate platform where users can search, filter, and explore properties in Dubai. This project demonstrates responsive design, dynamic filtering, and interactive UI components like a burger menu and investment cards.
 
-This project is live on [Netlify](https://your-live-link-here).
+This project is live on [Netlify](https://dian-eng.netlify.app/).
 
 ---
 
