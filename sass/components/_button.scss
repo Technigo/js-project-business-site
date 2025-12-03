@@ -1,0 +1,43 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+// MAIN BUTTON
+
+.btn {
+  @include btn--main;
+  margin: 0 auto;
+}
+
+.btn-search {
+  @include btn--search;
+}
+
+.btn-center {
+  margin: $gutter-horizontal-big 0 $gutter-horizontal-big 0;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+
+  @include respond(phone) {
+    margin-top: $gutter-horizontal-medium 0 $gutter-horizontal-medium 0;
+  }
+}
+
+// FILTER BUTTON
+
+.btn-choose {
+  @include btn--choose;
+}
+
+// WHATS APP BUTTON
+
+.btn-whatsapp {
+  @include btn--whatsapp;
+
+  &__icon {
+    fill: currentColor;
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
+  }
+}

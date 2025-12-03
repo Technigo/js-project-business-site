@@ -1,0 +1,188 @@
+@use "../abstracts/variables" as *;
+
+// MAIN BUTTON
+
+@mixin btn--main {
+  padding: 1.4rem 6rem;
+  background-color: var(--color-button);
+  border-radius: var(--border-radius-sm);
+  font-size: 1.8rem;
+  cursor: pointer;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  color: var(--color-white-base);
+  transition: 0.3s;
+  border: 0.1rem solid transparent;
+  box-shadow: var(--box-shadow);
+
+  @include respond-max(27.5em) {
+    // от 440px и нижу
+    width: 94vw;
+    padding: 1.4rem 0;
+  }
+
+  &:hover {
+    background-color: var(--color-primary-light);
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+  }
+}
+
+@mixin btn--search {
+  padding: 1.4rem 5rem;
+  background-color: var(--color-button);
+  border-radius: var(--border-radius-sm);
+  font-size: 1.8rem;
+  cursor: pointer;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  color: var(--color-white-base);
+  transition: 0.3s;
+  border: 0.1rem solid transparent;
+
+  box-shadow: var(--box-shadow);
+
+  &:hover {
+    background-color: var(--color-primary-light);
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+  }
+}
+
+// FILTER BUTTON
+
+@mixin btn--choose {
+  background-color: var(--color-primary-light);
+  padding: 1.5rem 2rem;
+  color: var(--color-grey-dark-base);
+  border: none;
+  border-radius: var(--border-radius-xs);
+  font-size: 1.8rem;
+  border: 0.1rem solid var(--color-primary);
+
+  @include respond(xs-phone) {
+    padding: 2rem 2rem;
+    font-size: 1.6rem;
+  }
+
+  &.active {
+    background-color: var(--color-primary);
+    color: var(--color-white-base);
+    border-color: var(--color-primary);
+  }
+}
+
+// WHATS APP BUTTON
+
+@mixin btn--whatsapp {
+  background-color: var(--color-primary-light);
+  padding: 1.4rem 0;
+  color: var(--color-primary);
+  border: none;
+  border-radius: var(--border-radius-xs);
+  font-size: 1.8rem;
+  font-weight: 500;
+  border: 0.1rem solid transparent;
+  text-decoration: none;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+
+  &:hover {
+    background-color: var(--color-primary);
+    color: var(--color-primary-light);
+  }
+}
+
+/* ------------------------------------------------------
+   MEDIA QUERY MANAGER
+   ------------------------------------------------------
+   
+   Брейкпоинты (по ширине экрана):
+
+   0 - 320px: Extra small (мини-телефоны)
+   0 - 600px: Phone
+   600px - 900px: Tablet portrait
+   900px - 1200px: Tablet landscape
+   1200px - 1800px:  Desktop (базовый дизайн) is where our normal style apply 
+   1800px + : Big desktop
+
+  
+
+   $breakpoint argument choices:
+   - xs-phone
+   - phone
+   - tab-port
+   - tab-land
+   - desktop
+   - big-desktop
+
+   1em = 16px
+------------------------------------------------------ */
+
+@mixin respond($breakpoint) {
+  // Extra small: ≤ 320px
+  @if $breakpoint == xs-phone {
+    @media only screen and (max-width: 20em) {
+      // 320px / 16px = 20em
+      @content;
+    }
+  }
+
+  // Phone: ≤ 600px
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) {
+      // 600px / 16px = 37.5em
+      @content;
+    }
+  }
+
+  // Tablet portrait: ≤ 900px
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 56.25em) {
+      // 900px / 16px = 56.25em
+      @content;
+    }
+  }
+
+  // Tablet landscape: ≤ 1200px
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 75em) {
+      // 1200px / 16px = 75em
+      @content;
+    }
+  }
+
+  // Big desktop: ≥ 1800px
+  @if $breakpoint == big-desktop {
+    @media only screen and (min-width: 112.5em) {
+      // 1800px / 16px = 112.5em
+      @content;
+    }
+  }
+}
+
+// 📌 Width between (min - max)
+@mixin respond-between($min, $max) {
+  @media only screen and (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}
+
+// 📌 Minimum width (from the number and up)
+@mixin respond-min($min) {
+  @media (min-width: $min) {
+    @content;
+  }
+}
+
+// 📌 Maximum width (up to the number)
+@mixin respond-max($max) {
+  @media (max-width: $max) {
+    @content;
+  }
+}

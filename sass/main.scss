@@ -1,0 +1,28 @@
+// ABSTRACTS FOR DESIGHN
+@use "abstracts/animations" as *;
+@use "abstracts/mixins" as *;
+@use "abstracts/typography" as *;
+@use "abstracts/variables" as *;
+
+// BASE FOR HTML AND BODY
+@use "base/base" as *;
+
+// COMPONENTS
+@use "components/button" as *;
+@use "components/filter" as *;
+@use "components/form" as *;
+@use "components/popup" as *;
+@use "components/card-invest" as *;
+@use "components/card-living" as *;
+@use "components/card-announce" as *;
+@use "components/icon" as *;
+@use "components/tag" as *;
+
+// LAYOUT
+@use "layouts/footer" as *;
+@use "layouts/grid" as *;
+@use "layouts/header" as *;
+@use "layouts/navigation" as *;
+
+// ALL PAGES
+@use "pages/home" as *;

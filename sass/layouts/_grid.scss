@@ -1,0 +1,70 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.row-header {
+  max-width: $grid-header-width;
+  margin: 0 auto;
+
+  @include respond(tab-land) {
+    max-width: $grid-header-tablet-landscape-width;
+  }
+
+  @include respond(tab-port) {
+    max-width: $grid-header-tab-port-width;
+  }
+
+  @include respond(phone) {
+    max-width: $grid-header-phone-width;
+  }
+
+  @include respond(xs-phone) {
+    max-width: $grid-header-xs-phone-width;
+  }
+}
+
+.row-options {
+  max-width: $grid-choose-option-width;
+  margin: 0 auto;
+
+  @include respond(tab-land) {
+    max-width: $grid-choose-option-tablet-landscape-width;
+  }
+
+  @include respond(tab-port) {
+    max-width: $grid-choose-option-tab-port-width;
+  }
+}
+
+.row-arrows {
+  max-width: $grid-arrows-width;
+  margin: 0 auto;
+
+  @include respond(tab-land) {
+    max-width: $grid-arrows-tablet-landscape-width;
+  }
+
+  @include respond(tab-port) {
+    max-width: $grid-arrows-tab-port-width;
+  }
+}
+
+.row-container {
+  max-width: $grid-main-container-width;
+  margin: 0 auto;
+
+  @include respond(tab-land) {
+    max-width: $grid-main-container-tablet-landscape-width;
+  }
+
+  @include respond(tab-port) {
+    max-width: $grid-main-container-tab-port-width;
+  }
+
+  @include respond(phone) {
+    max-width: $grid-main-container-phone-width;
+  }
+
+  @include respond(xs-phone) {
+    max-width: $grid-main-container-xs-phone-width;
+  }
+}

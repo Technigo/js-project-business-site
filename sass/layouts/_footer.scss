@@ -1,0 +1,132 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.footer-menue {
+  padding: 3rem 0;
+  background-color: var(--color-white);
+  box-shadow: var(--box-shadow);
+  margin-top: 10rem;
+
+  &__container {
+    background-color: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 3rem;
+    padding: 0 2rem;
+
+    @include respond(phone) {
+      padding: 1rem;
+    }
+
+    @include respond-max(35em) {
+      padding: 0 2rem;
+      flex-direction: column;
+    }
+
+    @include respond(xs-phone) {
+      padding: 0 0.5rem;
+    }
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 2rem;
+    align-self: stretch;
+    flex: 0 0 20%;
+  }
+
+  &__social-media {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: start;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  &__adress {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--color-primary-light);
+    border-radius: var(--border-radius-lg);
+    padding: 2rem;
+    width: 100%;
+    flex: 1;
+
+    &__sub-title-main {
+      font-size: 1.4rem;
+      color: var(--color-grey-dark);
+    }
+
+    &__sub-title {
+      margin-bottom: 2rem;
+    }
+
+    &__number {
+      color: var(--color-font);
+      text-decoration: none;
+    }
+  }
+
+  &__question {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-primary-light);
+    border-radius: var(--border-radius-lg);
+    padding: 2rem;
+    width: 100%;
+  }
+
+  &__btn {
+    width: 100%;
+    white-space: nowrap;
+  }
+
+  &__navigation-bar {
+    display: flex;
+    align-self: stretch;
+    gap: 1rem;
+    border-radius: var(--border-radius-lg);
+    background-color: var(--color-primary-light);
+    padding: 2rem;
+    flex: 1;
+
+    @include respond-max(49.375em) {
+      flex-wrap: wrap;
+    }
+
+    @include respond(phone) {
+      flex-wrap: wrap;
+      gap: 3rem;
+    }
+  }
+
+  &__nav-box-1 {
+    flex: 1;
+    white-space: nowrap;
+  }
+
+  &__nav-box-2 {
+    flex: 1;
+    white-space: nowrap;
+  }
+
+  &__nav-box-3 {
+    flex: 1;
+    white-space: nowrap;
+  }
+
+  &__title {
+    margin-bottom: 2rem;
+  }
+
+  &__list {
+    list-style: none;
+  }
+}

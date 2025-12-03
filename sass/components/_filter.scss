@@ -1,0 +1,46 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.choose-option {
+  background-color: var(--color-white);
+  padding: 1rem;
+  border-radius: var(--border-radius-md);
+  display: flex;
+  gap: 1rem;
+  border: 0.1rem solid var(--color-primary);
+  flex-wrap: wrap;
+  margin-bottom: $gutter-horizontal-medium;
+
+  @include respond(phone) {
+    background-color: transparent;
+    border: transparent;
+  }
+
+  &__filter-methods,
+  &__filter-cities {
+    display: flex;
+    gap: 1rem;
+    flex: auto;
+
+    @include respond(phone) {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      overflow-y: hidden;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      padding: 0 1rem;
+    }
+  }
+
+  &__btn-invest,
+  &__btn-city {
+    flex: 1;
+    cursor: pointer;
+
+    @include respond-max(36.875em) {
+      flex: 0 0 auto;
+      white-space: nowrap;
+    }
+  }
+}

@@ -1,0 +1,1463 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="img/building.png" type="image/x-icon" />
+
+    <title>DIAN — Real Estate Company</title>
+  </head>
+  <body>
+    <!---------------------------------------------->
+    <!--           HEADER MENU BLOCK              -->
+    <!---------------------------------------------->
+
+    <header class="header-menue">
+      <div class="row-header header-menue__container">
+        <div class="header-menue__logo">DIAN</div>
+        <nav class="navbar">
+          <ul class="nav-links">
+            <li><a href="#apartments">Apartment Search</a></li>
+            <li><a href="#investments">Investments</a></li>
+            <li><a href="#contacts">Contacts</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-menue__button">
+          <div
+            class="header-menue__button-heart theme-toggle"
+            id="theme-toggle"
+            aria-pressed="false"
+          >
+            <span>Dark mode</span>
+          </div>
+
+          <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!------------------->
+      <!-- HERO SECTION  -->
+      <!------------------->
+
+      <section id="apartments" class="hero row-header">
+        <div class="hero__img">
+          <div class="hero__container row-container">
+            <h1 class="primary-heading">
+              Create your <br />
+              new future in Dubai
+            </h1>
+            <h3 class="tertiary-headin">
+              Apartments. Investments. Opportunities.
+            </h3>
+
+            <!--------------------------------->
+            <!-- PROPERTY FILTER BLOCK -->
+            <!--------------------------------->
+
+            <form
+              class="search-form"
+              action="https://httpbin.org/anything"
+              method="POST"
+            >
+              <label class="search-form__group">
+                Property Type
+                <select name="property-type" class="search-form__select">
+                  <option value="all">All types</option>
+                  <option value="apartment">Apartment</option>
+                  <option value="villa">Villa</option>
+                  <option value="penthouse">Penthouse</option>
+                  <option value="duplex">Duplex</option>
+                  <option value="office">Office</option>
+                </select>
+              </label>
+
+              <label class="search-form__group">
+                District
+                <select name="district" class="search-form__select">
+                  <option value="any">Any district</option>
+                  <option value="al-jazeera">Al Jazeera</option>
+                  <option value="jebel-ali-first">Jebel Ali First</option>
+                  <option value="jumeirah-gardens-city">
+                    Jumeirah Gardens City
+                  </option>
+                  <option value="palm-jebel-ali">Palm Jebel Ali</option>
+                  <option value="downtown">Downtown</option>
+                </select>
+              </label>
+
+              <label class="search-form__group">
+                Price
+                <select name="price" class="search-form__select">
+                  <option value="200000">$ 200,000</option>
+                  <option value="500000">$ 500,000</option>
+                  <option value="700000">$ 700,000</option>
+                  <option value="800000">$ 800,000</option>
+                </select>
+              </label>
+
+              <div class="search-form__group">
+                <button type="submit" class="search-form__group-btn btn-search">
+                  Search
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!------------------------------- -->
+      <!-- INVESTMENT CARDS BLOCK -->
+      <!------------------------------- -->
+
+      <section id="investments" class="section-invest">
+        <h2 class="row-container secondary-heading">
+          Investments for <span class="highlight-green">earning in Dubai</span>
+        </h2>
+
+        <!------------------------------------------------------->
+        <!-- INVESTMENT AND CITY FILTERS BLOCK -->
+        <!------------------------------------------------------->
+
+        <div class="row-options section-invest__choose-option choose-option">
+          <div class="choose-option__filter-methods">
+            <button
+              class="btn-choose choose-option__btn-invest btn-method"
+              data-method="rent"
+            >
+              Passive rental income
+            </button>
+            <button
+              class="btn-choose choose-option__btn-invest btn-method"
+              data-method="resale"
+            >
+              Resale income
+            </button>
+            <button
+              class="btn-choose choose-option__btn-invest btn-method"
+              data-method="gold-anchor"
+            >
+              "Golden Anchor" income
+            </button>
+          </div>
+          <div class="choose-option__filter-cities">
+            <button
+              class="btn-choose choose-option__btn-city btn-city"
+              data-city="all"
+            >
+              All
+            </button>
+            <button
+              class="btn-choose choose-option__btn-city btn-city"
+              data-city="dubai"
+            >
+              Dubai
+            </button>
+            <button
+              class="btn-choose choose-option__btn-city btn-city"
+              data-city="abu-dabi"
+            >
+              Abu Dhabi
+            </button>
+            <button
+              class="btn-choose choose-option__btn-city btn-city"
+              data-city="sharjah"
+            >
+              Sharjah
+            </button>
+            <button
+              class="btn-choose choose-option__btn-city btn-city"
+              data-city="ajman"
+            >
+              Ajman
+            </button>
+            <button
+              class="btn-choose choose-option__btn-city btn-city"
+              data-city="fujairah"
+            >
+              Fujairah
+            </button>
+          </div>
+        </div>
+
+        <div class="row-arrows row-arrows--scroll section-invest__slider">
+          <!-- ARROW LEFT -->
+
+          <div class="section-invest__arrow arrow-left">
+            <svg class="arrow-icon">
+              <use xlink:href="img/sprite.svg#icon-arrow-left2"></use>
+            </svg>
+          </div>
+
+          <div
+            class="row-container row-container--scroll section-invest__container"
+          >
+            <div class="section-invest__container__card">
+              <!-- 1️⃣ INVESTMENT CARD --- DAMAC -->
+
+              <div
+                class="section-invest__card"
+                data-id="card-invest-1"
+                data-city="dubai"
+                data-method="rent"
+              >
+                <!-- Developer -->
+                <div class="section-invest__card__header">
+                  <div class="section-invest__card__developer">
+                    <!-- Лого застройщика -->
+                    <div class="developer__logo-box">
+                      <div class="developer__logo developer__logo--damac"></div>
+                    </div>
+
+                    <div class="section-invest__card__developer-title">
+                      <h4 class="object-title">Zeston Villas</h4>
+                      <p class="company-title">DAMAC Properties</p>
+                    </div>
+                  </div>
+
+                  <!-- Фото апартаментов -->
+                  <div class="invest__image invest__image--1"></div>
+
+                  <!-- Tags -->
+                  <div class="tags">
+                    <div class="tags__tag">
+                      <p>post installment</p>
+                    </div>
+                    <div class="tags__tag">
+                      <p>furnished</p>
+                    </div>
+                    <div class="tags__tag">
+                      <p>(7-8% ROI)</p>
+                    </div>
+                  </div>
+
+                  <!-- Name -->
+                  <!-- <p class="section-invest__card-backend__title">Zeston Villas</p> -->
+
+                  <!-- Location -->
+                  <div class="section-invest__card__location">
+                    <svg class="grey-card-icon">
+                      <use xlink:href="img/sprite.svg#icon-map-pin"></use>
+                    </svg>
+                    <p class="section-invest__card__location-title">
+                      Zeston, Athlon by Aldar, Dubai
+                    </p>
+                  </div>
+
+                  <!-- Divider -->
+                  <span class="section-invest__card__divider-horizontal"></span>
+
+                  <!-- Box 1: area and rooms -->
+                  <div class="section-invest__card__box-1">
+                    <!-- Area -->
+                    <div class="section-invest__card__area">
+                      <p class="section-invest__card__area-number">
+                        from 1634 (sq.m)
+                      </p>
+                      <div class="section-invest__card__area-info">
+                        <svg class="grey-card-icon">
+                          <use xlink:href="img/sprite.svg#icon-compass2"></use>
+                        </svg>
+                        <p class="section-invest__card__area-name">area</p>
+                      </div>
+                    </div>
+
+                    <!-- Rooms -->
+                    <div class="section-invest__card__area">
+                      <p class="section-invest__card__area-number">
+                        from 4 rooms
+                      </p>
+                      <div class="section-invest__card__area-info">
+                        <svg class="grey-card-icon">
+                          <use xlink:href="img/sprite.svg#icon-map1"></use>
+                        </svg>
+                        <p class="section-invest__card__area-name">bedrooms</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <span class="section-invest__card__divider-horizontal"></span>
+                </div>
+
+                <!-- BOX HOVER EFFECT WITH DETAIL INFORMATION -->
+                <div class="section-invest__card__hover">
+                  <!-- PRICE BOX -->
+
+                  <div class="section-invest__card__hover-cost">
+                    <p class="section-invest__card__cost">
+                      Starting price: <br />
+                      <span class="highlight-blue">AED 1.6M</span>
+                    </p>
+                    <span class="section-invest__card__divider-vertical"></span>
+                    <p class="section-invest__card__cost">
+                      Completion: <br />
+                      <span class="highlight-blue">Q3 2027</span>
+                    </p>
+                  </div>
+
+                  <!-- BUTTON BOX -->
+
+                  <div class="section-invest__card__hover-button">
+                    <!-- WhatsApp -->
+                    <a href="#" class="btn-whatsapp">
+                      <svg class="btn-whatsapp__icon">
+                        <use xlink:href="img/sprite.svg#icon-whatsapp"></use>
+                      </svg>
+                      WhatsApp
+                    </a>
+                  </div>
+
+                  <!-- Divider -->
+                  <span class="section-invest__card__divider-horizontal"></span>
+
+                  <!-- ROOM INFO BOX -->
+
+                  <div class="section-invest__card__hover-room">
+                    <div>
+                      <p class="text-bold">
+                        1 bedroom <span class="highlight-grey">from 91 m²</span>
+                      </p>
+                      <p class="text-bold">
+                        2 bedrooms
+                        <span class="highlight-grey">from 135 m²</span>
+                      </p>
+                      <p class="text-bold">
+                        3 bedrooms
+                        <span class="highlight-grey">from 267 m²</span>
+                      </p>
+                    </div>
+
+                    <div class="section-invest__card__text-right">
+                      <p class="text-bold">from 3M AED</p>
+                      <p class="text-bold">from 4.1M AED</p>
+                      <p class="text-bold">from 7M AED</p>
+                    </div>
+                  </div>
+
+                  <!-- Divider -->
+                  <span class="section-invest__card__divider-horizontal"></span>
+
+                  <!-- PAYMENT PLAN INFO BOX -->
+
+                  <div class="section-invest__card__hover-payment">
+                    <p>Payment plan: 40/60</p>
+
+                    <p class="text-bold">
+                      10% <span class="highlight-grey">initial deposit</span>
+                    </p>
+                    <p class="text-bold">
+                      50%
+                      <span class="highlight-grey">during construction</span>
+                    </p>
+                    <p class="text-bold">
+                      10%
+                      <span class="highlight-grey">upon completion</span>
+                    </p>
+                    <p class="text-bold">
+                      30%
+                      <span class="highlight-grey"
+                        >post-installment until Q1 2030</span
+                      >
+                    </p>
+                  </div>
+
+                  <!-- Divider -->
+                  <span class="section-invest__card__divider-horizontal"></span>
+
+                  <!-- AVAILABILITY INFO BOX -->
+
+                  <div class="section-invest__card__hover-availability">
+                    <div>
+                      <p class="text-bold">Available apartments</p>
+                      <p class="highlight-green text-bold">25 / 80</p>
+                    </div>
+
+                    <div class="section-invest__card__text-right">
+                      <p class="text-bold">completion year</p>
+                      <p class="highlight-green text-bold">Q3 2027</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 2️⃣ INVESTMENT CARD --- --- EMAAR -->
+
+              <div
+                class="section-invest__card"
+                data-id="card-invest-2"
+                data-city="dubai"
+                data-method="rent"
+              >
+                <!-- Developer -->
+                <div class="section-invest__card__header">
+                  <div class="section-invest__card__developer">
+                    <!-- Лого застройщика -->
+                    <div class="developer__logo-box">
+                      <div class="developer__logo developer__logo--emaar"></div>
+                    </div>
+
+                    <div class="section-invest__card__developer-title">
+                      <h4 class="object-title">Zeston Villas</h4>
+                      <p class="company-title">DAMAC Properties</p>
+                    </div>
+                  </div>
+
+                  <!-- Фото апартаментов -->
+                  <div class="invest__image invest__image--2"></div>
+
+                  <!-- Tags -->
+                  <div class="tags">
+                    <div class="tags__tag">
+                      <p>post installment</p>
+                    </div>
+                    <div class="tags__tag">
+                      <p>furnished</p>
+                    </div>
+                    <div class="tags__tag">
+                      <p>(7-8% ROI)</p>
+                    </div>
+                  </div>
+
+                  <!-- Name -->
+                  <!-- <p class="section-invest__card-backend__title">Zeston Villas</p> -->
+
+                  <!-- Location -->
+                  <div class="section-invest__card__location">
+                    <svg class="grey-card-icon">
+                      <use xlink:href="img/sprite.svg#icon-map-pin"></use>
+                    </svg>
+                    <p class="section-invest__card__location-title">
+                      Zeston, Athlon by Aldar, Dubai
+                    </p>
+                  </div>
+
+                  <!-- Divider -->
+                  <span class="section-invest__card__divider-horizontal"></span>
+
+                  <!-- Box 1: area and rooms -->
+                  <div class="section-invest__card__box-1">
+                    <!-- Area -->
+                    <div class="section-invest__card__area">
+                      <p class="section-invest__card__area-number">
+                        from 1634 (sq.m)
+                      </p>
+                      <div class="section-invest__card__area-info">
+                        <svg class="grey-card-icon">
+                          <use xlink:href="img/sprite.svg#icon-compass2"></use>
+                        </svg>
+                        <p class="section-invest__card__area-name">area</p>
+                      </div>
+                    </div>
+
+                    <!-- Rooms -->
+                    <div class="section-invest__card__area">
+                      <p class="section-invest__card__area-number">
+                        from 4 rooms
+                      </p>
+                      <div class="section-invest__card__area-info">
+                        <svg class="grey-card-icon">
+                          <use xlink:href="img/sprite.svg#icon-map1"></use>
+                        </svg>
+                        <p class="section-invest__card__area-name">bedrooms</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <span class="section-invest__card__divider-horizontal"></span>
+                </div>
+
+                <!-- BOX HOVER EFFECT WITH DETAIL INFORMATION -->
+                <div class="section-invest__card__hover">
+                  <!-- PRICE BOX -->
+
+                  <div class="section-invest__card__hover-cost">
+                    <p class="section-invest__card__cost">
+                      Starting price: <br />
+                      <span class="highlight-blue">AED 1.6M</span>
+                    </p>
+                    <span class="section-invest__card__divider-vertical"></span>
+                    <p class="section-invest__card__cost">
+                      Completion: <br />
+                      <span class="highlight-blue">Q3 2027</span>
+                    </p>
+                  </div>
+
+                  <!-- BUTTON BOX -->
+
+                  <div class="section-invest__card__hover-button">
+                    <!-- WhatsApp -->
+                    <a href="#" class="btn-whatsapp">
+                      <svg class="btn-whatsapp__icon">
+                        <use xlink:href="img/sprite.svg#icon-whatsapp"></use>
+                      </svg>
+                      WhatsApp
+                    </a>
+                  </div>
+
+                  <!-- Divider -->
+                  <span class="section-invest__card__divider-horizontal"></span>
+
+                  <!-- ROOM INFO BOX -->
+
+                  <div class="section-invest__card__hover-room">
+                    <div>
+                      <p class="text-bold">
+                        1 bedroom <span class="highlight-grey">from 91 m²</span>
+                      </p>
+                      <p class="text-bold">
+                        2 bedrooms
+                        <span class="highlight-grey">from 135 m²</span>
+                      </p>
+                      <p class="text-bold">
+                        3 bedrooms
+                        <span class="highlight-grey">from 267 m²</span>
+                      </p>
+                    </div>
+
+                    <div class="section-invest__card__text-right">
+                      <p class="text-bold">from 3M AED</p>
+                      <p class="text-bold">from 4.1M AED</p>
+                      <p class="text-bold">from 7M AED</p>
+                    </div>
+                  </div>
+
+                  <!-- Divider -->
+                  <span class="section-invest__card__divider-horizontal"></span>
+
+                  <!-- PAYMENT PLAN INFO BOX -->
+
+                  <div class="section-invest__card__hover-payment">
+                    <p>Payment plan: 40/60</p>
+
+                    <p class="text-bold">
+                      10% <span class="highlight-grey">initial deposit</span>
+                    </p>
+                    <p class="text-bold">
+                      50%
+                      <span class="highlight-grey">during construction</span>
+                    </p>
+                    <p class="text-bold">
+                      10%
+                      <span class="highlight-grey">upon completion</span>
+                    </p>
+                    <p class="text-bold">
+                      30%
+                      <span class="highlight-grey"
+                        >post-installment until Q1 2030</span
+                      >
+                    </p>
+                  </div>
+
+                  <!-- Divider -->
+                  <span class="section-invest__card__divider-horizontal"></span>
+
+                  <!-- AVAILABILITY INFO BOX -->
+
+                  <div class="section-invest__card__hover-availability">
+                    <div>
+                      <p class="text-bold">Available apartments</p>
+                      <p class="highlight-green text-bold">25 / 80</p>
+                    </div>
+
+                    <div class="section-invest__card__text-right">
+                      <p class="text-bold">completion year</p>
+                      <p class="highlight-green text-bold">Q3 2027</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 3️⃣ INVESTMENT CARD --- --- MERAAS -->
+
+              <div
+                class="section-invest__card"
+                data-id="card-invest-3"
+                data-city="dubai"
+                data-method="rent"
+              >
+                <!-- Developer -->
+                <div class="section-invest__card__header">
+                  <div class="section-invest__card__developer">
+                    <!-- Лого застройщика -->
+                    <div class="developer__logo-box">
+                      <div
+                        class="developer__logo developer__logo--meraas"
+                      ></div>
+                    </div>
+
+                    <div class="section-invest__card__developer-title">
+                      <h4 class="object-title">Zeston Villas</h4>
+                      <p class="company-title">DAMAC Properties</p>
+                    </div>
+                  </div>
+
+                  <!-- Фото апартаментов -->
+                  <div class="invest__image invest__image--3"></div>
+
+                  <!-- Tags -->
+                  <div class="tags">
+                    <div class="tags__tag">
+                      <p>post installment</p>
+                    </div>
+                    <div class="tags__tag">
+                      <p>furnished</p>
+                    </div>
+                    <div class="tags__tag">
+                      <p>(7-8% ROI)</p>
+                    </div>
+                  </div>
+
+                  <!-- Name -->
+                  <!-- <p class="section-invest__card-backend__title">Zeston Villas</p> -->
+
+                  <!-- Location -->
+                  <div class="section-invest__card__location">
+                    <svg class="grey-card-icon">
+                      <use xlink:href="img/sprite.svg#icon-map-pin"></use>
+                    </svg>
+                    <p class="section-invest__card__location-title">
+                      Zeston, Athlon by Aldar, Dubai
+                    </p>
+                  </div>
+
+                  <!-- Divider -->
+                  <span class="section-invest__card__divider-horizontal"></span>
+
+                  <!-- Box 1: area and rooms -->
+                  <div class="section-invest__card__box-1">
+                    <!-- Area -->
+                    <div class="section-invest__card__area">
+                      <p class="section-invest__card__area-number">
+                        from 1634 (sq.m)
+                      </p>
+                      <div class="section-invest__card__area-info">
+                        <svg class="grey-card-icon">
+                          <use xlink:href="img/sprite.svg#icon-compass2"></use>
+                        </svg>
+                        <p class="section-invest__card__area-name">area</p>
+                      </div>
+                    </div>
+
+                    <!-- Rooms -->
+                    <div class="section-invest__card__area">
+                      <p class="section-invest__card__area-number">
+                        from 4 rooms
+                      </p>
+                      <div class="section-invest__card__area-info">
+                        <svg class="grey-card-icon">
+                          <use xlink:href="img/sprite.svg#icon-map1"></use>
+                        </svg>
+                        <p class="section-invest__card__area-name">bedrooms</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <span class="section-invest__card__divider-horizontal"></span>
+                </div>
+
+                <!-- BOX HOVER EFFECT WITH DETAIL INFORMATION -->
+                <div class="section-invest__card__hover">
+                  <!-- PRICE BOX -->
+
+                  <div class="section-invest__card__hover-cost">
+                    <p class="section-invest__card__cost">
+                      Starting price: <br />
+                      <span class="highlight-blue">AED 1.6M</span>
+                    </p>
+                    <span class="section-invest__card__divider-vertical"></span>
+                    <p class="section-invest__card__cost">
+                      Completion: <br />
+                      <span class="highlight-blue">Q3 2027</span>
+                    </p>
+                  </div>
+
+                  <!-- BUTTON BOX -->
+
+                  <div class="section-invest__card__hover-button">
+                    <!-- WhatsApp -->
+                    <a href="#" class="btn-whatsapp">
+                      <svg class="btn-whatsapp__icon">
+                        <use xlink:href="img/sprite.svg#icon-whatsapp"></use>
+                      </svg>
+                      WhatsApp
+                    </a>
+                  </div>
+
+                  <!-- Divider -->
+                  <span class="section-invest__card__divider-horizontal"></span>
+
+                  <!-- ROOM INFO BOX -->
+
+                  <div class="section-invest__card__hover-room">
+                    <div>
+                      <p class="text-bold">
+                        1 bedroom <span class="highlight-grey">from 91 m²</span>
+                      </p>
+                      <p class="text-bold">
+                        2 bedrooms
+                        <span class="highlight-grey">from 135 m²</span>
+                      </p>
+                      <p class="text-bold">
+                        3 bedrooms
+                        <span class="highlight-grey">from 267 m²</span>
+                      </p>
+                    </div>
+
+                    <div class="section-invest__card__text-right">
+                      <p class="text-bold">from 3M AED</p>
+                      <p class="text-bold">from 4.1M AED</p>
+                      <p class="text-bold">from 7M AED</p>
+                    </div>
+                  </div>
+
+                  <!-- Divider -->
+                  <span class="section-invest__card__divider-horizontal"></span>
+
+                  <!-- PAYMENT PLAN INFO BOX -->
+
+                  <div class="section-invest__card__hover-payment">
+                    <p>Payment plan: 40/60</p>
+
+                    <p class="text-bold">
+                      10% <span class="highlight-grey">initial deposit</span>
+                    </p>
+                    <p class="text-bold">
+                      50%
+                      <span class="highlight-grey">during construction</span>
+                    </p>
+                    <p class="text-bold">
+                      10%
+                      <span class="highlight-grey">upon completion</span>
+                    </p>
+                    <p class="text-bold">
+                      30%
+                      <span class="highlight-grey"
+                        >post-installment until Q1 2030</span
+                      >
+                    </p>
+                  </div>
+
+                  <!-- Divider -->
+                  <span class="section-invest__card__divider-horizontal"></span>
+
+                  <!-- AVAILABILITY INFO BOX -->
+
+                  <div class="section-invest__card__hover-availability">
+                    <div>
+                      <p class="text-bold">Available apartments</p>
+                      <p class="highlight-green text-bold">25 / 80</p>
+                    </div>
+
+                    <div class="section-invest__card__text-right">
+                      <p class="text-bold">completion year</p>
+                      <p class="highlight-green text-bold">Q3 2027</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 4️⃣ INVESTMENT CARD --- --- NAKHEEL-->
+
+              <div
+                class="section-invest__card"
+                data-id="card-invest-4"
+                data-city="sharjah"
+                data-method="rent"
+              >
+                <!-- Developer -->
+                <div class="section-invest__card__header">
+                  <div class="section-invest__card__developer">
+                    <!-- Лого застройщика -->
+                    <div class="developer__logo-box">
+                      <div
+                        class="developer__logo developer__logo--nakheel"
+                      ></div>
+                    </div>
+
+                    <div class="section-invest__card__developer-title">
+                      <h4 class="object-title">Zeston Villas</h4>
+                      <p class="company-title">DAMAC Properties</p>
+                    </div>
+                  </div>
+
+                  <!-- Фото апартаментов -->
+                  <div class="invest__image invest__image--4"></div>
+
+                  <!-- Tags -->
+                  <div class="tags">
+                    <div class="tags__tag">
+                      <p>post installment</p>
+                    </div>
+                    <div class="tags__tag">
+                      <p>furnished</p>
+                    </div>
+                    <div class="tags__tag">
+                      <p>(7-8% ROI)</p>
+                    </div>
+                  </div>
+
+                  <!-- Name -->
+                  <!-- <p class="section-invest__card-backend__title">Zeston Villas</p> -->
+
+                  <!-- Location -->
+                  <div class="section-invest__card__location">
+                    <svg class="grey-card-icon">
+                      <use xlink:href="img/sprite.svg#icon-map-pin"></use>
+                    </svg>
+                    <p class="section-invest__card__location-title">
+                      Zeston, Athlon by Aldar, Dubai
+                    </p>
+                  </div>
+
+                  <!-- Divider -->
+                  <span class="section-invest__card__divider-horizontal"></span>
+
+                  <!-- Box 1: area and rooms -->
+                  <div class="section-invest__card__box-1">
+                    <!-- Area -->
+                    <div class="section-invest__card__area">
+                      <p class="section-invest__card__area-number">
+                        from 1634 (sq.m)
+                      </p>
+                      <div class="section-invest__card__area-info">
+                        <svg class="grey-card-icon">
+                          <use xlink:href="img/sprite.svg#icon-compass2"></use>
+                        </svg>
+                        <p class="section-invest__card__area-name">area</p>
+                      </div>
+                    </div>
+
+                    <!-- Rooms -->
+                    <div class="section-invest__card__area">
+                      <p class="section-invest__card__area-number">
+                        from 4 rooms
+                      </p>
+                      <div class="section-invest__card__area-info">
+                        <svg class="grey-card-icon">
+                          <use xlink:href="img/sprite.svg#icon-map1"></use>
+                        </svg>
+                        <p class="section-invest__card__area-name">bedrooms</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <span class="section-invest__card__divider-horizontal"></span>
+                </div>
+
+                <!-- BOX HOVER EFFECT WITH DETAIL INFORMATION -->
+                <div class="section-invest__card__hover">
+                  <!-- PRICE BOX -->
+
+                  <div class="section-invest__card__hover-cost">
+                    <p class="section-invest__card__cost">
+                      Starting price: <br />
+                      <span class="highlight-blue">AED 1.6M</span>
+                    </p>
+                    <span class="section-invest__card__divider-vertical"></span>
+                    <p class="section-invest__card__cost">
+                      Completion: <br />
+                      <span class="highlight-blue">Q3 2027</span>
+                    </p>
+                  </div>
+
+                  <!-- BUTTON BOX -->
+
+                  <div class="section-invest__card__hover-button">
+                    <!-- WhatsApp -->
+                    <a href="#" class="btn-whatsapp">
+                      <svg class="btn-whatsapp__icon">
+                        <use xlink:href="img/sprite.svg#icon-whatsapp"></use>
+                      </svg>
+                      WhatsApp
+                    </a>
+                  </div>
+
+                  <!-- Divider -->
+                  <span class="section-invest__card__divider-horizontal"></span>
+
+                  <!-- ROOM INFO BOX -->
+
+                  <div class="section-invest__card__hover-room">
+                    <div>
+                      <p class="text-bold">
+                        1 bedroom <span class="highlight-grey">from 91 m²</span>
+                      </p>
+                      <p class="text-bold">
+                        2 bedrooms
+                        <span class="highlight-grey">from 135 m²</span>
+                      </p>
+                      <p class="text-bold">
+                        3 bedrooms
+                        <span class="highlight-grey">from 267 m²</span>
+                      </p>
+                    </div>
+
+                    <div class="section-invest__card__text-right">
+                      <p class="text-bold">from 3M AED</p>
+                      <p class="text-bold">from 4.1M AED</p>
+                      <p class="text-bold">from 7M AED</p>
+                    </div>
+                  </div>
+
+                  <!-- Divider -->
+                  <span class="section-invest__card__divider-horizontal"></span>
+
+                  <!-- PAYMENT PLAN INFO BOX -->
+
+                  <div class="section-invest__card__hover-payment">
+                    <p>Payment plan: 40/60</p>
+
+                    <p class="text-bold">
+                      10% <span class="highlight-grey">initial deposit</span>
+                    </p>
+                    <p class="text-bold">
+                      50%
+                      <span class="highlight-grey">during construction</span>
+                    </p>
+                    <p class="text-bold">
+                      10%
+                      <span class="highlight-grey">upon completion</span>
+                    </p>
+                    <p class="text-bold">
+                      30%
+                      <span class="highlight-grey"
+                        >post-installment until Q1 2030</span
+                      >
+                    </p>
+                  </div>
+
+                  <!-- Divider -->
+                  <span class="section-invest__card__divider-horizontal"></span>
+
+                  <!-- AVAILABILITY INFO BOX -->
+
+                  <div class="section-invest__card__hover-availability">
+                    <div>
+                      <p class="text-bold">Available apartments</p>
+                      <p class="highlight-green text-bold">25 / 80</p>
+                    </div>
+
+                    <div class="section-invest__card__text-right">
+                      <p class="text-bold">completion year</p>
+                      <p class="highlight-green text-bold">Q3 2027</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 5️⃣ INVESTMENT CARD --- --- DAMAC -->
+
+              <div
+                class="section-invest__card"
+                data-id="card-invest-5"
+                data-city="abu-dabi"
+                data-method="rent"
+              >
+                <!-- Developer -->
+                <div class="section-invest__card__header">
+                  <div class="section-invest__card__developer">
+                    <!-- Лого застройщика -->
+                    <div class="developer__logo-box">
+                      <div class="developer__logo developer__logo--damac"></div>
+                    </div>
+
+                    <div class="section-invest__card__developer-title">
+                      <h4 class="object-title">Zeston Villas</h4>
+                      <p class="company-title">DAMAC Properties</p>
+                    </div>
+                  </div>
+
+                  <!-- Фото апартаментов -->
+                  <div class="invest__image invest__image--5"></div>
+
+                  <!-- Tags -->
+                  <div class="tags">
+                    <div class="tags__tag">
+                      <p>post installment</p>
+                    </div>
+                    <div class="tags__tag">
+                      <p>furnished</p>
+                    </div>
+                    <div class="tags__tag">
+                      <p>(7-8% ROI)</p>
+                    </div>
+                  </div>
+
+                  <!-- Name -->
+                  <!-- <p class="section-invest__card-backend__title">Zeston Villas</p> -->
+
+                  <!-- Location -->
+                  <div class="section-invest__card__location">
+                    <svg class="grey-card-icon">
+                      <use xlink:href="img/sprite.svg#icon-map-pin"></use>
+                    </svg>
+                    <p class="section-invest__card__location-title">
+                      Zeston, Athlon by Aldar, Dubai
+                    </p>
+                  </div>
+
+                  <!-- Divider -->
+                  <span class="section-invest__card__divider-horizontal"></span>
+
+                  <!-- Box 1: area and rooms -->
+                  <div class="section-invest__card__box-1">
+                    <!-- Area -->
+                    <div class="section-invest__card__area">
+                      <p class="section-invest__card__area-number">
+                        from 1634 (sq.m)
+                      </p>
+                      <div class="section-invest__card__area-info">
+                        <svg class="grey-card-icon">
+                          <use xlink:href="img/sprite.svg#icon-compass2"></use>
+                        </svg>
+                        <p class="section-invest__card__area-name">area</p>
+                      </div>
+                    </div>
+
+                    <!-- Rooms -->
+                    <div class="section-invest__card__area">
+                      <p class="section-invest__card__area-number">
+                        from 4 rooms
+                      </p>
+                      <div class="section-invest__card__area-info">
+                        <svg class="grey-card-icon">
+                          <use xlink:href="img/sprite.svg#icon-map1"></use>
+                        </svg>
+                        <p class="section-invest__card__area-name">bedrooms</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <span class="section-invest__card__divider-horizontal"></span>
+                </div>
+
+                <!-- BOX HOVER EFFECT WITH DETAIL INFORMATION -->
+                <div class="section-invest__card__hover">
+                  <!-- PRICE BOX -->
+
+                  <div class="section-invest__card__hover-cost">
+                    <p class="section-invest__card__cost">
+                      Starting price: <br />
+                      <span class="highlight-blue">AED 1.6M</span>
+                    </p>
+                    <span class="section-invest__card__divider-vertical"></span>
+                    <p class="section-invest__card__cost">
+                      Completion: <br />
+                      <span class="highlight-blue">Q3 2027</span>
+                    </p>
+                  </div>
+
+                  <!-- BUTTON BOX -->
+
+                  <div class="section-invest__card__hover-button">
+                    <!-- WhatsApp -->
+                    <a href="#" class="btn-whatsapp">
+                      <svg class="btn-whatsapp__icon">
+                        <use xlink:href="img/sprite.svg#icon-whatsapp"></use>
+                      </svg>
+                      WhatsApp
+                    </a>
+                  </div>
+
+                  <!-- Divider -->
+                  <span class="section-invest__card__divider-horizontal"></span>
+
+                  <!-- ROOM INFO BOX -->
+
+                  <div class="section-invest__card__hover-room">
+                    <div>
+                      <p class="text-bold">
+                        1 bedroom <span class="highlight-grey">from 91 m²</span>
+                      </p>
+                      <p class="text-bold">
+                        2 bedrooms
+                        <span class="highlight-grey">from 135 m²</span>
+                      </p>
+                      <p class="text-bold">
+                        3 bedrooms
+                        <span class="highlight-grey">from 267 m²</span>
+                      </p>
+                    </div>
+
+                    <div class="section-invest__card__text-right">
+                      <p class="text-bold">from 3M AED</p>
+                      <p class="text-bold">from 4.1M AED</p>
+                      <p class="text-bold">from 7M AED</p>
+                    </div>
+                  </div>
+
+                  <!-- Divider -->
+                  <span class="section-invest__card__divider-horizontal"></span>
+
+                  <!-- PAYMENT PLAN INFO BOX -->
+
+                  <div class="section-invest__card__hover-payment">
+                    <p>Payment plan: 40/60</p>
+
+                    <p class="text-bold">
+                      10% <span class="highlight-grey">initial deposit</span>
+                    </p>
+                    <p class="text-bold">
+                      50%
+                      <span class="highlight-grey">during construction</span>
+                    </p>
+                    <p class="text-bold">
+                      10%
+                      <span class="highlight-grey">upon completion</span>
+                    </p>
+                    <p class="text-bold">
+                      30%
+                      <span class="highlight-grey"
+                        >post-installment until Q1 2030</span
+                      >
+                    </p>
+                  </div>
+
+                  <!-- Divider -->
+                  <span class="section-invest__card__divider-horizontal"></span>
+
+                  <!-- AVAILABILITY INFO BOX -->
+
+                  <div class="section-invest__card__hover-availability">
+                    <div>
+                      <p class="text-bold">Available apartments</p>
+                      <p class="highlight-green text-bold">25 / 80</p>
+                    </div>
+
+                    <div class="section-invest__card__text-right">
+                      <p class="text-bold">completion year</p>
+                      <p class="highlight-green text-bold">Q3 2027</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 6️⃣ INVESTMENT CARD --- --- EMAAR -->
+
+              <div
+                class="section-invest__card"
+                data-id="card-invest-6"
+                data-city="ajman"
+                data-method="rent"
+              >
+                <!-- Developer -->
+                <div class="section-invest__card__header">
+                  <div class="section-invest__card__developer">
+                    <!-- Лого застройщика -->
+                    <div class="developer__logo-box">
+                      <div class="developer__logo developer__logo--emaar"></div>
+                    </div>
+
+                    <div class="section-invest__card__developer-title">
+                      <h4 class="object-title">Zeston Villas</h4>
+                      <p class="company-title">DAMAC Properties</p>
+                    </div>
+                  </div>
+
+                  <!-- Фото апартаментов -->
+                  <div class="invest__image invest__image--6"></div>
+
+                  <!-- Tags -->
+                  <div class="tags">
+                    <div class="tags__tag">
+                      <p>post installment</p>
+                    </div>
+                    <div class="tags__tag">
+                      <p>furnished</p>
+                    </div>
+                    <div class="tags__tag">
+                      <p>(7-8% ROI)</p>
+                    </div>
+                  </div>
+
+                  <!-- Name -->
+                  <!-- <p class="section-invest__card-backend__title">Zeston Villas</p> -->
+
+                  <!-- Location -->
+                  <div class="section-invest__card__location">
+                    <svg class="grey-card-icon">
+                      <use xlink:href="img/sprite.svg#icon-map-pin"></use>
+                    </svg>
+                    <p class="section-invest__card__location-title">
+                      Zeston, Athlon by Aldar, Dubai
+                    </p>
+                  </div>
+
+                  <!-- Divider -->
+                  <span class="section-invest__card__divider-horizontal"></span>
+
+                  <!-- Box 1: area and rooms -->
+                  <div class="section-invest__card__box-1">
+                    <!-- Area -->
+                    <div class="section-invest__card__area">
+                      <p class="section-invest__card__area-number">
+                        from 1634 (sq.m)
+                      </p>
+                      <div class="section-invest__card__area-info">
+                        <svg class="grey-card-icon">
+                          <use xlink:href="img/sprite.svg#icon-compass2"></use>
+                        </svg>
+                        <p class="section-invest__card__area-name">area</p>
+                      </div>
+                    </div>
+
+                    <!-- Rooms -->
+                    <div class="section-invest__card__area">
+                      <p class="section-invest__card__area-number">
+                        from 4 rooms
+                      </p>
+                      <div class="section-invest__card__area-info">
+                        <svg class="grey-card-icon">
+                          <use xlink:href="img/sprite.svg#icon-map1"></use>
+                        </svg>
+                        <p class="section-invest__card__area-name">bedrooms</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <span class="section-invest__card__divider-horizontal"></span>
+                </div>
+
+                <!-- BOX HOVER EFFECT WITH DETAIL INFORMATION -->
+                <div class="section-invest__card__hover">
+                  <!-- PRICE BOX -->
+
+                  <div class="section-invest__card__hover-cost">
+                    <p class="section-invest__card__cost">
+                      Starting price: <br />
+                      <span class="highlight-blue">AED 1.6M</span>
+                    </p>
+                    <span class="section-invest__card__divider-vertical"></span>
+                    <p class="section-invest__card__cost">
+                      Completion: <br />
+                      <span class="highlight-blue">Q3 2027</span>
+                    </p>
+                  </div>
+
+                  <!-- BUTTON BOX -->
+
+                  <div class="section-invest__card__hover-button">
+                    <!-- WhatsApp -->
+                    <a href="#" class="btn-whatsapp">
+                      <svg class="btn-whatsapp__icon">
+                        <use xlink:href="img/sprite.svg#icon-whatsapp"></use>
+                      </svg>
+                      WhatsApp
+                    </a>
+                  </div>
+
+                  <!-- Divider -->
+                  <span class="section-invest__card__divider-horizontal"></span>
+
+                  <!-- ROOM INFO BOX -->
+
+                  <div class="section-invest__card__hover-room">
+                    <div>
+                      <p class="text-bold">
+                        1 bedroom <span class="highlight-grey">from 91 m²</span>
+                      </p>
+                      <p class="text-bold">
+                        2 bedrooms
+                        <span class="highlight-grey">from 135 m²</span>
+                      </p>
+                      <p class="text-bold">
+                        3 bedrooms
+                        <span class="highlight-grey">from 267 m²</span>
+                      </p>
+                    </div>
+
+                    <div class="section-invest__card__text-right">
+                      <p class="text-bold">from 3M AED</p>
+                      <p class="text-bold">from 4.1M AED</p>
+                      <p class="text-bold">from 7M AED</p>
+                    </div>
+                  </div>
+
+                  <!-- Divider -->
+                  <span class="section-invest__card__divider-horizontal"></span>
+
+                  <!-- PAYMENT PLAN INFO BOX -->
+
+                  <div class="section-invest__card__hover-payment">
+                    <p>Payment plan: 40/60</p>
+
+                    <p class="text-bold">
+                      10% <span class="highlight-grey">initial deposit</span>
+                    </p>
+                    <p class="text-bold">
+                      50%
+                      <span class="highlight-grey">during construction</span>
+                    </p>
+                    <p class="text-bold">
+                      10%
+                      <span class="highlight-grey">upon completion</span>
+                    </p>
+                    <p class="text-bold">
+                      30%
+                      <span class="highlight-grey"
+                        >post-installment until Q1 2030</span
+                      >
+                    </p>
+                  </div>
+
+                  <!-- Divider -->
+                  <span class="section-invest__card__divider-horizontal"></span>
+
+                  <!-- AVAILABILITY INFO BOX -->
+
+                  <div class="section-invest__card__hover-availability">
+                    <div>
+                      <p class="text-bold">Available apartments</p>
+                      <p class="highlight-green text-bold">25 / 80</p>
+                    </div>
+
+                    <div class="section-invest__card__text-right">
+                      <p class="text-bold">completion year</p>
+                      <p class="highlight-green text-bold">Q3 2027</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ARROW RIGHT -->
+
+          <div class="section-invest__arrow arrow-right">
+            <svg class="arrow-icon">
+              <use xlink:href="img/sprite.svg#icon-arrow-right2"></use>
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <!------------------------------------->
+      <!-- "VIEW ALL PROPERTIES" BUTTON -->
+      <!------------------------------------->
+
+      <div class="btn-center">
+        <a href="#" class="btn">View all properties</a>
+      </div>
+    </main>
+
+    <!--------------------------------------->
+    <!--           FOOTER BLOCK            -->
+    <!--------------------------------------->
+
+    <footer id="contacts" class="footer-menue">
+      <div class="row-header footer-menue__container">
+        <div class="footer-menue__contact">
+          <div class="footer-menue__adress">
+            <div class="footer-menue__adress-test">
+              <p class="footer-menue__title text-bold">Contacts</p>
+              <p class="footer-menue__adress__sub-title-main">Phone</p>
+              <p
+                class="footer-menue__adress__sub-title footer-menue__adress__number"
+              >
+                +971 56 772 9022
+              </p>
+              <p class="footer-menue__adress__sub-title-main">E-mail</p>
+              <p class="footer-menue__adress__sub-title">info@domain.com</p>
+              <p class="footer-menue__adress__sub-title-main">Address</p>
+              <p class="footer-menue__adress__sub-title">
+                Moscow, Example Street, 1
+              </p>
+            </div>
+            <div class="footer-menue__social-media">
+              <div class="footer-menue__instagram social-media">
+                <svg class="social-media__icon">
+                  <use
+                    xlink:href="img/sprite.svg#icon-instagram-svgrepo-com"
+                  ></use>
+                </svg>
+              </div>
+              <div class="footer-menue__youtube social-media">
+                <svg class="social-media__icon">
+                  <use
+                    xlink:href="img/sprite.svg#icon-youtube-168-svgrepo-com"
+                  ></use>
+                </svg>
+              </div>
+              <div class="footer-menue__linkedin social-media">
+                <svg class="social-media__icon">
+                  <use xlink:href="img/sprite.svg#icon-linkedin2"></use>
+                </svg>
+              </div>
+              <div class="footer-menue__facebook social-media">
+                <svg class="social-media__icon">
+                  <use xlink:href="img/sprite.svg#icon-facebook"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="footer-menue__question">
+            <p class="text-bold footer-menue__title">
+              Have questions or suggestions?
+            </p>
+            <a href="#" class="footer-menue__btn btn">Contact us</a>
+          </div>
+        </div>
+        <div class="footer-menue__navigation-bar">
+          <div class="footer-menue__nav-box-1">
+            <p class="footer-menue__title text-bold">Navigation</p>
+            <nav class="footer-menue__navigation">
+              <ul class="footer-menue__list">
+                <li class="footer-menue__item">Home</li>
+                <li class="footer-menue__item">Property catalog</li>
+                <li class="footer-menue__item">About company</li>
+                <li class="footer-menue__item">News</li>
+                <li class="footer-menue__item">Contacts</li>
+                <li class="footer-menue__item">Special offers</li>
+                <li class="footer-menue__item">Q&A</li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="footer-menue__nav-box-2">
+            <p class="footer-menue__title text-bold">How to buy</p>
+            <nav class="footer-menue__navigation">
+              <ul class="footer-menue__list">
+                <li class="footer-menue__item">Home</li>
+                <li class="footer-menue__item">Property catalog</li>
+                <li class="footer-menue__item">About company</li>
+                <li class="footer-menue__item">News</li>
+                <li class="footer-menue__item">Contacts</li>
+                <li class="footer-menue__item">Documents</li>
+                <li class="footer-menue__item">Q&A</li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="footer-menue__nav-box-3">
+            <p class="footer-menue__title text-bold">About company</p>
+            <nav class="footer-menue__navigation">
+              <ul class="footer-menue__list">
+                <li class="footer-menue__item">Home</li>
+                <li class="footer-menue__item">Property catalog</li>
+                <li class="footer-menue__item">About company</li>
+                <li class="footer-menue__item">News</li>
+                <li class="footer-menue__item">Contacts</li>
+                <li class="footer-menue__item">Documents</li>
+                <li class="footer-menue__item">Q&A</li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>

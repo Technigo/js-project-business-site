@@ -1,0 +1,135 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.search-form {
+  background-color: var(--color-white);
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  align-items: center;
+  padding: 3rem;
+  gap: 1rem;
+  border-radius: var(--border-radius-xl);
+  border: 2px solid var(--color-primary);
+  flex-wrap: wrap;
+  margin: 0 4rem;
+  height: 100%;
+
+  @include respond-max(49.375em) {
+    grid-template-columns: repeat(2, auto);
+  }
+
+  @include respond(phone) {
+    grid-template-columns: repeat(2, auto);
+    border-radius: var(--border-radius-md);
+    padding: 2rem;
+  }
+
+  @include respond-max(31.25em) {
+    grid-template-columns: 1fr;
+    margin: 0 1rem;
+  }
+
+  @include respond(xs-phone) {
+    margin: 1px;
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border: none;
+    height: 100%;
+  }
+
+  &__group-btn {
+    margin-top: auto;
+  }
+
+  &__select {
+    padding: 1.4rem 2.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid var(--color-primary);
+    border-radius: 1rem;
+    gap: 1rem;
+    cursor: pointer;
+
+    &:hover {
+      .search-form__icon {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__icon {
+    fill: currentColor;
+    width: 1.5rem;
+    height: 1.5rem;
+    transition: 0.6s;
+    transform-origin: center;
+  }
+
+  &__list-box {
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-sm);
+    border: 0.1rem solid var(--color-primary);
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 7rem;
+    width: 100%;
+    z-index: 1000;
+    height: 0;
+    opacity: 0;
+
+    @include respond-between(37.5em, 42.625em) {
+      // от 601px до 682px
+      top: 6rem;
+    }
+
+    @include respond(phone) {
+      top: 6.5rem;
+    }
+  }
+
+  &__group.open {
+    .search-form__list-box {
+      height: auto;
+      opacity: 1;
+      transition: all 0.3s ease;
+    }
+
+    .search-form__icon {
+      transform: rotate(180deg);
+      transition: transform 0.3s ease;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+  &__item {
+    list-style: none;
+    padding: 0.6rem 2.2rem;
+    margin: 0.3rem;
+    border-radius: var(--border-radius-xs);
+    transition: 0.3s;
+
+    &:hover {
+      background-color: var(--color-primary);
+      cursor: pointer;
+
+      .search-form__link {
+        color: var(--color-white-base);
+      }
+    }
+  }
+  &__link {
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: var(--color-font);
+    transition: 0.3s;
+  }
+}

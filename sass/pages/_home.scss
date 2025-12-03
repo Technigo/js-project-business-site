@@ -1,0 +1,58 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.hero {
+  margin-bottom: $gutter-horizontal-big;
+  padding: 0 2rem;
+
+  @include respond(phone) {
+    margin-bottom: $gutter-horizontal-medium;
+    padding: 0 1rem;
+  }
+
+  @include respond(xs-phone) {
+    padding: 0 1px;
+  }
+
+  &__img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url(../img/hero-9.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 69rem;
+    border-radius: var(--border-radius-lg);
+    position: relative;
+
+    @include respond(tab-land) {
+      height: 60rem;
+    }
+
+    @include respond(phone) {
+      height: 55rem;
+    }
+
+    @include respond-max(27.5em) {
+      // от 440px и нижу
+      height: 60rem;
+    }
+
+    @include respond(xs-phone) {
+      height: 55rem;
+    }
+  }
+
+  &__container {
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.section-invest {
+  &__choose-option {
+    margin-bottom: $gutter-horizontal-medium;
+  }
+}

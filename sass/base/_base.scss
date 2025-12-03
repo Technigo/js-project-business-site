@@ -1,0 +1,45 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; // 10px = 1rem
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+
+  @include respond(big-desktop) {
+    font-size: 75%; // 12px
+  }
+
+  @include respond(tab-land) {
+    font-size: 56.25%; // 9px
+  }
+
+  @include respond(tab-port) {
+    font-size: 56.25%; // 9px
+  }
+
+  @include respond(xs-phone) {
+    font-size: 50%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  background-color: var(--color-primary-light);
+}
+
+body {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+body.loaded {
+  opacity: 1;
+}
