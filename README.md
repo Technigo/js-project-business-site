@@ -1,1 +1,84 @@
-# js-project-business-site
+# 🎵 NeonSound Studios  
+_A responsive business website project_
+
+## 📖 About the project
+NeonSound Studios is a fictional recording studio website created my first **student coding project**.  
+The goal was to practice building a **responsive, accessible business site** using only **HTML5, CSS3, and JavaScript**.
+The site has **booking** buttons, it's just for demo and do not have a function, this also goes for the **navigation menu**  
+
+The site demonstrates:
+- Semantic HTML structure
+- Responsive layouts (320px → 1600px)
+- Flexbox & CSS Grid usage
+- Interactive hamburger menu
+- Hero section with video background
+- Card grid with featured studios
+- Signup form with multiple input types
+- Footer with copyright
+
+---
+
+## 🚀 Features
+### Navigation & Layout
+- Responsive **navigation bar** with desktop links and a mobile hamburger menu  
+- Hamburger button toggles menu open/close with JavaScript  
+- Accessible `aria-expanded` state and icon swap (☰ → ✖)  
+
+### Hero
+- Video background with overlay heading & tagline  
+
+### Featured Studios
+- **Card grid** layout:  
+  - 1 column on mobile  
+  - 2 columns on tablets  
+  - 4 columns on desktop  
+- Cards have shadows and hover lift effect  
+
+### Signup Form
+Form submits with `method="POST"` to [https://httpbin.org/anything](https://httpbin.org/anything).  
+Includes:  
+- Text input (name)  
+- Email input  
+- Password input (minlength validation)  
+- Radio button group (role)  
+- Checkbox (terms required)  
+- Submit button  
+
+### Footer
+- Simple centered footer with copyright  
+
+---
+
+## 📱 Responsiveness
+The design is responsive and functional across viewports **320px–1600px**:  
+- Flexbox used for header and menus  
+- CSS Grid used for cards  
+- Media queries for breakpoints at 640px and 1024px  
+
+---
+
+## ✨ Stretch Goals (VG level)
+This project includes more than the required 4 stretch goals:
+- Card shadows for a “Polaroid” feel  
+- Cards centered on page  
+- Focus glow on input fields (`:focus` selector)  
+- Basic HTML5 form validation (required, minlength, type checks)  
+- Animated hamburger icon (bars ↔ close X)  
+- CSS animations (sound-wave EQ animation)  
+
+---
+
+## 🛠️ Technologies
+- **HTML5** (semantic structure)  
+- **CSS3** (variables, Flexbox, Grid, media queries, transitions, keyframes)  
+- **JavaScript (ES6)** for hamburger menu interactivity  
+
+---
+
+## 📂 Project Structure
+├── README.md
+├── hero-music-video.mp4
+├── hero-png
+├── index.html # main HTML page
+├── style.css # styles and responsive design
+└── script.js # hamburger menu interactivity
