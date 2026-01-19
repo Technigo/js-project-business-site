@@ -1,0 +1,26 @@
+{
+  "name": "js-project-business-site",
+  "version": "1.0.0",
+  "description": "path = js-project-business-site\r   url = https://github.com/ditt-användarnamn/js-project-business-site.git",
+  "main": "script.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emilfloren96/js-project-business-site.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/emilfloren96/js-project-business-site/issues"
+  },
+  "homepage": "https://github.com/emilfloren96/js-project-business-site#readme",
+  "dependencies": {
+    "vite": "^7.2.4"
+  }
+}
