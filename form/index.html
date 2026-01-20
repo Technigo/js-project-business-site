@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" type="image/png" href="/js-project-business-site/images/user-robot.png">
+    <title>Form | AI Compass</title>
+</head>
+<body>
+    <div class="signup-form">
+        <form 
+            action="https://httpbin.org/anything" 
+            method="POST">
+        <h2>Sign Up</h2>
+        <fieldset>
+            <div class="name">
+                <h4>Name</h4>
+                <label>
+                    <input 
+                        class="your-name" 
+                        type="text" 
+                        name="name" 
+                        placeholder="your name" 
+                        required />
+                </label>
+            </div>
+                
+            <div class="email">
+                <h4>Email</h4>
+                <label>
+                    <input 
+                    class="input-email" 
+                    type="email" 
+                    name="email" 
+                    placeholder="example@gmail.com" 
+                    required />
+                </label>
+            </div>
+
+            <div class="age-box">
+                <h4>Age Group</h4>
+                    <div class="age-checkbox">
+                        <label class="checkbox-label">
+                            <input 
+                                type="checkbox" 
+                                name="ageGroup" 
+                                value="lowerElementary">
+                            <span class="custom-checkbox"></span>
+                            <span>Lower Elementary</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input 
+                                type="checkbox" 
+                                name="ageGroup" 
+                                value="upperElementary">
+                            <span class="custom-checkbox"></span>
+                            <span>Upper Elementary</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input 
+                                type="checkbox" 
+                                name="ageGroup" 
+                                value="middleSchool">
+                            <span class="custom-checkbox"></span>
+                            <span>Middle School</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input 
+                                type="checkbox" 
+                                name="ageGroup" 
+                                value="highSchool">
+                            <span class="custom-checkbox"></span>
+                            <span>High School</span>
+                        </label>
+                    </div>
+            </div>
+
+            <div class="who-are-you">
+                <h4>Who are you?</h4>
+                <div class="who-radio">
+                    <label class="radio-label">
+                        <input 
+                            type="radio" 
+                            name="whoAreYou" 
+                            value="parent" 
+                            id="parent" 
+                            checked required>
+                        <span class="custom-radio"></span>
+                        <span>Parent</span>
+                    </label>
+                    <label class="radio-label">
+                        <input 
+                            type="radio" 
+                            name="whoAreYou" 
+                            value="teacher" 
+                            id="teacher" 
+                            required>
+                        <span class="custom-radio"></span>
+                        <span>Teacher</span>
+                    </label>
+                </div>
+            </div>
+                
+            <div class="line"></div>
+
+            <div class="interested-in">
+            <p>Interested in   (*optional)</p>
+                <label>
+                    <select 
+                        name="interestedIn" 
+                        id="interestedIn">
+                        <option 
+                            class="select-answer"
+                            value="selectAnswer" disabled selected>--Select Answer--</option>
+                        <option value="creativeProjects">Creative Projects</option>
+                        <option value="aiBasics">AI Basics</option>
+                        <option value="careerPreparation">Career Preparation</option>
+                    </select>
+                </label>
+            </div>
+
+            <button type="submit">Get Started</button>
+        </fieldset>
+    </form>
+    <div class="robot-image">
+        <img 
+            src="./robot.png" 
+            alt="AI Compass Image" 
+            width="200" 
+            height="200"/>
+    </div>
+    </div>
+</body>
+</html>

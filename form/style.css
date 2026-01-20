@@ -1,0 +1,261 @@
+body {
+    font-family: "Montserrat",;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #A5D6A7;
+    color: rgb(103, 102, 102);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 50px 0 auto;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.1);
+    }
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px 0 0 10px;
+    background-color: #f9f9f9;
+}
+@media (max-width: 668px) {
+    form {
+        width: 100%;
+        margin: 10px;
+        border-radius: 10px;
+        box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.1);
+    }
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 3px;
+}
+
+h4 {
+    margin: 5px 0;
+}
+
+p {
+    margin-bottom: 5px;
+    font-size: 14px; 
+}
+
+
+fieldset {
+    border: none;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+label {
+    width: 100%;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+select {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+.your-name:focus,
+.input-email:focus {
+    border: 1px solid #FF9800;
+    outline: none;
+}
+
+.your-name::placeholder,
+.input-email::placeholder {
+    color: #FF9800;
+    font-size: 15px;
+    opacity: 0.7;
+    font-style: italic;
+}
+
+.age-checkbox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 16px;
+}
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    margin-bottom: 4px;
+    line-height: 0.9;
+    font-size: small;
+    font-weight: lighter;
+
+}
+input[type="checkbox"] { /*delete the default checkbox*/
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    width: 0;
+    height: 0;
+}
+.custom-checkbox { /*create a custom checkbox*/
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;    
+}
+.checkbox-label:hover input ~ .custom-checkbox {
+    background-color: #ccc;
+}
+.checkbox-label input:checked + .custom-checkbox {
+    background-color: #FF9800;
+}
+.custom-checkbox::after { /*create the check mark/indicator (hidden when not checked)*/
+    content: "";
+    position: absolute;
+    display: none;
+    width: 3px;
+    height: 6px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    top: 5px;
+    left: 7px;
+    transform: rotate(45deg);
+    }
+.age-checkbox input:checked ~ .custom-checkbox:after { /*putt the check mark on the custom checkbox when checked*/
+    display: block;
+}
+
+.line {
+    border: 1px solid #ccc;
+    margin: 5px 0;
+}
+
+.who-are-you {
+    display: flex;
+    flex-direction: column;
+}
+.who-radio {
+    display: flex;
+    gap: 20px;
+    font-size: 16px;
+    user-select: none;
+    margin-bottom: 10px;
+}
+.who-radio input { /*delete the default radio button*/
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    width: 0;
+    height: 0;
+}
+.radio-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: lighter;
+}
+.custom-radio { /*create a custom radio button*/
+    display: inline-block;
+    top: 0;
+    left: 0;
+    height: 19px;
+    width: 19px;
+    margin: 5px 0;
+    background-color: #eee;
+    border-radius: 5px;
+    cursor: pointer;
+    border-radius: 50%;
+    position: relative;    
+}
+.radio-label:hover .custom-radio {
+    background-color: #ccc;
+}
+.radio-label input:checked ~ .custom-radio {
+    background-color: #FF9800;
+}
+.custom-radio:after { /*create the check mark (hidden when not checked)*/
+    content: "";
+    position: absolute;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+    }
+.who-radio input:checked + .custom-radio:after {
+    display: block;
+}
+.who-radio input:focus + .custom-radio {
+    outline: #898989 auto 1px;
+}
+
+.select-answer {
+    color: #FF9800;
+    font-size: 15px;
+    opacity: 0.7;
+    font-style: italic;
+}
+
+button {
+    padding: 10px;
+    background-color: #FF9800;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin: 20px;
+}
+button:hover {
+    background-color: #FFE0B2;
+    color: #FF9800;
+}
+
+.robot-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-left: none;
+    border-radius: 0 10px 10px 0;
+    padding: 20px;
+}
+@media (max-width: 668px) {
+    .robot-image {
+        display: none;
+    }
+    
+}
