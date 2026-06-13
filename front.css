@@ -1,0 +1,107 @@
+
+
+
+/* Main layout */
+body {
+  background-color: #f5f1ed;
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+/* Headings and paragraph */
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: black;
+}
+
+p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin-bottom: 3rem;
+  line-height: 1.6;
+  color: black;
+}
+
+/* Cards container */
+.front-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* White minimalist boxes */
+.front-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 240px;
+  height: 140px;
+  background-color: white;
+  border-radius: 16px;
+  text-decoration: none;
+  color: black !important;
+  transition: transform 0.3s ease;
+  border: none;
+}
+
+/* Subtle lift on hover (no color/text change) */
+.front-card:hover {
+  transform: translateY(-4px);
+}
+
+
+.front-card:link,
+.front-card:visited,
+.front-card:hover,
+.front-card:active,
+.front-card:focus {
+  color: black !important;
+  text-decoration: none !important;
+  outline: none !important;
+}
+
+/* Text inside cards */
+.front-card h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.4rem;
+  font-family: 'Playfair Display', serif;
+  color: black;
+}
+
+.front-card p {
+  font-size: 1rem;
+  margin: 0;
+  color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .front-card {
+    width: 180px;
+    height: 100px;
+  }
+}
+

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Health by Jasmin – Yoga & Ayurveda i Stockholm</title>
+    <meta name="description" content="Yoga och ayurvedisk massage i Stockholm på Södermalm. Ashtanga yoga, slow flow-klasser och ayurvediska behandlingar. Boka din tid direkt online." />
+    <meta name="keywords" content="yoga stockholm, ayurveda stockholm, ayurvedisk massage, ashtanga yoga, södermalm, health by jasmin, yogaklasser stockholm, slow flow yoga" />
+    <meta name="author" content="Jasmin Hedlund" />
+
+    <!-- Open Graph – för delning på Instagram och sociala medier -->
+    <meta property="og:title" content="Health by Jasmin – Yoga & Ayurveda i Stockholm" />
+    <meta property="og:description" content="Yoga och ayurvedisk massage i Stockholm på Södermalm. Boka din tid direkt online." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://healthbyjasmin.netlify.app" />
+    <meta property="og:image" content="https://healthbyjasmin.netlify.app/assets/ashtanga.jpeg" />
+    <meta property="og:locale" content="sv_SE" />
+    <meta property="og:site_name" content="Health by Jasmin" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Raleway:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <form name="massage-booking" netlify hidden>
+      <input name="name" />
+      <input name="email" />
+      <input name="phone" />
+      <input name="date" />
+      <input name="message" />
+    </form>
+    <form name="course-booking" netlify hidden>
+      <input name="name" />
+      <input name="email" />
+      <input name="course" />
+      <input name="message" />
+    </form>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
